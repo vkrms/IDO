@@ -18,7 +18,6 @@ import {
 } from '@mui/lab';
 import { Box, Container, Grid, Typography, duration } from '@mui/material';
 
-import { subtitle } from '@/module/dashboard/index.css';
 import { colorPrimary } from '@/style/config/color.css';
 
 // ----------------------------------------------------------------------------------
