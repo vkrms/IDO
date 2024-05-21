@@ -11,9 +11,9 @@ import * as styles from '@/module/login/index.css';
 import { Box, Button, CardMedia, FormControl, Stack, TextField, Typography } from '@mui/material';
 
 import bannerImg from '@/assets/img/login/banner.png';
-import IconEmail from '@/assets/svgs/email.svg';
-import IconEye from '@/assets/svgs/eye.svg';
-import IconLogo from '@/assets/svgs/logo.svg';
+import IconEmail from '@/assets/svg/email.svg';
+import IconEye from '@/assets/svg/eye.svg';
+import IconLogo from '@/assets/svg/logo.svg';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
