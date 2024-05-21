@@ -116,7 +116,7 @@ export default function Welcome() {
         <Grid className={styles.founderList}>
           {founderList.map((founder) => (
             <Grid key={founder.id}>
-              <CardMedia component='img' image={founder.img.src} height={28} />
+              <CardMedia component='img' image={founder.img.src} className={styles.img} />
             </Grid>
           ))}
         </Grid>

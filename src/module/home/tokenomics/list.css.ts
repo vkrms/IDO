@@ -16,15 +16,37 @@ export const list = style({
   display: 'flex',
   justifyContent: 'center',
   gap: 56,
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      gap: 40,
+    },
+  },
 });
 
 export const item = style({
-  paddingRight: 56,
-  borderRight: `1px solid ${colorPrimary}`,
+  display: 'flex',
+  gap: 56,
+  alignItems: 'center',
 
-  selectors: {
-    '&:last-child': {
-      borderRight: '1px solid transparent',
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      gap: 40,
+      flexDirection: 'column',
+    },
+  },
+});
+
+export const divider = style({
+  width: 2,
+  height: 56,
+  background: colorPrimary,
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      width: 56,
+      height: 2,
+      background: colorPrimary,
     },
   },
 });

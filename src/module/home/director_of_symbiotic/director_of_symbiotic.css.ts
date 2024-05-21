@@ -13,6 +13,13 @@ export const title = style({
   color: colorWhite,
   fontFamily: manropeSemiBold,
   textAlign: 'center',
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      fontSize: 32,
+      lineHeight: '44px',
+    },
+  },
 });
 
 export const subtitle = style({
@@ -24,6 +31,12 @@ export const subtitle = style({
   fontSize: 20,
   lineHeight: '27px',
   fontFamily: manropeSemiBold,
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      marginBottom: 16,
+    },
+  },
 });
 
 export const info = style({
@@ -34,4 +47,13 @@ export const info = style({
   color: colorWhite,
   textAlign: 'center',
   margin: '0 auto 56px',
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      fontSize: 14,
+      lineHeight: '22px',
+      maxWidth: 'unset',
+      marginBottom: 24,
+    },
+  },
 });

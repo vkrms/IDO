@@ -1,13 +1,16 @@
 import * as styles from '@/components/header.css';
 
+import { HOME, LOGIN, OUR_TEAM, ROADMAP, TOKENOMICS, WHY_FLO_COIN } from '@/router/name';
 import { Button, Grid, IconButton, Typography } from '@mui/material';
 
 import IconLogo from '@/assets/img//logo.svg';
 import IconMenu from '@/assets/svg/menu.svg';
-import { LOGIN } from '@/router/name';
+import NavMenu from '@/components/nav_menu';
 import { linkToBtn } from '@/style/common/link.css';
 import { colorWhite } from '@/style/config/color.css';
+import classNames from 'classnames';
 import Link from 'next/link';
+import { useState } from 'react';
 
 /**
  * ----------------------------------------------------------------------------------
@@ -19,11 +22,36 @@ import Link from 'next/link';
 
 // ----------------------------------------------------------------------------------
 
-const dataList = ['Whitepaper', 'Why FloCoin', 'Tokenomics', 'Our Team', 'Roadmap'];
+export const pathList = [
+  {
+    text: 'Whitepaper',
+    route: HOME,
+  },
+  {
+    text: 'Why FloCoin',
+    route: WHY_FLO_COIN,
+  },
+  {
+    text: 'Tokenomics',
+    route: TOKENOMICS,
+  },
+  {
+    text: 'Our Team',
+    route: OUR_TEAM,
+  },
+  {
+    text: 'Roadmap',
+    route: ROADMAP,
+  },
+];
 
 // ----------------------------------------------------------------------------------
 
 export default function Header() {
+  // ----------------------------------------------------------------------------------
+
+  const [menuState, setMenuState] = useState(false);
+
   // ----------------------------------------------------------------------------------
 
   return (
@@ -32,17 +60,22 @@ export default function Header() {
         <Grid item>
           <IconLogo width={176} />
         </Grid>
-        <Grid item>
+        <Grid item className={styles.listBox}>
           <Grid className={styles.list}>
-            {dataList.map((data) => (
-              <Grid key={data} className={styles.item}>
-                <Typography className={styles.itemText}>{data}</Typography>
+            {pathList.map((data) => (
+              <Grid key={data.text} className={styles.item}>
+                <Link href={data.route} className={styles.itemText}>
+                  {data.text}
+                </Link>
               </Grid>
             ))}
           </Grid>
         </Grid>
         <Grid item>
-          <Link href={LOGIN} className={linkToBtn}>
+          <IconButton size='large' sx={{ padding: 0 }} className={styles.menu} onClick={() => setMenuState(true)}>
+            <IconMenu />
+          </IconButton>
+          <Link href={LOGIN} className={classNames([styles.loginBtn, linkToBtn])}>
             <Button
               variant='outlined'
               sx={{ background: 'transparent', borderColor: colorWhite, color: colorWhite }}
@@ -54,6 +87,8 @@ export default function Header() {
           </Link>
         </Grid>
       </Grid>
+
+      {<NavMenu open={menuState} onClose={() => setMenuState(false)} />}
     </header>
   );
 }

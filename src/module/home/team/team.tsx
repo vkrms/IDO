@@ -136,8 +136,7 @@ export default function Founders() {
       <Typography className={styles.subtitle}>Meet The Powerhouse Team Driving FloCoin's Success</Typography>
 
       <FoundersList list={list} />
-      <Box height={80} />
-      <Box textAlign='center'>
+      <Box textAlign='center' className={styles.btnBox}>
         <Link href={EARLY_ACCESS} className={linkToBtn}>
           <Button variant='contained' size='large'>
             Join Early Access IDO List

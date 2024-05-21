@@ -8,6 +8,14 @@ export const bg = style({
   backgroundImage: 'url(/img/home/flo_coin/bg.png)',
   backgroundPosition: 'top right',
   backgroundRepeat: 'no-repeat',
+  backgroundSize: 'contain',
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      backgroundImage: 'url(/img/home/flo_coin/bg_mobile.png)',
+      backgroundSize: '30%',
+    },
+  },
 });
 
 export const title = style({
@@ -17,6 +25,15 @@ export const title = style({
   fontFamily: manropeSemiBold,
   color: colorWhite,
   textAlign: 'center',
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      maxWidth: 252,
+      margin: '0 auto 8px',
+      fontSize: 32,
+      lineHeight: '44px',
+    },
+  },
 });
 
 export const subtitle = style({
@@ -28,6 +45,14 @@ export const subtitle = style({
   fontSize: 16,
   lineHeight: '22px',
   fontFamily: manropeBold,
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      fontSize: 12,
+      lineHeight: '16px',
+      marginBottom: 8,
+    },
+  },
 });
 
 export const text = style({
@@ -38,11 +63,34 @@ export const text = style({
   lineHeight: '29px',
   fontFamily: manropeRegular,
   color: colorWhite,
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      fontSize: 12,
+      lineHeight: '16px',
+      maxWidth: 358,
+      margin: '0 auto 40px',
+    },
+  },
 });
 
 export const list = style({
   display: 'flex',
   gap: '72px 32px',
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      gap: 32,
+    },
+  },
+});
+
+export const item = style({
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      textAlign: 'center',
+    },
+  },
 });
 
 export const itemTitle = style({
@@ -51,6 +99,13 @@ export const itemTitle = style({
   color: colorWhite,
   fontFamily: manropeSemiBold,
   marginBottom: 8,
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      fontSize: 20,
+      lineHeight: '27px',
+    },
+  },
 });
 
 export const itemText = style({
@@ -59,4 +114,10 @@ export const itemText = style({
   color: colorWhite,
   fontFamily: manropeLight,
   maxWidth: 352,
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      fontSize: 12,
+      lineHeight: '22spx',
+    },
+  },
 });

@@ -1,4 +1,4 @@
-import { colorPrimary, colorTextBlack, colorTextGrey } from '@/style/config/color.css';
+import { colorPrimary, colorWhite } from '@/style/config/color.css';
 import { manropeBold, manropeMedium, manropeRegular } from '@/style/config/font.css';
 import { Button, Typography } from '@mui/material';
 
@@ -23,39 +23,33 @@ const NotFound: NextPageWithLayout = () => {
         <title>404 notfound</title>
       </Head>
 
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div>
         <Box height={256} />
-        <div>
-          <Typography
-            variant='h1'
-            align='center'
-            sx={{ fontSize: 120, fontFamily: manropeBold, color: colorTextBlack }}
-          >
-            404
-            <b style={{ color: colorPrimary, marginLeft: 12 }}>Oops!</b>
-          </Typography>
-          <Typography
-            variant='h2'
-            align='center'
-            sx={{ fontSize: 80, fontFamily: manropeMedium, color: colorTextBlack }}
-          >
-            Page Not Found
-          </Typography>
-          <Box height={24} />
-          <Typography
-            variant='subtitle1'
-            align='center'
-            sx={{ color: colorTextGrey, fontSize: 20, fontFamily: manropeRegular }}
-          >
-            Sorry the page you are looking for does not exist, click the <br />
-            button below to head on back to the home base.
-          </Typography>
-          <Box height={24} />
-          <Box textAlign='center'>
-            <Button variant='contained' color='primary'>
-              Back To Home
-            </Button>
-          </Box>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div>
+            <Typography variant='h1' align='center' sx={{ fontSize: 120, fontFamily: manropeBold, color: colorWhite }}>
+              404
+              <b style={{ color: colorPrimary, marginLeft: 12 }}>Oops!</b>
+            </Typography>
+            <Typography variant='h2' align='center' sx={{ fontSize: 80, fontFamily: manropeMedium, color: colorWhite }}>
+              Page Not Found
+            </Typography>
+            <Box height={24} />
+            <Typography
+              variant='subtitle1'
+              align='center'
+              sx={{ color: colorWhite, fontSize: 20, fontFamily: manropeRegular }}
+            >
+              Sorry the page you are looking for does not exist, click the <br />
+              button below to head on back to the home base.
+            </Typography>
+            <Box height={24} />
+            <Box textAlign='center'>
+              <Button variant='contained' color='primary'>
+                Back To Home
+              </Button>
+            </Box>
+          </div>
         </div>
       </div>
     </div>

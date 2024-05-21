@@ -59,8 +59,7 @@ export default function Event3() {
           ))}
         </Grid>
 
-        <Box height={48} />
-        <Box textAlign='center'>
+        <Box className={styles.btnBox}>
           <Button variant='contained'>Join Early Access IDO List</Button>
         </Box>
       </Container>

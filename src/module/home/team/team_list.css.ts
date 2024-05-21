@@ -19,12 +19,29 @@ export const title = style({
   fontFamily: manropeSemiBold,
   color: colorWhite,
   textAlign: 'center',
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      fontSize: 24,
+      lineHeight: '33px',
+      marginBottom: 32,
+    },
+  },
 });
 
 export const list = style({
   position: 'relative',
   gap: 32,
   justifyContent: 'center',
+});
+
+export const item = style({
+  borderRadius: '0 0 8px 8px',
+  background: 'rgba(154, 9, 139, 0.10)',
+});
+
+export const itemPadding = style({
+  padding: '0 16px 32px 16px',
 });
 
 export const header = style({
@@ -65,7 +82,15 @@ export const role = style({
   marginBottom: 38,
 });
 
-export const infoList = style({ padding: 0, gap: 28 });
+export const infoList = style({
+  padding: 0,
+  gap: 28,
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      gap: 20,
+    },
+  },
+});
 
 export const infoTitle = style({
   fontSize: 18,

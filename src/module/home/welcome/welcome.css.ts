@@ -21,6 +21,13 @@ export const title1 = style({
   fontFamily: manropeMedium,
   color: colorWhite,
   textAlign: 'center',
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      fontSize: 14,
+      lineHeight: '19px',
+    },
+  },
 });
 
 export const title2 = style({
@@ -30,6 +37,13 @@ export const title2 = style({
   fontFamily: manropeBold,
   color: colorWhite,
   textAlign: 'center',
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      fontSize: 48,
+      lineHeight: '66px',
+    },
+  },
 });
 
 export const title3 = style({
@@ -39,6 +53,15 @@ export const title3 = style({
   color: colorWhite,
   fontFamily: manropeRegular,
   textAlign: 'center',
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      margin: '0 auto 32px',
+      maxWidth: 310,
+      fontSize: 14,
+      lineHeight: '22px',
+    },
+  },
 });
 
 export const list = style({
@@ -47,6 +70,13 @@ export const list = style({
   alignItems: 'center',
   gap: 32,
   marginBottom: 40,
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      gap: 16,
+      marginBottom: 56,
+    },
+  },
 });
 
 export const itemValueList = style({
@@ -62,6 +92,14 @@ export const itemValue = style({
   lineHeight: '64px',
   fontFamily: electrolizeRegular,
   color: colorWhite,
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      padding: 12,
+      fontSize: 18,
+      lineHeight: '29px',
+    },
+  },
 });
 
 export const itemKey = style({
@@ -71,6 +109,13 @@ export const itemKey = style({
   lineHeight: '29px',
   color: colorWhite,
   fontFamily: manropeRegular,
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      fontSize: 14,
+      lineHeight: '22px',
+    },
+  },
 });
 
 export const imgBox = style({
@@ -97,6 +142,14 @@ export const founderTitle = style({
   lineHeight: '38px',
   fontFamily: manropeSemiBold,
   color: colorWhite,
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      fontSize: 20,
+      lineHeight: '27px',
+      marginBottom: 16,
+    },
+  },
 });
 
 export const founderBold = style({
@@ -107,6 +160,13 @@ export const founderBold = style({
   fontSize: 28,
   lineHeight: '38px',
   fontFamily: manropeSemiBold,
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      fontSize: 20,
+      lineHeight: '27px',
+    },
+  },
 });
 
 export const founderList = style({
@@ -116,4 +176,22 @@ export const founderList = style({
   justifyContent: 'center',
   gap: 32,
   flexWrap: 'wrap',
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      gap: 18,
+      marginBottom: 56,
+      justifyContent: 'space-around',
+    },
+  },
+});
+
+export const img = style({
+  height: 28,
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      height: 18,
+    },
+  },
 });
