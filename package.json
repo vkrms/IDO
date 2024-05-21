@@ -43,6 +43,7 @@
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "local-ssl-proxy": "^2.0.5",
+    "sharp": "^0.33.4",
     "typescript": "^5.4.5"
   }
 }
