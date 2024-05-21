@@ -1,4 +1,4 @@
-name: EventFlo Backend Production Tag Deployment
+name: EventFlo Landing Production Tag Deployment
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
@@ -22,8 +22,8 @@ jobs:
           version: 8
           run_install: false
       - name: Install Vercel CLI
-        run: pnpm add --global vercel@34.1.1
-      - name: Pull EventFlo Backend Vercel Environment Information
-        run: vercel pull --yes --environment=production --token=${{ secrets.EVENTFLO_BACKEND }}
-      - name: Deploy EventFlo Backend to Vercel Production (without --prebuilt)
-        run: vercel deploy --prod --token=${{ secrets.EVENTFLO_BACKEND }}
+        run: pnpm add --global vercel@34.2.0
+      - name: Pull EventFlo Landing Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.EVENTFLO_LANDING }}
+      - name: Deploy EventFlo Landing to Vercel Production (without --prebuilt)
+        run: vercel deploy --prod --token=${{ secrets.EVENTFLO_LANDING }}
