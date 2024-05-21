@@ -10,6 +10,14 @@ export const title = style({
   color: colorWhite,
   fontFamily: manropeSemiBold,
   textAlign: 'center',
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      fontSize: 32,
+      lineHeight: '44px',
+      marginBottom: 8,
+    },
+  },
 });
 
 export const subtitle = style({
@@ -19,6 +27,14 @@ export const subtitle = style({
   color: colorWhite,
   textAlign: 'center',
   marginBottom: 80,
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      fontSize: 14,
+      lineHeight: '22px',
+      marginBottom: 40,
+    },
+  },
 });
 
 export const list = style({
@@ -26,12 +42,23 @@ export const list = style({
   gap: 40,
   justifyContent: 'space-between',
   alignItems: 'center',
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      justifyContent: 'center',
+    },
+  },
 });
 
 export const legendList = style({
   display: 'flex',
   gap: 40,
   flexDirection: 'column',
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      gap: 32,
+    },
+  },
 });
 
 export const legendTitle = style({
@@ -39,6 +66,14 @@ export const legendTitle = style({
   lineHeight: '36px',
   fontFamily: manropeBold,
   marginBottom: 4,
+
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      fontSize: 20,
+      lineHeight: '30px',
+      marginBottom: 8,
+    },
+  },
 });
 
 export const legendText = style({
@@ -47,6 +82,12 @@ export const legendText = style({
   lineHeight: '24px',
   fontFamily: manropeLight,
   color: colorWhite,
+  '@media': {
+    'screen and (max-device-width: 767px)': {
+      fontSize: 12,
+      lineHeight: '18px',
+    },
+  },
 });
 
 export const line = style({

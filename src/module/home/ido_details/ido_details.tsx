@@ -27,7 +27,9 @@ export default function IdoDetails() {
   // ----------------------------------------------------------------------------------
   return (
     <Container>
-      <Typography className={styles.title}>IDO Details</Typography>
+      <Typography className={styles.title} sx={{ marginBottom: '56px' }}>
+        IDO Details
+      </Typography>
 
       <TokenomicsList list={dataList} cate='idoDetails' />
     </Container>

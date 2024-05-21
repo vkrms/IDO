@@ -16,6 +16,7 @@ import IconLogo from '@/assets/img/logo.svg';
 import IconEmail from '@/assets/svg/email.svg';
 import IconEye from '@/assets/svg/eye.svg';
 import { linkToBtn } from '@/style/common/link.css';
+import { manropeMedium } from '@/style/config/font.css';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -84,13 +85,18 @@ export default function Login() {
 
         <Grid className={styles.rightBox}>
           <Stack spacing={2} className={styles.rightContent}>
-            <Typography variant='h2' align='center' textTransform='uppercase'>
+            <Typography
+              variant='h2'
+              align='center'
+              textTransform='uppercase'
+              style={{ fontSize: 30, fontFamily: manropeMedium }}
+            >
               Login
             </Typography>
             <Box height={40} />
             <Box sx={{ marginBottom: '20px' }}>
               <FormControl fullWidth>
-                <Typography variant='subText8' sx={{ marginBottom: '12px' }}>
+                <Typography sx={{ marginBottom: '12px', fontSize: 14, fontFamily: manropeMedium }}>
                   Username or Email Address *
                 </Typography>
                 <TextField
@@ -107,6 +113,25 @@ export default function Login() {
                   {...register('account', {
                     required: true,
                   })}
+                  sx={{
+                    color: colorTextBlack,
+                    '& .MuiInputBase-input': {
+                      paddingTop: '12px',
+                      paddingBottom: '12px',
+                      color: colorTextBlack,
+                    },
+                    '& .MuiOutlinedInput-notchedOutline': {
+                      borderColor: ' #dbdbdb !important',
+                      height: 48,
+                      borderRadius: '8px',
+                    },
+                    '&:hover .MuiOutlinedInput-notchedOutline': {
+                      border: '1px solid #dbdbdb !important',
+                    },
+                    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                      border: '1px solid #dbdbdb !important',
+                    },
+                  }}
                 />
                 {errAcc && <p>{err?.message}</p>}
               </FormControl>
@@ -114,7 +139,7 @@ export default function Login() {
 
             <Box sx={{ marginBottom: '20px' }}>
               <FormControl fullWidth>
-                <Typography variant='subText8' sx={{ marginBottom: '12px' }}>
+                <Typography sx={{ marginBottom: '12px', fontSize: 14, fontFamily: manropeMedium }}>
                   Password *
                 </Typography>
                 <TextField
@@ -131,6 +156,25 @@ export default function Login() {
                   {...register('password', {
                     required: true,
                   })}
+                  sx={{
+                    color: colorTextBlack,
+                    '& .MuiInputBase-input': {
+                      paddingTop: '12px',
+                      paddingBottom: '12px',
+                      color: colorTextBlack,
+                    },
+                    '& .MuiOutlinedInput-notchedOutline': {
+                      borderColor: '#dbdbdb !important',
+                      height: 48,
+                      borderRadius: '8px',
+                    },
+                    '&:hover .MuiOutlinedInput-notchedOutline': {
+                      border: '1px solid #dbdbdb !important',
+                    },
+                    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                      border: '1px solid #dbdbdb !important',
+                    },
+                  }}
                 />
                 {errPwd && <p>{err?.message}</p>}
               </FormControl>
@@ -146,8 +190,8 @@ export default function Login() {
               Login
             </Button>
 
-            <Typography variant='subText9' sx={{ color: colorTextGrey }}>
-              Don’t have account?{' '}
+            <Typography sx={{ color: colorTextGrey, fontSize: 13, fontFamily: manropeMedium }}>
+              Don’t have account?
               <Link href='#' className={linkToBtn} style={{ color: colorPrimary }}>
                 Sign Up
               </Link>
