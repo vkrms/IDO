@@ -1,5 +1,5 @@
-const { createVanillaExtractPlugin } = require("@vanilla-extract/next-plugin");
-const withPWA = require("next-pwa");
+import { createVanillaExtractPlugin } from "@vanilla-extract/next-plugin";
+import  withPWA from "next-pwa";
 
 // ------------------------------------------------------------------------------
 
@@ -81,23 +81,11 @@ const webpack = (config, options) => {
 
 const finalConfig = Object.assign({}, pwaConf, vanillaConf);
 
-// async function rewrites() {
-// 	return {
-// 		beforeFiles: [
-// 			{
-// 				source: "/app/:path*",
-// 				destination: `${process.env.NEXT_PUBLIC_APP_BACKEND_HOST}/:path*`,
-// 			},
-// 		],
-// 	};
-// }
-
 finalConfig.webpack = webpack;
-// finalConfig.rewrites = rewrites;
 
 // ------------------------------------------------------------------------------
 
-module.exports = finalConfig;
+export default finalConfig;
 
 // ------------------------------------------------------------------------------
 
