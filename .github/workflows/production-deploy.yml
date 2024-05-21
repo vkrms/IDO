@@ -1,0 +1,29 @@
+name: EventFlo Landing Production Tag Deployment
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+on:
+  push:
+    tags:
+      - 'prod[0-9]+.[0-9]+.[0-9a-z]+'
+jobs:
+  Deploy-Production:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 21
+      - uses: pnpm/action-setup@v3
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 8
+          run_install: false
+      - name: Install Vercel CLI
+        run: pnpm add --global vercel@34.2.0
+      - name: Pull EventFlo Landing Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.EVENTFLO_LANDING }}
+      - name: Deploy EventFlo Landing to Vercel Production (without --prebuilt)
+        run: vercel deploy --prod --token=${{ secrets.EVENTFLO_LANDING }}
