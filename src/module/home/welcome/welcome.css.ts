@@ -1,4 +1,3 @@
-import { colorBorder, colorWhite } from '@/style/config/color.css';
 import {
   electrolizeRegular,
   manropeBold,
@@ -7,6 +6,7 @@ import {
   manropeSemiBold,
 } from '@/style/config/font.css';
 
+import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
 
 export const bg = style({
@@ -57,7 +57,7 @@ export const itemValueList = style({
 export const itemValue = style({
   padding: '12px 16px',
   borderRadius: 6,
-  border: `2px solid ${colorBorder}`,
+  border: `2px solid ${colorWhite}`,
   fontSize: 40,
   lineHeight: '64px',
   fontFamily: electrolizeRegular,

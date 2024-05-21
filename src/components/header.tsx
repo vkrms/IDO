@@ -22,7 +22,7 @@ const dataList = ['Whitepaper', 'Why FloCoin', 'Tokenomics', 'Our Team', 'Roadma
 
 // ----------------------------------------------------------------------------------
 
-export default function LandingHeader() {
+export default function Header() {
   // ----------------------------------------------------------------------------------
 
   return (

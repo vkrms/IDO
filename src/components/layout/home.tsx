@@ -1,32 +1,30 @@
-import LandingHeader from '@/components/header';
+import * as styles from '@/components/layout/home.css';
+
+import Header from '@/components/header';
 import { getBasicLayout } from '@/components/layout/base';
-import { bg } from '@/module/home/welcome/welcome.css';
 import type { NextPageWithLayout } from '@/pages/_app';
 import { Box } from '@mui/material';
 import type { ReactElement } from 'react';
 
 /**
  * ----------------------------------------------------------------------------------
- * landing layout
+ * home layout
  * ----------------------------------------------------------------------------------
  *
- * @author zhangmao 2024/01/15
+ * @author shuangshuang 2024/05/21
  */
 
 export interface Props {
   children: React.ReactElement;
 }
 
-const LandingLayout: NextPageWithLayout<Props> = ({ children }) => {
+const HomeLayout: NextPageWithLayout<Props> = ({ children }) => {
   return (
-    <Box sx={{ background: '#010314', minHeight: '100vh', position: 'relative' }}>
-      <Box className={bg}>
-        <LandingHeader />
-
-        {children}
-      </Box>
+    <Box className={styles.container}>
+      <Header />
+      {children}
     </Box>
   );
 };
 
-export const getLayout = (page: ReactElement) => getBasicLayout(<LandingLayout>{page}</LandingLayout>);
+export const getLayout = (page: ReactElement) => getBasicLayout(<HomeLayout>{page}</HomeLayout>);
