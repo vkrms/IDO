@@ -11,8 +11,8 @@ import * as styles from '@/module/login/index.css';
 import { colorPrimary, colorTextBlack, colorTextGrey } from '@/style/config/color.css';
 import { Box, Button, CardMedia, FormControl, Grid, Stack, TextField, Typography } from '@mui/material';
 
-import IconLogo from '@/assets/img/header/logo.svg';
 import bannerImg from '@/assets/img/login/banner.png';
+import IconLogo from '@/assets/img/logo.svg';
 import IconEmail from '@/assets/svg/email.svg';
 import IconEye from '@/assets/svg/eye.svg';
 import { linkToBtn } from '@/style/common/link.css';
