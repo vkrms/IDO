@@ -1,0 +1,30 @@
+name: EventFlo Backend Preview Deployment
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+on:
+  pull_request_target:
+    types:
+      - closed
+jobs:
+  EventFlo-Preview:
+    if: ${{ github.ref != 'refs/heads/main' && github.event.pull_request.merged == true }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 21
+      - uses: pnpm/action-setup@v3
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 8
+          run_install: false
+      - name: Install Vercel CLI
+        run: pnpm add --global vercel@34.1.1
+      - name: Pull EventFlo Backend Environment Information
+        run: vercel pull --yes --environment=preview --token=${{ secrets.EVENTFLO_BACKEND }}
+      - name: Deploy EventFlo Backend To Vercel Preview (without --prebuilt)
+        run: vercel deploy --token=${{ secrets.EVENTFLO_BACKEND }}
