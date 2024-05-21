@@ -1,5 +1,4 @@
-import { colorBorder, colorWhite } from '@/style/config/color.css';
-
+import { colorWhite } from '@/style/config/color.css';
 import { manropeMedium } from '@/style/config/font.css';
 import { zIndexHeader } from '@/style/config/zindex.css';
 import { style } from '@vanilla-extract/css';
