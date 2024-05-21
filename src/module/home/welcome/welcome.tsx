@@ -10,16 +10,15 @@ import * as styles from '@/module/home/welcome/welcome.css';
 
 import { Box, Button, CardMedia, Grid, Typography } from '@mui/material';
 
-import IconFounder1 from '@/assets/img//home/welcome/founder_1.svg';
-import IconFounder2 from '@/assets/img//home/welcome/founder_2.svg';
-import IconFounder3 from '@/assets/img//home/welcome/founder_3.svg';
-import IconFounder4 from '@/assets/img//home/welcome/founder_4.svg';
-import IconFounder5 from '@/assets/img//home/welcome/founder_5.svg';
-import IconFounder6 from '@/assets/img//home/welcome/founder_6.svg';
-import IconFounder7 from '@/assets/img//home/welcome/founder_7.svg';
-import IconFounder8 from '@/assets/img//home/welcome/founder_8.svg';
 import ImgVideo from '@/assets/img//home/welcome/video.png';
 import IconVideo from '@/assets/img//home/welcome/video.svg';
+import img1 from '@/assets/img/home/welcome/img_1.png';
+import img2 from '@/assets/img/home/welcome/img_2.png';
+import img3 from '@/assets/img/home/welcome/img_3.png';
+import img4 from '@/assets/img/home/welcome/img_4.png';
+import img5 from '@/assets/img/home/welcome/img_5.png';
+import img6 from '@/assets/img/home/welcome/img_6.png';
+import img7 from '@/assets/img/home/welcome/img_7.png';
 import { EARLY_ACCESS } from '@/router/name';
 import { linkToBtn } from '@/style/common/link.css';
 import { Container } from '@mui/material';
@@ -40,35 +39,31 @@ const list = [
 const founderList = [
   {
     id: 'founder1',
-    icon: <IconFounder1 />,
+    img: img1,
   },
   {
     id: 'founder2',
-    icon: <IconFounder2 />,
+    img: img2,
   },
   {
     id: 'founder3',
-    icon: <IconFounder3 />,
+    img: img3,
   },
   {
     id: 'founder4',
-    icon: <IconFounder4 />,
+    img: img4,
   },
   {
     id: 'founder5',
-    icon: <IconFounder5 />,
+    img: img5,
   },
   {
     id: 'founder6',
-    icon: <IconFounder6 />,
+    img: img6,
   },
   {
     id: 'founder7',
-    icon: <IconFounder7 />,
-  },
-  {
-    id: 'founder8',
-    icon: <IconFounder8 />,
+    img: img7,
   },
 ];
 
@@ -120,7 +115,9 @@ export default function Welcome() {
 
         <Grid className={styles.founderList}>
           {founderList.map((founder) => (
-            <Grid key={founder.id}>{founder.icon}</Grid>
+            <Grid key={founder.id}>
+              <CardMedia component='img' image={founder.img.src} height={28} />
+            </Grid>
           ))}
         </Grid>
 

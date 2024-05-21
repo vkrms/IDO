@@ -1,9 +1,10 @@
 import * as styles from '@/components/header.css';
 
-import { EARLY_ACCESS, LOGIN } from '@/router/name';
-import { Button, Grid, Typography } from '@mui/material';
+import { Button, Grid, IconButton, Typography } from '@mui/material';
 
 import IconLogo from '@/assets/img//logo.svg';
+import IconMenu from '@/assets/svg/menu.svg';
+import { LOGIN } from '@/router/name';
 import { linkToBtn } from '@/style/common/link.css';
 import { colorWhite } from '@/style/config/color.css';
 import Link from 'next/link';
