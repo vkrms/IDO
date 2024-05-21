@@ -1,0 +1,14 @@
+{
+	"devCommand": "local-ssl-proxy --source 3003 --target 3000 & next dev -H 0.0.0.0",
+	"trailingSlash": false,
+	"git": {
+		"silent": false,
+		"deploymentEnabled": false
+	},
+	"crons": [
+		{
+			"path": "/timers/foo/per_30_minutes",
+			"schedule": "*/30 * * * *"
+		}
+	]
+}
