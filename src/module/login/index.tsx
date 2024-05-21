@@ -13,8 +13,8 @@ import { Box, Button, CardMedia, FormControl, Grid, Stack, TextField, Typography
 
 import IconLogo from '@/assets/img/header/logo.svg';
 import bannerImg from '@/assets/img/login/banner.png';
-import IconEmail from '@/assets/svgs/email.svg';
-import IconEye from '@/assets/svgs/eye.svg';
+import IconEmail from '@/assets/svg/email.svg';
+import IconEye from '@/assets/svg/eye.svg';
 import { linkToBtn } from '@/style/common/link.css';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -87,6 +87,7 @@ export default function Login() {
             <Typography variant='h2' align='center' textTransform='uppercase'>
               Login
             </Typography>
+            <Box height={40} />
             <Box sx={{ marginBottom: '20px' }}>
               <FormControl fullWidth>
                 <Typography variant='subText8' sx={{ marginBottom: '12px' }}>
