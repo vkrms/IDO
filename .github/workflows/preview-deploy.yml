@@ -1,4 +1,4 @@
-name: EventFlo Backend Preview Deployment
+name: EventFlo Landing Preview Deployment
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
@@ -23,8 +23,8 @@ jobs:
           version: 8
           run_install: false
       - name: Install Vercel CLI
-        run: pnpm add --global vercel@34.1.1
-      - name: Pull EventFlo Backend Environment Information
-        run: vercel pull --yes --environment=preview --token=${{ secrets.EVENTFLO_BACKEND }}
-      - name: Deploy EventFlo Backend To Vercel Preview (without --prebuilt)
-        run: vercel deploy --token=${{ secrets.EVENTFLO_BACKEND }}
+        run: pnpm add --global vercel@34.2.0
+      - name: Pull EventFlo Landing Environment Information
+        run: vercel pull --yes --environment=preview --token=${{ secrets.EVENTFLO_LANDING }}
+      - name: Deploy EventFlo Landing To Vercel Preview (without --prebuilt)
+        run: vercel deploy --token=${{ secrets.EVENTFLO_LANDING }}
