@@ -5,6 +5,7 @@ import { StyledEngineProvider, ThemeProvider, createTheme } from '@mui/material/
 
 import { colorPrimary, colorTextBlack, colorTextGrey, colorWhite } from '@/style/config/color.css';
 import { manropeBold, manropeMedium } from '@/style/config/font.css';
+import { borderColor, borderRadius, height, maxWidth } from '@mui/system';
 
 /**
  * ----------------------------------------------------------------------------------
@@ -32,6 +33,70 @@ const theme = createTheme({
     },
   },
   components: {
+    MuiInputBase: {
+      styleOverrides: {
+        root: {
+          '&.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline': {
+            borderColor: colorWhite,
+          },
+
+          '&.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor: colorWhite,
+          },
+          '&.MuiInput-underline:before': {
+            height: 48,
+            borderRadius: 8,
+            border: `1px solid ${colorWhite}`,
+          },
+          '&.MuiInput-underline:after': {
+            border: 'none',
+          },
+
+          '&.MuiInput-underline.MuiInput-root:hover:before': {
+            border: `1px solid ${colorWhite}`,
+          },
+          '&.MuiInput-underline.MuiInput-root.Mui-focused:hover:before': {
+            border: `1px solid ${colorWhite}`,
+          },
+        },
+        input: {
+          paddingTop: '12px',
+          paddingBottom: '12px',
+          color: colorWhite,
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        input: {
+          paddingTop: '12px',
+          paddingBottom: '12px',
+          color: colorWhite,
+        },
+        notchedOutline: {
+          border: `1px solid ${colorWhite}`,
+          height: 48,
+          borderRadius: '8px',
+        },
+      },
+    },
+    MuiInputAdornment: {
+      styleOverrides: {
+        root: {
+          paddingLeft: '16px',
+          marginRight: '16px',
+        },
+      },
+    },
+    MuiButtonBase: {
+      styleOverrides: {
+        root: {
+          '&.MuiPhoneNumber-flagButton': {
+            maxWidth: 24,
+          },
+        },
+      },
+    },
     MuiListItemIcon: {
       styleOverrides: {
         root: {

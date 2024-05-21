@@ -19,6 +19,9 @@ import img3 from '@/assets/img//home/team/founder_3.png';
 import img4 from '@/assets/img//home/team/key_member_1.png';
 import img5 from '@/assets/img//home/team/key_member_2.png';
 import img6 from '@/assets/img//home/team/key_member_3.png';
+import { EARLY_ACCESS } from '@/router/name';
+import { linkToBtn } from '@/style/common/link.css';
+import Link from 'next/link';
 
 // ----------------------------------------------------------------------------------
 const list: TeamData[] = [
@@ -135,9 +138,11 @@ export default function Founders() {
       <FoundersList list={list} />
       <Box height={80} />
       <Box textAlign='center'>
-        <Button variant='contained' size='large'>
-          Join Early Access IDO List
-        </Button>
+        <Link href={EARLY_ACCESS} className={linkToBtn}>
+          <Button variant='contained' size='large'>
+            Join Early Access IDO List
+          </Button>
+        </Link>
       </Box>
     </Container>
   );

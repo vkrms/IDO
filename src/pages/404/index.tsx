@@ -23,7 +23,8 @@ const NotFound: NextPageWithLayout = () => {
         <title>404 notfound</title>
       </Head>
 
-      <div style={{ marginTop: 256, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Box height={256} />
         <div>
           <Typography
             variant='h1'

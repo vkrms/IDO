@@ -20,8 +20,11 @@ import IconFounder7 from '@/assets/img//home/welcome/founder_7.svg';
 import IconFounder8 from '@/assets/img//home/welcome/founder_8.svg';
 import ImgVideo from '@/assets/img//home/welcome/video.png';
 import IconVideo from '@/assets/img//home/welcome/video.svg';
+import { EARLY_ACCESS } from '@/router/name';
+import { linkToBtn } from '@/style/common/link.css';
 import { Container } from '@mui/material';
 import { split } from 'lodash';
+import Link from 'next/link';
 
 // ----------------------------------------------------------------------------------
 
@@ -102,9 +105,11 @@ export default function Welcome() {
         </Grid>
 
         <Box sx={{ textAlign: 'center' }}>
-          <Button variant='contained' size='large'>
-            Join Early Access IDO List
-          </Button>
+          <Link href={EARLY_ACCESS} className={linkToBtn}>
+            <Button variant='contained' size='large'>
+              Join Early Access IDO List
+            </Button>
+          </Link>
         </Box>
 
         <Box height={48} />

@@ -1,9 +1,9 @@
 import * as styles from '@/components/header.css';
 
+import { EARLY_ACCESS, LOGIN } from '@/router/name';
 import { Button, Grid, Typography } from '@mui/material';
 
 import IconLogo from '@/assets/img//logo.svg';
-import { LOGIN } from '@/router/name';
 import { linkToBtn } from '@/style/common/link.css';
 import { colorWhite } from '@/style/config/color.css';
 import Link from 'next/link';
@@ -47,7 +47,8 @@ export default function Header() {
               sx={{ background: 'transparent', borderColor: colorWhite, color: colorWhite }}
               fullWidth
             >
-              Early Access
+              {/* Early Access */}
+              LOGIN
             </Button>
           </Link>
         </Grid>
