@@ -13,7 +13,7 @@ export const header = style({
   padding: '32px 160px',
 
   '@media': {
-    'screen and (max-device-width: 768px)': {
+    'screen and (max-width: 768px)': {
       padding: '32px 16px',
     },
     'screen and (max-width: 1023px)': {

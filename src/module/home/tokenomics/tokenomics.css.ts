@@ -12,7 +12,7 @@ export const title = style({
   textAlign: 'center',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 32,
       lineHeight: '44px',
       marginBottom: 22,
@@ -28,7 +28,7 @@ export const box = style({
   marginBottom: 56,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       justifyContent: 'start',
       marginBottom: 32,
     },
@@ -43,7 +43,7 @@ export const boxLeft = style({
   color: colorWhite,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 24,
       lineHeight: '33px',
       maxWidth: 'unset',
@@ -59,7 +59,7 @@ export const boxRight = style({
   color: colorWhite,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       maxWidth: 'unset',
       fontSize: 12,
       lineHeight: '22px',

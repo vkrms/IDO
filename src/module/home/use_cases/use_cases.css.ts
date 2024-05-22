@@ -12,7 +12,7 @@ export const title = style({
   textAlign: 'center',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 32,
       lineHeight: '44px',
       marginBottom: 32,
@@ -26,7 +26,7 @@ export const list = style({
   justifyContent: 'space-between',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       gap: 28,
     },
   },
@@ -41,7 +41,7 @@ export const itemId = style({
   fontFamily: manropeBold,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 40,
       lineHeight: '52px',
     },
@@ -57,7 +57,7 @@ export const itemTitle = style({
   color: colorWhite,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 20,
       lineHeight: '27px',
       maxWidth: 'unset',
@@ -72,7 +72,7 @@ export const itemText = style({
   color: colorWhite,
   fontFamily: manropeLight,
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 12,
       lineHeight: '18px',
     },
@@ -84,7 +84,7 @@ export const btnBox = style({
   textAlign: 'center',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       marginTop: 40,
       textAlign: 'left',
     },

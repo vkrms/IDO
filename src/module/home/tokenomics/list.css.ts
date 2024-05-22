@@ -18,7 +18,7 @@ export const list = style({
   gap: 56,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       gap: 40,
     },
   },
@@ -30,7 +30,7 @@ export const item = style({
   alignItems: 'center',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       gap: 40,
       flexDirection: 'column',
     },
@@ -43,7 +43,7 @@ export const divider = style({
   background: colorPrimary,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       width: 56,
       height: 2,
       background: colorPrimary,

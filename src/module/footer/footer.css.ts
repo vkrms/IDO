@@ -9,7 +9,7 @@ export const footer = style({
   background: 'url(/img/footer/bg_1.png) bottom left no-repeat, url(/img/footer/bg_2.png) bottom right no-repeat',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       background:
         'url(/img/footer/bg_1_mobile.png) top left no-repeat, url(/img/footer/bg_2_mobile.png) bottom right no-repeat',
     },
@@ -21,7 +21,7 @@ export const box = style({
   gap: 40,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       gap: 32,
       justifyContent: 'center',
     },
@@ -32,7 +32,7 @@ export const logo = style({
   marginBottom: 22,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       textAlign: 'center',
     },
   },
@@ -45,7 +45,7 @@ export const iconList = style({
   marginBottom: 24,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       justifyContent: 'center',
     },
   },
@@ -59,7 +59,7 @@ export const text = style({
   fontFamily: manropeRegular,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 14,
       lineHeight: '22px',
       textAlign: 'center',
@@ -74,7 +74,7 @@ export const link = style({
   gap: 16,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       justifyContent: 'center',
       textAlign: 'center',
     },
@@ -99,7 +99,7 @@ export const copyright = style({
   fontFamily: manropeSemiBold,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       marginTop: 28,
     },
   },

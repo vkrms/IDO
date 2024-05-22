@@ -13,7 +13,7 @@ export const title = style({
   textAlign: 'center',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       maxWidth: 358,
       fontSize: 32,
       lineHeight: '44px',
@@ -32,7 +32,7 @@ export const subtitle = style({
   textAlign: 'center',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       maxWidth: 358,
       fontSize: 12,
       lineHeight: '22px',
@@ -48,7 +48,7 @@ export const list = style({
   flexWrap: 'wrap',
   gap: 32,
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       gap: 22,
     },
   },
@@ -62,7 +62,7 @@ export const itemTitle = style({
   fontFamily: manropeSemiBold,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 18,
     },
   },
@@ -75,7 +75,7 @@ export const itemText = style({
   color: colorWhite,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 12,
       lineHeight: '18px',
     },
@@ -86,7 +86,7 @@ export const btnBox = style({
   marginTop: 48,
   textAlign: 'center',
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       marginTop: 40,
       textAlign: 'left',
     },

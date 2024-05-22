@@ -12,7 +12,7 @@ export const title = style({
   textAlign: 'center',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 32,
       lineHeight: '44px',
       marginBottom: 8,
@@ -29,7 +29,7 @@ export const subtitle = style({
   marginBottom: 80,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 14,
       lineHeight: '22px',
       marginBottom: 40,
@@ -44,7 +44,7 @@ export const list = style({
   alignItems: 'center',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       justifyContent: 'center',
     },
   },
@@ -55,7 +55,7 @@ export const legendList = style({
   gap: 40,
   flexDirection: 'column',
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       gap: 32,
     },
   },
@@ -68,7 +68,7 @@ export const legendTitle = style({
   marginBottom: 4,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 20,
       lineHeight: '30px',
       marginBottom: 8,
@@ -83,7 +83,7 @@ export const legendText = style({
   fontFamily: manropeLight,
   color: colorWhite,
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 12,
       lineHeight: '18px',
     },
