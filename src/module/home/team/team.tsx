@@ -58,21 +58,6 @@ const list: TeamData[] = [
           },
         ],
       },
-      {
-        img: img3,
-        name: 'Richie McNeill',
-        role: 'Founder',
-        info: [
-          {
-            title: 'Industry Legend',
-            text: 'test text',
-          },
-          {
-            title: 'King Connector',
-            text: 'test text',
-          },
-        ],
-      },
     ],
   },
   {
@@ -111,6 +96,21 @@ const list: TeamData[] = [
   {
     title: 'Our Advisors',
     list: [
+      {
+        img: img3,
+        name: 'Richie McNeill',
+        role: 'Founder',
+        info: [
+          {
+            title: 'Industry Legend',
+            text: 'test text',
+          },
+          {
+            title: 'King Connector',
+            text: 'test text',
+          },
+        ],
+      },
       {
         img: img7,
         name: 'Rudy Santino',
