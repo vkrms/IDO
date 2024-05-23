@@ -12,7 +12,7 @@ export const title = style({
   textAlign: 'center',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 32,
       lineHeight: '44px',
       marginBottom: 40,

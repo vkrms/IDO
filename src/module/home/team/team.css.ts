@@ -13,7 +13,7 @@ export const title = style({
   textAlign: 'center',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       maxWidth: 310,
       margin: '0 auto 8px',
       fontSize: 32,
@@ -31,7 +31,7 @@ export const subtitle = style({
   textAlign: 'center',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 12,
       lineHeight: '22px',
     },
@@ -42,7 +42,7 @@ export const btnBox = style({
   marginTop: 80,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       marginTop: 48,
     },
   },

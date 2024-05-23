@@ -4,7 +4,7 @@ export const boxMargin = style({
   height: 120,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       height: 64,
     },
   },

@@ -16,7 +16,7 @@ export const box = style({
   gridTemplateColumns: 'repeat(2, 50%)',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       minWidth: 'unset',
     },
     'screen and (max-width: 1024px)': {
@@ -55,7 +55,7 @@ export const rightContent = style({
   maxWidth: 480,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       minWidth: 300,
     },
   },

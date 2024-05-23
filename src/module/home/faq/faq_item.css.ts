@@ -16,7 +16,7 @@ export const quesItem = style({
   },
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       padding: '24px 16px',
       marginBottom: 24,
 
@@ -36,7 +36,7 @@ export const itemTitle = style({
   fontFamily: manropeMedium,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 18,
       lineHeight: '29px',
     },
@@ -51,7 +51,7 @@ export const itemInfo = style({
   marginBottom: 24,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 14,
       lineHeight: '21px',
       marginBottom: 16,
@@ -75,7 +75,7 @@ export const innerItem = style({
   },
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       marginBottom: 16,
 
       selectors: {
@@ -97,7 +97,7 @@ export const innerIdx = style({
   fontFamily: manropeBold,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 18,
       lineHeight: '29px',
     },
@@ -111,7 +111,7 @@ export const innerName = style({
   fontFamily: manropeSemiBold,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 20,
       lineHeight: '30px',
     },
@@ -125,7 +125,7 @@ export const innerText = style({
   fontFamily: manropeRegular,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 14,
       lineHeight: '21px',
     },

@@ -11,7 +11,7 @@ export const bg = style({
   backgroundSize: 'contain',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       backgroundImage: 'url(/img/home/flo_coin/bg_mobile.png)',
       backgroundSize: '30%',
     },
@@ -27,7 +27,7 @@ export const title = style({
   textAlign: 'center',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       maxWidth: 252,
       margin: '0 auto 8px',
       fontSize: 32,
@@ -47,7 +47,7 @@ export const subtitle = style({
   fontFamily: manropeBold,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 12,
       lineHeight: '16px',
       marginBottom: 8,
@@ -65,7 +65,7 @@ export const text = style({
   color: colorWhite,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 12,
       lineHeight: '16px',
       maxWidth: 358,
@@ -79,7 +79,7 @@ export const list = style({
   gap: '72px 32px',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       gap: 32,
     },
   },
@@ -87,7 +87,7 @@ export const list = style({
 
 export const item = style({
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       textAlign: 'center',
     },
   },
@@ -101,7 +101,7 @@ export const itemTitle = style({
   marginBottom: 8,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 20,
       lineHeight: '27px',
     },
@@ -115,7 +115,7 @@ export const itemText = style({
   fontFamily: manropeLight,
   maxWidth: 352,
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 12,
       lineHeight: '22spx',
     },

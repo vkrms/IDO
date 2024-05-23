@@ -21,7 +21,7 @@ export const title = style({
   textAlign: 'center',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 24,
       lineHeight: '33px',
       marginBottom: 32,
@@ -86,7 +86,7 @@ export const infoList = style({
   padding: 0,
   gap: 28,
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       gap: 20,
     },
   },

@@ -13,7 +13,7 @@ export const title = style({
   margin: '0 auto 16px',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       maxWidth: 310,
       margin: '0 auto 8px',
       fontSize: 32,
@@ -32,7 +32,7 @@ export const subtitle = style({
   margin: '0 auto 104px',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       maxWidth: 'unset',
       fontSize: 12,
       lineHeight: '22px',
@@ -43,7 +43,7 @@ export const subtitle = style({
 
 export const timeline1 = style({
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       display: 'none',
     },
   },
@@ -53,7 +53,7 @@ export const timeline2 = style({
   display: 'none',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       display: 'flex',
     },
   },
@@ -66,7 +66,7 @@ export const timmelineItem = style({
   padding: 0,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       gap: 0,
       selectors: {
         '&:before': {
@@ -79,7 +79,7 @@ export const timmelineItem = style({
 
 export const timelineContent = style({
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       paddingLeft: 46,
       paddingRight: 0,
       paddingTop: 0,
@@ -98,7 +98,7 @@ export const timeLimeTitle = style({
   lineHeight: '44px',
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 24,
       lineHeight: '33px',
       marginBottom: 8,
@@ -117,7 +117,7 @@ export const timeLineInfo = style({
   color: colorWhite,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 16,
       lineHeight: '22px',
       maxWidth: 'unset',
@@ -132,7 +132,7 @@ export const timeLineSubtitle = style({
   color: colorWhite,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 16,
       lineHeight: '22px',
     },
@@ -149,7 +149,7 @@ export const timelineDuration = style({
   fontFamily: manropeSemiBold,
 
   '@media': {
-    'screen and (max-device-width: 767px)': {
+    'screen and (max-width: 767px)': {
       fontSize: 18,
       lineHeight: '29px',
       marginBottom: 16,
