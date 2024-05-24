@@ -32,6 +32,9 @@ const list = [
   { value: '09', key: 'Seconds' },
 ];
 
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+
+
 // ----------------------------------------------------------------------------------
 
 const founderList = [
@@ -74,8 +77,16 @@ const founderList = [
 export default function Welcome() {
   // ----------------------------------------------------------------------------------
   return (
+  <>
+    <BackgroundGradientAnimation
+      firstColor='112, 0, 255'
+      secondColor='255, 0, 199'
+      interactive={false}
+    >
+      <div className="bob2">
     <Container>
-      <Box height={64} />
+          <Box height={176} />
+          
       <Typography variant='subtitle2' className={styles.title1}>
         Powered by FloCoin
       </Typography>
@@ -117,7 +128,13 @@ export default function Welcome() {
           <Grid key={founder.id}>{founder.icon}</Grid>
         ))}
       </Grid>
+        </Container>
+      </div>
+    </BackgroundGradientAnimation>
 
+
+
+    <Container>
       <Box className={styles.imgBox}>
         <CardMedia component='img' image={ImgVideo.src} />
         <Box className={styles.iconBox}>
@@ -125,5 +142,6 @@ export default function Welcome() {
         </Box>
       </Box>
     </Container>
+  </>
   );
 }

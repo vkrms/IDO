@@ -9,11 +9,13 @@ import {
 
 import { style } from '@vanilla-extract/css';
 
-export const bg = style({
-  paddingTop: 108,
-  background: 'url(/img/home/welcome/bg_1.png) top left no-repeat, url(/img/home/welcome/bg_2.png) top right no-repeat',
-  backgroundSize: 'contain',
-});
+export const foo = style({
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  right: 0,
+  zIndex: 1,
+})
 
 export const title1 = style({
   fontSize: 18,

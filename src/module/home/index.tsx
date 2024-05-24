@@ -20,11 +20,12 @@ import UseCases from '@/module/home/use_cases/use_cases';
 import Welcome from '@/module/home/welcome/welcome';
 import { Box } from '@mui/material';
 
+
 // ----------------------------------------------------------------------------------
 export default function HomePage() {
   // ----------------------------------------------------------------------------------
   return (
-    <Box>
+    <Box className="overflow-hidden">
       <Welcome />
       <Box height={120} />
       <FloCoin />

@@ -3,14 +3,15 @@ import { cn } from "@/lib/utils/cn";
 import { useEffect, useRef, useState } from "react";
 
 export const BackgroundGradientAnimation = ({
-    gradientBackgroundStart = "rgb(108, 0, 162)",
-    gradientBackgroundEnd = "rgb(0, 17, 82)",
+    gradientBackgroundStart = "rgb(0, 0, 0)",
+    gradientBackgroundEnd = "rgb(0, 0, 0)",
     firstColor = "18, 113, 255",
     secondColor = "221, 74, 255",
-    thirdColor = "100, 220, 255",
-    fourthColor = "200, 50, 50",
-    fifthColor = "180, 180, 50",
+    // thirdColor = "100, 220, 255",
+    // fourthColor = "200, 50, 50",
+    // fifthColor = "180, 180, 50",
     pointerColor = "140, 100, 255",
+    // size = "80%",
     size = "80%",
     blendingValue = "hard-light",
     children,
@@ -22,9 +23,9 @@ export const BackgroundGradientAnimation = ({
     gradientBackgroundEnd?: string;
     firstColor?: string;
     secondColor?: string;
-    thirdColor?: string;
-    fourthColor?: string;
-    fifthColor?: string;
+    // thirdColor?: string;
+    // fourthColor?: string;
+    // fifthColor?: string;
     pointerColor?: string;
     size?: string;
     blendingValue?: string;
@@ -50,9 +51,9 @@ export const BackgroundGradientAnimation = ({
         );
         document.body.style.setProperty("--first-color", firstColor);
         document.body.style.setProperty("--second-color", secondColor);
-        document.body.style.setProperty("--third-color", thirdColor);
-        document.body.style.setProperty("--fourth-color", fourthColor);
-        document.body.style.setProperty("--fifth-color", fifthColor);
+        document.body.style.setProperty("--third-color", firstColor);
+        document.body.style.setProperty("--fourth-color", secondColor);
+        document.body.style.setProperty("--fifth-color", firstColor);
         document.body.style.setProperty("--pointer-color", pointerColor);
         document.body.style.setProperty("--size", size);
         document.body.style.setProperty("--blending-value", blendingValue);
@@ -89,9 +90,11 @@ export const BackgroundGradientAnimation = ({
     return (
         <div
             className={cn(
-                "h-screen w-screen relative overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
+                "w-screen relative overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
                 containerClassName
             )}
+
+            style={{height: '777px'}}
         >
             <svg className="hidden">
                 <defs>
