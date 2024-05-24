@@ -38,3 +38,7 @@ next-env.d.ts
 
 /.husky/
 /.idea/
+
+service-worker.js
+workbox-*.js
+notes.log
