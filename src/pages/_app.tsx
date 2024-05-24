@@ -1,4 +1,5 @@
 import 'react-toastify/dist/ReactToastify.css';
+import '@/style/common/main.css';
 
 import type { ReactElement, ReactNode } from 'react';
 
