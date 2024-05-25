@@ -28,6 +28,7 @@ export const list = style({
 });
 
 export const header = style({
+  transformStyle: 'preserve-3d',
   position: 'relative',
   width: '100%',
   height: 160,
@@ -36,6 +37,7 @@ export const header = style({
 });
 
 export const imgBox = style({
+  transformStyle: 'preserve-3d',
   position: 'absolute',
   width: '100%',
   height: '100%',
@@ -65,7 +67,16 @@ export const role = style({
   marginBottom: 38,
 });
 
-export const infoList = style({ padding: 0, gap: 28 });
+export const bar = style({
+  borderRadius: 8,
+  backgroundColor: '#9A098B1A',
+  // overflow: 'hidden',
+})
+
+export const infoList = style({
+  padding: '0 16px 32px',
+  gap: 28
+});
 
 export const infoTitle = style({
   fontSize: 18,
