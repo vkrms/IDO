@@ -55,6 +55,14 @@ export default function FloCoin() {
   // ----------------------------------------------------------------------------------
   return (
     <Box className={styles.bg}>
+
+      <div className="relative bob41">
+        {/* <video autoPlay={true} loop={true} muted className="object-cover bob4">
+          <source src="/medium.webm" type="video/webm" />
+        </video> */}
+        {/* <div className="bob4__square"></div> */}
+      </div>
+
       <Container>
         <Typography className={styles.title}>FloCoin: The Future of Events</Typography>
         <Typography className={styles.subtitle}>Why FloCoin? Utility - Rewards - Growth Potential</Typography>

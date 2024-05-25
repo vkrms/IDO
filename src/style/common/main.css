@@ -2,3 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.bob4 {
+    background: hotpink;
+    top: -70%;
+    left: 50%;
+    position: absolute;
+    mix-blend-mode: plus-lighter;
+}
+
+.bob4__square {
+    content: "x";
+    position: absolute;
+    background: salmon;
+    height: 538px;
+    width: 538px;
+    display: block;
+}

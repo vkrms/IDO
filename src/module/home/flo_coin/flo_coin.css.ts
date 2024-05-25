@@ -5,9 +5,7 @@ import { style } from '@vanilla-extract/css';
 
 export const bg = style({
   marginTop: 12,
-  backgroundImage: 'url(/img/home/flo_coin/bg.png)',
-  backgroundPosition: 'top right',
-  backgroundRepeat: 'no-repeat',
+  position: 'relative',
 });
 
 export const title = style({

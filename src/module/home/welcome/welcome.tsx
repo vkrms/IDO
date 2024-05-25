@@ -10,6 +10,8 @@ import * as styles from '@/module/home/welcome/welcome.css';
 
 import { Box, Button, CardMedia, Grid, Typography } from '@mui/material';
 
+import FancyButton from '@/components/ui/fancy-button';
+
 import IconFounder1 from '@/assets/img//home/welcome/founder_1.svg';
 import IconFounder2 from '@/assets/img//home/welcome/founder_2.svg';
 import IconFounder3 from '@/assets/img//home/welcome/founder_3.svg';
@@ -83,57 +85,59 @@ export default function Welcome() {
       secondColor='255, 0, 199'
       interactive={false}
     >
-      <div className="bob2">
-    <Container>
+      <div className={styles.foo}>
+        <Container>
           <Box height={176} />
-          
-      <Typography variant='subtitle2' className={styles.title1}>
-        Powered by FloCoin
-      </Typography>
-      <Typography className={styles.title2}>Welcome to Event 3.0</Typography>
-      <Typography className={styles.title3}>
-        Own the cryptocurrency powering NFT ticketing, data-driven insights, and the future <br />
-        of event management
-      </Typography>
 
-      <Grid container className={styles.list}>
-        {list.map((item) => (
-          <Grid item key={item.key}>
-            <Grid container className={styles.itemValueList}>
-              {split(item.value, '').map((str: string, index: number) => (
-                <Grid item key={index + str}>
-                  <Typography className={styles.itemValue}>{str}</Typography>
+          <Typography variant='subtitle2' className={styles.title1}>
+            Powered by FloCoin
+          </Typography>
+          <Typography className={styles.title2}>Welcome to Event 3.0</Typography>
+          <Typography className={styles.title3}>
+            Own the cryptocurrency powering NFT ticketing, data-driven insights, and the future <br />
+            of event management
+          </Typography>
+
+          <Grid container className={styles.list}>
+            {list.map((item) => (
+              <Grid item key={item.key}>
+                <Grid container className={styles.itemValueList}>
+                  {split(item.value, '').map((str: string, index: number) => (
+                    <Grid item key={index + str}>
+                      <Typography className={styles.itemValue}>{str}</Typography>
+                    </Grid>
+                  ))}
                 </Grid>
-              ))}
-            </Grid>
-            <Typography className={styles.itemKey}>{item.key}</Typography>
+                <Typography className={styles.itemKey}>{item.key}</Typography>
+              </Grid>
+            ))}
           </Grid>
-        ))}
-      </Grid>
 
-      <Box sx={{ textAlign: 'center' }}>
-        <Button variant='contained' size='large'>
-          Join Early Access IDO List
-        </Button>
-      </Box>
+          <Box sx={{ textAlign: 'center' }}>
 
-      <Box height={48} />
+            <FancyButton>
+              Join Early Access IDO List
+            </FancyButton>
 
-      <Typography className={styles.founderTitle}>
-        Built by the <b className={styles.founderBold}>founders</b> of
-      </Typography>
+          </Box>
 
-      <Grid className={styles.founderList}>
-        {founderList.map((founder) => (
-          <Grid key={founder.id}>{founder.icon}</Grid>
-        ))}
-      </Grid>
+          <Box height={48} />
+
+          <Typography className={styles.founderTitle}>
+            Built by the <b className={styles.founderBold}>founders</b> of
+          </Typography>
+
+          <Grid className={styles.founderList}>
+            {founderList.map((founder) => (
+              <Grid key={founder.id}>{founder.icon}</Grid>
+            ))}
+          </Grid>
         </Container>
       </div>
     </BackgroundGradientAnimation>
 
 
-
+    
     <Container>
       <Box className={styles.imgBox}>
         <CardMedia component='img' image={ImgVideo.src} />
