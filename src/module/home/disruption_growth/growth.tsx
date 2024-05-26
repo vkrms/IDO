@@ -19,6 +19,7 @@ import {
 import { Box, Container, Grid, Typography, duration } from '@mui/material';
 
 import { colorPrimary } from '@/style/config/color.css';
+import { TracingBeam } from '@/components/ui/tracing-beam';
 
 // ----------------------------------------------------------------------------------
 const list = [
@@ -59,31 +60,34 @@ export default function DisruptionGrowth() {
 
   return (
     <Container>
-      <Typography className={styles.title}>The Path to Disruption & Growth</Typography>
+      <Typography className={styles.title}>The Path to Disruption & Growth</Typography>
       <Typography className={styles.subtitle}>
         Our roadmap outlines how eventflo & FloCoin will transform the event industry. From fraud-proof ticketing to the
         launch of FloCoin and AI-driven optimization, this strategic plan positions token for rapid growth and success.
       </Typography>
 
-      <Timeline position='alternate'>
-        {list.map((item) => (
-          <TimelineItem key={item.duration} sx={{ gap: '72px', justifyContent: 'center', padding: 0 }}>
-            <TimelineOppositeContent>
-              <Typography className={styles.timeLimeTitle}>{item.title}</Typography>
-              <Typography className={styles.timeLineInfo}>{item.info}</Typography>
-              <Typography className={styles.timeLineInfo} sx={{ marginBottom: '56px !important' }}>
-                <b className={styles.timeLineSubtitle}>{item.subtitle}</b>
-                {item.subtext}
-              </Typography>
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineDot sx={{ width: 36, height: 36, background: colorPrimary }} />
-              <TimelineConnector sx={{ background: 'transparent', borderRight: `2px dashed ${colorPrimary}` }} />
-            </TimelineSeparator>
-            <TimelineOppositeContent className={styles.timelineDuration}>{item.duration}</TimelineOppositeContent>
-          </TimelineItem>
-        ))}
-      </Timeline>
+      <TracingBeam>
+        <Timeline position='alternate'>
+          {list.map((item) => (
+            <TimelineItem key={item.duration} sx={{ gap: '72px', justifyContent: 'center', padding: 0 }}>
+              <TimelineOppositeContent>
+                <Typography className={styles.timeLimeTitle}>{item.title}</Typography>
+                <Typography className={styles.timeLineInfo}>{item.info}</Typography>
+                <Typography className={styles.timeLineInfo} sx={{ marginBottom: '56px !important' }}>
+                  <b className={styles.timeLineSubtitle}>{item.subtitle}</b>
+                  {item.subtext}
+                </Typography>
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineDot sx={{ width: 36, height: 36, background: colorPrimary }} />
+                <TimelineConnector sx={{ background: 'transparent', borderRight: `2px dashed ${colorPrimary}` }} />
+              </TimelineSeparator>
+              <TimelineOppositeContent className={styles.timelineDuration}>{item.duration}</TimelineOppositeContent>
+            </TimelineItem>
+          ))}
+        </Timeline>
+      </TracingBeam>
+
     </Container>
   );
 }
