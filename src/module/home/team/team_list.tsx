@@ -14,6 +14,7 @@ import FoundersListItem from '@/module/home/team/list_item';
 import type { StaticImageData } from 'next/image';
 
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { cn } from '@/lib/utils/cn';
 
 
 // ----------------------------------------------------------------------------------
@@ -45,7 +46,7 @@ export default function TeamList({ list }: PropsType) {
         <Box key={item.title} className={styles.teamItem}>
           <Typography variant="h3" className={styles.title}>{item.title}</Typography>
 
-            <Grid container className={styles.list}>
+            <Grid container className={cn(styles.list, 'scrollable')}>
               {item.list.map((item) => (
                 <CardContainer className="card-container" key={item.name}>
                   <CardBody className="relative group/card">

@@ -22,3 +22,15 @@
 body {
     color: #fff;
 }
+
+.scrollable {
+    justify-content: left !important;
+    flex-flow: row;
+    max-width: 100%;
+    overflow: auto;
+    padding-inline: 16px;
+}
+
+.scrollable::-webkit-scrollbar {
+    display: none;
+}
