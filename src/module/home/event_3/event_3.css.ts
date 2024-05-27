@@ -37,6 +37,8 @@ export const itemTitle = style({
   backgroundClip: 'text',
   fontSize: 24,
   fontFamily: manropeSemiBold,
+  display: 'block',
+  marginBottom: 8,
 });
 
 export const itemText = style({

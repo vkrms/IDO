@@ -21,7 +21,7 @@ export const title1 = style({
   fontSize: 18,
   lineHeight: '25px',
   fontFamily: manropeMedium,
-  color: colorWhite,
+  // color: colorWhite,
   textAlign: 'center',
 });
 
@@ -30,7 +30,7 @@ export const title2 = style({
   fontSize: 64,
   lineHeight: '88px',
   fontFamily: manropeBold,
-  color: colorWhite,
+  // color: colorWhite,
   textAlign: 'center',
 });
 
@@ -38,7 +38,7 @@ export const title3 = style({
   marginBottom: 32,
   fontSize: 18,
   lineHeight: '29px',
-  color: colorWhite,
+  // color: colorWhite,
   fontFamily: manropeRegular,
   textAlign: 'center',
 });

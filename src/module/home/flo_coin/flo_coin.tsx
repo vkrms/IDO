@@ -17,6 +17,9 @@ import Icon4 from '@/assets/img//home/flo_coin/icon_4.svg';
 import Icon5 from '@/assets/img//home/flo_coin/icon_5.svg';
 import Icon6 from '@/assets/img//home/flo_coin/icon_6.svg';
 
+import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
+import { Reveal } from '@/components/ui/reveal';
+
 // ----------------------------------------------------------------------------------
 const dataList = [
   {
@@ -56,7 +59,8 @@ export default function FloCoin() {
   return (
     <Box className={styles.bg}>
 
-      <div className="relative bob41">
+      <div className="relative bob41 bg-pink-500 text-blue-600 mb-2">
+        <p>sup</p>
         {/* <video autoPlay={true} loop={true} muted className="object-cover bob4">
           <source src="/medium.webm" type="video/webm" />
         </video> */}
@@ -64,16 +68,30 @@ export default function FloCoin() {
       </div>
 
       <Container>
-        <Typography className={styles.title}>FloCoin: The Future of Events</Typography>
-        <Typography className={styles.subtitle}>Why FloCoin? Utility - Rewards - Growth Potential</Typography>
-        <Typography className={styles.text}>
-          FloCoin ignites a new era of event experience. Invest in FloCoin, and you're not only fueling innovation in
-          event attendance & management, but also have the potential to directly benefit from its success.
-        </Typography>
+
+        <Reveal>
+          <Typography className={styles.title}>
+            FloCoin: The Future of Events
+          </Typography>
+          
+          <Typography className={styles.subtitle}>
+            Why FloCoin? Utility - Rewards - Growth Potential
+          </Typography>
+          
+          <Typography className={styles.text}>
+            FloCoin ignites a new era of event experience. Invest in FloCoin, and you're not only fueling innovation in
+            event attendance & management, but also have the potential to directly benefit from its success.
+          </Typography>
+        </Reveal>
+
         <Grid container className={styles.list}>
           {dataList.map((data) => (
             <Grid key={data.text} flexGrow={1}>
-              {data.icon}
+              
+              <Box mb={1}>
+                {data.icon}
+              </Box>
+
               <Typography className={styles.itemTitle}>{data.title}</Typography>
               <Typography className={styles.itemText}>{data.text}</Typography>
             </Grid>

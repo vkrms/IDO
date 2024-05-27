@@ -47,9 +47,9 @@ export default function TeamList({ list }: PropsType) {
 
             <Grid container className={styles.list}>
               {item.list.map((item) => (
-                <CardContainer className="card-container">
-                  <CardBody className="relative group/card lookiehere text-white">
-                    <Grid item key={item.name} flexBasis={352} className={styles.bar}>
+                <CardContainer className="card-container" key={item.name}>
+                  <CardBody className="relative group/card lookiehere">
+                    <Grid item flexBasis={352} className={styles.bar}>
 
                       <Box className={styles.header}>
                         <Box className={styles.imgBox}>

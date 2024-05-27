@@ -13,7 +13,7 @@ export const title = style({
   fontSize: 52,
   lineHeight: '71px',
   fontFamily: manropeSemiBold,
-  color: colorWhite,
+  // color: colorWhite,
   textAlign: 'center',
 });
 
@@ -35,7 +35,7 @@ export const text = style({
   fontSize: 18,
   lineHeight: '29px',
   fontFamily: manropeRegular,
-  color: colorWhite,
+  // color: colorWhite,
 });
 
 export const list = style({
@@ -58,3 +58,7 @@ export const itemText = style({
   fontFamily: manropeLight,
   maxWidth: 352,
 });
+
+export const icon = style({
+  marginBottom: 8,
+})

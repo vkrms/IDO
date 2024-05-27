@@ -53,7 +53,9 @@ export default function Event3() {
           {dataList.map((data) => (
             <Grid key={data.title}>
               <Typography className={styles.itemText}>
-                <b className={styles.itemTitle}>{data.title}</b>:{data.text}
+                <b className={styles.itemTitle}>{data.title}</b>
+                
+                {data.text}
               </Typography>
             </Grid>
           ))}

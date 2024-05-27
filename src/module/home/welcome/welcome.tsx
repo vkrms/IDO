@@ -35,6 +35,8 @@ const list = [
 ];
 
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { Reveal } from '@/components/ui/reveal';
 
 
 // ----------------------------------------------------------------------------------
@@ -89,14 +91,20 @@ export default function Welcome() {
         <Container>
           <Box height={176} />
 
-          <Typography variant='subtitle2' className={styles.title1}>
-            Powered by FloCoin
-          </Typography>
-          <Typography className={styles.title2}>Welcome to Event 3.0</Typography>
-          <Typography className={styles.title3}>
-            Own the cryptocurrency powering NFT ticketing, data-driven insights, and the future <br />
-            of event management
-          </Typography>
+          <Reveal>
+            <Typography variant='subtitle2' className={styles.title1}>
+              Powered by FloCoin
+            </Typography>
+
+            <Typography className={styles.title2}>
+                Welcome to Event 3.0
+            </Typography>
+
+            <Typography className={styles.title3}>
+                Own the cryptocurrency powering NFT ticketing, data-driven insights, and the future <br />
+                of event management
+            </Typography>
+          </Reveal>
 
           <Grid container className={styles.list}>
             {list.map((item) => (
