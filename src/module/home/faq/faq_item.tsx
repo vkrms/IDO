@@ -44,15 +44,11 @@ export default function FAQItem({ item }: PropsType) {
 
   return (
     <ListItem className={styles.quesItem}>
-      <Grid container justifyContent='space-between'>
-        <Grid item>
-          <Typography className={styles.itemTitle}>{item.title}</Typography>
-        </Grid>
-        <Grid item>
-          <IconButton size='large' onClick={() => setExpState(!expState)}>
-            {expState ? <IconShrink /> : <IconExpand />}
-          </IconButton>
-        </Grid>
+      <Grid container sx={{ display: 'grid', alignItems: 'center', gridTemplateColumns: 'auto 48px', gap: '16px' }}>
+        <Typography className={styles.itemTitle}>{item.title}</Typography>
+        <IconButton size='large' onClick={() => setExpState(!expState)}>
+          {expState ? <IconShrink /> : <IconExpand />}
+        </IconButton>
       </Grid>
 
       {expState && (

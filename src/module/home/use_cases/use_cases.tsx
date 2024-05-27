@@ -59,8 +59,7 @@ export default function UseCases() {
           </Grid>
         ))}
       </Grid>
-      <Box height={72} />
-      <Box textAlign='center'>
+      <Box className={styles.btnBox}>
         <Button variant='contained'>Explore Tokenomics</Button>
       </Box>
     </Container>

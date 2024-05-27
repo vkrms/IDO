@@ -8,7 +8,7 @@
 
 import * as styles from '@/module/home/tokenomics/list.css';
 
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Divider, Grid, Typography } from '@mui/material';
 
 import IconBgLeftTop from '@/assets/img//home/tokenomics/bg_left_top.svg';
 import IconBgLeftBottom from '@/assets/img//home/tokenomics/bg_right_bottom.svg';
@@ -40,10 +40,13 @@ export default function TokenomicsList({ list, cate }: PropsType) {
         <IconBgLeftBottom className={styles.bgPosVar.leftBottom} />
       )}
       <Grid container className={styles.list}>
-        {list.map((data) => (
+        {list.map((data, index) => (
           <Grid item key={data.title} className={styles.item}>
-            <Typography className={styles.itemTitle}>{data.title}</Typography>
-            <Typography className={styles.itemText}>{data.text}</Typography>
+            <Box>
+              <Typography className={styles.itemTitle}>{data.title}</Typography>
+              <Typography className={styles.itemText}>{data.text}</Typography>
+            </Box>
+            {index !== list.length - 1 && <Divider className={styles.divider} />}
           </Grid>
         ))}
       </Grid>

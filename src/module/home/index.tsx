@@ -6,6 +6,8 @@
  * @author shuangshuang 2024/4/11
  */
 
+import * as styles from '@/module/home/index.css';
+
 import Footer from '@/module/footer/footer';
 import DirectorOfSymbiotic from '@/module/home/director_of_symbiotic/director_of_symbiotic';
 import DisruptionGrowth from '@/module/home/disruption_growth/growth';
@@ -26,29 +28,28 @@ export default function HomePage() {
   return (
     <Box>
       <Welcome />
-      <Box height={120} />
+      <Box className={styles.boxMargin} />
       <FloCoin />
-      <Box height={120} />
+      <Box className={styles.boxMargin} />
       <Event3 />
-      <Box height={120} />
+      <Box className={styles.boxMargin} />
       <Tokenomics />
-      <Box height={120} />
+      <Box className={styles.boxMargin} />
       <TokenAllocation />
-      <Box height={120} />
+      <Box className={styles.boxMargin} />
       <UseCases />
-      <Box height={120} />
+      <Box className={styles.boxMargin} />
       <IdoDetails />
-      <Box height={120} />
+      <Box className={styles.boxMargin} />
       <Founders />
-      <Box height={120} />
+      <Box className={styles.boxMargin} />
       <DisruptionGrowth />
-      <Box height={96} />
+      <Box className={styles.boxMargin} />
       <DirectorOfSymbiotic />
-      <Box height={120} />
+      <Box className={styles.boxMargin} />
       <FAQ />
-      <Box height={120} />
+      <Box className={styles.boxMargin} />
       <Footer />
-      <Box height={16} />
     </Box>
   );
 }

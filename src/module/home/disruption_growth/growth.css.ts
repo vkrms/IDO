@@ -11,6 +11,15 @@ export const title = style({
   textAlign: 'center',
   maxWidth: 596,
   margin: '0 auto 16px',
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      maxWidth: 310,
+      margin: '0 auto 8px',
+      fontSize: 32,
+      lineHeight: '44px',
+    },
+  },
 });
 
 export const subtitle = style({
@@ -21,6 +30,62 @@ export const subtitle = style({
   color: colorWhite,
   textAlign: 'center',
   margin: '0 auto 104px',
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      maxWidth: 'unset',
+      fontSize: 12,
+      lineHeight: '22px',
+      marginBottom: 48,
+    },
+  },
+});
+
+export const timeline1 = style({
+  '@media': {
+    'screen and (max-width: 767px)': {
+      display: 'none',
+    },
+  },
+});
+
+export const timeline2 = style({
+  display: 'none',
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      display: 'flex',
+    },
+  },
+});
+
+export const timmelineItem = style({
+  gap: '72px',
+  justifyContent: 'center',
+
+  padding: 0,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      gap: 0,
+      selectors: {
+        '&:before': {
+          display: 'none',
+        },
+      },
+    },
+  },
+});
+
+export const timelineContent = style({
+  '@media': {
+    'screen and (max-width: 767px)': {
+      paddingLeft: 46,
+      paddingRight: 0,
+      paddingTop: 0,
+      paddingBottom: 0,
+    },
+  },
 });
 
 export const timeLimeTitle = style({
@@ -31,6 +96,15 @@ export const timeLimeTitle = style({
   fontFamily: manropeSemiBold,
   color: colorWhite,
   lineHeight: '44px',
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      fontSize: 24,
+      lineHeight: '33px',
+      marginBottom: 8,
+      maxWidth: 'unset',
+    },
+  },
 });
 
 export const timeLineInfo = style({
@@ -41,12 +115,28 @@ export const timeLineInfo = style({
   lineHeight: '29px',
   fontFamily: manropeRegular,
   color: colorWhite,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      fontSize: 16,
+      lineHeight: '22px',
+      maxWidth: 'unset',
+      marginBottom: 24,
+    },
+  },
 });
 
 export const timeLineSubtitle = style({
   fontSize: 22,
   fontFamily: manropeSemiBold,
   color: colorWhite,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      fontSize: 16,
+      lineHeight: '22px',
+    },
+  },
 });
 
 export const timelineDuration = style({
@@ -57,4 +147,12 @@ export const timelineDuration = style({
   fontSize: 24,
   lineHeight: '33px',
   fontFamily: manropeSemiBold,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      fontSize: 18,
+      lineHeight: '29px',
+      marginBottom: 16,
+    },
+  },
 });

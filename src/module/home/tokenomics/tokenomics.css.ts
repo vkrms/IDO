@@ -10,6 +10,14 @@ export const title = style({
   color: colorWhite,
   fontFamily: manropeSemiBold,
   textAlign: 'center',
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      fontSize: 32,
+      lineHeight: '44px',
+      marginBottom: 22,
+    },
+  },
 });
 
 export const box = style({
@@ -18,6 +26,13 @@ export const box = style({
   alignItems: 'center',
   gap: 32,
   marginBottom: 56,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      justifyContent: 'start',
+      marginBottom: 32,
+    },
+  },
 });
 
 export const boxLeft = style({
@@ -26,6 +41,14 @@ export const boxLeft = style({
   lineHeight: '66px',
   fontFamily: manropeSemiBold,
   color: colorWhite,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      fontSize: 24,
+      lineHeight: '33px',
+      maxWidth: 'unset',
+    },
+  },
 });
 
 export const boxRight = style({
@@ -34,57 +57,12 @@ export const boxRight = style({
   lineHeight: '25px',
   fontFamily: manropeRegular,
   color: colorWhite,
-});
 
-export const infoBox = style({
-  position: 'relative',
-  width: '100%',
-  padding: 48,
-  borderRadius: 16,
-  overflow: 'hidden',
-  background: 'rgba(154, 9, 139, 0.10)',
-});
-
-export const list = style({
-  display: 'flex',
-  justifyContent: 'center',
-  gap: 56,
-});
-
-export const item = style({
-  paddingRight: 56,
-  borderRight: `1px solid ${colorPrimary}`,
-
-  selectors: {
-    '&:last-child': {
-      borderRight: '1px solid transparent',
+  '@media': {
+    'screen and (max-width: 767px)': {
+      maxWidth: 'unset',
+      fontSize: 12,
+      lineHeight: '22px',
     },
   },
-});
-
-export const itemTitle = style({
-  marginBottom: 16,
-  fontSize: 16,
-  lineHeight: '22px',
-  fontFamily: manropeSemiBold,
-  color: '#686868',
-});
-
-export const itemText = style({
-  fontSize: 32,
-  color: colorWhite,
-  lineHeight: '44px',
-  fontFamily: manropeSemiBold,
-});
-
-export const bgLeft = style({
-  position: 'absolute',
-  top: 0,
-  left: 0,
-});
-
-export const bgRight = style({
-  position: 'absolute',
-  bottom: 0,
-  right: 0,
 });

@@ -14,6 +14,19 @@ export const quesItem = style({
       marginBottom: 0,
     },
   },
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      padding: '24px 16px',
+      marginBottom: 24,
+
+      selectors: {
+        '&:last-child': {
+          marginBottom: 0,
+        },
+      },
+    },
+  },
 });
 
 export const itemTitle = style({
@@ -21,6 +34,13 @@ export const itemTitle = style({
   lineHeight: '36px',
   color: colorWhite,
   fontFamily: manropeMedium,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      fontSize: 18,
+      lineHeight: '29px',
+    },
+  },
 });
 
 export const itemInfo = style({
@@ -29,6 +49,14 @@ export const itemInfo = style({
   fontFamily: manropeRegular,
   color: colorWhite,
   marginBottom: 24,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      fontSize: 14,
+      lineHeight: '21px',
+      marginBottom: 16,
+    },
+  },
 });
 
 export const innerList = style({
@@ -45,6 +73,18 @@ export const innerItem = style({
       marginBottom: 0,
     },
   },
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      marginBottom: 16,
+
+      selectors: {
+        '&:last-child': {
+          marginBottom: 0,
+        },
+      },
+    },
+  },
 });
 
 export const innerIdx = style({
@@ -55,6 +95,13 @@ export const innerIdx = style({
   fontSize: 20,
   lineHeight: '30px',
   fontFamily: manropeBold,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      fontSize: 18,
+      lineHeight: '29px',
+    },
+  },
 });
 
 export const innerName = style({
@@ -62,6 +109,13 @@ export const innerName = style({
   lineHeight: '30px',
   color: colorWhite,
   fontFamily: manropeSemiBold,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      fontSize: 20,
+      lineHeight: '30px',
+    },
+  },
 });
 
 export const innerText = style({
@@ -69,4 +123,11 @@ export const innerText = style({
   lineHeight: '29px',
   color: colorWhite,
   fontFamily: manropeRegular,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      fontSize: 14,
+      lineHeight: '21px',
+    },
+  },
 });

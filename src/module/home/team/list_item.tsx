@@ -31,19 +31,20 @@ export default function FoundersListItem({ info }: PropsType) {
   const [expState, setExpState] = useState(false);
   // ----------------------------------------------------------------------------------
   return (
-    <Grid item key={info.title}>
-      <Grid container gap={2} alignItems='center'>
-        <Grid>
-          <Typography className={styles.infoTitle}>{info.title}</Typography>
-        </Grid>
-        <Grid>
-          <IconButton
-            sx={{ width: 18, height: 18, background: 'transparent', '&:hover': { background: 'transparent' } }}
-            onClick={() => setExpState(!expState)}
-          >
-            {expState ? <IconArrowDown /> : <IconArrowRight />}
-          </IconButton>
-        </Grid>
+    <Grid item key={info.title} sx={{ width: '100%' }}>
+      <Grid
+        container
+        alignItems='center'
+        sx={{ gap: '4px', width: '100%', display: 'grid', gridTemplateColumns: 'auto 18px', gridGap: '8px' }}
+        justifyContent='space-between'
+      >
+        <Typography className={styles.infoTitle}>{info.title}</Typography>
+        <IconButton
+          sx={{ width: 18, height: 18, background: 'transparent', '&:hover': { background: 'transparent' } }}
+          onClick={() => setExpState(!expState)}
+        >
+          {expState ? <IconArrowDown /> : <IconArrowRight />}
+        </IconButton>
       </Grid>
       {expState && <Typography className={styles.infoText}>{info.text}</Typography>}
     </Grid>

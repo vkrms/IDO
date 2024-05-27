@@ -10,12 +10,26 @@ export const title = style({
   color: colorWhite,
   fontFamily: manropeSemiBold,
   textAlign: 'center',
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      fontSize: 32,
+      lineHeight: '44px',
+      marginBottom: 32,
+    },
+  },
 });
 
 export const list = style({
   display: 'flex',
   gap: '32px 52px',
   justifyContent: 'space-between',
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      gap: 28,
+    },
+  },
 });
 
 export const itemId = style({
@@ -25,6 +39,13 @@ export const itemId = style({
   fontSize: 56,
   lineHeight: '72px',
   fontFamily: manropeBold,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      fontSize: 40,
+      lineHeight: '52px',
+    },
+  },
 });
 
 export const itemTitle = style({
@@ -34,6 +55,14 @@ export const itemTitle = style({
   lineHeight: '33px',
   fontFamily: manropeSemiBold,
   color: colorWhite,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      fontSize: 20,
+      lineHeight: '27px',
+      maxWidth: 'unset',
+    },
+  },
 });
 
 export const itemText = style({
@@ -42,4 +71,22 @@ export const itemText = style({
   lineHeight: '24px',
   color: colorWhite,
   fontFamily: manropeLight,
+  '@media': {
+    'screen and (max-width: 767px)': {
+      fontSize: 12,
+      lineHeight: '18px',
+    },
+  },
+});
+
+export const btnBox = style({
+  marginTop: 72,
+  textAlign: 'center',
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      marginTop: 40,
+      textAlign: 'left',
+    },
+  },
 });

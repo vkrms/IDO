@@ -44,19 +44,22 @@ export default function TeamList({ list }: PropsType) {
 
           <Grid container className={styles.list}>
             {item.list.map((item) => (
-              <Grid item key={item.name} flexBasis={352}>
+              <Grid item key={item.name} flexBasis={352} className={styles.item}>
                 <Box className={styles.header}>
                   <Box className={styles.imgBox}>
                     <CardMedia component='img' image={item.img.src} width={160} height={160} sx={{ maxWidth: 160 }} />
                   </Box>
                 </Box>
-                <Typography className={styles.name}>{item.name}</Typography>
-                <Typography className={styles.role}>{item.role}</Typography>
-                <Grid container className={styles.infoList}>
-                  {item.info.map((info) => (
-                    <FoundersListItem info={info} key={info.title} />
-                  ))}
-                </Grid>
+
+                <Box className={styles.itemPadding}>
+                  <Typography className={styles.name}>{item.name}</Typography>
+                  <Typography className={styles.role}>{item.role}</Typography>
+                  <Grid container className={styles.infoList}>
+                    {item.info.map((info) => (
+                      <FoundersListItem info={info} key={info.title} />
+                    ))}
+                  </Grid>
+                </Box>
               </Grid>
             ))}
           </Grid>

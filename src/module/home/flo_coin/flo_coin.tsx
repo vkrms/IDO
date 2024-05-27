@@ -64,7 +64,7 @@ export default function FloCoin() {
         </Typography>
         <Grid container className={styles.list}>
           {dataList.map((data) => (
-            <Grid key={data.text} flexGrow={1}>
+            <Grid key={data.text} flexGrow={1} className={styles.item}>
               {data.icon}
               <Typography className={styles.itemTitle}>{data.title}</Typography>
               <Typography className={styles.itemText}>{data.text}</Typography>

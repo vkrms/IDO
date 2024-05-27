@@ -8,12 +8,15 @@
 
 import * as styles from '@/module/login/index.css';
 
-import { Box, Button, CardMedia, FormControl, Stack, TextField, Typography } from '@mui/material';
+import { colorPrimary, colorTextBlack, colorTextGrey } from '@/style/config/color.css';
+import { Box, Button, CardMedia, FormControl, Grid, Stack, TextField, Typography } from '@mui/material';
 
 import bannerImg from '@/assets/img/login/banner.png';
+import IconLogo from '@/assets/img/logo.svg';
 import IconEmail from '@/assets/svg/email.svg';
 import IconEye from '@/assets/svg/eye.svg';
-import IconLogo from '@/assets/svg/logo.svg';
+import { linkToBtn } from '@/style/common/link.css';
+import { manropeMedium } from '@/style/config/font.css';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -69,25 +72,33 @@ export default function Login() {
   }
 
   return (
-    <Box height='100vh' display='flex' flexDirection='column'>
+    <Box height='100vh'>
       <Head>
         <title>Admin Login</title>
       </Head>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '50% 50%' }}>
-        <Box className={styles.leftBox}>
+      <Grid container className={styles.box}>
+        <Grid className={styles.leftBox}>
           <IconLogo className={styles.siteName} />
           <CardMedia component='img' height='100%' image={bannerImg.src} />
-        </Box>
+        </Grid>
 
-        <Box className={styles.rightBox}>
+        <Grid className={styles.rightBox}>
           <Stack spacing={2} className={styles.rightContent}>
-            <Typography variant='h2' align='center' textTransform='uppercase'>
+            <Typography
+              variant='h2'
+              align='center'
+              textTransform='uppercase'
+              style={{ fontSize: 30, fontFamily: manropeMedium }}
+            >
               Login
             </Typography>
-            <Box>
-              <FormControl fullWidth sx={{ m: 1 }}>
-                <p>Username or Email Address *</p>
+            <Box height={40} />
+            <Box sx={{ marginBottom: '20px' }}>
+              <FormControl fullWidth>
+                <Typography sx={{ marginBottom: '12px', fontSize: 14, fontFamily: manropeMedium }}>
+                  Username or Email Address *
+                </Typography>
                 <TextField
                   error={!!errors.account || errAcc}
                   type='text'
@@ -95,21 +106,42 @@ export default function Login() {
                   InputProps={{
                     endAdornment: (
                       <div className={styles.rightIcon}>
-                        <IconEmail />
+                        <IconEmail color={colorTextGrey} />
                       </div>
                     ),
                   }}
                   {...register('account', {
                     required: true,
                   })}
+                  sx={{
+                    color: colorTextBlack,
+                    '& .MuiInputBase-input': {
+                      paddingTop: '12px',
+                      paddingBottom: '12px',
+                      color: colorTextBlack,
+                    },
+                    '& .MuiOutlinedInput-notchedOutline': {
+                      borderColor: ' #dbdbdb !important',
+                      height: 48,
+                      borderRadius: '8px',
+                    },
+                    '&:hover .MuiOutlinedInput-notchedOutline': {
+                      border: '1px solid #dbdbdb !important',
+                    },
+                    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                      border: '1px solid #dbdbdb !important',
+                    },
+                  }}
                 />
                 {errAcc && <p>{err?.message}</p>}
               </FormControl>
             </Box>
 
-            <Box>
-              <FormControl fullWidth sx={{ m: 1 }}>
-                <p>Password *</p>
+            <Box sx={{ marginBottom: '20px' }}>
+              <FormControl fullWidth>
+                <Typography sx={{ marginBottom: '12px', fontSize: 14, fontFamily: manropeMedium }}>
+                  Password *
+                </Typography>
                 <TextField
                   error={!!errors.password || errPwd}
                   type='password'
@@ -124,25 +156,49 @@ export default function Login() {
                   {...register('password', {
                     required: true,
                   })}
+                  sx={{
+                    color: colorTextBlack,
+                    '& .MuiInputBase-input': {
+                      paddingTop: '12px',
+                      paddingBottom: '12px',
+                      color: colorTextBlack,
+                    },
+                    '& .MuiOutlinedInput-notchedOutline': {
+                      borderColor: '#dbdbdb !important',
+                      height: 48,
+                      borderRadius: '8px',
+                    },
+                    '&:hover .MuiOutlinedInput-notchedOutline': {
+                      border: '1px solid #dbdbdb !important',
+                    },
+                    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                      border: '1px solid #dbdbdb !important',
+                    },
+                  }}
                 />
                 {errPwd && <p>{err?.message}</p>}
               </FormControl>
-
-              <p className={styles.forgotPwd}>
-                <Link href='#'>Forgot Password?</Link>
-              </p>
             </Box>
+
+            <p className={styles.forgotPwd}>
+              <Link href='#' className={linkToBtn} style={{ color: colorTextBlack }}>
+                Forgot Password?
+              </Link>
+            </p>
 
             <Button fullWidth variant='contained' className={styles.textUpper} onClick={handleSubmit(doLogin)}>
               Login
             </Button>
 
-            <p>
-              Don’t have account? <Link href='#'>Sign Up</Link>
-            </p>
+            <Typography sx={{ color: colorTextGrey, fontSize: 13, fontFamily: manropeMedium }}>
+              Don’t have account?
+              <Link href='#' className={linkToBtn} style={{ color: colorPrimary }}>
+                Sign Up
+              </Link>
+            </Typography>
           </Stack>
-        </Box>
-      </div>
+        </Grid>
+      </Grid>
     </Box>
   );
 }

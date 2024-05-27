@@ -19,6 +19,9 @@ import img3 from '@/assets/img//home/team/founder_3.png';
 import img4 from '@/assets/img//home/team/key_member_1.png';
 import img5 from '@/assets/img//home/team/key_member_2.png';
 import img6 from '@/assets/img//home/team/key_member_3.png';
+import { EARLY_ACCESS } from '@/router/name';
+import { linkToBtn } from '@/style/common/link.css';
+import Link from 'next/link';
 
 // ----------------------------------------------------------------------------------
 const list: TeamData[] = [
@@ -51,21 +54,6 @@ const list: TeamData[] = [
           },
           {
             title: 'Event Marketing Ace',
-            text: 'test text',
-          },
-        ],
-      },
-      {
-        img: img3,
-        name: 'Richie McNeill',
-        role: 'Founder',
-        info: [
-          {
-            title: 'Industry Legend',
-            text: 'test text',
-          },
-          {
-            title: 'King Connector',
             text: 'test text',
           },
         ],
@@ -109,6 +97,21 @@ const list: TeamData[] = [
     title: 'Our Advisors',
     list: [
       {
+        img: img3,
+        name: 'Richie McNeill',
+        role: 'Founder',
+        info: [
+          {
+            title: 'Industry Legend',
+            text: 'test text',
+          },
+          {
+            title: 'King Connector',
+            text: 'test text',
+          },
+        ],
+      },
+      {
         img: img7,
         name: 'Rudy Santino',
         role: 'Advisor',
@@ -133,11 +136,12 @@ export default function Founders() {
       <Typography className={styles.subtitle}>Meet The Powerhouse Team Driving FloCoin's Success</Typography>
 
       <FoundersList list={list} />
-      <Box height={80} />
-      <Box textAlign='center'>
-        <Button variant='contained' size='large'>
-          Join Early Access IDO List
-        </Button>
+      <Box textAlign='center' className={styles.btnBox}>
+        <Link href={EARLY_ACCESS} className={linkToBtn}>
+          <Button variant='contained' size='large'>
+            Join Early Access IDO List
+          </Button>
+        </Link>
       </Box>
     </Container>
   );

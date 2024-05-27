@@ -11,6 +11,15 @@ export const title = style({
   color: colorWhite,
   fontFamily: manropeSemiBold,
   textAlign: 'center',
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      maxWidth: 358,
+      fontSize: 32,
+      lineHeight: '44px',
+      textAlign: 'left',
+    },
+  },
 });
 
 export const subtitle = style({
@@ -21,6 +30,15 @@ export const subtitle = style({
   lineHeight: '29px',
   fontFamily: manropeRegular,
   textAlign: 'center',
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      maxWidth: 358,
+      fontSize: 12,
+      lineHeight: '22px',
+      textAlign: 'left',
+    },
+  },
 });
 
 export const list = style({
@@ -29,6 +47,11 @@ export const list = style({
   justifyContent: 'space-between',
   flexWrap: 'wrap',
   gap: 32,
+  '@media': {
+    'screen and (max-width: 767px)': {
+      gap: 22,
+    },
+  },
 });
 
 export const itemTitle = style({
@@ -37,6 +60,12 @@ export const itemTitle = style({
   backgroundClip: 'text',
   fontSize: 24,
   fontFamily: manropeSemiBold,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      fontSize: 18,
+    },
+  },
 });
 
 export const itemText = style({
@@ -44,4 +73,22 @@ export const itemText = style({
   fontSize: 16,
   lineHeight: '24px',
   color: colorWhite,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      fontSize: 12,
+      lineHeight: '18px',
+    },
+  },
+});
+
+export const btnBox = style({
+  marginTop: 48,
+  textAlign: 'center',
+  '@media': {
+    'screen and (max-width: 767px)': {
+      marginTop: 40,
+      textAlign: 'left',
+    },
+  },
 });
