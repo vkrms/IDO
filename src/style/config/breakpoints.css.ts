@@ -1,0 +1,1 @@
+export const small = '(max-width: 600px)'

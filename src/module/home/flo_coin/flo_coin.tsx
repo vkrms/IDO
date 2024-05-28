@@ -88,7 +88,7 @@ export default function FloCoin() {
           {dataList.map((data) => (
             <Grid key={data.text} flexGrow={1}>
               
-              <Box mb={1}>
+              <Box className={styles.iconWrap}>
                 {data.icon}
               </Box>
 

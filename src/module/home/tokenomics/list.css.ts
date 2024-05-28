@@ -2,6 +2,7 @@ import { colorPrimary, colorWhite } from '@/style/config/color.css';
 import { style, styleVariants } from '@vanilla-extract/css';
 
 import { manropeSemiBold } from '@/style/config/font.css';
+import { small } from '@/style/config/breakpoints.css';
 
 export const infoBox = style({
   position: 'relative',
@@ -10,6 +11,7 @@ export const infoBox = style({
   borderRadius: 16,
   overflow: 'hidden',
   background: 'rgba(154, 9, 139, 0.10)',
+  textAlign: 'center',
 });
 
 export const list = style({
@@ -21,6 +23,16 @@ export const list = style({
 export const item = style({
   paddingRight: 56,
   borderRight: `1px solid ${colorPrimary}`,
+
+  // media query
+  '@media': {
+    [small]: {
+      paddingRight: 0,
+      paddingBottom: 40,
+      borderRight: 'none',
+      borderBottom: `1px solid ${colorPrimary}`,
+    }
+  },
 
   selectors: {
     '&:last-child': {
