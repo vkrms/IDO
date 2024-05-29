@@ -34,3 +34,7 @@ body {
 .scrollable::-webkit-scrollbar {
     display: none;
 }
+
+.alice {
+    font-size: 24px;
+}

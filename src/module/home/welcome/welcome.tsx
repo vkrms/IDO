@@ -37,6 +37,7 @@ const list = [
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { Reveal } from '@/components/ui/reveal';
+import Countdown from '@/components/ui/countdown';
 
 
 // ----------------------------------------------------------------------------------
@@ -106,20 +107,8 @@ export default function Welcome() {
             </Typography>
           </Reveal>
 
-          <Grid container className={styles.list}>
-            {list.map((item) => (
-              <Grid item key={item.key}>
-                <Grid container className={styles.itemValueList}>
-                  {split(item.value, '').map((str: string, index: number) => (
-                    <Grid item key={index + str}>
-                      <Typography className={styles.itemValue}>{str}</Typography>
-                    </Grid>
-                  ))}
-                </Grid>
-                <Typography className={styles.itemKey}>{item.key}</Typography>
-              </Grid>
-            ))}
-          </Grid>
+          {/* new timer layout */}
+          <Countdown/>
 
           <Box sx={{ textAlign: 'center' }}>
 

@@ -53,23 +53,33 @@ export const list = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  gap: 32,
+  gap: '0.6em',
   marginBottom: 40,
 });
 
+export const bob = style({
+  textAlign: 'center',
+})
+
+// group of digits
 export const itemValueList = style({
-  gap: 8,
+  gap: '0.14em',
   alignItems: 'center',
+  fontFamily: electrolizeRegular,
+  display: 'flex',
 });
 
+// digit in a box
 export const itemValue = style({
-  padding: '12px 16px',
+  aspectRatio: '56/88',
+  display: 'grid',
+  placeContent: 'center',
   borderRadius: 6,
-  border: `2px solid ${colorBorder}`,
+  border: `0.036em solid ${colorBorder}`,
   fontSize: 40,
-  lineHeight: '64px',
-  fontFamily: electrolizeRegular,
+  lineHeight: 1.14,
   color: colorWhite,
+  width: '1.4em',
 });
 
 export const itemKey = style({
@@ -79,6 +89,8 @@ export const itemKey = style({
   lineHeight: '29px',
   color: colorWhite,
   fontFamily: manropeRegular,
+  textTransform: 'capitalize',
+  display: 'block',
 });
 
 export const imgBox = style({
