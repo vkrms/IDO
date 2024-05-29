@@ -47,6 +47,7 @@ export const itemTitle = style({
   lineHeight: '22px',
   fontFamily: manropeSemiBold,
   color: '#686868',
+  textAlign: 'center',
 });
 
 export const itemText = style({

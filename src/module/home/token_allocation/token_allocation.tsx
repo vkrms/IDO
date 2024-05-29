@@ -61,7 +61,8 @@ export default function TokenAllocation() {
   // ----------------------------------------------------------------------------------
   return (
     <Container>
-      <Typography className={styles.title}>Token Allocation</Typography>
+      <Typography variant="h2" className={styles.title}>Token Allocation</Typography>
+      
       <Typography className={styles.subtitle}>Here's how we'll emphasize value creation and longevity</Typography>
       <Grid container className={styles.list}>
         <Grid item>

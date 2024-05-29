@@ -41,7 +41,10 @@ export default function Event3() {
   return (
     <Box>
       <Container>
-        <Typography className={styles.title}>The Technology Powering Event 3.0</Typography>
+        <Typography className={styles.title} variant="h2" textAlign='left'>
+          The Technology Powering Event 3.0
+        </Typography>
+
         <Typography className={styles.subtitle}>
           eventflo is the innovative platform propelling events into the Web 3.0 era. Our all-in-one solution empowers
           organizers, enhances the attendee experience, and drives adoption of FloCoin, generating consistent demand and

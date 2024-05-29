@@ -32,7 +32,7 @@ export default function FoundersListItem({ info }: PropsType) {
   // ----------------------------------------------------------------------------------
   return (
     <Grid item key={info.title}>
-      <Grid container gap={2} alignItems='center'>
+      <Grid container gap={2} alignItems='center' className={styles.cardItemTitle}>
         <Grid>
           <Typography className={styles.infoTitle}>{info.title}</Typography>
         </Grid>

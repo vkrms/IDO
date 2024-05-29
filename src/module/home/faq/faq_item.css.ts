@@ -2,6 +2,9 @@ import { manropeBold, manropeLight, manropeMedium, manropeRegular, manropeSemiBo
 
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
+import { line } from '../token_allocation/token_allocation.css';
+import { smallB } from '@/style/config/breakpoints.css';
+
 
 export const quesItem = style({
   display: 'block',
@@ -21,6 +24,11 @@ export const itemTitle = style({
   lineHeight: '36px',
   color: colorWhite,
   fontFamily: manropeMedium,
+
+  '@media': smallB({
+    fontSize: 18,
+    lineHeight: '27px',
+  })
 });
 
 export const itemInfo = style({
@@ -70,3 +78,8 @@ export const innerText = style({
   color: colorWhite,
   fontFamily: manropeRegular,
 });
+
+export const temp = style({
+  flexFlow: 'row',
+  alignItems: 'center',
+})

@@ -60,7 +60,6 @@ export default function FloCoin() {
     <Box className={styles.bg}>
 
       <div className="relative bob41 bg-pink-500 text-blue-600 mb-2">
-        <p>sup</p>
         {/* <video autoPlay={true} loop={true} muted className="object-cover bob4">
           <source src="/medium.webm" type="video/webm" />
         </video> */}
@@ -70,7 +69,7 @@ export default function FloCoin() {
       <Container>
 
         <Reveal>
-          <Typography className={styles.title}>
+          <Typography className={styles.title} variant="h2">
             FloCoin: The Future of Events
           </Typography>
           

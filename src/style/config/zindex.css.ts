@@ -1,2 +1,2 @@
-export const zIndexHeader = 100;
+export const zIndexHeader = 11111;
 export const zIndexNav = 111;

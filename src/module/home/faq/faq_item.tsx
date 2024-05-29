@@ -44,7 +44,7 @@ export default function FAQItem({ item }: PropsType) {
 
   return (
     <ListItem className={styles.quesItem}>
-      <Grid container justifyContent='space-between'>
+      <Grid container justifyContent='space-between' className={styles.temp}>
         <Grid item>
           <Typography className={styles.itemTitle}>{item.title}</Typography>
         </Grid>

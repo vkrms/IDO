@@ -1,12 +1,19 @@
 import * as styles from '@/components/header.css';
+import { isVisible, menuIcon } from '@/components/header.css';
 
-import { Button, Grid, Typography } from '@mui/material';
+import { Button, Grid, Typography, Drawer, useMediaQuery, IconButton } from '@mui/material';
 
 import IconLogo from '@/assets/img//logo.svg';
+import MenuIcon from '@/assets/svg/menu.svg';
+import CloseIcon from '@/assets/svg/close.svg';
 import { LOGIN } from '@/router/name';
 import { linkToBtn } from '@/style/common/link.css';
 import { colorWhite } from '@/style/config/color.css';
 import Link from 'next/link';
+import { useState } from 'react';
+import { cn } from '@/lib/utils/cn';
+
+// 
 
 /**
  * ----------------------------------------------------------------------------------
@@ -22,8 +29,49 @@ const dataList = ['Whitepaper', 'Why FloCoin', 'Tokenomics', 'Our Team', 'Roadma
 
 // ----------------------------------------------------------------------------------
 
+interface Props {
+  className?: string;
+}
+
+const Menu = ({className}: Props) => {
+  return (
+    <Grid item {...{className}}>
+      <Grid item>
+        <Grid className={cn(styles.list, 'doo')}>
+          {dataList.map((data) => (
+            <Grid key={data} className={styles.item}>
+              <a href="//www.example.com" target='_blank'>
+                <Typography className={styles.itemText}>{data}</Typography>
+              </a>
+            </Grid>
+          ))}
+        </Grid>
+      </Grid>
+
+      <Grid item>
+        <Link href={LOGIN} className={linkToBtn}>
+          <Button
+            variant='outlined'
+            sx={{ background: 'transparent', borderColor: colorWhite, color: colorWhite }}
+            fullWidth
+          >
+            Early Access
+          </Button>
+        </Link>
+      </Grid>
+    </Grid>
+  )
+}
+
 export default function LandingHeader() {
   // ----------------------------------------------------------------------------------
+
+  const [open, setOpen] = useState(false);
+  const isMobile = useMediaQuery(theme => theme.breakpoints.down('sm'));
+
+  const toggleDrawer = () => {
+    setOpen(!open);
+  };
 
   return (
     <header className={styles.header}>
@@ -31,27 +79,29 @@ export default function LandingHeader() {
         <Grid item>
           <IconLogo width={176} />
         </Grid>
-        <Grid item>
-          <Grid className={styles.list}>
-            {dataList.map((data) => (
-              <Grid key={data} className={styles.item}>
-                <Typography className={styles.itemText}>{data}</Typography>
-              </Grid>
-            ))}
-          </Grid>
-        </Grid>
-        <Grid item>
-          <Link href={LOGIN} className={linkToBtn}>
-            <Button
-              variant='outlined'
-              sx={{ background: 'transparent', borderColor: colorWhite, color: colorWhite }}
-              fullWidth
-            >
-              Early Access
-            </Button>
-          </Link>
-        </Grid>
+
+        <Menu className={styles.menuWide}/>
+
+        <IconButton
+          className={styles.menuBtn}
+          onClick={toggleDrawer}
+        >
+          <CloseIcon className={cn(menuIcon, { [isVisible]:  open })}/>
+          <MenuIcon  className={cn(menuIcon, { [isVisible]: !open })} />
+        </IconButton>
+
       </Grid>
+
+      <Drawer
+        anchor="right"
+        open={open}
+        onClose={toggleDrawer}
+        className={styles.drawer}
+        PaperProps={{className: styles.drawerPaper}}
+      >
+        <Menu className={styles.menuMobile} />
+      </Drawer>
+
     </header>
   );
 }

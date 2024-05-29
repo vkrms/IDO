@@ -16,7 +16,7 @@ import {
   TimelineOppositeContent,
   TimelineSeparator,
 } from '@mui/lab';
-import { Box, Container, Grid, Typography, duration } from '@mui/material';
+import { Box, Container, Grid, Typography, duration, useMediaQuery } from '@mui/material';
 
 import { colorPrimary } from '@/style/config/color.css';
 import { TracingBeam } from '@/components/ui/tracing-beam';
@@ -58,19 +58,27 @@ const list = [
 export default function DisruptionGrowth() {
   // ----------------------------------------------------------------------------------
 
+  const isMobile = useMediaQuery(theme => theme.breakpoints.down('md'));
+
   return (
     <Container>
-      <Typography className={styles.title}>The Path to Disruption & Growth</Typography>
+      <Typography variant="h2" className={styles.title}>The Path to Disruption & Growth</Typography>
       <Typography className={styles.subtitle}>
         Our roadmap outlines how eventflo & FloCoin will transform the event industry. From fraud-proof ticketing to the
         launch of FloCoin and AI-driven optimization, this strategic plan positions token for rapid growth and success.
       </Typography>
 
       <TracingBeam>
-        <Timeline position='alternate'>
+        <Timeline position={isMobile ? 'left' : 'alternate'} className={styles.timeline}>
           {list.map((item) => (
-            <TimelineItem key={item.duration} sx={{ gap: '72px', justifyContent: 'center', padding: 0 }}>
-              <TimelineOppositeContent>
+            <TimelineItem
+              key={item.duration}
+              sx={{ gap: '72px', justifyContent: 'center', padding: 0 }}
+              className={styles.timelineItem}
+            >
+
+              {/* text content */}
+              <TimelineOppositeContent className={styles.timelineContent}>
                 <Typography className={styles.timeLimeTitle}>{item.title}</Typography>
                 <Typography className={styles.timeLineInfo}>{item.info}</Typography>
                 <Typography className={styles.timeLineInfo} sx={{ marginBottom: '56px !important' }}>
@@ -78,11 +86,19 @@ export default function DisruptionGrowth() {
                   {item.subtext}
                 </Typography>
               </TimelineOppositeContent>
+
               <TimelineSeparator>
                 <TimelineDot sx={{ width: 36, height: 36, background: colorPrimary }} />
                 <TimelineConnector sx={{ background: 'transparent', borderRight: `2px dashed ${colorPrimary}` }} />
               </TimelineSeparator>
-              <TimelineOppositeContent className={styles.timelineDuration}>{item.duration}</TimelineOppositeContent>
+
+              {/* duration */}
+              <TimelineOppositeContent
+                className={styles.timelineDuration}
+                sx={{ display: {xs: 'none', md: 'block'}}}
+              >
+                {item.duration}
+              </TimelineOppositeContent>
             </TimelineItem>
           ))}
         </Timeline>

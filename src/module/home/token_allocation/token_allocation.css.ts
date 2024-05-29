@@ -2,23 +2,31 @@ import { manropeBold, manropeLight, manropeRegular, manropeSemiBold } from '@/st
 
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
+import { smallB, smallUp } from '@/style/config/breakpoints.css';
 
 export const title = style({
   marginBottom: 16,
-  fontSize: 56,
-  lineHeight: '76px',
   color: colorWhite,
   fontFamily: manropeSemiBold,
   textAlign: 'center',
+
+  '@media': smallUp({
+    fontSize: 56,
+    lineHeight: '76px',
+  })
 });
 
 export const subtitle = style({
-  fontSize: 18,
-  lineHeight: '29px',
+
   fontFamily: manropeRegular,
   color: colorWhite,
   textAlign: 'center',
   marginBottom: 80,
+
+  '@media': smallUp({
+    fontSize: 18,
+    lineHeight: '29px',
+  })
 });
 
 export const list = style({
@@ -39,21 +47,33 @@ export const legendTitle = style({
   lineHeight: '36px',
   fontFamily: manropeBold,
   marginBottom: 4,
+  position: 'relative',
+
+  '@media': smallB({
+    fontSize: 20,
+    lineHeight: '30px',
+    paddingLeft: 12,
+  })
 });
 
 export const legendText = style({
   maxWidth: 544,
-  fontSize: 16,
-  lineHeight: '24px',
   fontFamily: manropeLight,
   color: colorWhite,
+
+  '@media': smallUp({
+    fontSize: 16,
+    lineHeight: '24px',
+  })
 });
 
 export const line = style({
   display: 'inline-block',
   marginRight: 6,
   width: 6,
-  height: 36,
   borderRadius: 2,
   verticalAlign: 'middle',
+  position: 'absolute',
+  height: '100%',
+  left: 0,
 });

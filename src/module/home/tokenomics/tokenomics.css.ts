@@ -1,16 +1,8 @@
 import { colorPrimary, colorWhite } from '@/style/config/color.css';
 import { manropeRegular, manropeSemiBold } from '@/style/config/font.css';
+import { small, smallB, smallUp } from '@/style/config/breakpoints.css'
 
 import { style } from '@vanilla-extract/css';
-
-export const title = style({
-  marginBottom: 56,
-  fontSize: 56,
-  lineHeight: '76px',
-  color: colorWhite,
-  fontFamily: manropeSemiBold,
-  textAlign: 'center',
-});
 
 export const box = style({
   display: 'flex',
@@ -18,6 +10,13 @@ export const box = style({
   alignItems: 'center',
   gap: 32,
   marginBottom: 56,
+
+  '@media': {
+    [small]: {
+      flexDirection: 'column',
+      gap: 8,
+    }
+  }
 });
 
 export const boxLeft = style({
@@ -26,14 +25,23 @@ export const boxLeft = style({
   lineHeight: '66px',
   fontFamily: manropeSemiBold,
   color: colorWhite,
+
+  '@media': smallB({
+      fontSize: 24,
+      lineHeight: '33px',
+      alignSelf: 'flex-start',
+    })
 });
 
 export const boxRight = style({
   maxWidth: 543,
-  fontSize: 18,
-  lineHeight: '25px',
   fontFamily: manropeRegular,
   color: colorWhite,
+
+  '@media': smallUp({
+    fontSize: 18,
+    lineHeight: '25px',
+  })
 });
 
 export const infoBox = style({

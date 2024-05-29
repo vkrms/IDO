@@ -1,5 +1,8 @@
 import { manropeBold, manropeMedium, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
 
+import { colorPrimary, colorWhite } from '@/style/config/color.css';
+import { small } from '@/style/config/breakpoints.css';
+
 import { style } from '@vanilla-extract/css';
 
 export const f10 = style({
@@ -18,9 +21,22 @@ export const h1 = style({
 });
 
 export const h2 = style({
-  fontSize: 30,
-  fontFamily: manropeMedium,
-});
+  marginBottom: 56,
+  fontSize: 56,
+  lineHeight: '76px',
+  color: colorWhite,
+  fontFamily: manropeSemiBold,
+  textAlign: 'center',
+
+  '@media': {
+    [small]: {
+      fontSize: 32,
+      lineHeight: 44,
+      marginBottom: 32,
+    }
+  }
+
+})
 
 export const h3 = style({
   fontSize: 24,

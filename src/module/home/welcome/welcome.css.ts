@@ -1,3 +1,4 @@
+import { smallUp } from '@/style/config/breakpoints.css';
 import { colorBorder, colorWhite } from '@/style/config/color.css';
 import {
   electrolizeRegular,
@@ -27,17 +28,22 @@ export const title1 = style({
 
 export const title2 = style({
   marginBottom: 8,
-  fontSize: 64,
-  lineHeight: '88px',
+  fontSize: 48,
+  lineHeight: '66px',
   fontFamily: manropeBold,
   // color: colorWhite,
   textAlign: 'center',
+
+  '@media': smallUp({
+    fontSize: 64,
+    lineHeight: '88px',
+  })
 });
 
 export const title3 = style({
   marginBottom: 32,
-  fontSize: 18,
-  lineHeight: '29px',
+  // fontSize: 18,
+  // lineHeight: '29px',
   // color: colorWhite,
   fontFamily: manropeRegular,
   textAlign: 'center',
