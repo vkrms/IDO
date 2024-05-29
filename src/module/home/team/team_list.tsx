@@ -43,13 +43,13 @@ export default function TeamList({ list }: PropsType) {
     <Box>
       {list.map((item) => (
         <Box key={item.title} className={styles.teamItem}>
-          <Typography className={styles.title}>{item.title}</Typography>
+          <Typography variant="h3" className={styles.title}>{item.title}</Typography>
 
             <Grid container className={styles.list}>
               {item.list.map((item) => (
                 <CardContainer className="card-container" key={item.name}>
-                  <CardBody className="relative group/card lookiehere">
-                    <Grid item flexBasis={352} className={styles.bar}>
+                  <CardBody className="relative group/card">
+                    <Grid item className={styles.bar}>
 
                       <Box className={styles.header}>
                         <Box className={styles.imgBox}>

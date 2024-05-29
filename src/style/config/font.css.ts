@@ -1,5 +1,6 @@
 import { globalFontFace, style } from '@vanilla-extract/css';
 
+
 export const manropeBold = 'ManropeBold';
 export const manropeExtraBold = 'ManropeExtraBold';
 export const manropeExtraLight = 'ManropeExtraLight';

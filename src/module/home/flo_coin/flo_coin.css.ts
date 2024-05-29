@@ -11,10 +11,6 @@ export const bg = style({
 
 export const title = style({
   marginBottom: 8,
-  fontSize: 52,
-  lineHeight: '71px',
-  fontFamily: manropeSemiBold,
-  // color: colorWhite,
   textAlign: 'center',
 });
 
@@ -33,8 +29,8 @@ export const text = style({
   maxWidth: 745,
   margin: '0 auto 80px',
   textAlign: 'center',
-  fontSize: 18,
-  lineHeight: '29px',
+  // fontSize: 18,
+  // lineHeight: '29px',
   fontFamily: manropeRegular,
   // color: colorWhite,
 });
@@ -65,8 +61,6 @@ export const itemTitle = style({
 });
 
 export const itemText = style({
-  fontSize: 16,
-  lineHeight: '24px',
   color: colorWhite,
   fontFamily: manropeLight,
   maxWidth: 352,

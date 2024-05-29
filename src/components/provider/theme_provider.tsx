@@ -18,6 +18,9 @@ import {
   colorWhite,
 } from '@/style/config/color.css';
 import { manropeBold, manropeMedium, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
+import { line } from '@/module/home/token_allocation/token_allocation.css';
+
+const smallUp = '@media (min-width:600px)';
 
 /**
  * ----------------------------------------------------------------------------------
@@ -108,19 +111,39 @@ declare module '@mui/material/Button' {
 
 const theme = createTheme({
   typography: {
+    body1: {
+      fontSize: 12,
+      lineHeight: '23px',
+
+      [smallUp]: {
+        fontSize: 16,
+        lineHeight: '24px',
+      }
+    },
+
     h1: {
       fontSize: 40,
       fontFamily: manropeBold,
+      color: colorWhite,
     },
+
     h2: {
-      fontSize: 30,
+      fontSize: 32,
+      lineHeight: '44px',
+      marginBottom: 32,
+      textAlign: 'center',
       fontFamily: manropeMedium,
-      styleOverrides: {
-        root: {
-          fontSize: 30,
-          fontFamily: manropeMedium,
-        },
-      },
+
+      [smallUp]: {
+        fontSize: 56,
+        lineHeight: '76px',
+      }
+      // styleOverrides: {
+      //   root: {
+      //     fontSize: 30,
+      //     fontFamily: manropeMedium,
+      //   },
+      // },
     },
     h3: {
       fontSize: 24,
@@ -225,7 +248,7 @@ const theme = createTheme({
       main: colorError,
     },
     text: {
-      primary: colorTextBlack,
+      primary: colorWhite,
       secondary: colorTextGrey,
     },
     gray: {
@@ -288,6 +311,13 @@ const theme = createTheme({
           height: 48,
         },
       },
+    },
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          paddingInline: 20,
+        }
+      }
     },
     MuiCardHeader: {
       styleOverrides: {
@@ -353,7 +383,7 @@ const theme = createTheme({
           padding: '18px 40px',
           fontSize: 15,
           lineHeight: '18px',
-          color: colorTextGrey,
+          color: colorWhite,
           fontFamily: manropeRegular,
         },
       },

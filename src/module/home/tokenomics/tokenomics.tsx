@@ -27,11 +27,10 @@ export default function Tokenomics() {
   // ----------------------------------------------------------------------------------
   return (
     <Container>
-      <Typography className={styles.title}>Tokenomics</Typography>
+      <Typography variant="h2" component="h2">Tokenomics</Typography>
       <Grid container className={styles.box}>
-        <Grid item>
-          <Typography className={styles.boxLeft}>Own Your Share of the Future</Typography>
-        </Grid>
+        <Typography variant="h3" className={styles.boxLeft}>Own Your Share of the Future</Typography>
+                
         <Grid item>
           <Typography className={styles.boxRight}>
             FloCoin ignites a new era of event experience. Invest in FloCoin, and you're not only fueling innovation in

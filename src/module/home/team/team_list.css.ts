@@ -2,6 +2,7 @@ import { manropeMedium, manropeRegular, manropeSemiBold } from '@/style/config/f
 
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
+import { smallUp } from '@/style/config/breakpoints.css';
 
 export const teamItem = style({
   marginBottom: 56,
@@ -14,11 +15,12 @@ export const teamItem = style({
 
 export const title = style({
   marginBottom: 48,
-  fontSize: 32,
-  lineHeight: '44px',
-  fontFamily: manropeSemiBold,
-  color: colorWhite,
   textAlign: 'center',
+
+  '@media': smallUp({
+    fontSize: 32,
+    lineHeight: '44px',
+  })
 });
 
 export const list = style({
@@ -70,7 +72,9 @@ export const role = style({
 export const bar = style({
   borderRadius: 8,
   backgroundColor: '#9A098B1A',
-  // overflow: 'hidden',
+  maxWidth: 352,
+  flexBasis: 288,
+  flexGrow: 1,
 })
 
 export const infoList = style({
@@ -93,3 +97,9 @@ export const infoText = style({
   fontFamily: manropeRegular,
   maxWidth: 320,
 });
+
+export const cardItemTitle = style({
+  whiteSpace: 'nowrap',
+  display: 'flex',
+  flexFlow: 'row',
+})  

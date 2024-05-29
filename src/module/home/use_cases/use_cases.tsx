@@ -49,7 +49,8 @@ export default function UseCases() {
   // ----------------------------------------------------------------------------------
   return (
     <Container>
-      <Typography className={styles.title}>FloCoin Use Cases</Typography>
+      <Typography variant="h2" className={styles.title}>FloCoin Use Cases</Typography>
+      
       <Grid container className={styles.list}>
         {list.map((item) => (
           <Grid item key={item.id}>

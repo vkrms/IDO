@@ -97,12 +97,12 @@ export default function Welcome() {
             </Typography>
 
             <Typography className={styles.title2}>
-                Welcome to Event 3.0
+                Welcome to Event 3.0
             </Typography>
 
             <Typography className={styles.title3}>
-                Own the cryptocurrency powering NFT ticketing, data-driven insights, and the future <br />
-                of event management
+                Own the cryptocurrency powering NFT ticketing, data-driven insights, and the future
+                of event management
             </Typography>
           </Reveal>
 

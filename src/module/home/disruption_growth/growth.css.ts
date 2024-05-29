@@ -2,10 +2,9 @@ import { manropeBold, manropeLight, manropeRegular, manropeSemiBold } from '@/st
 
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
+import { smallUp } from '@/style/config/breakpoints.css';
 
 export const title = style({
-  fontSize: 56,
-  lineHeight: '76px',
   color: colorWhite,
   fontFamily: manropeSemiBold,
   textAlign: 'center',
@@ -15,12 +14,15 @@ export const title = style({
 
 export const subtitle = style({
   maxWidth: 806,
-  fontSize: 18,
-  lineHeight: '29px',
   fontFamily: manropeRegular,
   color: colorWhite,
   textAlign: 'center',
   margin: '0 auto 104px',
+
+  '@media': smallUp({
+    fontSize: 18,
+    lineHeight: '29px',
+  })
 });
 
 export const timeLimeTitle = style({
@@ -58,3 +60,15 @@ export const timelineDuration = style({
   lineHeight: '33px',
   fontFamily: manropeSemiBold,
 });
+
+export const timeline = style({
+  padding: '0 0 0 10px',
+})
+
+export const timelineItem = style({
+  gap: 48,
+})
+
+export const timelineContent = style({
+  padding: 0,
+})

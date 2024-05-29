@@ -2,25 +2,33 @@ import { manropeRegular, manropeSemiBold } from '@/style/config/font.css';
 
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
+import { smallB, smallUp } from '@/style/config/breakpoints.css';
+import { m } from 'framer-motion';
 
 export const title = style({
   maxWidth: 700,
   margin: '0 auto 8px',
-  fontSize: 56,
-  lineHeight: '76px',
   color: colorWhite,
   fontFamily: manropeSemiBold,
   textAlign: 'center',
+
+  '@media': smallB({
+    textAlign: 'left',
+  })
 });
 
 export const subtitle = style({
   maxWidth: 894,
   margin: '0 auto 40px',
   color: colorWhite,
-  fontSize: 18,
-  lineHeight: '29px',
   fontFamily: manropeRegular,
-  textAlign: 'center',
+  textAlign: 'left',
+
+  '@media': smallUp({
+    textAlign: 'center',
+    fontSize: 18,
+    lineHeight: '29px',
+  })
 });
 
 export const list = style({
@@ -39,6 +47,12 @@ export const itemTitle = style({
   fontFamily: manropeSemiBold,
   display: 'block',
   marginBottom: 8,
+
+  '@media': smallB({
+    fontSize: 18,
+    lineHeight: '27px',
+    marginBottom: 4,
+  })
 });
 
 export const itemText = style({
@@ -46,4 +60,5 @@ export const itemText = style({
   fontSize: 16,
   lineHeight: '24px',
   color: colorWhite,
+  fontWeight: 300,
 });

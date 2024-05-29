@@ -64,7 +64,7 @@ export default function FAQ() {
 
   return (
     <Container>
-      <Typography className={styles.title}>FAQ's</Typography>
+      <Typography variant="h2" className={styles.title}>FAQ's</Typography>
       <List sx={{ padding: 0 }}>
         {list.map((item) => (
           <FAQItem item={item} key={item.title} />
