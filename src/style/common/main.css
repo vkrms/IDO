@@ -23,14 +23,6 @@ body {
     color: #fff;
 }
 
-.scrollable {
-    justify-content: left !important;
-    flex-flow: row;
-    max-width: 100%;
-    overflow: auto;
-    padding-inline: 16px;
-}
-
 .scrollable::-webkit-scrollbar {
     display: none;
 }
@@ -39,4 +31,16 @@ body {
     flex: 0 1 352px;    
 }
 
+path.expand_b_svg__v,
+path.expand_b_svg__h {
+    transition: all .3s;
+    transform-origin: center;
+}
+
+.expState path.expand_b_svg__v {
+    transform: rotate(90deg);
+}
+
+.expState path.expand_b_svg__h {
+    transform: rotate(180deg);
 }

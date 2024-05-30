@@ -79,7 +79,13 @@ export const innerText = style({
   fontFamily: manropeRegular,
 });
 
-export const temp = style({
+export const itemTitleWrap = style({
   flexFlow: 'row',
   alignItems: 'center',
+  cursor: 'pointer',
+  userSelect: 'none',
+})
+
+export const btn = style({
+  marginLeft: 16,
 })
