@@ -35,6 +35,8 @@ body {
     display: none;
 }
 
-.alice {
-    font-size: 24px;
+.bazuzi {
+    flex: 0 1 352px;    
+}
+
 }

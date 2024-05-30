@@ -46,9 +46,9 @@ export default function TeamList({ list }: PropsType) {
         <Box key={item.title} className={styles.teamItem}>
           <Typography variant="h3" className={styles.title}>{item.title}</Typography>
 
-            <Grid container className={cn(styles.list, 'scrollable')}>
+            <Grid container className={cn(styles.list)}>
               {item.list.map((item) => (
-                <CardContainer className="card-container" key={item.name}>
+                <CardContainer className={styles.cardContainer} key={item.name}>
                   <CardBody className="relative group/card">
                     <Grid item className={styles.bar}>
 
@@ -67,11 +67,13 @@ export default function TeamList({ list }: PropsType) {
                         <Typography className={styles.role}>{item.role}</Typography>
                       </CardItem>
 
-                        <Grid container className={styles.infoList}>
-                          {item.info.map((info) => (
-                            <FoundersListItem info={info} key={info.title} />
-                          ))}
-                        </Grid>
+                      <CardItem translateZ={10}>
+                          <Grid container className={styles.infoList}>
+                            {item.info.map((info) => (
+                              <FoundersListItem info={info} key={info.title} />
+                            ))}
+                          </Grid>
+                      </CardItem>
 
                       </Grid>
                     </CardBody>

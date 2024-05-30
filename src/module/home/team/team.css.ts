@@ -3,7 +3,7 @@ import { manropeRegular, manropeSemiBold } from '@/style/config/font.css';
 import { colorWhite } from '@/style/config/color.css';
 import { small } from '@/style/config/breakpoints.css';
 import { style } from '@vanilla-extract/css';
-import { smallUp } from '@/style/config/breakpoints.css';
+import { smallUp, medium } from '@/style/config/breakpoints.css';
 
 export const title = style({
   maxWidth: 740,
@@ -33,3 +33,7 @@ export const subtitle = style({
     lineHeight: '31px',
   })
 });
+
+export const teamContainer = style({
+  padding: 0,
+})

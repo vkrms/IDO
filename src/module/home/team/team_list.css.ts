@@ -26,7 +26,19 @@ export const title = style({
 export const list = style({
   position: 'relative',
   gap: 32,
-  justifyContent: 'center',
+  justifyContent: 'left',
+  flexFlow: 'row',
+  maxWidth: '100%',
+  overflow: 'auto',
+  paddingInline: 16,
+
+  '@media': {
+    '(min-width: 1200px)': {
+      paddingInline: 0,
+      justifyContent: 'center',
+      overflow: 'visible',
+    }
+  }
 });
 
 export const header = style({
@@ -102,4 +114,10 @@ export const cardItemTitle = style({
   whiteSpace: 'nowrap',
   display: 'flex',
   flexFlow: 'row',
+  cursor: 'pointer',
+  userSelect: 'none',
 })  
+
+export const cardContainer = style({
+  width: '100%',
+})
