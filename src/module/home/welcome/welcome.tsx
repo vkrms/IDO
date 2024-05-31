@@ -22,6 +22,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { Reveal } from '@/components/ui/reveal';
 import Countdown from '@/components/ui/countdown';
 import Image from 'next/image';
+import { CtaButton } from '@/components/ui/cta_button';
 
 
 // ----------------------------------------------------------------------------------
@@ -71,9 +72,11 @@ export default function Welcome() {
 
           <Box sx={{ textAlign: 'center' }}>
 
+            <CtaButton>
             <FancyButton>
               Join Early Access IDO List
             </FancyButton>
+            </CtaButton>
 
           </Box>
 

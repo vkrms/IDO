@@ -6,6 +6,7 @@
  * @author shuangshuang 2024/4/11
  */
 
+import FormDialog from '@/components/ui/form-dialog';
 import Footer from '@/module/footer/footer';
 import DirectorOfSymbiotic from '@/module/home/director_of_symbiotic/director_of_symbiotic';
 import DisruptionGrowth from '@/module/home/disruption_growth/growth';
@@ -26,6 +27,7 @@ export default function HomePage() {
   // ----------------------------------------------------------------------------------
   return (
     <Box className="overflow-hidden">
+      <FormDialog />
       <Welcome />
       <Box height={120} />
       <FloCoin />
@@ -47,7 +49,7 @@ export default function HomePage() {
       <DirectorOfSymbiotic />
       <Box height={120} />
       <FAQ />
-      <Box height={120} />
+      <Box height={120} />      
       <Footer />
       <Box height={16} />
     </Box>

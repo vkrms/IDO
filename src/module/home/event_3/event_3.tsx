@@ -11,6 +11,7 @@ import * as styles from '@/module/home/event_3/event_3.css';
 import { Box, Button, CardMedia, Container, Grid, Typography } from '@mui/material';
 
 import img from '@/assets/img//home/event_3/video.png';
+import { CtaButton } from '@/components/ui/cta_button';
 
 // ----------------------------------------------------------------------------------
 const dataList = [
@@ -66,7 +67,9 @@ export default function Event3() {
 
         <Box height={48} />
         <Box textAlign='center'>
-          <Button variant='contained'>Join Early Access IDO List</Button>
+          <CtaButton>
+            <Button variant='contained'>Join Early Access IDO List</Button>
+          </CtaButton>
         </Box>
       </Container>
     </Box>

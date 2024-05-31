@@ -6,6 +6,7 @@
  * @author shuangshuang 2024/4/11
  */
 
+import { CtaButton } from '@/components/ui/cta_button';
 import * as styles from '@/module/home/use_cases/use_cases.css';
 
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
@@ -62,7 +63,9 @@ export default function UseCases() {
       </Grid>
       <Box height={72} />
       <Box textAlign='center'>
-        <Button variant='contained'>Explore Tokenomics</Button>
+        <CtaButton>
+          <Button variant='contained'>Explore Tokenomics</Button>
+        </CtaButton>
       </Box>
     </Container>
   );
