@@ -8,74 +8,33 @@
 
 import * as styles from '@/module/home/welcome/welcome.css';
 
-import { Box, Button, CardMedia, Grid, Typography } from '@mui/material';
+import { Box, Button, CardMedia, Grid, Icon, Typography } from '@mui/material';
 
 import FancyButton from '@/components/ui/fancy-button';
 
-import IconFounder1 from '@/assets/img//home/welcome/founder_1.svg';
-import IconFounder2 from '@/assets/img//home/welcome/founder_2.svg';
-import IconFounder3 from '@/assets/img//home/welcome/founder_3.svg';
-import IconFounder4 from '@/assets/img//home/welcome/founder_4.svg';
-import IconFounder5 from '@/assets/img//home/welcome/founder_5.svg';
-import IconFounder6 from '@/assets/img//home/welcome/founder_6.svg';
-import IconFounder7 from '@/assets/img//home/welcome/founder_7.svg';
-import IconFounder8 from '@/assets/img//home/welcome/founder_8.svg';
-import ImgVideo from '@/assets/img//home/welcome/video.png';
 import IconVideo from '@/assets/img//home/welcome/video.svg';
 import { Container } from '@mui/material';
-import { split } from 'lodash';
 
 // ----------------------------------------------------------------------------------
-
-const list = [
-  { value: '99', key: 'Days' },
-  { value: '99', key: 'Hours' },
-  { value: '09', key: 'Minutes' },
-  { value: '09', key: 'Seconds' },
-];
 
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { Reveal } from '@/components/ui/reveal';
 import Countdown from '@/components/ui/countdown';
+import Image from 'next/image';
 
 
 // ----------------------------------------------------------------------------------
 
 const founderList = [
-  {
-    id: 'founder1',
-    icon: <IconFounder1 />,
-  },
-  {
-    id: 'founder2',
-    icon: <IconFounder2 />,
-  },
-  {
-    id: 'founder3',
-    icon: <IconFounder3 />,
-  },
-  {
-    id: 'founder4',
-    icon: <IconFounder4 />,
-  },
-  {
-    id: 'founder5',
-    icon: <IconFounder5 />,
-  },
-  {
-    id: 'founder6',
-    icon: <IconFounder6 />,
-  },
-  {
-    id: 'founder7',
-    icon: <IconFounder7 />,
-  },
-  {
-    id: 'founder8',
-    icon: <IconFounder8 />,
-  },
-];
+  'stereosonic',
+  'hardware',
+  'reminisce',
+  'festivalx',
+  'tailgate',
+  'twotribes',
+  'babylon',
+]
 
 // ----------------------------------------------------------------------------------
 
@@ -125,8 +84,10 @@ export default function Welcome() {
           </Typography>
 
           <Grid className={styles.founderList}>
-            {founderList.map((founder) => (
-              <Grid key={founder.id}>{founder.icon}</Grid>
+            {founderList.map((id) => (
+              <Grid key={id}>
+                <Image src={`/img/home/welcome/${id}.webp`} alt={id} height={28} width={180} className={styles.logo}/>
+              </Grid>
             ))}
           </Grid>
         </Container>
@@ -137,7 +98,7 @@ export default function Welcome() {
     
     <Container>
       <Box className={styles.imgBox}>
-        <CardMedia component='img' image={ImgVideo.src} />
+        <CardMedia component='img' image='/img/home/welcome/video.webp' />
         <Box className={styles.iconBox}>
           <IconVideo />
         </Box>
