@@ -44,3 +44,15 @@ path.expand_b_svg__h {
 .expState path.expand_b_svg__h {
     transform: rotate(180deg);
 }
+
+.input {
+    background: #180728;
+    border: 1px solid #fff;
+    color: #fff;
+    max-width: 424px;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 12px;
+}

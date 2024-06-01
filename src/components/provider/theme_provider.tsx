@@ -257,6 +257,15 @@ const theme = createTheme({
     divider: colorBorder,
   },
   components: {
+    MuiFormControl: {
+      styleOverrides: {
+        root: {
+          width: '100%',
+          maxWidth: 424,
+          marginBottom: 16,
+        },
+      },
+    },
     MuiTypography: {
       defaultProps: {
         variantMapping: {
