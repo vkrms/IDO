@@ -3,6 +3,7 @@ import React from "react";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils/cn";
 import { Typography, Box, Grid, Button, FormControl } from "@mui/material";
+import { MuiTelInput } from 'mui-tel-input'
 import * as styles from './form-fields.css';
 
 export function FormFields() {
@@ -31,6 +32,11 @@ export function FormFields() {
                         <FormControl className={styles.control}>
                             <label htmlFor="email">Email Address</label>
                             <Input id="email" placeholder="enter your email address" type="email" />
+                        </FormControl>
+
+                        <FormControl className={styles.control}>
+                            <label htmlFor="phone">Phone Number</label>
+                            <MuiTelInput/>
                         </FormControl>
 
                         <Grid item textAlign={'center'}>
