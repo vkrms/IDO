@@ -18,7 +18,10 @@ const nextConfig = {
 		],
 	},
 	reactStrictMode: true,
-	transpilePackages: ["@pusher/push-notifications-web"],
+	transpilePackages: [
+		"@pusher/push-notifications-web",
+		'mui-tel-input',
+	],
 	i18n: {
 		locales: ["en-US", "zh-CN"],
 		defaultLocale: "en-US",
