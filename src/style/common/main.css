@@ -21,6 +21,7 @@
     right: -120px;
     top: -120px;
     opacity: .1;
+    visibility: hidden;
 }
 
 body {
@@ -47,18 +48,6 @@ path.expand_b_svg__h {
 
 .expState path.expand_b_svg__h {
     transform: rotate(180deg);
-}
-
-.input {
-    background: #180728;
-    border: 1px solid #fff;
-    color: #fff;
-    max-width: 424px;
-}
-
-label {
-    font-size: 14px;
-    margin-bottom: 12px;
 }
 
 .telly .MuiInputAdornment-root {
@@ -99,4 +88,24 @@ label {
     border-radius: 100%;
     background: hsl(320deg 100% 91% / 30%);
     box-shadow: 0 0 10px 2px hotpink;
+}
+
+.gradients-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+}
+
+.input {
+    background: #180728;
+    border: 1px solid #fff;
+    color: #fff;
+    max-width: 424px;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 12px;
 }
