@@ -94,7 +94,7 @@ export const BackgroundGradientAnimation = ({
                 containerClassName
             )}
 
-            style={{height: '777px'}}
+            style={{height: 'auto'}}
         >
             <svg className="hidden">
                 <defs>
@@ -114,7 +114,9 @@ export const BackgroundGradientAnimation = ({
                     </filter>
                 </defs>
             </svg>
+
             <div className={cn("", className)}>{children}</div>
+            
             <div
                 className={cn(
                     "gradients-container h-full w-full blur-lg",

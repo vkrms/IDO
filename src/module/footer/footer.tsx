@@ -46,50 +46,58 @@ const socials = [
     icon: img5.src,
   },
 ]
+import { BackgroundGradientAnimation } from '@/components/ui/background-gradient-animation';
 
 // ----------------------------------------------------------------------------------
 
 export default function Footer() {
   // ----------------------------------------------------------------------------------
   return (
-    <Box className={styles.footer}>
-      <Container>
-        <Grid container className={styles.box}>
-          <Grid item>
-            <Typography className={styles.logo}>
-              <IconLogo width={217} />
-            </Typography>
-            <Typography className={styles.iconList}>
-              {socials.map((item, i) => (
-                <IconButton size='medium' href={item.href} target="_blank" key={item.slug} className="social">
-                  <CardMedia component='img' image={item.icon} width='32' />
-                </IconButton>
-              ))}
-            </Typography>
+    <Box className={''/*styles.footer*/}>
+      <BackgroundGradientAnimation
+          firstColor='112, 0, 255'
+          secondColor='255, 0, 199'
+          interactive={false}
+          className={styles.padding}
+      >
+        <Container className={styles.container}>
+            <Grid container className={styles.box}>
+              <Grid item>
+                <Typography className={styles.logo}>
+                  <IconLogo width={217} />
+                </Typography>
+                <Typography className={styles.iconList}>
+                  {socials.map((item, i) => (
+                    <IconButton size='medium' href={item.href} target="_blank" key={item.slug} className="social">
+                      <CardMedia component='img' image={item.icon} width='32' />
+                    </IconButton>
+                  ))}
+                </Typography>
 
-            <Typography className={styles.text}>
-              Participation in an IDO carries inherent risk. Please review our offering materials and consult with a
-              financial advisor before making any investment decisions. eventflo is an registered Australian company
-              (ACN: 677 042 947).
-            </Typography>
-          </Grid>
+                <Typography className={styles.text}>
+                  Participation in an IDO carries inherent risk. Please review our offering materials and consult with a
+                  financial advisor before making any investment decisions. eventflo is an registered Australian company
+                  (ACN: 677 042 947).
+                </Typography>
+              </Grid>
 
 
 
-          <Grid item className={styles.link}>
-            {/* <Link href='' className={styles.linkText}>
+              <Grid item className={styles.link}>
+                {/* <Link href='' className={styles.linkText}>
               Terms & Conditions
             </Link> */}
-            <Link href='' className={styles.linkText}>
-              Privacy Policy
-            </Link>
-            <Link href='' className={styles.linkText}>
-              Disclaimer
-            </Link>
-          </Grid>
-        </Grid>
-        <Typography className={styles.copyright}>&copy; eventflo Pty Ltd</Typography>
-      </Container>
+                <Link href='' className={styles.linkText}>
+                  Privacy Policy
+                </Link>
+                <Link href='' className={styles.linkText}>
+                  Disclaimer
+                </Link>
+              </Grid>
+            </Grid>
+            <Typography className={styles.copyright}>&copy; eventflo Pty Ltd</Typography>
+        </Container>
+      </BackgroundGradientAnimation>
     </Box>
   );
 }

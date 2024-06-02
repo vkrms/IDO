@@ -51,7 +51,6 @@ export default function HomePage() {
       <FAQ />
       <Box height={120} />      
       <Footer />
-      <Box height={16} />
     </Box>
   );
 }
