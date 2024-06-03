@@ -81,15 +81,15 @@ export default function DisruptionGrowth() {
               <TimelineOppositeContent className={styles.timelineContent}>
                 <Typography className={styles.timeLimeTitle}>{item.title}</Typography>
                 <Typography className={styles.timeLineInfo}>{item.info}</Typography>
-                <Typography className={styles.timeLineInfo} sx={{ marginBottom: '56px !important' }}>
+                <Typography className={styles.timeLineInfo}>
                   <b className={styles.timeLineSubtitle}>{item.subtitle}</b>
                   {item.subtext}
                 </Typography>
               </TimelineOppositeContent>
 
-              <TimelineSeparator>
-                <TimelineDot sx={{ width: 36, height: 36, background: colorPrimary }} />
-                <TimelineConnector sx={{ background: 'transparent', borderRight: `2px dashed ${colorPrimary}` }} />
+              <TimelineSeparator className={styles.separator}>
+                <TimelineDot className={styles.dot}/>
+                <TimelineConnector sx={{ background: 'transparent', borderRight: `2px dotted ${colorPrimary}` }} />
               </TimelineSeparator>
 
               {/* duration */}

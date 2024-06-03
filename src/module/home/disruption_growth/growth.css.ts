@@ -1,4 +1,5 @@
 import { manropeBold, manropeLight, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
+import { colorPrimary } from '@/style/config/color.css';
 
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
@@ -43,6 +44,10 @@ export const timeLineInfo = style({
   lineHeight: '29px',
   fontFamily: manropeRegular,
   color: colorWhite,
+
+  '&:last-child': {
+    marginBottom: 0,
+  },
 });
 
 export const timeLineSubtitle = style({
@@ -59,6 +64,7 @@ export const timelineDuration = style({
   fontSize: 24,
   lineHeight: '33px',
   fontFamily: manropeSemiBold,
+  flex: '0 0 50%',
 });
 
 export const timeline = style({
@@ -71,4 +77,24 @@ export const timelineItem = style({
 
 export const timelineContent = style({
   padding: 0,
+  flex: '0 0 50%',
+  marginBottom: 32,
+
+  '@media': smallUp({
+    marginBottom: 80,
+  })  
+})
+
+export const separator = style({
+  background: '#4388dd1a',
+  borderRadius: 2,
+})
+
+export const dot = style({
+  aspectRatio: '1/1',
+  transition: 'all .3s',
+  transform: 'scale(1.5)',
+  width: 24,
+  background: colorPrimary,
+  margin: '24px 0',
 })

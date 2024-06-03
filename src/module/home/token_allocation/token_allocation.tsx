@@ -62,12 +62,22 @@ export default function TokenAllocation() {
   return (
     <Container>
       <Typography variant="h2" className={styles.title}>Token Allocation</Typography>
-      
+
       <Typography className={styles.subtitle}>Here's how we'll emphasize value creation and longevity</Typography>
+
       <Grid container className={styles.list}>
-        <Grid item>
-          <Doughnut data={data} options={{ responsive: true, plugins: { legend: { display: false } } }} />
+        <Grid item className={styles.donutWrap}>
+          <video autoPlay={true} loop={true} muted className={styles.xsVideo}>
+            <source src="/xs.webm" type="video/webm" />
+          </video>
+
+          <Doughnut
+            className={styles.donut}
+            data={data}
+            options={{ responsive: true, plugins: { legend: { display: false } } }}
+          />
         </Grid>
+
         <Grid item>
           <Grid container className={styles.legendList}>
             {legendList.map((data, index) => (

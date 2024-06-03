@@ -48,11 +48,11 @@ export const legendTitle = style({
   fontFamily: manropeBold,
   marginBottom: 4,
   position: 'relative',
+  paddingLeft: 12,
 
   '@media': smallB({
     fontSize: 20,
     lineHeight: '30px',
-    paddingLeft: 12,
   })
 });
 
@@ -77,3 +77,24 @@ export const line = style({
   height: '100%',
   left: 0,
 });
+
+export const donut = style({
+  position: 'relative',
+})
+
+export const donutWrap = style({
+  position: 'relative',
+  objectFit: 'cover',
+})
+
+export const xsVideo = style({
+  position: 'absolute',
+  aspectRatio: '1 / 1',
+  width: '200px',
+  margin: 'auto',
+  top: '0',
+  right: '0',
+  bottom: '0',
+  left: '0',
+  objectFit: 'cover',
+})

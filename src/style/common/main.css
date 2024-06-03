@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 .bob4 {
-    background: hotpink;
-    top: -70%;
-    left: 50%;
+    top: -400px;
+    right: -400px;
     position: absolute;
-    mix-blend-mode: plus-lighter;
+    aspect-ratio: 1 / 1;
+    width: 1080px;
+    object-fit: cover;
 }
 
 .bob4__square {
@@ -17,6 +18,9 @@
     height: 538px;
     width: 538px;
     display: block;
+    right: -120px;
+    top: -120px;
+    opacity: .1;
 }
 
 body {
@@ -78,3 +82,21 @@ label {
     color: hotpink;
 }
 
+@media (max-width: 1592px) {
+    .bob4{
+        width: 500px;
+        right: -200px;
+        top: 64px;
+        z-index: 0;
+    }
+}
+
+.social {
+    transition: all .3s ease;
+}
+
+.social:hover {
+    border-radius: 100%;
+    background: hsl(320deg 100% 91% / 30%);
+    box-shadow: 0 0 10px 2px hotpink;
+}

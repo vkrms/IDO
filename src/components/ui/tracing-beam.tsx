@@ -53,31 +53,35 @@ export const TracingBeam = ({
         >
             <div className="absolute left-1/2 right-1/2">
                 <svg
-                    viewBox={`0 0 20 ${svgHeight}`}
-                    width="20"
+                    viewBox={`0 0 24 ${svgHeight}`}
+                    width="24"
                     height={svgHeight} // Set the SVG height
                     className="block"
                     aria-hidden="true"
                 >
-                    <motion.path
-                        d={`M 1 0V -36 V ${svgHeight * 0.8} V ${svgHeight}`}
-                        fill="none"
-                        stroke="#9091A0"
-                        strokeOpacity="0.16"
+                    <motion.rect
+                        width={24}
+                        height={svgHeight}
+                        rx={2}
+                        ry={2}
+                        fill="#9091A0"
+                        stroke="none"
+                        opacity="0.2"
                         transition={{
                             duration: 10,
                         }}
-                    ></motion.path>
-                    <motion.path
-                        d={`M 1 0V -36 V ${svgHeight * 0.8} V ${svgHeight}`}
-                        fill="none"
-                        stroke="url(#gradient)"
-                        strokeWidth="1.25"
+                    ></motion.rect>
+                    <motion.rect
+                        width={24}
+                        height={svgHeight}
+                        rx={2}
+                        ry={2}                       
+                        fill="url(#gradient)"
                         className="motion-reduce:hidden"
                         transition={{
                             duration: 10,
                         }}
-                    ></motion.path>
+                    ></motion.rect>
                     <defs>
                         <motion.linearGradient
                             id="gradient"

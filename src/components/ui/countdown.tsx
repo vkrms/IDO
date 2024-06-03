@@ -17,13 +17,12 @@ function MyTimer({ expiryTimestamp }: { expiryTimestamp: Date }) {
 
                 {timeBits.map(title => {
                     const props = {
-                        key: title,
                         value: timerInstance[title as keyof TimerResult] as number,
                         title
                     }
 
                     return (
-                        <Digit {...props} />
+                        <Digit key={title} {...props} />
                     )
                 })}
             </div>
