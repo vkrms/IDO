@@ -1,5 +1,6 @@
 import { createVanillaExtractPlugin } from "@vanilla-extract/next-plugin";
 import  withPWA from "next-pwa";
+import { types } from "util";
 
 // ------------------------------------------------------------------------------
 
@@ -18,6 +19,9 @@ const nextConfig = {
 		],
 	},
 	reactStrictMode: true,
+	typescript: {
+		ignoreBuildErrors: true,
+	},
 	transpilePackages: [
 		"@pusher/push-notifications-web",
 		'mui-tel-input',

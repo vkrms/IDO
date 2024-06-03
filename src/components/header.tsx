@@ -1,7 +1,7 @@
 import * as styles from '@/components/header.css';
 import { isVisible, menuIcon } from '@/components/header.css';
 
-import { Button, Grid, Typography, Drawer, useMediaQuery, IconButton } from '@mui/material';
+import { Button, Grid, Typography, Drawer, useMediaQuery, IconButton, Theme } from '@mui/material';
 
 import IconLogo from '@/assets/img//logo.svg';
 import MenuIcon from '@/assets/svg/menu.svg';
@@ -67,7 +67,7 @@ export default function LandingHeader() {
   // ----------------------------------------------------------------------------------
 
   const [open, setOpen] = useState(false);
-  const isMobile = useMediaQuery(theme => theme.breakpoints.down('sm'));
+  const isMobile = useMediaQuery<Theme>(theme => theme.breakpoints.down('sm'));
 
   const toggleDrawer = () => {
     setOpen(!open);
