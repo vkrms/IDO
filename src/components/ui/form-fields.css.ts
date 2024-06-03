@@ -28,3 +28,7 @@ export const subtitle = style({
 export const control = style({
     marginBottom: 16,
 })
+
+export const tel = style({
+    color: '#fff'
+})

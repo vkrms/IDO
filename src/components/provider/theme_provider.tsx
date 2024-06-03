@@ -372,6 +372,13 @@ const theme = createTheme({
         },
       },
     },
+    MuiInputAdornment: {
+      styleOverrides: {
+        root: {
+          color: '#fff',
+        }
+      }
+    },
     MuiTableCell: {
       styleOverrides: {
         root: {

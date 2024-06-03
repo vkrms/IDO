@@ -56,3 +56,25 @@ label {
     font-size: 14px;
     margin-bottom: 12px;
 }
+
+.telly .MuiInputAdornment-root {
+    color: #fff;
+    border-right: 1px solid white;
+    height: 100%;
+    max-height: none;
+    font-size: 12px;
+}
+
+.telly .MuiTypography-body1 {
+    border: none;
+}
+
+.telly .MuiInputBase-input {
+    color: #fff;
+    font-size: 12px;
+}
+
+.MuiTelInput-Flag {
+    color: hotpink;
+}
+

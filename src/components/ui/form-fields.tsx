@@ -7,6 +7,14 @@ import { MuiTelInput } from 'mui-tel-input'
 import * as styles from './form-fields.css';
 
 export function FormFields() {
+    // console.log('rererender')
+    const [phone, setPhone] = React.useState('')
+
+    const handleChange = (newPhone) => {
+        setPhone(newPhone)
+        // console.log('yay!')
+    }
+
     return (
         <>
             <Box className={styles.body}>
@@ -18,8 +26,7 @@ export function FormFields() {
                     Get notified of the drop of the IDO and other important news by entering your details below.
                 </Typography>
 
-                {/* <form className="my-8 align-left" onSubmit={handleSubmit}> */}
-                    <Grid direction='column'>
+                    <Grid container direction='column'>
                         <FormControl className={styles.control}>
                             <label>Name</label>
 
@@ -34,9 +41,15 @@ export function FormFields() {
                             <Input id="email" placeholder="enter your email address" type="email" />
                         </FormControl>
 
-                        <FormControl className={styles.control}>
+                        <FormControl className={cn(styles.control, 'telly')}>
                             <label htmlFor="phone">Phone Number</label>
-                            <MuiTelInput/>
+                            <MuiTelInput
+                                value={phone}
+                                onChange={handleChange}
+                                defaultCountry="AU"
+                                forceCallingCode={true}
+                                className="my-class-name"
+                            />                        
                         </FormControl>
 
                         <Grid item textAlign={'center'}>
@@ -48,7 +61,6 @@ export function FormFields() {
                             </Button>
                         </Grid>
                     </Grid>
-                {/* </form> */}
             </Box>
         </>
     );
