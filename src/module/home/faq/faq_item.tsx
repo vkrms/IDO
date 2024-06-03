@@ -49,7 +49,6 @@ export default function FAQItem({ item }: PropsType) {
 
   function toggle() {
     setExpState(!expState)
-    console.log('toggle faq')
   }
 
   // ----------------------------------------------------------------------------------

@@ -48,8 +48,7 @@ export default function Welcome() {
       secondColor='255, 0, 199'
       interactive={false}
     >
-      <div className={styles.foo}>
-        <Container>
+       <Container className={styles.container}>
           <Box height={176} />
 
           <Reveal>
@@ -73,9 +72,9 @@ export default function Welcome() {
           <Box sx={{ textAlign: 'center' }}>
 
             <CtaButton>
-            <FancyButton>
-              Join Early Access IDO List
-            </FancyButton>
+              <FancyButton>
+                Join Early Access IDO List
+              </FancyButton>
             </CtaButton>
 
           </Box>
@@ -94,7 +93,6 @@ export default function Welcome() {
             ))}
           </Grid>
         </Container>
-      </div>
     </BackgroundGradientAnimation>
 
 

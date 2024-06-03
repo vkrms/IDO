@@ -9,9 +9,11 @@ import {
 } from '@/style/config/font.css';
 
 import { style } from '@vanilla-extract/css';
+import { relative } from 'path';
 
-export const foo = style({
-  position: 'absolute',
+export const container = style({
+  // position: 'absolute',
+  position: 'relative',
   top: 0,
   left: 0,
   right: 0,
@@ -76,21 +78,28 @@ export const itemValue = style({
   placeContent: 'center',
   borderRadius: 6,
   border: `0.036em solid ${colorBorder}`,
-  fontSize: 40,
+  fontSize: 24,
   lineHeight: 1.14,
   color: colorWhite,
   width: '1.4em',
+
+  '@media': smallUp({
+    fontSize: 40,
+  })
 });
 
 export const itemKey = style({
   marginTop: 16,
   textAlign: 'center',
-  fontSize: 18,
-  lineHeight: '29px',
   color: colorWhite,
   fontFamily: manropeRegular,
-  textTransform: 'capitalize',
   display: 'block',
+
+  '@media': smallUp({
+    fontSize: 18,
+    lineHeight: '29px',
+    // textTransform: 'capitalize',
+  })
 });
 
 export const imgBox = style({
@@ -134,6 +143,18 @@ export const founderList = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  gap: 32,
   flexWrap: 'wrap',
+  maxWidth: 900,
+  marginInline: 'auto',
+  gap: 32,
+  
+  '@media': smallUp({
+    gap: '28px 56px',
+  })
 });
+
+
+export const logo = style({
+  width: 'auto',
+  height: 'auto',
+})

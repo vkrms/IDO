@@ -1,7 +1,7 @@
 import { manropeBold, manropeLight, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
 
 import { colorWhite } from '@/style/config/color.css';
-import { small } from '@/style/config/breakpoints.css';
+import { small, medium } from '@/style/config/breakpoints.css';
 import { style } from '@vanilla-extract/css';
 
 export const bg = style({
@@ -45,11 +45,11 @@ export const list = style({
   gap: '72px 32px',
 
   '@media': {
-    [small]: {
+    '(max-width: 768px)': {
       textAlign: 'center',
-    },
+      justifyContent: 'center',
+    }
   }
-
 });
 
 export const itemTitle = style({
@@ -63,7 +63,7 @@ export const itemTitle = style({
 export const itemText = style({
   color: colorWhite,
   fontFamily: manropeLight,
-  maxWidth: 352,
+  maxWidth: '40ch',
 });
 
 export const icon = style({
