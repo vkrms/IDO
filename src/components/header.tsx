@@ -12,6 +12,7 @@ import { colorWhite } from '@/style/config/color.css';
 import Link from 'next/link';
 import { useState } from 'react';
 import { cn } from '@/lib/utils/cn';
+import { CtaButton } from './ui/cta_button';
 
 // 
 
@@ -49,15 +50,15 @@ const Menu = ({className}: Props) => {
       </Grid>
 
       <Grid item>
-        <Link href={LOGIN} className={linkToBtn}>
-          <Button
-            variant='outlined'
-            sx={{ background: 'transparent', borderColor: colorWhite, color: colorWhite }}
-            fullWidth
-          >
-            Early Access
-          </Button>
-        </Link>
+          <CtaButton>
+            <Button
+              variant='outlined'
+              sx={{ background: 'transparent', borderColor: colorWhite, color: colorWhite }}
+              fullWidth
+            >
+              Early Access
+            </Button>
+          </CtaButton>
       </Grid>
     </Grid>
   )

@@ -8,7 +8,7 @@
 
 import FormDialog from '@/components/ui/form-dialog';
 import Footer from '@/module/footer/footer';
-import DirectorOfSymbiotic from '@/module/home/director_of_symbiotic/director_of_symbiotic';
+import Testimonial from '@/module/home/testimonial/testimonial';
 import DisruptionGrowth from '@/module/home/disruption_growth/growth';
 import Event3 from '@/module/home/event_3/event_3';
 import FAQ from '@/module/home/faq/faq';
@@ -46,7 +46,7 @@ export default function HomePage() {
       <Box height={120} />
       <DisruptionGrowth />
       <Box height={96} />
-      <DirectorOfSymbiotic />
+      <Testimonial />
       <Box height={120} />
       <FAQ />
       <Box height={120} />      
