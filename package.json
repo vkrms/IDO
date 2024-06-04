@@ -15,7 +15,8 @@
     "@radix-ui/react-label": "^2.0.2",
     "@vercel/node": "^3.1.5",
     "autoprefixer": "^10.4.19",
-    "chart.js": "^4.4.3",
+    "chart.js": "^3.9.1",
+    "chartjs-plugin-deferred": "^2.0.0",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
     "cookie": "^0.6.0",
@@ -28,7 +29,7 @@
     "node-mailjet": "^6.0.5",
     "postcss": "^8.4.38",
     "react": "^18.3.1",
-    "react-chartjs-2": "^5.2.0",
+    "react-chartjs-2": "^4.3.1",
     "react-custom-scrollbars-2": "^4.5.0",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.51.4",
@@ -49,6 +50,7 @@
     "@vanilla-extract/next-plugin": "^2.4.0",
     "local-ssl-proxy": "^2.0.5",
     "sharp": "^0.33.4",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "webp-loader": "^0.6.0"
   }
 }

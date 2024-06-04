@@ -85,12 +85,13 @@ export const donut = style({
 export const donutWrap = style({
   position: 'relative',
   objectFit: 'cover',
+  flex: '0 1 384px',
 })
 
 export const xsVideo = style({
   position: 'absolute',
   aspectRatio: '1 / 1',
-  width: '200px',
+  width: '156px',
   margin: 'auto',
   top: '0',
   right: '0',
