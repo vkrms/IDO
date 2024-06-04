@@ -39,9 +39,8 @@ export const itemId = style({
 });
 
 export const itemTitle = style({
-  maxWidth: 250,
   marginBottom: 8,
-  fontSize: 24,
+  fontSize: 23,
   lineHeight: '33px',
   fontFamily: manropeSemiBold,
   color: colorWhite,

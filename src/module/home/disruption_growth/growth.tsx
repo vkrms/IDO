@@ -72,7 +72,6 @@ export default function DisruptionGrowth() {
         launch of FloCoin and AI-driven optimization, this strategic plan positions token for rapid growth and success.
       </Typography>
 
-      <TracingBeam>
         <Timeline position={isMobile ? 'left' : 'alternate'} className={styles.timeline}>
           {list.map((item) => (
             <TimelineItem
@@ -106,7 +105,8 @@ export default function DisruptionGrowth() {
             </TimelineItem>
           ))}
         </Timeline>
-      </TracingBeam>
+
+      {/* <TracingBeam/> */}
 
     </Container>
   );
