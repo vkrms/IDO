@@ -22,7 +22,6 @@ const Bob = () => {
 
     return (
         <>
-            <Button onClick={temp}>Bob</Button>
             <FormFields/>
         </>
     )

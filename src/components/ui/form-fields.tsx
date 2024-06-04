@@ -2,29 +2,34 @@
 import React from "react";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils/cn";
-import { Typography, Box, Grid, Button, FormControl } from "@mui/material";
+import { Typography, Box, Grid, Button, FormControl, IconButton } from "@mui/material";
 import { MuiTelInput } from 'mui-tel-input'
 import * as styles from './form-fields.css';
 
-export function FormFields() {
+interface Props {
+    success: boolean;
+}
+
+export function FormFields({success}: Props) {
     // console.log('rererender')
     const [phone, setPhone] = React.useState('')
 
-    const handleChange = (newPhone) => {
+    const handleChange = (newPhone: string) => {
         setPhone(newPhone)
         // console.log('yay!')
     }
 
     return (
         <>
-            <Box className={styles.body}>
-                <Typography variant="h3" className={styles.title}>
-                    Early Access
-                </Typography>
+            <Box className={styles.body}>                
+    {!success && <>
+                    <Typography variant="h3" className={styles.title}>
+                        Early Access
+                    </Typography>
 
-                <Typography className={cn('text-center', styles.subtitle)}>
-                    Get notified of the drop of the IDO and other important news by entering your details below.
-                </Typography>
+                    <Typography className={cn('text-center', styles.subtitle)}>
+                        Get notified of the drop of the IDO and other important news by entering your details below.
+                    </Typography>
 
                     <Grid container direction='column'>
                         <FormControl className={styles.control}>
@@ -61,6 +66,13 @@ export function FormFields() {
                             </Button>
                         </Grid>
                     </Grid>
+                </>}
+
+    {success && <>
+                    <Typography variant="h3" className={styles.title}>                        
+                        Thanks for signing up to get the drop on the IDO and any other FloCoin news, check your email for the next steps.
+                    </Typography>
+                </>}
             </Box>
         </>
     );

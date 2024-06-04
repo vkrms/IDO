@@ -9,13 +9,9 @@ const mailjet = new Mailjet({
     // options,
 })
 
-type ResponseData = {
-    message: string
-}
-
 export default async function handler(
     req: NextApiRequest,
-    res: NextApiResponse<ResponseData>
+    res: NextApiResponse
 ) {
 
 

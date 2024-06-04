@@ -4,7 +4,6 @@ import { smallUp } from '@/style/config/breakpoints.css';
 export const body = style({
     maxWidth: 500,
     borderRadius: 12,
-    border: '1px solid hotpink',
     margin: 'auto',
     padding: 40,
     backgroundColor: '#010314',
