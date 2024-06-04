@@ -16,16 +16,16 @@ import { Container } from '@mui/material';
 // ----------------------------------------------------------------------------------
 
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+import { InfiniteMovingCards as Scroller } from '@/components/ui/infinite-moving-cards';
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { Reveal } from '@/components/ui/reveal';
 import Countdown from '@/components/ui/countdown';
-import Image from 'next/image';
 import { CtaButton } from '@/components/ui/cta_button';
 
 
 // ----------------------------------------------------------------------------------
 
-const founderList = [
+const founders = [
   'stereosonic',
   'hardware',
   'reminisce',
@@ -83,12 +83,16 @@ export default function Welcome() {
             Built by the <b className={styles.founderBold}>founders</b> of
           </Typography>
 
+          <div className='container'>
+            <Scroller
+              items={founders}
+              direction="left"
+              speed="slow"
+            />
+          </div>
+
           <Grid className={styles.founderList}>
-            {founderList.map((id) => (
-              <Grid key={id}>
-                <Image src={`/img/home/welcome/${id}.webp`} alt={id} height={28} width={180} className={styles.logo}/>
-              </Grid>
-            ))}
+
           </Grid>
         </Container>
     </BackgroundGradientAnimation>

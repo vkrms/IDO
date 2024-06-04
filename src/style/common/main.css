@@ -126,3 +126,7 @@ label {
 /* .footer {
     overflow: hidden;
 } */
+
+.container {
+    max-width: 1152px;
+}
