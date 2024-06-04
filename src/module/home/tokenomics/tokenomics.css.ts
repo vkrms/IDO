@@ -3,6 +3,18 @@ import { manropeRegular, manropeSemiBold } from '@/style/config/font.css';
 import { small, smallB, smallUp } from '@/style/config/breakpoints.css'
 
 import { style } from '@vanilla-extract/css';
+import { text } from 'stream/consumers';
+
+export const title = style({
+  fontWeight: 600,
+
+  '@media': smallUp({
+    fontSize: 56,
+    lineHeight: '77px',
+    textAlign: 'center',
+    marginBottom: 48,
+  })
+})
 
 export const box = style({
   display: 'flex',
@@ -40,7 +52,7 @@ export const boxRight = style({
 
   '@media': smallUp({
     fontSize: 18,
-    lineHeight: '25px',
+    lineHeight: 1.7,
   })
 });
 

@@ -9,7 +9,6 @@ export const title = style({
   color: colorWhite,
   fontFamily: manropeSemiBold,
   textAlign: 'center',
-  maxWidth: 596,
   margin: '0 auto 16px',
 });
 
@@ -45,9 +44,11 @@ export const timeLineInfo = style({
   fontFamily: manropeRegular,
   color: colorWhite,
 
-  '&:last-child': {
-    marginBottom: 0,
-  },
+  selectors: {
+    '&:last-child': {
+      marginBottom: 0,
+    },
+  },  
 });
 
 export const timeLineSubtitle = style({

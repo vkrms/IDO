@@ -17,8 +17,8 @@ import TokenomicsList from '@/module/home/tokenomics/list';
 const dataList = [
   { title: 'Launchpad', text: 'TBC' },
   { title: 'Launch Date & Time', text: 'TBC' },
-  { title: 'Token Price', text: '$0.05' },
-  { title: 'Available Allocation', text: '8%' },
+  { title: 'Token Price', text: '$0.25' },
+  { title: 'Available Allocation', text: '20%' },
 ];
 
 // ----------------------------------------------------------------------------------
@@ -27,7 +27,7 @@ export default function IdoDetails() {
   // ----------------------------------------------------------------------------------
   return (
     <Container>
-      <Typography className={styles.title}>IDO Details</Typography>
+      <Typography className={styles.title} variant="h2">IDO Details</Typography>
 
       <TokenomicsList list={dataList} cate='idoDetails' />
     </Container>

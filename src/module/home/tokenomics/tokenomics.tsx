@@ -17,7 +17,7 @@ import TokenomicsList from '@/module/home/tokenomics/list';
 const dataList = [
   { title: 'Token Name', text: 'flocoin' },
   { title: 'Ticker Symbol', text: '$FLOCOIN' },
-  { title: 'Total Supply', text: '70,000,000' },
+  { title: 'Total Supply', text: '10,000,000' },
   { title: 'Blockchain', text: 'ERC-20' },
 ];
 
@@ -33,8 +33,7 @@ export default function Tokenomics() {
                 
         <Grid item>
           <Typography className={styles.boxRight}>
-            FloCoin ignites a new era of event experience. Invest in FloCoin, and you're not only fueling innovation in
-            event management, but also have the potential to directly benefit from its success.
+            FloCoin ($FLOCOIN), the lifeblood of eventflo, is an ERC20 token designed to retain value.  Rewarding use within the platform incentivizes active circulation, fostering liquidity and combating potential devaluation.
           </Typography>
         </Grid>
       </Grid>

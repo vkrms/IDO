@@ -25,22 +25,22 @@ import { TracingBeam } from '@/components/ui/tracing-beam';
 const list = [
   {
     duration: 'Q3 2024',
-    title: 'Phase 1: October Launch Focus',
-    info: 'Fraud-proof NFT ticketing, seamless pre-sale registrations, and a robust server-less architecture. This ensures fast, secure ticketing with zero downtime. Ran at our own events after an early beta test.',
+    title: 'Phase 1: December MVP Launch',
+    info: `Fraud-proof NFT ticketing, seamless pre-sale registrations, and a robust server-less architecture. This ensures fast, secure ticketing with zero downtime. Ran at our own events after an early beta test with the Prototype.`,
     subtitle: 'Strategic Vision',
     subtext: ': Unveil eventflo’s MVP to a small group of events as the first step in shaking up the industry.',
   },
   {
     duration: 'Q4 2024 - Q1 2025',
     title: 'Phase 2: Post-Launch Expansion',
-    info: "We'll introduce integrated marketing (email/SMS), a robust CRM for deep customer insights, and an inbuilt customer support module.",
+    info: `Launch our integrated marketing tools (email/SMS), a robust CRM for deep customer insights, and an inbuilt customer support module, while making the product available to event organizers on the waiting list.`,
     subtitle: 'Strategic Vision',
     subtext: ': Position eventflo as the indispensable, all-in-one event management platform.',
   },
   {
-    duration: 'Q2 - Q3 2025',
+    duration: 'Q1 - Q2 2025',
     title: 'Phase 3: Innovation & Expansion',
-    info: 'Seamlessly integrate FloCoin, into eventflo and the Reminisce Festival. Users can utilize FloCoin for transactions and start earning rewards on our platform.',
+    info: `Seamlessly integrate FloCoin, into eventflo and the Reminisce Festival. Users can utilize FloCoin for transactions and start earning rewards on our platform.`,
     sutitle: 'Strategic Vision',
     subtext:
       ": Demonstrate FloCoin's real-world applications at a live Festival and show how it can amplify event success for organizers.",
@@ -62,7 +62,11 @@ export default function DisruptionGrowth() {
 
   return (
     <Container>
-      <Typography variant="h2" className={styles.title}>The Path to Disruption & Growth</Typography>
+      <Typography variant="h2" className={styles.title}>
+        The Path<br/>
+        to Disruption & Growth
+      </Typography>
+
       <Typography className={styles.subtitle}>
         Our roadmap outlines how eventflo & FloCoin will transform the event industry. From fraud-proof ticketing to the
         launch of FloCoin and AI-driven optimization, this strategic plan positions token for rapid growth and success.
