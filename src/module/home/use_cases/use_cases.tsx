@@ -62,9 +62,10 @@ export default function UseCases() {
         ))}
       </Grid>
       <Box height={72} />
-      <Box textAlign='center'>
+
+      <Box textAlign='center'>        
         <CtaButton>
-          <Button variant='contained'>Explore Tokenomics</Button>
+          Explore Tokenomics
         </CtaButton>
       </Box>
     </Container>
