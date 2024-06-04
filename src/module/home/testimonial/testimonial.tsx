@@ -33,7 +33,9 @@ export default function Testimonial() {
 
       <Box textAlign='center'>
         <CtaButton>
-            Join Early Access IDO List          
+            <Button variant='contained' color='primary'>
+              Join Early Access IDO List          
+            </Button>
         </CtaButton>
       </Box>
     </Container>

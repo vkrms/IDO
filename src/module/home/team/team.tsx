@@ -15,6 +15,7 @@ import img7 from '@/assets/img//home/team/advisor_1.png';
 import img8 from '@/assets/img//home/team/advisor_2.png';
 import img1 from '@/assets/img//home/team/founder_1.png';
 import img2 from '@/assets/img//home/team/founder_2.png';
+import img3 from '@/assets/img//home/team/founder_3.png';
 import img4 from '@/assets/img//home/team/key_member_1.png';
 import img5 from '@/assets/img//home/team/key_member_2.png';
 import img6 from '@/assets/img//home/team/key_member_3.png';
@@ -55,22 +56,6 @@ const list: TeamData[] = [
           },
         ],
       },
-//       {
-//         img: img3,
-//         name: 'Richie McNeill',
-//         role: 'Founder',
-//         info: [
-//           {
-//             title: 'Industry Legend',
-//             text: `Richie's a true icon in the Australian dance music scene. His co-founding of the legendary Stereosonic festival (sold for over $100M!) proves his ability to spot and scale disruptive event concepts.`,
-//           },
-//           {
-//             title: 'Unmatched Network',
-//             text: `As a co - owner of prominent event companies, Richie's got the connections and influence to open doors throughout the entire Global festival industry.
-// Key Team Members`,
-//           },
-//         ],
-//       },
     ],
   },
   {
@@ -121,6 +106,22 @@ const list: TeamData[] = [
         role: 'Advisor',
         info: [{ title: 'Hype Generator', text: `Andrej's isn't just a marketer, he's a Web3 growth strategist with a decade of proven results.  His track record speaks for itself – multiple 7-figure raises and a $3 million NFT-ticketing triumph demonstrate his ability to build thriving communities and ignite project momentum. As eventflo's advisor, he's the force behind our strategic marketing, fueling FloCoin's unstoppable rise.` }],
       },
+      {
+        img: img3,
+        name: 'Richie McNeill',
+        role: 'Founder',
+        info: [
+          {
+            title: 'Industry Legend',
+            text: `Richie's a true icon in the Australian dance music scene. His co-founding of the legendary Stereosonic festival (sold for over $100M!) proves his ability to spot and scale disruptive event concepts.`,
+          },
+          {
+            title: 'Unmatched Network',
+            text: `As a co - owner of prominent event companies, Richie's got the connections and influence to open doors throughout the entire Global festival industry.
+Key Team Members`,
+          },
+        ],
+      },      
     ],
   },
 ];
