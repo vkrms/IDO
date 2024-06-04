@@ -10,8 +10,6 @@ import * as styles from '@/module/home/welcome/welcome.css';
 
 import { Box, Button, CardMedia, Grid, Icon, Typography } from '@mui/material';
 
-import FancyButton from '@/components/ui/fancy-button';
-
 import IconVideo from '@/assets/img//home/welcome/video.svg';
 import { Container } from '@mui/material';
 
@@ -72,9 +70,9 @@ export default function Welcome() {
           <Box sx={{ textAlign: 'center' }}>
 
             <CtaButton>
-              <FancyButton>
+              <Button variant='contained' size="large">
                 Join Early Access IDO List
-              </FancyButton>
+              </Button>
             </CtaButton>
 
           </Box>

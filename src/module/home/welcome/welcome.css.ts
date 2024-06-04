@@ -77,7 +77,7 @@ export const itemValue = style({
   display: 'grid',
   placeContent: 'center',
   borderRadius: 6,
-  border: `0.036em solid ${colorBorder}`,
+  border: `0.066em solid ${colorBorder}`,
   fontSize: 24,
   lineHeight: 1.14,
   color: colorWhite,
