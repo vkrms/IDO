@@ -18,7 +18,7 @@ export const title = style({
 });
 
 export const subtitle = style({
-  maxWidth: 894,
+  maxWidth: 895,
   margin: '0 auto 40px',
   color: colorWhite,
   fontFamily: manropeRegular,
@@ -37,6 +37,10 @@ export const list = style({
   justifyContent: 'space-between',
   flexWrap: 'wrap',
   gap: 32,
+
+  '@media': smallUp({
+    marginTop: 64,
+  })
 });
 
 export const itemTitle = style({
@@ -44,9 +48,15 @@ export const itemTitle = style({
   color: 'transparent',
   backgroundClip: 'text',
   fontSize: 24,
-  fontFamily: manropeSemiBold,
-  display: 'block',
+  fontFamily: manropeSemiBold,  
   marginBottom: 8,
+
+  selectors: {
+    '&:after': {
+      content: ':',
+      marginRight: '0.5ch',
+    }
+  },
 
   '@media': smallB({
     fontSize: 18,
@@ -62,3 +72,33 @@ export const itemText = style({
   color: colorWhite,
   fontWeight: 300,
 });
+
+export const img = style({
+  maxWidth: 960,
+  marginInline: 'auto',
+  borderRadius: 16,
+  display: 'block',
+  zIndex: 1,
+  position: 'relative',
+})
+
+export const imgWrap = style({
+  position: 'relative',
+})
+
+export const flare = style({
+  position: 'absolute',
+  zIndex: 0,
+
+  selectors: {
+    '&.--blue': {
+      top: -160,
+      left: -128,
+    },
+
+    '&.--pink': {
+      bottom: -192,
+      right: -128,
+    }
+  }
+})

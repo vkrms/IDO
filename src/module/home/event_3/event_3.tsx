@@ -10,8 +10,10 @@ import * as styles from '@/module/home/event_3/event_3.css';
 
 import { Box, Button, CardMedia, Container, Grid, Typography } from '@mui/material';
 
-import img from '@/assets/img//home/event_3/video.png';
 import { CtaButton } from '@/components/ui/cta_button';
+import FlareBlue from '@/assets/svg/flare_blue.svg'
+import FlarePink from '@/assets/svg/flare_pink.svg'
+import { cn } from '@/lib/utils/cn';
 
 // ----------------------------------------------------------------------------------
 const dataList = [
@@ -51,7 +53,12 @@ export default function Event3() {
           organizers, enhances the attendee experience, and drives adoption of FloCoin, generating consistent demand and
           contributing to its growth potential.
         </Typography>
-        <CardMedia component='img' image={img.src} />
+
+        <Box className={styles.imgWrap}>
+          <FlareBlue className={cn(styles.flare, '--blue')}/>
+          <CardMedia component='img' image='/img//home/event_3/eventflo.webp' className={styles.img} />          
+          <FlarePink className={cn(styles.flare, '--pink')} />
+        </Box>
 
         <Grid className={styles.list}>
           {dataList.map((data) => (
