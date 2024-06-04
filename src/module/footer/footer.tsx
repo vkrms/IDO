@@ -53,7 +53,7 @@ import { BackgroundGradientAnimation } from '@/components/ui/background-gradient
 export default function Footer() {
   // ----------------------------------------------------------------------------------
   return (
-    <Box className={''/*styles.footer*/}>
+    <Box className={'footer'}>
       <BackgroundGradientAnimation
           firstColor='112, 0, 255'
           secondColor='255, 0, 199'

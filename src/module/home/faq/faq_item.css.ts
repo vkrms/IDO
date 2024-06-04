@@ -10,8 +10,11 @@ export const quesItem = style({
   display: 'block',
   padding: '32px 40px',
   borderRadius: 16,
-  background: 'rgba(154, 9, 139, 0.10)',
+  background: '#100420',
   marginBottom: 32,
+  zIndex: 1,
+  overflow: 'hidden',
+
   selectors: {
     '&:last-child': {
       marginBottom: 0,

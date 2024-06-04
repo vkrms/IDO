@@ -110,8 +110,19 @@ label {
     margin-bottom: 12px;
 }
 
+.foo-close {
+    position: absolute;
+    right: 0;
+}
+
+.foo {
+    background-image: linear-gradient(40deg, black, transparent);
+}
 
 .homepage {
     overflow: hidden;
 }
 
+/* .footer {
+    overflow: hidden;
+} */

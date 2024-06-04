@@ -26,7 +26,7 @@ import { Box } from '@mui/material';
 export default function HomePage() {
   // ----------------------------------------------------------------------------------
   return (
-    <Box className="overflow-hidden">
+    <Box className="homepage">
       <FormDialog />
       <Welcome />
       <Box height={120} />
@@ -49,7 +49,7 @@ export default function HomePage() {
       <Testimonial />
       <Box height={120} />
       <FAQ />
-      <Box height={120} />      
+      <Box height={120} />        
       <Footer />
     </Box>
   );

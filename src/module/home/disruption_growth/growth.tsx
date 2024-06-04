@@ -16,7 +16,7 @@ import {
   TimelineOppositeContent,
   TimelineSeparator,
 } from '@mui/lab';
-import { Box, Container, Grid, Typography, duration, useMediaQuery } from '@mui/material';
+import { Container, Theme, Typography, useMediaQuery } from '@mui/material';
 
 import { colorPrimary } from '@/style/config/color.css';
 import { TracingBeam } from '@/components/ui/tracing-beam';
@@ -58,7 +58,7 @@ const list = [
 export default function DisruptionGrowth() {
   // ----------------------------------------------------------------------------------
 
-  const isMobile = useMediaQuery(theme => theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery<Theme>(theme => theme.breakpoints.down('md'));
 
   return (
     <Container>
