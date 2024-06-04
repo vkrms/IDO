@@ -9,7 +9,6 @@ import {
 } from '@/style/config/font.css';
 
 import { style } from '@vanilla-extract/css';
-import { relative } from 'path';
 
 export const container = style({
   // position: 'absolute',
@@ -103,8 +102,10 @@ export const itemKey = style({
 });
 
 export const imgBox = style({
-  marginTop: 40,
+  marginTop: 64,
   position: 'relative',
+  display: 'flex',
+  justifyContent: 'center',
 });
 
 export const iconBox = style({
@@ -117,6 +118,7 @@ export const iconBox = style({
   justifyContent: 'center',
   width: '100%',
   height: '100%',
+  marginInline: 'auto',
 });
 
 export const founderTitle = style({

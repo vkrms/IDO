@@ -9,7 +9,7 @@
 import * as styles from '@/module/home/welcome/welcome.css';
 
 import { Box, Button, CardMedia, Grid, Icon, Typography } from '@mui/material';
-
+import { cn } from '@/lib/utils/cn';
 import IconVideo from '@/assets/img//home/welcome/video.svg';
 import { Container } from '@mui/material';
 
@@ -21,6 +21,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { Reveal } from '@/components/ui/reveal';
 import Countdown from '@/components/ui/countdown';
 import { CtaButton } from '@/components/ui/cta_button';
+import Image from 'next/image';
 
 
 // ----------------------------------------------------------------------------------
@@ -90,21 +91,16 @@ export default function Welcome() {
               speed="slow"
             />
           </div>
-
-          <Grid className={styles.founderList}>
-
-          </Grid>
         </Container>
     </BackgroundGradientAnimation>
 
-
-    
     <Container>
       <Box className={styles.imgBox}>
-        <CardMedia component='img' image='/img/home/welcome/video.webp' />
-        <Box className={styles.iconBox}>
-          <IconVideo />
-        </Box>
+          <Image src='/img/home/welcome/video.webp' alt='bob' width={960} height={550}/>  
+
+          <Box className={styles.iconBox}>
+            <IconVideo />
+          </Box>
       </Box>
     </Container>
   </>
