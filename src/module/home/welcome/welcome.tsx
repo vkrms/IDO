@@ -46,6 +46,7 @@ export default function Welcome() {
       firstColor='112, 0, 255'
       secondColor='255, 0, 199'
       interactive={false}
+      className='fade-up'
     >
        <Container className={styles.container}>
           <Box height={176} />

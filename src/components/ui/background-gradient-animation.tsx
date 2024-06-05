@@ -90,7 +90,7 @@ export const BackgroundGradientAnimation = ({
     return (
         <div
             className={cn(
-                `foo w-screen relative top-0 left-0`,
+                `w-screen relative top-0 left-0`,
                 containerClassName
             )}
 

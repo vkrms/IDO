@@ -72,13 +72,13 @@ module.exports = {
         },
         moveVertical: {
           "0%": {
-            transform: "translateY(-50%)",
+            transform: "translateY(-20%)",
           },
           "50%": {
-            transform: "translateY(50%)",
+            transform: "translateY(20%)",
           },
           "100%": {
-            transform: "translateY(-50%)",
+            transform: "translateY(-20%)",
           },
         },
         scroll: {

@@ -115,8 +115,12 @@ label {
     right: 0;
 }
 
-.foo {
-    background-image: linear-gradient(40deg, black, transparent);
+.fade-up {
+    background-image: linear-gradient(180deg, black, transparent);
+}
+
+.fade-down {
+    background-image: linear-gradient(0deg, black, transparent);
 }
 
 .homepage {

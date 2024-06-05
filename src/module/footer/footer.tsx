@@ -47,6 +47,7 @@ const socials = [
   },
 ]
 import { BackgroundGradientAnimation } from '@/components/ui/background-gradient-animation';
+import { cn } from '@/lib/utils/cn';
 
 // ----------------------------------------------------------------------------------
 
@@ -58,7 +59,7 @@ export default function Footer() {
           firstColor='112, 0, 255'
           secondColor='255, 0, 199'
           interactive={false}
-          className={styles.padding}
+          className={cn(styles.padding, 'fade-down')}
       >
         <Container className={styles.container}>
             <Grid container className={styles.box}>
