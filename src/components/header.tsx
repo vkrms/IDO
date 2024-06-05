@@ -42,7 +42,7 @@ const Menu = ({className}: Props) => {
           {dataList.map((data) => (
             <Grid key={data} className={styles.item}>
               <a href="//www.example.com" target='_blank'>
-                <Typography className={styles.itemText}>{data}</Typography>
+                <Typography variant="inherit" className={styles.itemText}>{data}</Typography>
               </a>
             </Grid>
           ))}

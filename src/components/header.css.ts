@@ -44,6 +44,17 @@ export const itemText = style({
   fontFamily: manropeMedium,
   color: colorWhite,
   whiteSpace: 'nowrap',
+  transition: 'all .3s ease',
+  display: 'inline',
+  borderBottom: `2px solid transparent`,
+  paddingBottom: 3,
+
+  selectors: {
+    '&:hover': {
+      paddingBottom: 0,
+      borderColor: '#f352e3',
+    }
+  }
 });
 
 
