@@ -11,6 +11,7 @@ import * as styles from '@/module/home/faq/faq.css';
 import FAQItem, { type FAQItemData } from '@/module/home/faq/faq_item';
 import { Container, List, Typography } from '@mui/material';
 import Appear from '@/components/ui/appear';
+import AppearList from '@/components/ui/appear-list';
 
 // ----------------------------------------------------------------------------------
 const list: FAQItemData[] = [
@@ -135,11 +136,13 @@ export default function FAQ() {
         <Typography variant="h2" className={styles.title}>FAQ's</Typography>
       </Appear>
 
-      <List sx={{ padding: 0 }}>
-        {list.map((item) => (
-          <FAQItem item={item} key={item.title} />
-        ))}
-      </List>
+      <AppearList>
+        <List sx={{ padding: 0 }}>
+          {list.map((item) => (
+            <FAQItem item={item} key={item.title} className='foo-tree'/>
+          ))}
+        </List>
+      </AppearList>
     </Container>
   );
 }

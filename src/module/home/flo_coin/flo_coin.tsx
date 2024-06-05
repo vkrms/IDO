@@ -12,6 +12,7 @@ import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image'
 
 import Appear from '@/components/ui/appear';
+import AppearList from '@/components/ui/appear-list';
 
 const Icon: React.FC<{i: number}> = ({i}) => {
   return <Image src={`/img/home/flo_coin/icon_${i}.webp`} alt="Icon" width={72} height={72} />
@@ -74,19 +75,21 @@ export default function FloCoin() {
           </Typography>
         </Appear>
 
-        <Grid container className={styles.list}>
-          {dataList.map((data, i) => (
-            <Grid key={data.text} flexBasis={352}>
-              
-              <Box className={styles.iconWrap}>
-                <Icon i={i + 1} />
-              </Box>
+        <AppearList>
+          <Grid container className={styles.list}>
+            {dataList.map((data, i) => (
+              <Grid key={data.text} flexBasis={352} className="foo-tree">
+                
+                <Box className={styles.iconWrap}>
+                  <Icon i={i + 1} />
+                </Box>
 
-              <Typography className={styles.itemTitle}>{data.title}</Typography>
-              <Typography className={styles.itemText}>{data.text}</Typography>
-            </Grid>
-          ))}
-        </Grid>
+                <Typography className={styles.itemTitle}>{data.title}</Typography>
+                <Typography className={styles.itemText}>{data.text}</Typography>
+              </Grid>
+            ))}
+          </Grid>
+        </AppearList>
       </Container>
     </Box>
   );

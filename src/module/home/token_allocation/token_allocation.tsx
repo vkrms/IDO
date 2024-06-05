@@ -16,6 +16,7 @@ import { ArcElement, Chart as ChartJS, Legend, Tooltip } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 
 import Appear from '@/components/ui/appear';
+import AppearList from '@/components/ui/appear-list';
 
 const colorList = ['#32C8C9', '#E26B91', '#AF6AD8', '#608CD5', '#9A098B'];
 
@@ -110,17 +111,19 @@ export default function TokenAllocation() {
         </Grid>
 
         <Grid item>
-          <Grid container className={styles.legendList}>
-            {legendList.map((data, index) => (
-              <Grid item key={data.title}>
-                <Typography style={{ color: colorList[index] }} className={styles.legendTitle}>
-                  <span className={styles.line} style={{ background: colorList[index] }} />
-                  {data.title}
-                </Typography>
-                <Typography className={styles.legendText}>{data.subtitle}</Typography>
-              </Grid>
-            ))}
-          </Grid>
+          <AppearList>
+            <Grid container className={styles.legendList}>
+              {legendList.map((data, index) => (
+                <Grid item key={data.title} className="foo-tree">
+                  <Typography style={{ color: colorList[index] }} className={styles.legendTitle}>
+                    <span className={styles.line} style={{ background: colorList[index] }} />
+                    {data.title}
+                  </Typography>
+                  <Typography className={styles.legendText}>{data.subtitle}</Typography>
+                </Grid>
+              ))}
+            </Grid>
+          </AppearList>  
         </Grid>
       </Grid>
     </Container>

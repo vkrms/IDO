@@ -7,6 +7,7 @@
  */
 
 import Appear from '@/components/ui/appear';
+import AppearList from '@/components/ui/appear-list';
 import { CtaButton } from '@/components/ui/cta_button';
 import * as styles from '@/module/home/use_cases/use_cases.css';
 
@@ -55,20 +56,25 @@ export default function UseCases() {
         <Typography variant="h2" className={styles.title}>FloCoin Use Cases</Typography>
       </Appear>
       
-      <Grid container className={styles.list}>
-        {list.map((item) => (
-          <Grid item key={item.id}>
-            <Typography className={styles.itemId}>{item.id}</Typography>
-            <Typography className={styles.itemTitle}>{item.title}</Typography>
-            <Typography className={styles.itemText}>{item.text}</Typography>
-          </Grid>
-        ))}
-      </Grid>
+      <AppearList>
+        <Grid container className={styles.list}>
+          {list.map((item) => (
+            <Grid item key={item.id} className="foo-tree">
+              <Typography className={styles.itemId}>{item.id}</Typography>
+              <Typography className={styles.itemTitle}>{item.title}</Typography>
+              <Typography className={styles.itemText}>{item.text}</Typography>
+            </Grid>
+          ))}
+        </Grid>
+      </AppearList>
+
       <Box height={72} />
 
       <Box textAlign='center'>        
         <CtaButton>
-          Explore Tokenomics
+          <Button variant='contained' size='large'>
+            Explore Tokenomics
+          </Button>
         </CtaButton>
       </Box>
     </Container>

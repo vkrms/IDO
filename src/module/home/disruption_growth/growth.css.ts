@@ -72,8 +72,10 @@ export const timeline = style({
   padding: '0 0 0 10px',
 })
 
-export const timelineItem = style({
-  gap: 48,
+export const timelineItem = style({  
+  gap: '72px',
+  justifyContent: 'center',
+  padding: 0
 })
 
 export const timelineContent = style({

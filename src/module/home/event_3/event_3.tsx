@@ -15,6 +15,7 @@ import FlareBlue from '@/assets/svg/flare_blue.svg'
 import FlarePink from '@/assets/svg/flare_pink.svg'
 import { cn } from '@/lib/utils/cn';
 import Appear from '@/components/ui/appear';
+import AppearList from '@/components/ui/appear-list';
 
 // ----------------------------------------------------------------------------------
 const dataList = [
@@ -56,25 +57,28 @@ export default function Event3() {
             organizers, enhances the attendee experience, and drives adoption of FloCoin, generating consistent demand and
             contributing to its growth potential.
           </Typography>
+
+          <Box className={styles.imgWrap}>
+            <FlareBlue className={cn(styles.flare, '--blue')}/>
+            <CardMedia component='img' image='/img//home/event_3/eventflo.webp' className={styles.img} />          
+            <FlarePink className={cn(styles.flare, '--pink')} />
+          </Box>
         </Appear>
 
-        <Box className={styles.imgWrap}>
-          <FlareBlue className={cn(styles.flare, '--blue')}/>
-          <CardMedia component='img' image='/img//home/event_3/eventflo.webp' className={styles.img} />          
-          <FlarePink className={cn(styles.flare, '--pink')} />
-        </Box>
 
-        <Grid className={styles.list}>
-          {dataList.map((data) => (
-            <Grid key={data.title}>
-              <Typography className={styles.itemText}>
-                <b className={styles.itemTitle}>{data.title}</b>
-                
-                {data.text}
-              </Typography>
-            </Grid>
-          ))}
-        </Grid>
+        <AppearList>
+          <Grid className={styles.list}>
+            {dataList.map((data) => (
+              <Grid key={data.title} className="foo-tree">
+                <Typography className={styles.itemText}>
+                  <b className={styles.itemTitle}>{data.title}</b>
+                  
+                  {data.text}
+                </Typography>
+              </Grid>
+            ))}
+          </Grid>
+        </AppearList>
 
         <Box height={48} />
         <Box textAlign='center'>

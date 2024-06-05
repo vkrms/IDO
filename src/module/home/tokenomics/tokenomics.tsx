@@ -30,19 +30,19 @@ export default function Tokenomics() {
     <Container>
       <Appear>
         <Typography variant="h2" component="h2">Tokenomics</Typography>
-      </Appear>
-      
-      <Grid container className={styles.box}>
-        <Typography variant="h3" className={styles.boxLeft}>Own Your Share of the Future</Typography>
-                
-        <Grid item>
-          <Typography className={styles.boxRight}>
-            FloCoin ($FLOCOIN), the lifeblood of eventflo, is an ERC20 token designed to retain value.  Rewarding use within the platform incentivizes active circulation, fostering liquidity and combating potential devaluation.
-          </Typography>
-        </Grid>
-      </Grid>
 
-      <TokenomicsList list={dataList} cate='tokenomics' />
+        <Grid container className={styles.box}>
+          <Typography variant="h3" className={styles.boxLeft}>Own Your Share of the Future</Typography>
+                  
+          <Grid item>
+            <Typography className={styles.boxRight}>
+              FloCoin ($FLOCOIN), the lifeblood of eventflo, is an ERC20 token designed to retain value.  Rewarding use within the platform incentivizes active circulation, fostering liquidity and combating potential devaluation.
+            </Typography>
+          </Grid>
+        </Grid>
+
+        <TokenomicsList list={dataList} cate='tokenomics' />
+      </Appear>      
     </Container>
   );
 }

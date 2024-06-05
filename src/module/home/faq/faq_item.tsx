@@ -34,6 +34,7 @@ export type FAQItemData = {
 
 interface PropsType {
   item: FAQItemData;
+  className: string;
 }
 
 const accordionTextAnimation = {
@@ -44,7 +45,7 @@ const accordionTextAnimation = {
 
 // ----------------------------------------------------------------------------------
 
-export default function FAQItem({ item }: PropsType) {
+export default function FAQItem({ item, className }: PropsType) {
   const [expState, setExpState] = useState(false);
 
   function toggle() {
@@ -54,7 +55,7 @@ export default function FAQItem({ item }: PropsType) {
   // ----------------------------------------------------------------------------------
 
   return (
-    <ListItem className={styles.quesItem}>
+    <ListItem className={cn(styles.quesItem, className)}>
       <Grid container justifyContent='space-between' className={styles.itemTitleWrap} onClick={toggle}>
         <Grid item>
           <Typography className={styles.itemTitle}>{item.title}</Typography>

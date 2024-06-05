@@ -20,6 +20,8 @@ import { Container, Theme, Typography, useMediaQuery } from '@mui/material';
 
 import { colorPrimary } from '@/style/config/color.css';
 import Appear from '@/components/ui/appear';
+import { cn } from '@/lib/utils/cn';
+import AppearTimeline from '@/components/ui/appear-timeline';
 
 // ----------------------------------------------------------------------------------
 const list = [
@@ -76,39 +78,35 @@ export default function DisruptionGrowth() {
 
         <Timeline position={isMobile ? 'left' : 'alternate'} className={styles.timeline}>
           {list.map((item) => (
-            <TimelineItem
-              key={item.duration}
-              sx={{ gap: '72px', justifyContent: 'center', padding: 0 }}
-              className={styles.timelineItem}
-            >
+            <AppearTimeline>
+              <TimelineItem key={item.duration} className={cn(styles.timelineItem)}>
 
-              {/* text content */}
-              <TimelineOppositeContent className={styles.timelineContent}>
-                <Typography className={styles.timeLimeTitle}>{item.title}</Typography>
-                <Typography className={styles.timeLineInfo}>{item.info}</Typography>
-                <Typography className={styles.timeLineInfo}>
-                  <b className={styles.timeLineSubtitle}>{item.subtitle}</b>
-                  {item.subtext}
-                </Typography>
-              </TimelineOppositeContent>
+                {/* text content */}
+                <TimelineOppositeContent className={styles.timelineContent}>
+                  <Typography className={styles.timeLimeTitle}>{item.title}</Typography>
+                  <Typography className={styles.timeLineInfo}>{item.info}</Typography>
+                  <Typography className={styles.timeLineInfo}>
+                    <b className={styles.timeLineSubtitle}>{item.subtitle}</b>
+                    {item.subtext}
+                  </Typography>
+                </TimelineOppositeContent>
 
-              <TimelineSeparator className={styles.separator}>
-                <TimelineDot className={styles.dot}/>
-                <TimelineConnector sx={{ background: 'transparent', borderRight: `2px dotted ${colorPrimary}` }} />
-              </TimelineSeparator>
+                <TimelineSeparator className={styles.separator}>
+                  <TimelineDot className={styles.dot}/>
+                  <TimelineConnector sx={{ background: 'transparent', borderRight: `2px dotted ${colorPrimary}` }} />
+                </TimelineSeparator>
 
-              {/* duration */}
-              <TimelineOppositeContent
-                className={styles.timelineDuration}
-                sx={{ display: {xs: 'none', md: 'block'}}}
-              >
-                {item.duration}
-              </TimelineOppositeContent>
-            </TimelineItem>
+                {/* duration */}
+                <TimelineOppositeContent
+                  className={styles.timelineDuration}
+                  sx={{ display: {xs: 'none', md: 'block'}}}
+                >
+                  {item.duration}
+                </TimelineOppositeContent>
+              </TimelineItem>
+            </AppearTimeline>
           ))}
         </Timeline>
-
-      {/* <TracingBeam/> */}
 
     </Container>
   );

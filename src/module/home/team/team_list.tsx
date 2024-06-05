@@ -15,6 +15,7 @@ import type { StaticImageData } from 'next/image';
 
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { cn } from '@/lib/utils/cn';
+import AppearList from '@/components/ui/appear-list';
 
 
 // ----------------------------------------------------------------------------------
@@ -46,40 +47,43 @@ export default function TeamList({ list }: PropsType) {
         <Box key={item.title} className={styles.teamItem}>
           <Typography variant="h3" className={styles.title}>{item.title}</Typography>
 
-            <Grid container className={cn(styles.list)}>
-              {item.list.map((item) => (
-                <CardContainer className={styles.cardContainer} key={item.name}>
-                  <CardBody className="relative group/card">
-                    <Grid item className={styles.bar}>
+            <AppearList>
+              <Grid container className={cn(styles.list)}>
+                {item.list.map((item) => (
+                  <CardContainer className={cn(styles.cardContainer, 'foo-tree')} key={item.name}>
+                    <CardBody className="relative group/card">
+                      <Grid item className={styles.bar}>
 
-                      <Box className={styles.header}>
-                        <Box className={styles.imgBox}>
+                        <Box className={styles.header}>
+                          <Box className={styles.imgBox}>
 
-                          <CardItem translateZ="60">
-                            <CardMedia component='img' image={item.img.src} width={160} height={160} sx={{ maxWidth: 160 }} />
-                          </CardItem>
+                            <CardItem translateZ="60">
+                              <CardMedia component='img' image={item.img.src} width={160} height={160} sx={{ maxWidth: 160 }} />
+                            </CardItem>
 
+                          </Box>
                         </Box>
-                      </Box>
-                    
-                      <CardItem translateZ="30" className="w-full">
-                        <Typography className={styles.name}>{item.name}</Typography>
-                        <Typography className={styles.role}>{item.role}</Typography>
-                      </CardItem>
+                      
+                        <CardItem translateZ="30" className="w-full">
+                          <Typography className={styles.name}>{item.name}</Typography>
+                          <Typography className={styles.role}>{item.role}</Typography>
+                        </CardItem>
 
-                      <CardItem translateZ={10}>
-                          <Grid container className={styles.infoList}>
-                            {item.info.map((info) => (
-                              <FoundersListItem info={info} key={info.title} />
-                            ))}
-                          </Grid>
-                      </CardItem>
+                        <CardItem translateZ={10}>
+                            <Grid container className={styles.infoList}>
+                              {item.info.map((info) => (
+                                <FoundersListItem info={info} key={info.title} />
+                              ))}
+                            </Grid>
+                        </CardItem>
 
-                      </Grid>
-                    </CardBody>
+                        </Grid>
+                      </CardBody>
                   </CardContainer>
-              ))}
-            </Grid>
+                ))}
+              </Grid>
+            </AppearList>
+
         </Box>
       ))}
     </Box>
