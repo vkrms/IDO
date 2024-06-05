@@ -81,7 +81,7 @@ export default function Welcome() {
             Built by the <b className={styles.founderBold}>founders</b> of
           </Typography>
 
-          <div className='container'>
+          <div className='scroller__container'>
             <Scroller
               items={founders}
               direction="left"
