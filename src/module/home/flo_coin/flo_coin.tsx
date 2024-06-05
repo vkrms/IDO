@@ -8,11 +8,10 @@
 
 import * as styles from '@/module/home/flo_coin/flo_coin.css';
 
-import { Box, Container, Grid, /*Icon,*/ Typography } from '@mui/material';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import Image from 'next/image'
 
-import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
-import { Reveal } from '@/components/ui/reveal';
+import Appear from '@/components/ui/appear';
 
 const Icon: React.FC<{i: number}> = ({i}) => {
   return <Image src={`/img/home/flo_coin/icon_${i}.webp`} alt="Icon" width={72} height={72} />
@@ -60,7 +59,7 @@ export default function FloCoin() {
 
       <Container>
 
-        <Reveal>
+        <Appear>
           <Typography className={styles.title} variant="h2">
             FloCoin: The Future of Events
           </Typography>
@@ -73,7 +72,7 @@ export default function FloCoin() {
             FloCoin ignites a new era of event experience. Invest in FloCoin, and you're not only fueling innovation in
             event attendance & management, but also have the potential to directly benefit from its success.
           </Typography>
-        </Reveal>
+        </Appear>
 
         <Grid container className={styles.list}>
           {dataList.map((data, i) => (

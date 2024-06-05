@@ -15,6 +15,8 @@ import { ArcElement, Chart as ChartJS, Legend, Tooltip } from 'chart.js';
 
 import { Doughnut } from 'react-chartjs-2';
 
+import Appear from '@/components/ui/appear';
+
 const colorList = ['#32C8C9', '#E26B91', '#AF6AD8', '#608CD5', '#9A098B'];
 
 // ----------------------------------------------------------------------------------
@@ -82,7 +84,9 @@ export default function TokenAllocation() {
   // ----------------------------------------------------------------------------------
   return (
     <Container>
-      <Typography id="chart" variant="h2" className={styles.title}>Token Allocation</Typography>
+      <Appear>
+        <Typography id="chart" variant="h2" className={styles.title}>Token Allocation</Typography>
+      </Appear>
 
       <Typography className={styles.subtitle}>Here's how we'll emphasize value creation and longevity</Typography>
 

@@ -8,8 +8,7 @@
 
 import * as styles from '@/module/home/welcome/welcome.css';
 
-import { Box, Button, CardMedia, Grid, Icon, Typography } from '@mui/material';
-import { cn } from '@/lib/utils/cn';
+import { Box, Button, Typography } from '@mui/material';
 import IconVideo from '@/assets/img//home/welcome/video.svg';
 import { Container } from '@mui/material';
 
@@ -17,11 +16,10 @@ import { Container } from '@mui/material';
 
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { InfiniteMovingCards as Scroller } from '@/components/ui/infinite-moving-cards';
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { Reveal } from '@/components/ui/reveal';
 import Countdown from '@/components/ui/countdown';
 import { CtaButton } from '@/components/ui/cta_button';
 import Image from 'next/image';
+import Appear from '@/components/ui/appear';
 
 
 // ----------------------------------------------------------------------------------
@@ -50,21 +48,19 @@ export default function Welcome() {
     >
        <Container className={styles.container}>
           <Box height={176} />
+          
+          <Typography variant='subtitle2' className={styles.title1}>
+            Powered by FloCoin
+          </Typography>
 
-          <Reveal>
-            <Typography variant='subtitle2' className={styles.title1}>
-              Powered by FloCoin
-            </Typography>
+          <Typography className={styles.title2}>
+              Welcome to Event 3.0
+          </Typography>
 
-            <Typography className={styles.title2}>
-                Welcome to Event 3.0
-            </Typography>
-
-            <Typography className={styles.title3}>
-                Own the cryptocurrency powering NFT ticketing, data-driven insights, and the future
-                of event management
-            </Typography>
-          </Reveal>
+          <Typography className={styles.title3}>
+              Own the cryptocurrency powering NFT ticketing, data-driven insights, and the future
+              of event management
+          </Typography>
 
           {/* new timer layout */}
           <Countdown/>

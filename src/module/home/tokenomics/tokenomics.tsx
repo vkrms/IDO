@@ -11,6 +11,7 @@ import * as styles from '@/module/home/tokenomics/tokenomics.css';
 import { Container, Grid, Typography } from '@mui/material';
 
 import TokenomicsList from '@/module/home/tokenomics/list';
+import Appear from '@/components/ui/appear';
 
 // ----------------------------------------------------------------------------------
 
@@ -27,7 +28,10 @@ export default function Tokenomics() {
   // ----------------------------------------------------------------------------------
   return (
     <Container>
-      <Typography variant="h2" component="h2">Tokenomics</Typography>
+      <Appear>
+        <Typography variant="h2" component="h2">Tokenomics</Typography>
+      </Appear>
+      
       <Grid container className={styles.box}>
         <Typography variant="h3" className={styles.boxLeft}>Own Your Share of the Future</Typography>
                 

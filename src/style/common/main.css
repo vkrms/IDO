@@ -134,3 +134,23 @@ label {
 .container {
     max-width: 1152px;
 }
+
+.disappear {
+    opacity: 0;
+    line-height: 2;
+    transform: translateY(30%);
+}
+
+.appear {
+    animation: fadeInUp .6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    /* from {} */
+
+    to {
+        line-height: inherit;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

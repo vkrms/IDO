@@ -20,6 +20,7 @@ import img4 from '@/assets/img//home/team/key_member_1.png';
 import img5 from '@/assets/img//home/team/key_member_2.png';
 import img6 from '@/assets/img//home/team/key_member_3.png';
 import { CtaButton } from '@/components/ui/cta_button';
+import Appear from '@/components/ui/appear';
 
 // ----------------------------------------------------------------------------------
 const list: TeamData[] = [
@@ -131,8 +132,10 @@ export default function Founders() {
   // ----------------------------------------------------------------------------------
   return (
     <Container className={styles.teamContainer}>
-      <Typography className={styles.title}>The Team Delivering Event Industry Transformation</Typography>
-      <Typography className={styles.subtitle}>Meet The Powerhouse Team Driving FloCoin's Success</Typography>
+      <Appear>
+        <Typography className={styles.title}>The Team Delivering Event Industry Transformation</Typography>
+        <Typography className={styles.subtitle}>Meet The Powerhouse Team Driving FloCoin's Success</Typography>
+      </Appear>
 
       <FoundersList list={list} />
 

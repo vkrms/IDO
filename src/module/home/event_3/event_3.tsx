@@ -14,6 +14,7 @@ import { CtaButton } from '@/components/ui/cta_button';
 import FlareBlue from '@/assets/svg/flare_blue.svg'
 import FlarePink from '@/assets/svg/flare_pink.svg'
 import { cn } from '@/lib/utils/cn';
+import Appear from '@/components/ui/appear';
 
 // ----------------------------------------------------------------------------------
 const dataList = [
@@ -44,15 +45,18 @@ export default function Event3() {
   return (
     <Box>
       <Container>
-        <Typography className={styles.title} variant="h2" textAlign='left'>
-          The Technology Powering Event 3.0
-        </Typography>
 
-        <Typography className={styles.subtitle}>
-          eventflo is the innovative platform propelling events into the Web 3.0 era. Our all-in-one solution empowers
-          organizers, enhances the attendee experience, and drives adoption of FloCoin, generating consistent demand and
-          contributing to its growth potential.
-        </Typography>
+        <Appear>
+          <Typography className={styles.title} variant="h2" textAlign='left'>
+            The Technology Powering Event 3.0
+          </Typography>
+
+          <Typography className={styles.subtitle}>
+            eventflo is the innovative platform propelling events into the Web 3.0 era. Our all-in-one solution empowers
+            organizers, enhances the attendee experience, and drives adoption of FloCoin, generating consistent demand and
+            contributing to its growth potential.
+          </Typography>
+        </Appear>
 
         <Box className={styles.imgWrap}>
           <FlareBlue className={cn(styles.flare, '--blue')}/>

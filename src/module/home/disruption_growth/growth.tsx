@@ -19,7 +19,7 @@ import {
 import { Container, Theme, Typography, useMediaQuery } from '@mui/material';
 
 import { colorPrimary } from '@/style/config/color.css';
-import { TracingBeam } from '@/components/ui/tracing-beam';
+import Appear from '@/components/ui/appear';
 
 // ----------------------------------------------------------------------------------
 const list = [
@@ -62,15 +62,17 @@ export default function DisruptionGrowth() {
 
   return (
     <Container>
-      <Typography variant="h2" className={styles.title}>
-        The Path<br/>
-        to Disruption & Growth
-      </Typography>
+      <Appear>
+        <Typography variant="h2" className={styles.title}>
+          The Path<br/>
+          to Disruption & Growth
+        </Typography>
 
-      <Typography className={styles.subtitle}>
-        Our roadmap outlines how eventflo & FloCoin will transform the event industry. From fraud-proof ticketing to the
-        launch of FloCoin and AI-driven optimization, this strategic plan positions token for rapid growth and success.
-      </Typography>
+        <Typography className={styles.subtitle}>
+          Our roadmap outlines how eventflo & FloCoin will transform the event industry. From fraud-proof ticketing to the
+          launch of FloCoin and AI-driven optimization, this strategic plan positions token for rapid growth and success.
+        </Typography>
+      </Appear>
 
         <Timeline position={isMobile ? 'left' : 'alternate'} className={styles.timeline}>
           {list.map((item) => (

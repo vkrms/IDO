@@ -6,6 +6,7 @@
  * @author shuangshuang 2024/4/11
  */
 
+import Appear from '@/components/ui/appear';
 import { CtaButton } from '@/components/ui/cta_button';
 import * as styles from '@/module/home/use_cases/use_cases.css';
 
@@ -50,7 +51,9 @@ export default function UseCases() {
   // ----------------------------------------------------------------------------------
   return (
     <Container>
-      <Typography variant="h2" className={styles.title}>FloCoin Use Cases</Typography>
+      <Appear>
+        <Typography variant="h2" className={styles.title}>FloCoin Use Cases</Typography>
+      </Appear>
       
       <Grid container className={styles.list}>
         {list.map((item) => (
