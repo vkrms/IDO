@@ -1,4 +1,4 @@
-import { colorBorder, colorWhite } from '@/style/config/color.css';
+import { colorBorder, colorWhite, glowColor } from '@/style/config/color.css';
 
 import { manropeMedium } from '@/style/config/font.css';
 import { zIndexHeader } from '@/style/config/zindex.css';
@@ -44,15 +44,39 @@ export const itemText = style({
   fontFamily: manropeMedium,
   color: colorWhite,
   whiteSpace: 'nowrap',
-  transition: 'all .3s ease',
-  display: 'inline',
+  transition: 'all .35s ease-out',
+  display: 'block',
   borderBottom: `2px solid transparent`,
-  paddingBottom: 3,
+  position: 'relative',
+  borderRadius: 12,
 
   selectors: {
+    // '&:after': {
+    //   content: '',
+    //   width: '100%',
+    //   height: 3,
+    //   borderRadius: 8,
+    //   background: '#fff',
+    //   transition: 'all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+    //   opacity: 0,
+    //   position: 'absolute',
+    //   left: 0,
+    //   bottom: 0,
+    //   zIndex: -1,
+    //   transform: 'scale(0.85) translateY(50%) rotate(-3deg)',      
+    // },
+
+    // '&:hover:after': {
+    //   // borderColor: '#f352e3',
+    //   opacity: 1,
+    //   transform: 'scale(1) translateY(0) rotate(3deg) scale(1)',
+    //   boxShadow: '0 0 0 16px #851771',
+    // }
+
     '&:hover': {
-      paddingBottom: 0,
-      borderColor: '#f352e3',
+      background: glowColor,
+      boxShadow: `0 0 24px 16px ${glowColor}`,
+      textShadow: '0 0 8px #ff9fcf',
     }
   }
 });

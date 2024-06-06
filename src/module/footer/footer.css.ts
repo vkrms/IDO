@@ -1,7 +1,7 @@
 import { manropeRegular, manropeSemiBold } from '@/style/config/font.css';
 
 import { linkToBtn } from '@/style/common/link.css';
-import { colorWhite } from '@/style/config/color.css';
+import { colorWhite, glowColor } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
 
 export const padding = style({
@@ -47,6 +47,13 @@ export const linkText = style([
     fontSize: 16,
     lineHeight: '22px',
     color: colorWhite,
+    transition: 'all .35s ease-out',
+
+    ':hover': {
+      background: glowColor,
+      boxShadow: `0 0 24px 16px ${glowColor}`,
+      textShadow: '0 0 8px #ff9fcf',
+    },
   },
 ]);
 

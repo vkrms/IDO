@@ -66,3 +66,5 @@ export const colorBgIconWrapYellow = 'rgba(255, 236, 69, 0.24)';
 export const colorBgIconWrapRed = 'rgba(234, 52, 127, 0.16)';
 export const colorBgIconWrapRed2 = '#F9D6E6';
 export const colorBgIconWrapRed3 = 'rgba(154, 9, 139, 0.20)';
+
+export const glowColor = '#a637f626';
