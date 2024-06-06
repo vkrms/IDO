@@ -11,15 +11,15 @@ export default function FormDialog() {
     const context = useContext(ContextProvider);
 
     function handleClose() {
-        context.toggleModal();
+        context.toggleForm();
     }
 
     const [success, setSuccess] = React.useState(false);
 
     return (
         <Dialog
-            open={context.isOpen}
-            onClose={context.toggleModal}
+            open={context.isOpen('form')}
+            onClose={context.toggleForm}
             slotProps={{
                 backdrop: {
                     sx: {
@@ -39,7 +39,8 @@ export default function FormDialog() {
                     // handleClose();
                     setSuccess(true);
                 },
-                className: 'bg-transparent'
+                className: 'bg-transparent overflow-visible',
+                sx: {margin: '80px auto 16px'}
             }}
         >
             <IconButton className={'foo-close'} onClick={handleClose}>

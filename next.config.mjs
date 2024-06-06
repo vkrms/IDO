@@ -77,6 +77,13 @@ const webpack = (config, options) => {
 			resourceQuery: { not: /url/ }, // exclude if *.svg?url
 			use: ["@svgr/webpack"],
 		},
+
+		//html loader
+		{
+			test: /\.html$/i,
+			issuer: /\.[jt]sx?$/,
+			use: ["html-loader"],
+		}
 	);
 
 	// Modify the file loader rule to ignore *.svg, since we have it handled now.

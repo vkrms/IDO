@@ -10,7 +10,7 @@ export const CtaButton: React.FC<Props> = ({ children }) => {
     const context = useContext(ContextProvider);
 
     const handleCTAbutton = () => {
-        context.toggleModal();
+        context.toggleForm();
     }
 
     return (

@@ -20,6 +20,10 @@ import Tokenomics from '@/module/home/tokenomics/tokenomics';
 import UseCases from '@/module/home/use_cases/use_cases';
 import Welcome from '@/module/home/welcome/welcome';
 import { Box } from '@mui/material';
+import ReadingDialog from '@/components/ui/reading-dialog';
+
+import privacy from '@/data/privacy.html';
+import disclaimer from '@/data/disclaimer.html';
 
 
 // ----------------------------------------------------------------------------------
@@ -57,7 +61,10 @@ export default function HomePage() {
 
       <div className="footer-grad-overflow">
         <Footer />
-      </div>       
+      </div>
+             
+      <ReadingDialog text={disclaimer} slug='disclaimer' />
+      <ReadingDialog text={privacy} slug='privacy' />
     </Box>
   );
 }

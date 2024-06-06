@@ -116,7 +116,7 @@ label {
 
 .foo-close {
     position: absolute;
-    right: 0;
+    right: -10px;
 }
 
 .fade-up {
@@ -243,4 +243,30 @@ label {
 
 :target {
     scroll-margin-top: 100px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f122;
+    border-radius: 12px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #8883;
+    transition: all .3s ease;
+    border-radius: 12px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #5553;
+}
+
+.bg-reading {
+    background-color: #0006;
+    box-shadow: 0 0 32px 16px #0006;
 }

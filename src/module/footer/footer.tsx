@@ -19,6 +19,9 @@ import IconLogo from '@/assets/img//logo.svg';
 import Link from 'next/link';
 import { icon } from '../home/flo_coin/flo_coin.css';
 
+import ContextProvider from '@/components/provider/context_provider';
+import { useContext } from 'react';
+
 const socials = [
   {
     slug: 'twitter',
@@ -52,6 +55,8 @@ import { cn } from '@/lib/utils/cn';
 // ----------------------------------------------------------------------------------
 
 export default function Footer() {
+  const context = useContext(ContextProvider);
+
   // ----------------------------------------------------------------------------------
   return (
     <Box className={'footer'}>
@@ -86,12 +91,12 @@ export default function Footer() {
 
               <Grid item className={styles.link}>
                 {/* <Link href='' className={styles.linkText}>
-              Terms & Conditions
-            </Link> */}
-                <Link href='' className={styles.linkText}>
+                  Terms & Conditions
+                </Link> */}
+                <Link href='' className={styles.linkText} onClick={() => context.toggle('privacy')}>
                   Privacy Policy
                 </Link>
-                <Link href='' className={styles.linkText}>
+                <Link href='' className={styles.linkText} onClick={() => context.toggle('disclaimer')}>
                   Disclaimer
                 </Link>
               </Grid>

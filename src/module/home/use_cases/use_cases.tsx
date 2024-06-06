@@ -71,11 +71,9 @@ export default function UseCases() {
       <Box height={72} />
 
       <Box textAlign='center'>        
-        <CtaButton>
-          <Button variant='contained' size='large'>
-            Explore Tokenomics
-          </Button>
-        </CtaButton>
+        <Button variant='contained' size='large' href="https://online.publuu.com/533650/1195962" target="_new">
+          Explore Tokenomics
+        </Button>        
       </Box>
     </Container>
   );
