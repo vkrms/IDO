@@ -28,7 +28,11 @@ export default function HomePage() {
   return (
     <Box className="homepage">
       <FormDialog />
-      <Welcome />
+
+      <div className="hero-grad-overflow">
+        <Welcome />
+      </div>
+
       <Box height={120} />
       <FloCoin />
       <Box height={120} />
@@ -49,8 +53,11 @@ export default function HomePage() {
       <Testimonial />
       <Box height={120} />
       <FAQ />
-      <Box height={120} />        
-      <Footer />
+      <Box height={120} /> 
+
+      <div className="footer-grad-overflow">
+        <Footer />
+      </div>       
     </Box>
   );
 }

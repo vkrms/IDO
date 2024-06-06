@@ -27,7 +27,7 @@ const dataList = [
 export default function Tokenomics() {
   // ----------------------------------------------------------------------------------
   return (
-    <Container>
+    <Container id='tokenomics'>
       <Appear>
         <Typography variant="h2" component="h2">Tokenomics</Typography>
 

@@ -106,6 +106,7 @@ export const imgBox = style({
   position: 'relative',
   display: 'flex',
   justifyContent: 'center',
+  zIndex: 1,
 });
 
 export const iconBox = style({

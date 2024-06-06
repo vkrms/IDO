@@ -131,7 +131,7 @@ Key Team Members`,
 export default function Founders() {
   // ----------------------------------------------------------------------------------
   return (
-    <Container className={styles.teamContainer}>
+    <Container className={styles.teamContainer} id='our-team'>
       <Appear>
         <Typography className={styles.title}>The Team Delivering Event Industry Transformation</Typography>
         <Typography className={styles.subtitle}>Meet The Powerhouse Team Driving FloCoin's Success</Typography>

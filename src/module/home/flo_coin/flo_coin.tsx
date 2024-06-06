@@ -49,7 +49,7 @@ const dataList = [
 export default function FloCoin() {
   // ----------------------------------------------------------------------------------
   return (
-    <Box className={styles.bg}>
+    <Box className={styles.bg} id='why-flocoin'>
 
       <div className="relative bob41 bg-pink-500 text-blue-600 mb-2">
         <video autoPlay={true} loop={true} muted className="object-cover bob4">
