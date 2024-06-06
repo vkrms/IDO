@@ -27,7 +27,7 @@ const AppearTimeline: React.FC<AppearProps> = ({children, className}) => {
                 if (React.isValidElement(child)) {
                     return React.cloneElement(child, {
                         //@ts-ignore
-                        className: cn(child.props.className, 'disappear', {'appear': isInView}),
+                        className: cn(child.props.className, 'disappear', {'appear-down': isInView}),
                         ref,
                     });
                 }
