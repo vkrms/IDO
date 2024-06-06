@@ -29,7 +29,7 @@ export default function Testimonial() {
         <Typography className={styles.subtitle}>Director of Hardware/Symbiotic</Typography>
 
         <Typography className={styles.info}>
-          “I’ve seen the prototype and the vision for the software, once launched I’m personally putting all my events on it and getting right behind it. I don’t say this often but this is an absolute game changer for the industry.”
+          “I’m really excited about eventflo and its vision for transforming the event industry. I'm right behind the project, actively guiding the team to ensure they deliver on their goals. I’m personally backing this initiative and getting my entire network on board. You can bet that my large-scale events will be among the first to benefit from this game changer.”
         </Typography>
 
         <Box textAlign='center'>
