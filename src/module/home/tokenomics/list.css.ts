@@ -18,6 +18,17 @@ export const list = style({
   display: 'flex',
   justifyContent: 'center',
   gap: 56,
+
+  '@media': {
+    '(min-width: 500px)': {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+    },
+    '(min-width: 1110px)': {
+      display: 'flex',
+      flexFlow: 'row nowrap',
+    } 
+  }
 });
 
 export const item = style({

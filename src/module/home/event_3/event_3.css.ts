@@ -33,15 +33,22 @@ export const subtitle = style({
 
 export const list = style({
   marginTop: 48,
-  display: 'flex',
+  // display: 'flex',
   justifyContent: 'space-between',
   flexWrap: 'wrap',
   gap: 32,
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(376px, 1fr))',
 
   '@media': smallUp({
     marginTop: 64,
   })
 });
+
+export const listItem = style({
+  maxWidth: 544,
+  marginInline: 'auto',
+})
 
 export const itemTitle = style({
   background: ' linear-gradient(45deg, #EA347F 14.66%, #E23080 28.1%, #CC2484 50.02%, #A81189 76.18%, #9A098B 85.37%)',

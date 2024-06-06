@@ -81,6 +81,16 @@ path.expand_b_svg__h {
         right: -200px;
         top: 64px;
         z-index: 0;
+        display: none;
+    }
+}
+
+@media (max-width: 1600px) {
+    .bob4{
+        width: 700px;
+        right: -30%;
+        top: -128px;
+        z-index: 0;
     }
 }
 
@@ -211,7 +221,7 @@ label {
 }
 
 .hero-grad-overflow {
-    height: 200vh;
+    /* height: 200vh; */
     overflow: hidden;
     display: flex;    
     flex-flow: column;

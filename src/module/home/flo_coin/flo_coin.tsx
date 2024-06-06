@@ -13,6 +13,7 @@ import Image from 'next/image'
 
 import Appear from '@/components/ui/appear';
 import AppearList from '@/components/ui/appear-list';
+import { cn } from '@/lib/utils/cn';
 
 const Icon: React.FC<{i: number}> = ({i}) => {
   return <Image src={`/img/home/flo_coin/icon_${i}.webp`} alt="Icon" width={72} height={72} />
@@ -78,7 +79,7 @@ export default function FloCoin() {
         <AppearList>
           <Grid container className={styles.list}>
             {dataList.map((data, i) => (
-              <Grid key={data.text} flexBasis={352} className="foo-tree">
+              <Grid key={data.text} className={cn(styles.item, "foo-tree")}>
                 
                 <Box className={styles.iconWrap}>
                   <Icon i={i + 1} />

@@ -43,11 +43,11 @@ export const iconWrap = style({
 export const list = style({
   display: 'flex',
   gap: '72px 32px',
+  justifyContent: 'center',
 
   '@media': {
     '(max-width: 768px)': {
       textAlign: 'center',
-      justifyContent: 'center',
     }
   }
 });
@@ -58,14 +58,21 @@ export const itemTitle = style({
   color: colorWhite,
   fontFamily: manropeSemiBold,
   marginBottom: 8,
+  marginInline: 'auto',
 });
 
 export const itemText = style({
   color: colorWhite,
   fontFamily: manropeLight,
   maxWidth: '40ch',
+  marginInline: 'auto',
 });
 
 export const icon = style({
   marginBottom: 8,
+})
+
+export const item = style({
+  flex: '1 1 312px',
+  maxWidth: 352,
 })
