@@ -30,9 +30,11 @@ export default function IdoDetails() {
     <Container>
       <Appear>
         <Typography className={styles.title} variant="h2">IDO Details</Typography>
-      </Appear>
 
-      <TokenomicsList list={dataList} cate='idoDetails' />
+        <div>
+          <TokenomicsList list={dataList} cate='idoDetails' />
+        </div>
+      </Appear>
     </Container>
   );
 }

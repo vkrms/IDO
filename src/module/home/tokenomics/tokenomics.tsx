@@ -41,7 +41,9 @@ export default function Tokenomics() {
           </Grid>
         </Grid>
 
-        <TokenomicsList list={dataList} cate='tokenomics' />
+        <div>
+          <TokenomicsList list={dataList} cate='tokenomics' />    
+        </div>
       </Appear>      
     </Container>
   );
