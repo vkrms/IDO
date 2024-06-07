@@ -34,11 +34,11 @@ const list: TeamData[] = [
         info: [
           {
             title: 'Tech Visionary & Crypto Pioneer',
-            text: "Mark's a serial entrepreneur with a knack for spotting the next big thing. Way back when Bitcoin was worth pocket change, he built his own mining rig! While power bills cut that adventure short, his passion for tech-driven solutions fuels eventflo's strategic vision.",
+            text: 'Mark is a serial entrepreneur known for his uncanny ability to identify and capitalize on emerging trends. From the early days of Bitcoin, where he built his own mining rig, to the forefront of blockchain innovation with eventflo, Mark’s passion for tech-driven solutions has always been his driving force.',
           },
           {
-            title: 'Festival Experience',
-            text: 'As co - founder of Reminisce, one of Melbourne\'s hottest house music festivals, Mark\'s got proven skills for bringing large - scale events to life and growing brands from nothing.',
+            title: 'Scale Specialist',
+            text: 'With a knack for scaling businesses, Mark has successfully built and grown several ventures, including the standout success of Reminisce, one of Melbourne\'s most beloved house music festivals. His unique blend of technological expertise and business acumen has consistently driven brand growth and event success, making him a key asset to eventflo’s strategic vision.'
           },
         ],
       },
@@ -49,12 +49,12 @@ const list: TeamData[] = [
         info: [
           {
             title: 'Festival Marketing Maestro',
-            text: 'Corey played a pivotal role in scaling Reminisce into a major Australian music festival.He\'s the marketing genius who\'ll drive explosive growth for eventflo.',
+            text: 'Corey is a social media expert and digital advertising wizard, renowned for transforming Reminisce into one of Australia’s favorite festivals. Leveraging his extensive industry connections and innovative strategies, Corey will be leading eventflo\'s marketing efforts with a proven track record of success.'
           },
           {
-            title: 'Event Marketing Ace',
-            text: `With a background in digital marketing and his own successful event marketing agency, Corey's got the connections and strategies to put eventflo and FloCoin on the map.`,
-          },
+            title: 'Business Growth Strategist',
+            text: 'With a wealth of experience from his successful event marketing agency, Corey has generated over $100M in sales for clients through his cutting-edge campaigns. His expertise will be instrumental in positioning eventflo as the premier platform for event creators, driving the expansion and value of FloCoin.'
+          }
         ],
       },
     ],
@@ -88,7 +88,11 @@ const list: TeamData[] = [
         img: img6,
         name: 'Adrian Chan',
         role: 'Head of Blockchain',
-        info: [{ title: 'Web3 Pioneer', text: `Adrian's no blockchain newbie – he's been building in the space since the early days.Two successful venture - backed startups under his belt prove his expertise.At eventflo, he's the architect behind our blockchain initiatives, designing bulletproof tokenomics and flawless IDOs – FloCoin's launch is a testament to his skills.` }],
+        info: [
+          {
+            title: 'Web3 Pioneer',
+            text: `Adrian's no blockchain newbie – he's been building in the space since the early days.Two successful venture-backed startups under his belt prove his expertise. At eventflo, he's the architect behind our blockchain initiatives, designing bulletproof tokenomics and flawless IDOs – FloCoin's launch is a testament to his skills.`
+          }],
       },
     ],
   },
@@ -99,7 +103,8 @@ const list: TeamData[] = [
         img: img7,
         name: 'Rudy Santino',
         role: 'Advisor',
-        info: [{ title: 'Startup Scaling Guru', text: `Rudy's got over 20 years of web development expertise under his belt, plus a proven track record with his own startup, Circle.so (valued at over $250M with over 150 staff globally).  He's the technical mastermind guiding eventflo's architecture and mentoring the scale up process.` }],
+        info: [{ title: 'Startup Scaling Guru',
+          text: `Rudy's got over 20 years of web development expertise under his belt, plus a proven track record with his own startup, Circle.so (valued at over $250M with over 150 staff globally).  He's the technical mastermind guiding eventflo's architecture and mentoring the scale up process.` }],
       },
       {
         img: img8,
@@ -110,16 +115,11 @@ const list: TeamData[] = [
       {
         img: img3,
         name: 'Richie McNeill',
-        role: 'Founder',
+        role: 'Advisor',
         info: [
           {
             title: 'Industry Legend',
-            text: `Richie's a true icon in the Australian dance music scene. His co-founding of the legendary Stereosonic festival (sold for over $100M!) proves his ability to spot and scale disruptive event concepts.`,
-          },
-          {
-            title: 'Unmatched Network',
-            text: `As a co - owner of prominent event companies, Richie's got the connections and influence to open doors throughout the entire Global festival industry.
-Key Team Members`,
+            text: 'Richie\'s a true icon in the Australian dance music scene. His co-founding of the legendary Stereosonic festival (sold for over $100M!) proves his ability to spot and scale disruptive event concepts. As a co-owner of prominent event companies, Richie\'s got the connections and influence to open doors throughout the entire Global festival industry.'
           },
         ],
       },      
