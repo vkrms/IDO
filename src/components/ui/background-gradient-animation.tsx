@@ -18,6 +18,7 @@ export const BackgroundGradientAnimation = ({
     className,
     interactive = true,
     containerClassName,
+    opacity = 1, 
 }: {
     gradientBackgroundStart?: string;
     gradientBackgroundEnd?: string;
@@ -33,6 +34,7 @@ export const BackgroundGradientAnimation = ({
     className?: string;
     interactive?: boolean;
     containerClassName?: string;
+    opacity?: number;
 }) => {
     const interactiveRef = useRef<HTMLDivElement>(null);
 
@@ -118,6 +120,7 @@ export const BackgroundGradientAnimation = ({
             <div className={cn("", className)}>{children}</div>
             
             <div
+                style={{ opacity }}
                 className={cn(
                     "gradients-container h-full w-full blur-lg",
                     isSafari ? "blur-2xl" : "[filter:url(#blurMe)_blur(120px)]"
