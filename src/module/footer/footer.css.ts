@@ -4,7 +4,7 @@ import { linkToBtn } from '@/style/common/link.css';
 import { colorWhite, glowColor } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
 
-export const padding = style({
+export const disco = style({
   padding: '56px 0 40px',
 });
 

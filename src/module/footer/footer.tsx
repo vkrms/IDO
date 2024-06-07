@@ -64,7 +64,8 @@ export default function Footer() {
           firstColor='112, 0, 255'
           secondColor='255, 0, 199'
           interactive={false}
-          className={cn(styles.padding, 'fade-down')}
+          className={cn(styles.disco, 'fade-down')}
+          opacity={0.8}
       >
         <Container className={styles.container}>
             <Grid container className={styles.box}>
