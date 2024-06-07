@@ -8,7 +8,7 @@
 
 import Appear from '@/components/ui/appear';
 import AppearList from '@/components/ui/appear-list';
-import { CtaButton } from '@/components/ui/cta_button';
+import Icon from '@mui/material/Icon';
 import * as styles from '@/module/home/use_cases/use_cases.css';
 
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
@@ -59,8 +59,9 @@ export default function UseCases() {
       <AppearList>
         <Grid container className={styles.list}>
           {list.map((item) => (
-            <Grid item key={item.id} className="foo-tree">
-              <Typography className={styles.itemId}>{item.id}</Typography>
+            <Grid item key={item.id} className="stagger">
+              <Icon component="img" src={`/img/${item.id}.svg`} className={styles.itemId} />
+              {/* <Typography className={styles.itemId}>{item.id}</Typography> */}
               <Typography className={styles.itemTitle}>{item.title}</Typography>
               <Typography className={styles.itemText}>{item.text}</Typography>
             </Grid>

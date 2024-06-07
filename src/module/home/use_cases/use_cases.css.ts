@@ -28,10 +28,14 @@ export const itemId = style({
   background: ' linear-gradient(45deg, #EA347F 14.66%, #E23080 28.1%, #CC2484 50.02%, #A81189 76.18%, #9A098B 85.37%)',
   color: 'transparent',
   backgroundClip: 'text',
-  fontSize: 56,
-  lineHeight: '72px',
   fontFamily: manropeBold,
-
+  marginBottom: 8,
+  aspectRatio: '1 / 1',
+  width: 72,
+  height: 'auto',
+  objectPosition: 'left',
+  objectFit: 'none',
+    
   '@media': smallB({
     fontSize: 40,
     lineHeight: '52px',
