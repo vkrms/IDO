@@ -19,9 +19,10 @@ export const title = style({
 
 export const list = style({
   gap: '32px 52px',
-  justifyContent: 'space-between',
+  justifyContent: 'space-evenly',
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(288px, 1fr))',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(288px, 336px))',
+  paddingInline: 32,
 });
 
 export const itemId = style({

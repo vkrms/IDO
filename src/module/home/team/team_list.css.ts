@@ -30,7 +30,7 @@ export const list = style({
   flexFlow: 'row',
   maxWidth: '100%',
   overflow: 'auto',
-  paddingInline: 16,
+  padding: 32,
 
   '@media': {
     '(min-width: 1200px)': {
@@ -120,4 +120,5 @@ export const cardItemTitle = style({
 
 export const cardContainer = style({
   width: '100%',
+  minWidth: 312,
 })

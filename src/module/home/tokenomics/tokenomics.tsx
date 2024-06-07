@@ -34,8 +34,8 @@ export default function Tokenomics() {
         <Grid container className={styles.box}>
           <Typography variant="h3" className={styles.boxLeft}>Own Your Share of the Future</Typography>
                   
-          <Grid item>
-            <Typography className={styles.boxRight}>
+          <Grid item className={styles.boxRight}>
+            <Typography>
               FloCoin ($FLOCOIN), the lifeblood of eventflo, is an ERC20 token designed to retain value.  Rewarding use within the platform incentivizes active circulation, fostering liquidity and combating potential devaluation.
             </Typography>
           </Grid>

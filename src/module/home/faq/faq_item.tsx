@@ -27,7 +27,7 @@ export type AnwserItem = {
 export type FAQItemData = {
   title: string;
   info: string;
-  innerList: AnwserItem[];
+  innerList?: AnwserItem[];
 };
 
 // ----------------------------------------------------------------------------------
@@ -72,11 +72,13 @@ export default function FAQItem({ item, className }: PropsType) {
             <Box height={56} />
 
             <Typography className={styles.itemInfo}>
-              {item.info}
+              <div style={{paddingRight: 48}}>
+                {item.info}
+              </div>
             </Typography>
 
-            <List className={styles.innerList}>
-              {item.innerList.map((inner, index) => (
+            {/* <List className={styles.innerList}>
+              {item.innerList?.map((inner, index) => (
                 <ListItem key={inner.text} className={styles.innerItem}>
                   <ListItemText className={styles.innerText}>
                     <b className={styles.innerIdx}>{index}.</b>
@@ -85,7 +87,7 @@ export default function FAQItem({ item, className }: PropsType) {
                   </ListItemText>
                 </ListItem>
               ))}
-            </List>
+            </List> */}
           </motion.div>
         )}
       </AnimatePresence>

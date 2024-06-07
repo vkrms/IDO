@@ -32,7 +32,7 @@ export const subtitle = style({
 export const list = style({
   display: 'flex',
   gap: 40,
-  justifyContent: 'space-between',
+  justifyContent: 'space-evenly',
   alignItems: 'center',
 });
 
@@ -85,7 +85,12 @@ export const donut = style({
 export const donutWrap = style({
   position: 'relative',
   objectFit: 'cover',
-  flex: '0 1 384px',
+  // flex: '0 1 384px',
+
+  // for tablet resolution
+  flex: '1 1 312px',
+  minWidth: 312,
+  maxWidth: 384,
 })
 
 export const xsVideo = style({
@@ -98,4 +103,10 @@ export const xsVideo = style({
   bottom: '0',
   left: '0',
   objectFit: 'cover',
+})
+
+export const legendWrap = style({
+  flex: '1 1 384px',
+  minWidth: 312,
+  maxWidth: 544,
 })

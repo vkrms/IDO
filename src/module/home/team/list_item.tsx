@@ -48,6 +48,7 @@ export default function FoundersListItem({ info }: PropsType) {
         </Grid>
 
         <motion.div
+          style={{ width: 18, height: 18, display: 'grid' }}
           animate={{ rotate: expState ? 90 : 0 }}
           transition={{ duration: 0.3 }}
         >

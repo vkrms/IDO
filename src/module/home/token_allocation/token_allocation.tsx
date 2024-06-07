@@ -110,7 +110,7 @@ export default function TokenAllocation() {
           />
         </Grid>
 
-        <Grid item>
+        <Grid item className={styles.legendWrap}>
           <AppearList>
             <Grid container className={styles.legendList}>
               {legendList.map((data, index) => (

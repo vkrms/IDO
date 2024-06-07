@@ -18,42 +18,63 @@ export const title = style({
 
 export const box = style({
   display: 'flex',
+  flexFlow: 'row wrap',
   justifyContent: 'space-between',
   alignItems: 'center',
   gap: 32,
   marginBottom: 56,
+  textAlign: 'left',
 
   '@media': {
-    [small]: {
-      flexDirection: 'column',
-      gap: 8,
+    
+    // '(max-width: 600px)': {
+    //   // flexDirection: 'column',
+    //   gap: 8,
+    //   textAlign: 'left',
+    // },
+
+    '(max-width: 1120px)': {
+      gap: 16,
+
+      // flexDirection: 'column',
+      // textAlign: 'center',
+      marginInline: 'auto',
     }
-  }
+  },
 });
 
 export const boxLeft = style({
-  maxWidth: 489,
+  // flexBasis: 489,
   fontSize: 48,
   lineHeight: '66px',
   fontFamily: manropeSemiBold,
   color: colorWhite,
 
+
   '@media': smallB({
       fontSize: 24,
       lineHeight: '33px',
       alignSelf: 'flex-start',
+      flex: '0 1 48%',
+      minWidth: 312,    
     })
 });
 
 export const boxRight = style({
-  maxWidth: 543,
   fontFamily: manropeRegular,
   color: colorWhite,
+  maxWidth: 768,
 
-  '@media': smallUp({
-    fontSize: 18,
-    lineHeight: 1.7,
-  })
+  '@media': {
+    '(min-width: 600px)': {
+        fontSize: 18,
+        lineHeight: 1.7,
+    },
+    '(max-width: 720px)': {
+      flex: '0 1 48%',
+      minWidth: 312,    
+    }
+  }
 });
 
 export const infoBox = style({

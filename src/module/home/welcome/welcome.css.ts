@@ -159,4 +159,5 @@ export const founderList = style({
 export const logo = style({
   width: 'auto',
   height: 'auto',
+  maxWidth: 152,
 })

@@ -37,7 +37,7 @@ export const timeLimeTitle = style({
 
 export const timeLineInfo = style({
   textAlign: 'left',
-  maxWidth: 476,
+  maxWidth: '44ch',
   marginBottom: 32,
   fontSize: 18,
   lineHeight: '29px',
@@ -65,7 +65,8 @@ export const timelineDuration = style({
   fontSize: 24,
   lineHeight: '33px',
   fontFamily: manropeSemiBold,
-  flex: '0 0 50%',
+  flex: '0 1 50%',
+  padding: 0,
 });
 
 export const timeline = style({
@@ -80,12 +81,21 @@ export const timelineItem = style({
 
 export const timelineContent = style({
   padding: 0,
-  flex: '0 0 50%',
+  flex: '1 1 50%',
   marginBottom: 32,
 
-  '@media': smallUp({
-    marginBottom: 80,
-  })  
+  // '@media': smallUp({
+  //   marginBottom: 80,
+  // })
+
+  '@media': {
+    '(min-width: 1200px)': {
+      flex: '0 1 50%',
+      marginBottom: 80,
+    }
+  }
+  
+  
 })
 
 export const separator = style({

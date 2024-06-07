@@ -5,7 +5,7 @@ export const body = style({
     maxWidth: 500,
     borderRadius: 12,
     margin: 'auto',
-    padding: 40,
+    padding: '72px 40px',
     backgroundColor: '#010314',
     backgroundImage: `url(/img/ovals.svg)`,
     backgroundSize: '100% 100%',
@@ -22,10 +22,17 @@ export const subtitle = style({
     textAlign: 'center',
     maxWidth: '48ch',
     marginInline: 'auto',
+    marginBottom: 32,
 })
 
 export const control = style({
-    marginBottom: 16,
+    marginBottom: 20,
+
+    selectors: {
+        '&:last-of-type': {
+            marginBottom: 24,
+        }
+    }
 })
 
 export const tel = style({
