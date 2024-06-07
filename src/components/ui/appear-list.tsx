@@ -25,7 +25,7 @@ const AppearList: React.FC<AppearProps> = ({children, className}) => {
     useEffect(() => {
         if (!isInView) return;
 
-        animate('.foo-tree', { opacity: 1, y: 0 }, { delay: stagger(0.1), duration: .6 })
+        animate('.stagger', { opacity: 1, y: 0 }, { delay: stagger(0.1), duration: .6 })
     }, [isInView]);
 
     // console.count('Appear')

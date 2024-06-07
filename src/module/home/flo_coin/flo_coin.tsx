@@ -79,7 +79,7 @@ export default function FloCoin() {
         <AppearList>
           <Grid container className={styles.list}>
             {dataList.map((data, i) => (
-              <Grid key={data.text} className={cn(styles.item, "foo-tree")}>
+              <Grid key={data.text} className={cn(styles.item, "stagger")}>
                 
                 <Box className={styles.iconWrap}>
                   <Icon i={i + 1} />

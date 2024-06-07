@@ -69,7 +69,7 @@ export default function Event3() {
         <AppearList>
           <Grid className={styles.list}>
             {dataList.map((data) => (
-              <Grid key={data.title} className={cn(styles.listItem, "foo-tree")}>
+              <Grid key={data.title} className={cn(styles.listItem, "stagger")}>
                 <Typography className={styles.itemText}>
                   <b className={styles.itemTitle}>{data.title}</b>
                   

@@ -75,7 +75,7 @@ path.expand_b_svg__h {
     color: hotpink;
 }
 
-@media (max-width: 1592px) {
+@media (max-width: 1199px) {
     .bob4{
         width: 500px;
         right: -200px;
@@ -124,9 +124,19 @@ label {
     margin-bottom: 12px;
 }
 
-.foo-close {
+.cross-btn {
     position: absolute;
-    right: -10px;
+    right: 0;
+}
+
+.cross-btn > svg {
+    transition: all .3s ease;
+}
+
+.cross-btn:hover > svg {
+    background: hsl(320deg 100% 91% / 30%);
+    box-shadow: 0 0 10px 2px hotpink;
+    border-radius: 14px;
 }
 
 .fade-up {
@@ -175,7 +185,7 @@ label {
     }
 }
 
-.foo-tree {
+.stagger {
     opacity: 0;
     transform: translateY(20%);
     transition: all .6s ease-out;
@@ -277,6 +287,7 @@ label {
 }
 
 .bg-reading {
-    background-color: #0006;
-    box-shadow: 0 0 32px 16px #0006;
+    background-color: #070215;
+    padding: 24px;
+    border-radius: 24px;
 }

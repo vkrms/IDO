@@ -114,7 +114,7 @@ export default function TokenAllocation() {
           <AppearList>
             <Grid container className={styles.legendList}>
               {legendList.map((data, index) => (
-                <Grid item key={data.title} className="foo-tree">
+                <Grid item key={data.title} className="stagger">
                   <Typography style={{ color: colorList[index] }} className={styles.legendTitle}>
                     <span className={styles.line} style={{ background: colorList[index] }} />
                     {data.title}

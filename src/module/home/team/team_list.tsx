@@ -50,7 +50,7 @@ export default function TeamList({ list }: PropsType) {
             <AppearList>
               <Grid container className={cn(styles.list)}>
                 {item.list.map((item) => (
-                  <CardContainer className={cn(styles.cardContainer, 'foo-tree')} key={item.name}>
+                  <CardContainer className={cn(styles.cardContainer, 'stagger')} key={item.name}>
                     <CardBody className="relative group/card">
                       <Grid item className={styles.bar}>
 
@@ -70,11 +70,11 @@ export default function TeamList({ list }: PropsType) {
                         </CardItem>
 
                         <CardItem translateZ={10}>
-                            <Grid container className={styles.infoList}>
-                              {item.info.map((info) => (
-                                <FoundersListItem info={info} key={info.title} />
-                              ))}
-                            </Grid>
+                          <Grid container className={styles.infoList}>
+                            {item.info.map((info) => (
+                              <FoundersListItem info={info} key={info.title} />
+                            ))}
+                          </Grid>
                         </CardItem>
 
                         </Grid>

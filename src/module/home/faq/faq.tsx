@@ -16,114 +16,37 @@ import AppearList from '@/components/ui/appear-list';
 // ----------------------------------------------------------------------------------
 const list: FAQItemData[] = [
   {
-    title: "What is FloCoin's utility within the eventflo platform?",
-    info: `FloCoin isn't just another cryptocurrency. It's designed with specific use cases for events:`,
-    innerList: [
-      {
-        name: 'Ticketing:',
-        text: 'Fraud-proof, transparent transactions on the blockchain.',
-      },
-      {
-        name: 'Rewards:',
-        text: 'Organizers can offer exclusive perks and discounts to FloCoin holders.',
-      },
-      {
-        name: 'In-Event Payments:',
-        text: 'Seamless food, beverage, and merchandise purchases.',
-      },
-      {
-        name: 'Governance:',
-        text: 'Potential for community voting on platform features and event-related decisions.',
-      }
-    ],
+    title: "What happens if people buy FloCoin prior to an event at a bubble then decreases in value, diminishing its value at the event?",
+    info: "Cryptocurrencies are inherently volatile. For the foreseeable future, we do not encourage using FloCoin as a currency prior to an event due to potential manipulation by traders and the risk of price swings. Instead, FloCoin will be used to reward and gamify the event experience and enhance interactions on the eventflo platform. Users can stake FloCoin to earn rewards and access exclusive features. Additionally, event organizers can use FloCoin for sponsor offerings, creating additional revenue streams. In the future, as digital currencies stabilize, using FloCoin as a currency at events will be a big part of the plans."
   },
-
   {
-    title: `How will FloCoin's value be maintained and grow?`,
-    info: `We're focused on driving real-world adoption of FloCoin within the event industry:`,
-    innerList: [
-      {
-        name: 'Partnerships:',
-        text: `Strategic integrations with major festivals, starting with Reminisce.`
-      },
-      {
-        name: 'Transaction Fees:',
-        text: `A percentage of transaction fees will be used for buybacks or liquidity provision, supporting price stability.`
-      },
-      {
-        name: 'Utility Expansion:',
-        text: `As eventflo's features evolve, FloCoin's use cases will grow, increasing demand.`
-      },
-    ],
+    title: "Can eventflo sustain the token buy back?",
+    info: "Yes, eventflo's robust network and high ticket sales volume ensure substantial revenue to support token buybacks. With millions of tickets expected to be sold via the platform given our current network, we can effectively buy back tokens, increasing their stability and value."
   },
-
   {
-    title: "What is the team's experience in the crypto space?",
-    info: 'While our core focus is event management, we have strong blockchain expertise on board:',
-    innerList: [
-      {
-        name: 'Mark Middo',
-        text: ': Early Bitcoin enthusiast with a proven understanding of tech trends.',
-      },
-      {
-        name: 'Shinsuke Ito',
-        text: ': Blockchain specialist (Solidity) who successfully built and exited an NFT marketplace.',
-      },
-      {
-        name: 'Andrejs Urban',
-        text: ': Crypto marketing expert with 6 years of experience and industry connections.',
-      },
-    ],
+    title: "Has development started?",
+    info: "Yes, development is well underway. The prototype will be ready in August for our launch event, and the MVP will debut at the Reminisce event in December. Regardless of the IDO outcome, our commitment to delivering eventflo remains steadfast."
   },
-
   {
-    title: 'How will eventflo address the volatility often seen in cryptocurrencies?',
-    info: `We understand investor concerns about volatility. Our strategies include:`,
-    innerList: [
-      { name: `Focus on Utility:`, text: `FloCoin's primary strength lies in its real-world applications within events.` },
-      { name: 'Reserve Mechanisms:', text: `Exploring reserve models (e.g., partial backing) to provide a safety net.` },
-      { name: 'Transparency:', text: `Clear communication with the community about tokenomics and long-term plans.` },
-
-    ],
+    title: "What are the vesting schedules for investors of the initial IDO and future rounds?",
+    info: "We seek long-term supporters and investors. Our vesting schedule releases 5% of tokens per month to ensure stable value growth and discourage short-term speculation. Team members and advisors are also on the same vesting schedule, aligning their interests with the platform's long-term success."
   },
-
   {
-    title: "What is the roadmap for FloCoin's launch and integration into eventflo?",
-    info: `You can find it in our development roadmap. Key milestones include:`,
-    innerList: [
-      {
-        name: '%Date%',
-        text: `FloCoin whitepaper release with detailed tokenomics.`,
-      },
-      {
-        name: '%Date%',
-        text: `IDO launch.`,
-      },
-      {
-        name: 'Phase 4',
-        text: `Seamless eventflo integration and pilot at Reminisce Festival.`,
-      }
-    ],
+    title: "What type of ROI can I expect on my investment?",
+    info: "We prioritize transparency over hype. While we don't promise astronomical returns, we emphasize that you should only invest what you can afford to lose. eventflo offers a real-world use case, a seasoned team with over 65 years of experience, and a solid distribution network. Our goal is to make FloCoin a top 100 cryptocurrency by market cap, leveraging our unique position to drive adoption and value. The potential for significant growth is substantial, given our comprehensive approach and industry support."
   },
-
   {
-    title: `How does eventflo plan to compete with existing ticketing platforms in the crypto space?`,
-    info: `We're not just about crypto ticketing:`,
-    innerList: [
-      {
-        name: 'All-in-one Platform:',
-        text: `eventflo offers a complete event management suite, with FloCoin as a powerful component.`,
-      },
-      {
-        name: 'Strong Industry Focus:',
-        text: `Our team's deep event expertise sets us apart.`,
-      },
-      {
-        name: 'AI-Driven Insights:',
-        text: `eventflo goes beyond transactions, with data tools that optimize events.`,
-      }
-    ],
+    title: "Have you thought about Blockchain challenges such as network congestion or increasing gas fees?",
+    info: "Absolutely. We are meticulously evaluating various blockchain options and implementing fallback systems to ensure smooth operations even during network issues. By building FloCoin on ERC20, we maintain flexibility to switch to different chains if needed, ensuring optimal performance and cost-efficiency."
   },
+  {
+    title: "Let’s say the internet goes down at an event, how would users be able to scan in?",
+    info: "Our system includes robust fallback mechanisms. Native apps used for scanning tickets can store data locally, enabling offline functionality. Once the internet connection is restored, the app syncs with the blockchain, ensuring seamless and reliable operations."
+  },
+  {
+    title: "Have you ran a simulation on your tokenomics?",
+    info: "Yes, extensive simulations have been conducted. Even in a worst-case scenario where everyone sold their FloCoin immediately, the tokenomics model shows excellent growth potential over a 10-year period. Our deflationary mechanisms and strategic buybacks further support long-term value appreciation."
+  }
 ];
 // ----------------------------------------------------------------------------------
 
@@ -139,7 +62,7 @@ export default function FAQ() {
       <AppearList>
         <List sx={{ padding: 0 }}>
           {list.map((item) => (
-            <FAQItem item={item} key={item.title} className='foo-tree'/>
+            <FAQItem item={item} key={item.title} className='stagger'/>
           ))}
         </List>
       </AppearList>
