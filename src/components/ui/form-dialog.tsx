@@ -43,7 +43,7 @@ export default function FormDialog() {
                 sx: {margin: '80px auto 16px'}
             }}
         >
-            <IconButton className={'foo-close'} onClick={handleClose}>
+            <IconButton className={'cross-btn'} onClick={handleClose}>
                 <Cross />
             </IconButton>
 
