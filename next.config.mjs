@@ -77,6 +77,13 @@ const webpack = (config, options) => {
 			resourceQuery: { not: /url/ }, // exclude if *.svg?url
 			use: ["@svgr/webpack"],
 		},
+		
+		// webp loader (not used anywhere yet)
+		{
+			test: /\.webp$/i,
+			issuer: /\.[jt]sx?$/,
+			use: ["webp-loader"],
+		},
 
 		//html loader
 		{
