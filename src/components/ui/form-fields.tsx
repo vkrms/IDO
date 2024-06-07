@@ -3,20 +3,26 @@ import React from "react";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils/cn";
 import { Typography, Box, Grid, Button, FormControl, IconButton } from "@mui/material";
-import { MuiTelInput } from 'mui-tel-input'
+import { MuiTelInput, matchIsValidTel } from 'mui-tel-input'
 import * as styles from './form-fields.css';
+import type { UseFormRegister } from "react-hook-form";
 
 interface Props {
-    success: boolean;
+    success: boolean,
+    register: UseFormRegister<any>,
+    getPhone: (a: string) => string,
 }
 
-export function FormFields({success}: Props) {
+export function FormFields({success, register, getPhone}: Props) {
     // console.log('rererender')
     const [phone, setPhone] = React.useState('')
+    // const [phoneB, setPhoneB] = React.useState('')
 
-    const handleChange = (newPhone: string) => {
+    const handleChange = (newPhone: string, info: {numberValue: string}) => {
         setPhone(newPhone)
-        // console.log('yay!')
+        // setPhoneB(info.numberValue)
+        getPhone(info.numberValue)
+        // console.log({phone, phoneB})
     }
 
     return (
@@ -36,19 +42,19 @@ export function FormFields({success}: Props) {
                             <label>Name</label>
 
                             <Grid container gap={2}>
-                                <Input placeholder="First name" />
-                                <Input placeholder="Last name" />
+                                <Input {...register('name')} placeholder="First name" />
+                                <Input {...register('lastName')}placeholder="Last name" />
                             </Grid>
                         </FormControl>
 
                         <FormControl className={styles.control}>
                             <label htmlFor="email">Email Address</label>
-                            <Input id="email" placeholder="enter your email address" type="email" />
+                            <Input id="email" {...register('email')} placeholder="enter your email address" type="email" />
                         </FormControl>
 
                         <FormControl className={cn(styles.control, 'telly')}>
                             <label htmlFor="phone">Phone Number</label>
-                            <MuiTelInput
+                            <MuiTelInput             
                                 value={phone}
                                 onChange={handleChange}
                                 defaultCountry="AU"

@@ -4,10 +4,47 @@ import IconButton from '@mui/material/IconButton';
 import { useContext } from 'react';
 import ContextProvider from '@/components/provider/context_provider';
 import { FormFields } from './form-fields';
-import { set } from 'react-hook-form';
 import Cross from '@/assets/svg/close.svg';
+import { useForm, SubmitHandler } from 'react-hook-form';
+
+type Inputs = {
+    name: string,
+    familyName: string,
+    email: string,
+    tel: string,
+}
+
 
 export default function FormDialog() {
+    const { register, handleSubmit } = useForm<Inputs>();
+
+    const [phoneB, setPhoneB] = React.useState('')
+
+    async function post(payload: {}) {
+        const res = await fetch('/api/mailjet', {
+            method: 'POST',
+            body: JSON.stringify(payload),
+        });
+
+        const v = await res.json();
+
+        if (res.status === 500) {
+            console.warn(v)
+        }
+
+        if (res.status === 200) {
+            // alert('Success');
+            setSuccess(true);
+        }
+    }
+
+
+    const onSubmit: SubmitHandler<Inputs> = data => {
+        data.tel = phoneB
+        console.log({data})
+        post(data)
+    }
+
     const context = useContext(ContextProvider);
 
     function handleClose() {
@@ -15,6 +52,12 @@ export default function FormDialog() {
     }
 
     const [success, setSuccess] = React.useState(false);
+
+    const getPhone = (phone: string) => {
+        console.log({phone})
+        setPhoneB(phone)
+        return phone
+    }
 
     return (
         <Dialog
@@ -30,15 +73,9 @@ export default function FormDialog() {
             }}
             PaperProps={{
                 component: 'form',
-                onSubmit: (event: React.FormEvent<HTMLFormElement>) => {
-                    event.preventDefault();
-                    const formData = new FormData(event.currentTarget);
-                    const formJson = Object.fromEntries((formData as any).entries());
-                    const email = formJson.email;
-                    console.log({formJson});
-                    // handleClose();
-                    setSuccess(true);
-                },
+
+                onSubmit: handleSubmit(onSubmit),
+
                 className: 'bg-transparent overflow-visible',
                 sx: {margin: '80px auto 16px'}
             }}
@@ -47,7 +84,7 @@ export default function FormDialog() {
                 <Cross />
             </IconButton>
 
-            <FormFields {...{success}} />
+            <FormFields {...{success, register, getPhone}} />
         </Dialog>
     );
 }

@@ -339,6 +339,14 @@ const theme = createTheme({
         },
       },
     },
+    MuiModal: {
+      styleOverrides: {
+        root: {
+          zIndex: 12000,
+          position: 'absolute',
+        },
+      },
+    },
     MuiDialogContent: {
       styleOverrides: {
         root: {

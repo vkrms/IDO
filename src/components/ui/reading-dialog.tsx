@@ -20,6 +20,7 @@ export default function ReadingDialog({text, slug}: Props) {
 
     return (
         <Dialog
+            disableRestoreFocus
             open={context.isOpen(slug)}
             onClose={handleClose}
             slotProps={{
@@ -30,13 +31,14 @@ export default function ReadingDialog({text, slug}: Props) {
                     },
                 },
             }}
+            
             PaperProps={{
                 component: 'div',
                 className: 'bg-reading',
-                sx: {maxWidth: 800, marginTop: '192px'}
+                sx: {maxWidth: 800, marginTop: '128px'}
             }}
         >
-            <IconButton className={'foo-close'} onClick={handleClose}>
+            <IconButton className={'cross-btn'} onClick={handleClose}>
                 <Cross />
             </IconButton>
 

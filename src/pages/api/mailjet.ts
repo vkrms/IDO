@@ -13,24 +13,33 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
+    // console.log('begin',req, 'end')
+    // return res.status(200).json({ body: req.body })
 
+    const { name, familyName, email, tel } = JSON.parse(req.body)
 
     const queryData: Contact.PostContactBody = {
-        Name: 'Test Person',
-        Email: 'somebody+1@example.com',
+        Name: `${name} ${familyName}`,
+        Email: email,
     }
 
-    const result: LibraryResponse<Contact.PostContactResponse> = await mailjet.post('contact').request(queryData)
+    console.log({ queryData })
 
-    const ContactID = result.body.Data[0].ID
-
-    const listID = process.env.MJ_LIST_ID;
-
-    const addToListResult: LibraryResponse<RequestData> = await mailjet.post('listrecipient').request({
-        ContactID: ContactID,
-        ListID: listID,
-        IsUnsubscribed: false
-    });
-
-    res.status(200).json({ body: addToListResult.body })    
+    try {
+        const result: LibraryResponse<Contact.PostContactResponse> = await mailjet.post('contact').request(queryData)
+    
+        const ContactID = result.body.Data[0].ID
+    
+        const listID = process.env.MJ_LIST_ID;
+    
+        const addToListResult: LibraryResponse<RequestData> = await mailjet.post('listrecipient').request({
+            ContactID: ContactID,
+            ListID: listID,
+            IsUnsubscribed: false
+        });
+    
+        res.status(200).json({ body: addToListResult.body })    
+    } catch (error) {
+        res.status(500).json({ error: error.message })
+    }
 }
