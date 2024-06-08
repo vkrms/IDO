@@ -22,7 +22,7 @@ export const list = style({
   justifyContent: 'space-evenly',
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fit, minmax(288px, 336px))',
-  paddingInline: 32,
+  paddingInline: 12,
 });
 
 export const itemId = style({

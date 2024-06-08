@@ -26,7 +26,10 @@ export const box = style({
   textAlign: 'left',
 
   '@media': {
-    
+    '(min-width: 940px)': {
+      flexFlow: 'row',
+    },
+
     // '(max-width: 600px)': {
     //   // flexDirection: 'column',
     //   gap: 8,
@@ -35,9 +38,6 @@ export const box = style({
 
     '(max-width: 1120px)': {
       gap: 16,
-
-      // flexDirection: 'column',
-      // textAlign: 'center',
       marginInline: 'auto',
     }
   },
@@ -50,14 +50,19 @@ export const boxLeft = style({
   fontFamily: manropeSemiBold,
   color: colorWhite,
 
-
-  '@media': smallB({
+  '@media': {
+    '(max-width: 600px)': {
       fontSize: 24,
       lineHeight: '33px',
       alignSelf: 'flex-start',
       flex: '0 1 48%',
-      minWidth: 312,    
-    })
+      minWidth: 312,
+    },
+    '(min-width:940px)': {
+      flex: '0 0 50%',
+    }
+
+  }
 });
 
 export const boxRight = style({
