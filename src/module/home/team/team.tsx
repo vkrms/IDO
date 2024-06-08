@@ -100,6 +100,17 @@ const list: TeamData[] = [
     title: 'Our Advisors',
     list: [
       {
+        img: img3,
+        name: 'Richie McNeill',
+        role: 'Advisor',
+        info: [
+          {
+            title: 'Industry Legend',
+            text: 'Richie\'s a true icon in the Australian dance music scene. His co-founding of the legendary Stereosonic festival (sold for over $100M!) proves his ability to spot and scale disruptive event concepts. As a co-owner of prominent event companies, Richie\'s got the connections and influence to open doors throughout the entire Global festival industry.'
+          },
+        ],
+      },      
+      {
         img: img7,
         name: 'Rudy Santino',
         role: 'Advisor',
@@ -112,17 +123,6 @@ const list: TeamData[] = [
         role: 'Advisor',
         info: [{ title: 'Hype Generator', text: `Andrej's isn't just a marketer, he's a Web3 growth strategist with a decade of proven results.  His track record speaks for itself – multiple 7-figure raises and a $3 million NFT-ticketing triumph demonstrate his ability to build thriving communities and ignite project momentum. As eventflo's advisor, he's the force behind our strategic marketing, fueling FloCoin's unstoppable rise.` }],
       },
-      {
-        img: img3,
-        name: 'Richie McNeill',
-        role: 'Advisor',
-        info: [
-          {
-            title: 'Industry Legend',
-            text: 'Richie\'s a true icon in the Australian dance music scene. His co-founding of the legendary Stereosonic festival (sold for over $100M!) proves his ability to spot and scale disruptive event concepts. As a co-owner of prominent event companies, Richie\'s got the connections and influence to open doors throughout the entire Global festival industry.'
-          },
-        ],
-      },      
     ],
   },
 ];
