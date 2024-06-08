@@ -52,6 +52,7 @@ export const Something = ({ children }: Props) => {
                     setIsPrivacyOpen(!isPrivacyOpen);
                     break;
             }
+            return false;
         }
     };
 

@@ -43,6 +43,7 @@ export const link = style({
 export const linkText = style([
   linkToBtn,
   {
+    cursor: 'pointer',
     fontFamily: manropeSemiBold,
     fontSize: 16,
     lineHeight: '22px',

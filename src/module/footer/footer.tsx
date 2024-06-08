@@ -57,6 +57,16 @@ import { cn } from '@/lib/utils/cn';
 export default function Footer() {
   const context = useContext(ContextProvider);
 
+  function openPrivacy(e) {
+    e.preventDefault();
+    context.toggle('privacy');    
+  }
+
+  function openDisclaimer(e) {
+    e.preventDefault();
+    context.toggle('disclaimer');    
+  }
+
   // ----------------------------------------------------------------------------------
   return (
     <Box className={'footer'}>
@@ -94,12 +104,12 @@ export default function Footer() {
                 {/* <Link href='' className={styles.linkText}>
                   Terms & Conditions
                 </Link> */}
-                <Link href='' className={styles.linkText} onClick={() => context.toggle('privacy')}>
+                <a className={styles.linkText} onClick={openPrivacy}>
                   Privacy Policy
-                </Link>
-                <Link href='' className={styles.linkText} onClick={() => context.toggle('disclaimer')}>
+                </a>
+                <a className={styles.linkText} onClick={openDisclaimer}>
                   Disclaimer
-                </Link>
+                </a>
               </Grid>
             </Grid>
             <Typography className={styles.copyright}>&copy; eventflo Pty Ltd</Typography>

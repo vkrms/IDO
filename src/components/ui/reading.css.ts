@@ -5,11 +5,10 @@ import { style } from '@vanilla-extract/css'
 export const reading = style({
     fontSize: 16,
     maxWidth: '88ch',
-    margin: '64px 0 2px',
+    margin: '24px 0',
     overflow: 'auto',
     paddingRight: 24,
     paddingBottom: 8,
-    marginBottom: 80,
 
     //@ts-ignore-line
     'h1, h2, p, strong': {
@@ -32,4 +31,19 @@ export const reading = style({
 
     // selectors: {
     // }
+})
+export const body = style({
+    backgroundColor: '#070215',
+    padding: 16,
+    margin: 8,
+    borderRadius: 24,
+    maxWidth: 800,
+    marginTop: '128px',
+
+    '@media': {
+        '(min-width: 768px)': {
+            padding: '32px 16px 24px 48px',
+            margin: 'auto',
+        }
+    }
 })

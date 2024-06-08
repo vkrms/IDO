@@ -343,7 +343,6 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           zIndex: 12000,
-          position: 'absolute',
         },
       },
     },

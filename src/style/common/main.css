@@ -127,6 +127,7 @@ label {
 .cross-btn {
     position: absolute;
     right: 0;
+    top: 0;
 }
 
 .cross-btn > svg {
@@ -284,10 +285,4 @@ label {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: #5553;
-}
-
-.bg-reading {
-    background-color: #070215;
-    padding: 24px;
-    border-radius: 24px;
 }

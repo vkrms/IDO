@@ -5,6 +5,7 @@ import { useContext } from 'react';
 import ContextProvider from '@/components/provider/context_provider';
 import Cross from '@/assets/svg/close.svg';
 import Reading from '@/components/ui/reading';
+import * as styles from '@/components/ui/reading.css';
 
 interface Props {
     text: string;
@@ -20,7 +21,7 @@ export default function ReadingDialog({text, slug}: Props) {
 
     return (
         <Dialog
-            disableRestoreFocus
+            
             open={context.isOpen(slug)}
             onClose={handleClose}
             slotProps={{
@@ -34,8 +35,7 @@ export default function ReadingDialog({text, slug}: Props) {
             
             PaperProps={{
                 component: 'div',
-                className: 'bg-reading',
-                sx: {maxWidth: 800, marginTop: '128px'}
+                className: styles.body,
             }}
         >
             <IconButton className={'cross-btn'} onClick={handleClose}>
