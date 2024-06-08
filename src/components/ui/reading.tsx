@@ -7,7 +7,7 @@ interface Props {
 
 const Reading: React.FC<Props> = ({text}) => {
     return (
-        <article className={styles.reading}>
+        <article className={styles.reading + ' scrollbar'}>
             <div dangerouslySetInnerHTML={{__html: text}}/>
         </article>
     );

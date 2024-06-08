@@ -266,23 +266,18 @@ label {
     scroll-margin-top: 100px;
 }
 
-::-webkit-scrollbar {
+.scrollbar::-webkit-scrollbar {
     width: 10px;
 }
 
-::-webkit-scrollbar-track {
+.scrollbar::-webkit-scrollbar-track {
     background: #262232;
     border-radius: 12px;
 }
 
 
-::-webkit-scrollbar-thumb {
+.scrollbar::-webkit-scrollbar-thumb {
     background-color: #3a3644;
     transition: all .3s ease;
     border-radius: 12px;
-}
-
-body::-webkit-scrollbar-track {
-    border-radius: 0;
-    background: #010314;
 }
