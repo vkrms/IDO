@@ -27,7 +27,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 
 const chartOptions = { 
-  cutout: '88%',
+  cutout: '74%',
   responsive: true,
   plugins: {
     tooltip: {
@@ -35,7 +35,7 @@ const chartOptions = {
     },
     legend: {
       display: false
-    },
+  },
     deferred: {/*defaults*/},
   }
 }
