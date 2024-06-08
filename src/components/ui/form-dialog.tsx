@@ -63,6 +63,7 @@ export default function FormDialog() {
         <Dialog
             open={context.isOpen('form')}
             onClose={context.toggleForm}
+            scroll="body"
             slotProps={{
                 backdrop: {
                     sx: {
