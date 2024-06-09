@@ -19,7 +19,8 @@ import { InfiniteMovingCards as Scroller } from '@/components/ui/infinite-moving
 import Countdown from '@/components/ui/countdown';
 import { CtaButton } from '@/components/ui/cta_button';
 import Image from 'next/image';
-import Appear from '@/components/ui/appear';
+import Preloader from '@/components/ui/preloader';
+import { useEffect, useState } from 'react';
 
 
 // ----------------------------------------------------------------------------------
@@ -37,6 +38,12 @@ const founders = [
 // ----------------------------------------------------------------------------------
 
 export default function Welcome() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(false)
+  }, [])
+
   // ----------------------------------------------------------------------------------
   return (
   <>
@@ -47,7 +54,7 @@ export default function Welcome() {
       className='fade-up'
       opacity={0.8}
     >
-       <Container className={styles.container}>
+      <Container className={styles.container}>
           <Box height={176} />
           
           <Typography variant='subtitle2' className={styles.title1}>
@@ -101,6 +108,8 @@ export default function Welcome() {
           </Box>
       </Box>
     </Container>
+
+    <Preloader isVisible={loading} />
   </>
   );
 }

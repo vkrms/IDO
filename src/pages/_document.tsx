@@ -12,7 +12,7 @@ import { colorWhite } from '@/style/config/color.css';
  */
 export default function Document() {
   return (
-    <Html>
+    <Html style={{ background: '#010314' }}>
       <Head>
         <meta charSet='utf-8' />
         <meta name='theme-color' content={colorWhite} />
