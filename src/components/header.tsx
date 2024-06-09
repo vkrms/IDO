@@ -45,7 +45,7 @@ const Menu = ({className}: Props) => {
         <Grid className={cn(styles.list, 'doo')}>
           {dataList.map((data) => (
             <Grid key={data} className={styles.item}>
-              <a href={'#' + slugify(data)}>
+              <a href={'#' + slugify(data)} className='menu-item'>
                 <Typography variant="inherit" className={styles.itemText}>{data}</Typography>
               </a>
             </Grid>

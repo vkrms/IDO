@@ -49,6 +49,7 @@ export const linkText = style([
     lineHeight: '22px',
     color: colorWhite,
     transition: 'all .35s ease-out',
+    width: 'fit-content',
 
     ':hover': {
       background: glowColor,

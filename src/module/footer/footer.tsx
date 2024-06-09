@@ -104,10 +104,10 @@ export default function Footer() {
                 {/* <Link href='' className={styles.linkText}>
                   Terms & Conditions
                 </Link> */}
-                <a className={styles.linkText} onClick={openPrivacy}>
+                <a className={cn(styles.linkText, 'menu-item')} onClick={openPrivacy}>
                   Privacy Policy
                 </a>
-                <a className={styles.linkText} onClick={openDisclaimer}>
+                <a className={cn(styles.linkText, 'menu-item')} onClick={openDisclaimer}>
                   Disclaimer
                 </a>
               </Grid>
