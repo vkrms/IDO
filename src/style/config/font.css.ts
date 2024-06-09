@@ -12,42 +12,42 @@ export const electrolizeRegular = 'ElectrolizeRegular';
 
 globalFontFace(electrolizeRegular, {
   src: 'url("/fonts/Electrolize-Regular.ttf")',
-  fontDisplay: 'swap',
+  fontDisplay: 'block',
 });
 
 globalFontFace(manropeBold, {
   src: 'url("/fonts/Manrope-Bold.ttf")',
-  fontDisplay: 'swap',
+  fontDisplay: 'block',
 });
 
 globalFontFace(manropeExtraBold, {
   src: 'url("/fonts/Manrope-ExtraBold.ttf")',
-  fontDisplay: 'swap',
+  fontDisplay: 'block',
 });
 
 globalFontFace(manropeExtraLight, {
   src: 'url("/fonts/Manrope-ExtraLight.ttf")',
-  fontDisplay: 'swap',
+  fontDisplay: 'block',
 });
 
 globalFontFace(manropeLight, {
   src: 'url("/fonts/Manrope-Light.ttf")',
-  fontDisplay: 'swap',
+  fontDisplay: 'block',
 });
 
 globalFontFace(manropeMedium, {
   src: 'url("/fonts/Manrope-Medium.ttf")',
-  fontDisplay: 'swap',
+  fontDisplay: 'block',
 });
 
 globalFontFace(manropeRegular, {
   src: 'url("/fonts/Manrope-Regular.ttf")',
-  fontDisplay: 'swap',
+  fontDisplay: 'block',
 });
 
 globalFontFace(manropeSemiBold, {
   src: 'url("/fonts/Manrope-SemiBold.ttf")',
-  fontDisplay: 'swap',
+  fontDisplay: 'block',
 });
 
 export const fontElectrolizeRegular = style({
