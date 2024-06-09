@@ -93,7 +93,7 @@ export default function Welcome() {
             <Scroller
               items={founders}
               direction="left"
-              speed="normal"
+              speed="slow"
             />
           </div>
         </Container>

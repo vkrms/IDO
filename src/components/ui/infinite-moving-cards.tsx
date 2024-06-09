@@ -87,7 +87,7 @@ export const InfiniteMovingCards = ({
             >
                 {items.map((id) => (
                     <li key={id}>
-                        <Image src={`/img/home/welcome/${id}.webp`} alt={id} height={28} width={180} className={styles.logo} />
+                        <img srcSet={`/img/home/welcome/${id}.webp 2x`} alt={id} height={28} width={180} className={styles.logo} />
                     </li>
                 ))}
             </ul>
