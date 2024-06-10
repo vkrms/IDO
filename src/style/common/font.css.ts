@@ -1,4 +1,3 @@
-import { manropeBold, manropeMedium, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
 
 import { colorPrimary, colorWhite } from '@/style/config/color.css';
 import { small } from '@/style/config/breakpoints.css';
@@ -17,7 +16,7 @@ export const f8 = style({
 
 export const h1 = style({
   fontSize: 40,
-  fontFamily: manropeBold,
+  fontWeight: 700,
 });
 
 export const h2 = style({
@@ -25,7 +24,7 @@ export const h2 = style({
   fontSize: 56,
   lineHeight: '76px',
   color: colorWhite,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   textAlign: 'center',
 
   '@media': {
@@ -41,105 +40,105 @@ export const h2 = style({
 export const h3 = style({
   fontSize: 24,
   lineHeight: '33px',
-  fontFamily: manropeMedium,
+  fontWeight: 500,
 });
 
 export const subtitle1 = style({
   fontSize: 18,
   lineHeight: '25px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
 });
 
 export const subtitle2 = style({
   fontSize: 18,
   lineHeight: '25px',
-  fontFamily: manropeMedium,
+  fontWeight: 500,
 });
 
 export const subText1 = style({
   fontSize: 30,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
 });
 
 export const subText2 = style({
   fontSize: 24,
   lineHeight: '33px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
 });
 
 export const subText3 = style({
   fontSize: 20,
   lineHeight: '22px',
-  fontFamily: manropeBold,
+  fontWeight: 700,
 });
 
 export const subText4 = style({
   fontSize: 18,
-  fontFamily: manropeBold,
+  fontWeight: 700,
 });
 
 export const subText5 = style({
   fontSize: 16,
   lineHeight: '24px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
 });
 
 export const subText6 = style({
   fontSize: 16,
   lineHeight: '24px',
-  fontFamily: manropeMedium,
+  fontWeight: 500,
 });
 
 export const subText7 = style({
   fontSize: 15,
-  fontFamily: manropeMedium,
+  fontWeight: 500,
 });
 
 export const subText8 = style({
   fontSize: 14,
   lineHeight: '19px',
-  fontFamily: manropeMedium,
+  fontWeight: 500,
 });
 
 export const subText9 = style({
   fontSize: 13,
-  fontFamily: manropeMedium,
+  fontWeight: 500,
 });
 
 export const subText10 = style({
   fontSize: 12,
   lineHeight: '18px',
-  fontFamily: manropeMedium,
+  fontWeight: 500,
 });
 
 export const subText11 = style([
   f10,
   {
     lineHeight: '14px',
-    fontFamily: manropeMedium,
+    fontWeight: 500,
   },
 ]);
 
 export const subText12 = style({
   fontSize: 18,
   lineHeight: '25px',
-  fontFamily: manropeRegular,
+  fontWeight: 400,
 });
 
 export const subText13 = style({
   fontSize: 15,
-  fontFamily: manropeRegular,
+  fontWeight: 400,
 });
 
 export const subText14 = style({
   fontSize: 12,
   lineHeight: '18px',
-  fontFamily: manropeRegular,
+  fontWeight: 400,
 });
 
 export const subText15 = style([
   f8,
   {
-    fontFamily: manropeRegular,
+    fontWeight: 400,
   },
 ]);

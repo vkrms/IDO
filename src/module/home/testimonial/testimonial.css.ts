@@ -1,5 +1,3 @@
-import { manropeBold, manropeLight, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
-
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
 
@@ -11,7 +9,7 @@ export const title = style({
   fontSize: 40,
   lineHeight: '55px',
   color: colorWhite,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   textAlign: 'center',
 });
 
@@ -23,14 +21,14 @@ export const subtitle = style({
   backgroundClip: 'text',
   fontSize: 20,
   lineHeight: '27px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
 });
 
 export const info = style({
   maxWidth: 674,
   fontSize: 18,
   lineHeight: '29px',
-  fontFamily: manropeRegular,
+  fontWeight: 400,
   color: colorWhite,
   textAlign: 'center',
   margin: '0 auto 56px',

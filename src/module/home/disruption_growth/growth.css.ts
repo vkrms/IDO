@@ -1,4 +1,3 @@
-import { manropeBold, manropeLight, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
 import { colorPrimary } from '@/style/config/color.css';
 
 import { colorWhite } from '@/style/config/color.css';
@@ -7,14 +6,14 @@ import { smallUp } from '@/style/config/breakpoints.css';
 
 export const title = style({
   color: colorWhite,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   textAlign: 'center',
   margin: '0 auto 16px',
 });
 
 export const subtitle = style({
   maxWidth: 806,
-  fontFamily: manropeRegular,
+  fontWeight: 400,
   color: colorWhite,
   textAlign: 'center',
   margin: '0 auto 104px',
@@ -30,7 +29,7 @@ export const timeLimeTitle = style({
   maxWidth: 339,
   marginBottom: 24,
   fontSize: 32,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   color: colorWhite,
   lineHeight: '44px',
 });
@@ -41,7 +40,7 @@ export const timeLineInfo = style({
   marginBottom: 32,
   fontSize: 18,
   lineHeight: '29px',
-  fontFamily: manropeRegular,
+  fontWeight: 400,
   color: colorWhite,
 
   selectors: {
@@ -53,7 +52,7 @@ export const timeLineInfo = style({
 
 export const timeLineSubtitle = style({
   fontSize: 22,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   color: colorWhite,
 });
 
@@ -64,7 +63,7 @@ export const timelineDuration = style({
   backgroundClip: 'text',
   fontSize: 24,
   lineHeight: '33px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   flex: '0 1 50%',
   padding: 0,
 });

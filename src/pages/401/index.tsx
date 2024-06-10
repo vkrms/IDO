@@ -1,5 +1,4 @@
 import { colorPrimary, colorTextBlack, colorTextGrey } from '@/style/config/color.css';
-import { manropeBold, manropeMedium, manropeRegular } from '@/style/config/font.css';
 import { Button, Typography } from '@mui/material';
 
 import { getLayout } from '@/components/layout/home';
@@ -28,7 +27,7 @@ const Unauthorized: NextPageWithLayout = () => {
           <Typography
             variant='h1'
             align='center'
-            sx={{ fontSize: 120, fontFamily: manropeBold, color: colorTextBlack }}
+            sx={{ fontSize: 120, fontWeight: 700, color: colorTextBlack }}
           >
             401
             <b style={{ color: colorPrimary, marginLeft: 12 }}>Oops!</b>
@@ -36,7 +35,7 @@ const Unauthorized: NextPageWithLayout = () => {
           <Typography
             variant='h2'
             align='center'
-            sx={{ fontSize: 80, fontFamily: manropeMedium, color: colorTextBlack }}
+            sx={{ fontSize: 80, fontWeight: 500, color: colorTextBlack }}
           >
             Unauthorized
           </Typography>
@@ -44,7 +43,7 @@ const Unauthorized: NextPageWithLayout = () => {
           <Typography
             variant='subtitle1'
             align='center'
-            sx={{ color: colorTextGrey, fontSize: 20, fontFamily: manropeRegular }}
+            sx={{ color: colorTextGrey, fontSize: 20, fontWeight: 400}}
           >
             Access is allowed only for registered users, click on the button below to head on back to home base.
           </Typography>

@@ -1,7 +1,5 @@
 import { colorPrimary, colorWhite } from '@/style/config/color.css';
 import { style, styleVariants } from '@vanilla-extract/css';
-
-import { manropeSemiBold } from '@/style/config/font.css';
 import { small } from '@/style/config/breakpoints.css';
 
 export const infoBox = style({
@@ -56,7 +54,7 @@ export const itemTitle = style({
   marginBottom: 16,
   fontSize: 16,
   lineHeight: '22px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   color: '#686868',
   textAlign: 'center',
 });
@@ -65,7 +63,7 @@ export const itemText = style({
   fontSize: 32,
   color: colorWhite,
   lineHeight: '44px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
 });
 
 export const bgPosVar = styleVariants({

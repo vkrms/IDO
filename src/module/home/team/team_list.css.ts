@@ -1,5 +1,3 @@
-import { manropeMedium, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
-
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
 import { smallUp } from '@/style/config/breakpoints.css';
@@ -67,7 +65,7 @@ export const name = style({
   marginBottom: 4,
   fontSize: 24,
   lineHeight: '33px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   textAlign: 'center',
   color: colorWhite,
 });
@@ -75,7 +73,7 @@ export const name = style({
 export const role = style({
   fontSize: 20,
   lineHeight: '27px',
-  fontFamily: manropeMedium,
+  fontWeight: 500,
   color: colorWhite,
   textAlign: 'center',
   marginBottom: 38,
@@ -98,7 +96,7 @@ export const infoTitle = style({
   fontSize: 18,
   lineHeight: '27px',
   color: colorWhite,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
 });
 
 export const infoText = style({
@@ -106,7 +104,7 @@ export const infoText = style({
   color: '#B5B5B5',
   fontSize: 14,
   lineHeight: '24px',
-  fontFamily: manropeRegular,
+  fontWeight: 400,
   maxWidth: 320,
 });
 

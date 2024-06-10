@@ -1,5 +1,3 @@
-import { manropeBold, manropeLight, manropeMedium, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
-
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
 import { line } from '../token_allocation/token_allocation.css';
@@ -26,7 +24,7 @@ export const itemTitle = style({
   fontSize: 24,
   lineHeight: '36px',
   color: colorWhite,
-  fontFamily: manropeMedium,
+  fontWeight: 500,
 
   '@media': smallB({
     fontSize: 18,
@@ -37,7 +35,7 @@ export const itemTitle = style({
 export const itemInfo = style({
   fontSize: 18,
   lineHeight: '29px',
-  fontFamily: manropeRegular,
+  fontWeight: 400,
   color: colorWhite,
   marginBottom: 24,
 });
@@ -65,21 +63,21 @@ export const innerIdx = style({
   backgroundClip: 'text',
   fontSize: 20,
   lineHeight: '30px',
-  fontFamily: manropeBold,
+  fontWeight: 700,
 });
 
 export const innerName = style({
   fontSize: 20,
   lineHeight: '30px',
   color: colorWhite,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
 });
 
 export const innerText = style({
   fontSize: 18,
   lineHeight: '29px',
   color: colorWhite,
-  fontFamily: manropeRegular,
+  fontWeight: 400,
 });
 
 export const itemTitleWrap = style({

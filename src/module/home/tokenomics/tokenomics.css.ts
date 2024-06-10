@@ -1,5 +1,4 @@
 import { colorPrimary, colorWhite } from '@/style/config/color.css';
-import { manropeRegular, manropeSemiBold } from '@/style/config/font.css';
 import { small, smallB, smallUp } from '@/style/config/breakpoints.css'
 
 import { style } from '@vanilla-extract/css';
@@ -47,7 +46,7 @@ export const boxLeft = style({
   // flexBasis: 489,
   fontSize: 48,
   lineHeight: '66px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   color: colorWhite,
 
   '@media': {
@@ -66,7 +65,7 @@ export const boxLeft = style({
 });
 
 export const boxRight = style({
-  fontFamily: manropeRegular,
+  fontWeight: 400,
   color: colorWhite,
   maxWidth: 768,
 
@@ -112,7 +111,7 @@ export const itemTitle = style({
   marginBottom: 16,
   fontSize: 16,
   lineHeight: '22px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   color: '#686868',
 });
 
@@ -120,7 +119,7 @@ export const itemText = style({
   fontSize: 32,
   color: colorWhite,
   lineHeight: '44px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
 });
 
 export const bgLeft = style({

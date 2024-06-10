@@ -1,5 +1,3 @@
-import { manropeBold, manropeLight, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
-
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
 import { smallB, smallUp } from '@/style/config/breakpoints.css';
@@ -7,7 +5,7 @@ import { smallB, smallUp } from '@/style/config/breakpoints.css';
 export const title = style({
   marginBottom: 16,
   color: colorWhite,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   textAlign: 'center',
 
   '@media': smallUp({
@@ -18,7 +16,7 @@ export const title = style({
 
 export const subtitle = style({
 
-  fontFamily: manropeRegular,
+  fontWeight: 400,
   color: colorWhite,
   textAlign: 'center',
   marginBottom: 80,
@@ -45,7 +43,7 @@ export const legendList = style({
 export const legendTitle = style({
   fontSize: 24,
   lineHeight: '36px',
-  fontFamily: manropeBold,
+  fontWeight: 700,
   marginBottom: 4,
   position: 'relative',
   paddingLeft: 12,
@@ -58,7 +56,7 @@ export const legendTitle = style({
 
 export const legendText = style({
   maxWidth: 544,
-  fontFamily: manropeLight,
+  fontWeight: 300,
   color: colorWhite,
 
   '@media': smallUp({

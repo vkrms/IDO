@@ -30,6 +30,10 @@ html {
 
 body {
     color: #fff;
+    font-family: "Manrope";
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
 }
 
 .scrollable::-webkit-scrollbar {

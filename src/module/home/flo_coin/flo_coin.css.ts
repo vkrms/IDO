@@ -1,5 +1,3 @@
-import { manropeBold, manropeLight, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
-
 import { colorWhite } from '@/style/config/color.css';
 import { small, medium } from '@/style/config/breakpoints.css';
 import { style } from '@vanilla-extract/css';
@@ -22,7 +20,7 @@ export const subtitle = style({
   backgroundClip: 'text',
   fontSize: 16,
   lineHeight: '22px',
-  fontFamily: manropeBold,
+  fontWeight: 700,
 });
 
 export const text = style({
@@ -31,7 +29,7 @@ export const text = style({
   textAlign: 'center',
   // fontSize: 18,
   // lineHeight: '29px',
-  fontFamily: manropeRegular,
+  fontWeight: 400,
   // color: colorWhite,
 });
 
@@ -56,14 +54,14 @@ export const itemTitle = style({
   fontSize: 24,
   lineHeight: '33px',
   color: colorWhite,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   marginBottom: 8,
   marginInline: 'auto',
 });
 
 export const itemText = style({
   color: colorWhite,
-  fontFamily: manropeLight,
+  fontWeight: 300,
   maxWidth: '40ch',
   marginInline: 'auto',
 });

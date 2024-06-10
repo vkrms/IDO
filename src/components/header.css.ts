@@ -1,6 +1,5 @@
 import { colorBorder, colorWhite, glowColor } from '@/style/config/color.css';
 
-import { manropeMedium } from '@/style/config/font.css';
 import { zIndexHeader } from '@/style/config/zindex.css';
 import { style, globalStyle } from '@vanilla-extract/css';
 import { smallUp, medium } from '@/style/config/breakpoints.css';
@@ -41,7 +40,6 @@ export const item = style({
 
 export const itemText = style({
   fontSize: 16,
-  fontFamily: manropeMedium,
   color: colorWhite,
   whiteSpace: 'nowrap',
   transition: 'all .35s ease-out',

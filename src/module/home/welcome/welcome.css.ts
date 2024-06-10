@@ -2,10 +2,6 @@ import { smallUp } from '@/style/config/breakpoints.css';
 import { colorBorder, colorWhite } from '@/style/config/color.css';
 import {
   electrolizeRegular,
-  manropeBold,
-  manropeMedium,
-  manropeRegular,
-  manropeSemiBold,
 } from '@/style/config/font.css';
 
 import { style } from '@vanilla-extract/css';
@@ -22,7 +18,7 @@ export const container = style({
 export const title1 = style({
   fontSize: 18,
   lineHeight: '25px',
-  fontFamily: manropeMedium,
+  fontWeight: 500,
   // color: colorWhite,
   textAlign: 'center',
 });
@@ -31,7 +27,7 @@ export const title2 = style({
   marginBottom: 8,
   fontSize: 48,
   lineHeight: '66px',
-  fontFamily: manropeBold,
+  fontWeight: 700,
   // color: colorWhite,
   textAlign: 'center',
 
@@ -46,7 +42,7 @@ export const title3 = style({
   // fontSize: 18,
   // lineHeight: '29px',
   // color: colorWhite,
-  fontFamily: manropeRegular,
+  fontWeight: 400,
   textAlign: 'center',
 });
 
@@ -91,7 +87,7 @@ export const itemKey = style({
   marginTop: 16,
   textAlign: 'center',
   color: colorWhite,
-  fontFamily: manropeRegular,
+  fontWeight: 400,
   display: 'block',
 
   '@media': smallUp({
@@ -127,7 +123,7 @@ export const founderTitle = style({
   textAlign: 'center',
   fontSize: 28,
   lineHeight: '38px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   color: colorWhite,
 });
 
@@ -138,7 +134,7 @@ export const founderBold = style({
   backgroundClip: 'text',
   fontSize: 28,
   lineHeight: '38px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
 });
 
 export const founderList = style({

@@ -7,7 +7,6 @@ import {
   colorTextBlack,
   colorWhite,
 } from '@/style/config/color.css';
-import { manropeBold, manropeMedium } from '@/style/config/font.css';
 import { style, styleVariants } from '@vanilla-extract/css';
 
 /**

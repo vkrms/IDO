@@ -1,5 +1,3 @@
-import { manropeRegular, manropeSemiBold } from '@/style/config/font.css';
-
 import { linkToBtn } from '@/style/common/link.css';
 import { colorWhite, glowColor } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
@@ -31,7 +29,7 @@ export const text = style({
   fontSize: 18,
   lineHeight: '29px',
   color: colorWhite,
-  fontFamily: manropeRegular,
+  fontWeight: 400,
 });
 
 export const link = style({
@@ -44,7 +42,7 @@ export const linkText = style([
   linkToBtn,
   {
     cursor: 'pointer',
-    fontFamily: manropeSemiBold,
+    fontWeight: 600,
     fontSize: 16,
     lineHeight: '22px',
     color: colorWhite,
@@ -64,7 +62,7 @@ export const copyright = style({
   textAlign: 'center',
   color: colorWhite,
   fontSize: 16,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
 });
 
 export const container = style({

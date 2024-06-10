@@ -17,7 +17,7 @@ import {
   colorTextGrey,
   colorWhite,
 } from '@/style/config/color.css';
-import { manropeBold, manropeMedium, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
+
 import { line } from '@/module/home/token_allocation/token_allocation.css';
 
 const smallUp = '@media (min-width:600px)';
@@ -111,7 +111,7 @@ declare module '@mui/material/Button' {
 
 const theme = createTheme({
   typography: {
-    fontFamily: `${manropeRegular}, sans-serif`,
+    fontFamily: `'manrope' system-ui sans-serif`,
 
     body1: {
       fontSize: 12,
@@ -125,7 +125,6 @@ const theme = createTheme({
 
     h1: {
       fontSize: 40,
-      fontFamily: manropeBold,
       color: colorWhite,
     },
 
@@ -134,7 +133,6 @@ const theme = createTheme({
       lineHeight: '44px',
       marginBottom: 32,
       textAlign: 'center',
-      fontFamily: manropeMedium,
 
       [smallUp]: {
         fontSize: 56,
@@ -143,94 +141,97 @@ const theme = createTheme({
       // styleOverrides: {
       //   root: {
       //     fontSize: 30,
-      //     fontFamily: manropeMedium,
+      //     fontWeight: 500,
       //   },
       // },
     },
     h3: {
       fontSize: 24,
       lineHeight: '33px',
-      fontFamily: manropeMedium,
+      fontWeight: 500,
     },
     subtitle1: {
       fontSize: 18,
       lineHeight: '25px',
-      fontFamily: manropeSemiBold,
+      fontWeight: 600,
     },
     subtitle2: {
       fontSize: 18,
       lineHeight: '25px',
-      fontFamily: manropeSemiBold,
+      fontWeight: 600,
     },
     subText1: {
       fontSize: 30,
-      fontFamily: manropeSemiBold,
+      fontWeight: 600,
     },
     subText2: {
       fontSize: 24,
       lineHeight: '33px',
-      fontFamily: manropeSemiBold,
+      fontWeight: 600,
     },
     subText3: {
       fontSize: 20,
-      fontFamily: manropeBold,
+      fontWeight: 700,
     },
     subText4: {
       fontSize: 18,
-      fontFamily: manropeBold,
+      fontWeight: 700,
     },
     subText5: {
       fontSize: 16,
       lineHeight: '24px',
-      fontFamily: manropeSemiBold,
+      fontWeight: 600,
     },
     subText6: {
       fontSize: 16,
       lineHeight: '24px',
-      fontFamily: manropeMedium,
+      fontWeight: 500,
     },
     subText7: {
       fontSize: 15,
-      fontFamily: manropeMedium,
+      fontWeight: 500,
     },
     subText8: {
       fontSize: 14,
       lineHeight: '19px',
-      fontFamily: manropeMedium,
+      fontWeight: 500,
     },
     subText9: {
       fontSize: 13,
-      fontFamily: manropeMedium,
+      fontWeight: 500,
     },
     subText10: {
       fontSize: 12,
       lineHeight: '18px',
-      fontFamily: manropeMedium,
+      fontWeight: 500,
     },
     subText11: {
       fontSize: 12,
       WebkitTransform: 'scale(0.84)',
       lineHeight: '14px',
-      fontFamily: manropeMedium,
+      fontWeight: 500,
     },
     subText12: {
       fontSize: 18,
       lineHeight: '25px',
-      fontFamily: manropeRegular,
+      fontWeight: 400,
     },
     subText13: {
       fontSize: 15,
-      fontFamily: manropeRegular,
+      fontWeight: 400,
+
     },
     subText14: {
       fontSize: 12,
       lineHeight: '18px',
-      fontFamily: manropeRegular,
+      fontWeight: 400,
+
     },
     subText15: {
       fontSize: 12,
       WebkitTransform: 'scale(0.66)',
-      fontFamily: manropeRegular,
+      fontWeight: 400,
+
     },
   },
   palette: {
@@ -401,15 +402,15 @@ const theme = createTheme({
         head: {
           padding: '24px 16px',
           fontSize: 18,
-          fontFamily: manropeMedium,
           color: colorTextBlack,
+          fontWeight: 500,
         },
         body: {
           padding: '18px 40px',
           fontSize: 15,
           lineHeight: '18px',
           color: colorWhite,
-          fontFamily: manropeRegular,
+          fontWeight: 400,
         },
       },
     },
@@ -457,17 +458,19 @@ const theme = createTheme({
         textSizeLarge: {
           fontSize: 16,
           lineHeight: '24px',
-          fontFamily: manropeMedium,
+          fontWeight: 500,
+
+          
         },
         textSizeMedium: {
           fontSize: 16,
           lineHeight: '24px',
-          fontFamily: manropeMedium,
+          fontWeight: 500,
         },
         textSizeSmall: {
           fontSize: 14,
           lineHeight: '24px',
-          fontFamily: manropeBold,
+          fontWeight: 700,
         },
         outlinedPrimary: {
           color: colorTextBlack,

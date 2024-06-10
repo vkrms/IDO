@@ -1,5 +1,3 @@
-import { manropeBold, manropeLight, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
-
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
 import { smallUp, smallB } from '@/style/config/breakpoints.css';
@@ -8,7 +6,7 @@ import { line } from '../token_allocation/token_allocation.css';
 export const title = style({
   marginBottom: 72,
   color: colorWhite,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   textAlign: 'center',
 
   '@media': smallUp({
@@ -29,7 +27,7 @@ export const itemId = style({
   background: ' linear-gradient(45deg, #EA347F 14.66%, #E23080 28.1%, #CC2484 50.02%, #A81189 76.18%, #9A098B 85.37%)',
   color: 'transparent',
   backgroundClip: 'text',
-  fontFamily: manropeBold,
+  fontWeight: 700,
   marginBottom: 8,
   aspectRatio: '1 / 1',
   width: 72,
@@ -47,7 +45,7 @@ export const itemTitle = style({
   marginBottom: 8,
   fontSize: 23,
   lineHeight: '33px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   color: colorWhite,
 
   '@media': smallB({
@@ -59,7 +57,7 @@ export const itemTitle = style({
 export const itemText = style({
   maxWidth: 350,
   color: colorWhite,
-  fontFamily: manropeLight,
+  fontWeight: 300,
 
   '@media': smallUp({
     fontSize: 16,
