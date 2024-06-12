@@ -52,11 +52,13 @@ export const list = style({
   alignItems: 'center',
   gap: '0.6em',
   marginBottom: 40,
-});
 
-export const bob = style({
-  textAlign: 'center',
-})
+  '@media': {
+    'screen and (min-width: 648px)': {
+      gap: 32, 
+    }
+  }
+});
 
 // group of digits
 export const itemValueList = style({

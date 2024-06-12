@@ -12,7 +12,7 @@ function MyTimer({ expiryTimestamp }: { expiryTimestamp: Date }) {
     const timeBits = ['days', 'hours', 'minutes', 'seconds'];
 
     return (
-        <div className={'baz'}>
+        <div>
             <div className={styles.list}>
 
                 {timeBits.map(title => {

@@ -13,13 +13,13 @@ export function Digit({ value, title }: Props) {
     const digits = value.toString().padStart(2, '0').split('');
 
     return (
-        <div className={styles.bob}>
+        <div className='text-center'>
             <div className={styles.itemValueList}>
 
                 {digits.map((digit) => {
                     return (
                         <span
-                            className={styles.itemValue + ' alice'}
+                            className={styles.itemValue}
                             key={title + digit + Math.random()}
                         >
                             {digit}

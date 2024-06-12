@@ -6,7 +6,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.bob4 {
+.ring-video {
     top: -400px;
     right: -400px;
     position: absolute;
@@ -15,7 +15,7 @@ html {
     object-fit: cover;
 }
 
-.bob4__square {
+.ring-video__square {
     content: "x";
     position: absolute;
     background: salmon;
@@ -38,10 +38,6 @@ body {
 
 .scrollable::-webkit-scrollbar {
     display: none;
-}
-
-.bazuzi {
-    flex: 0 1 352px;    
 }
 
 path.expand_b_svg__v,
@@ -80,7 +76,7 @@ path.expand_b_svg__h {
 }
 
 @media (max-width: 1199px) {
-    .bob4{
+    .ring-video{
         width: 500px;
         right: -200px;
         top: 64px;
@@ -90,7 +86,7 @@ path.expand_b_svg__h {
 }
 
 @media (max-width: 1600px) {
-    .bob4{
+    .ring-video{
         width: 700px;
         right: -30%;
         top: -128px;

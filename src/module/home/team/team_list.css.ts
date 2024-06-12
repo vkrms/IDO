@@ -79,7 +79,7 @@ export const role = style({
   marginBottom: 38,
 });
 
-export const bar = style({
+export const cardGrid = style({
   borderRadius: 8,
   backgroundColor: '#9A098B1A',
   maxWidth: 352,

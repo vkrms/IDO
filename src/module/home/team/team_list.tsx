@@ -52,7 +52,7 @@ export default function TeamList({ list }: PropsType) {
                 {item.list.map((item) => (
                   <CardContainer className={cn(styles.cardContainer, 'stagger')} key={item.name}>
                     <CardBody className="relative group/card">
-                      <Grid item className={styles.bar}>
+                      <Grid item className={styles.cardGrid}>
 
                         <Box className={styles.header}>
                           <Box className={styles.imgBox}>
