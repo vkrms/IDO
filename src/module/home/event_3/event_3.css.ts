@@ -36,11 +36,21 @@ export const list = style({
   flexWrap: 'wrap',
   gap: 32,
   display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(376px, 1fr))',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(var(--minWidth), 1fr))',
 
-  '@media': smallUp({
-    marginTop: 64,
-  })
+  vars: {
+    '--minWidth': '264px',
+  },
+
+  '@media': {
+    '(min-width: 900px)': {
+      marginTop: 64,
+      paddingInline: 16,
+      vars: {
+        '--minWidth': '360px',      
+      }
+    }
+  }
 });
 
 export const listItem = style({

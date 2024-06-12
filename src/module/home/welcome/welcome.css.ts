@@ -66,6 +66,12 @@ export const itemValueList = style({
   alignItems: 'center',
   fontFamily: electrolizeRegular,
   display: 'flex',
+
+  '@media': {
+    'screen and (min-width: 648px)': {
+      gap: 8,
+    }
+  }  
 });
 
 // digit in a box

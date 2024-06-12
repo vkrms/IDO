@@ -60,7 +60,7 @@ export default function FAQ() {
       </Appear>
 
       <AppearList>
-        <List sx={{ padding: 0 }}>
+        <List sx={{ padding: '0 0 56px' }}>
           {list.map((item) => (
             <FAQItem item={item} key={item.title} className='stagger'/>
           ))}

@@ -34,6 +34,7 @@ body {
     font-optical-sizing: auto;
     /* font-weight: <weight>; */
     font-style: normal;
+    padding-right: 0 !important;
 }
 
 .scrollable::-webkit-scrollbar {
@@ -167,7 +168,7 @@ label {
     z-index: 99999;
     display: grid;
     place-content: center;
-    transition: all .3s ease;
+    transition: all .5s ease;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -175,7 +176,7 @@ label {
 
 .preloader__vid {
     aspect-ratio: 1 / 1;
-    width: 96px;
+    width: 328px;
     height: auto;
     /* animation: pulse 1.5s infinite; */
 }
@@ -271,17 +272,21 @@ label {
     scroll-margin-top: 100px;
 }
 
-.scrollbar::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 10px;
 }
 
-.scrollbar::-webkit-scrollbar-track {
-    background: #262232;
+::-webkit-scrollbar-track {
+    /* background: #262232; */
+    background: transparent;
     border-radius: 12px;
 }
 
+::-webkit-scrollbar-track-piece {
+    background: transparent;
+}
 
-.scrollbar::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: #3a3644;
     transition: all .3s ease;
     border-radius: 12px;
