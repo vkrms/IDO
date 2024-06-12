@@ -78,7 +78,7 @@ export default function FormDialog() {
                 onSubmit: handleSubmit(onSubmit),
 
                 className: 'bg-transparent overflow-visible',
-                sx: {margin: '24px auto 16px'}
+                sx: {margin: '8px auto'}
             }}
         >
             <IconButton className={'cross-btn'} onClick={handleClose}>
