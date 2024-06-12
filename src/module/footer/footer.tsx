@@ -24,13 +24,13 @@ import { useContext } from 'react';
 
 const socials = [
   {
-    slug: 'twitter',
-    href: 'https://twitter.com/eventfloHQ',
+    slug: 'facebook',
+    href: 'https://facebook.com/eventfloHQ',
     icon: img1.src,
   },
   {
-    slug: 'facebook',
-    href: 'https://facebook.com/eventfloHQ',
+    slug: 'twitter',
+    href: 'https://twitter.com/eventfloHQ',
     icon: img2.src,
   },
   {
