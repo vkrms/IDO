@@ -19,7 +19,7 @@ export default function FormDialog() {
     const { register, handleSubmit } = useForm<Inputs>();
 
     const [phoneData, setPhoneData] = React.useState({
-        number: '',
+        tel: '',
         country: '',
     })
 
@@ -36,7 +36,6 @@ export default function FormDialog() {
         }
 
         if (res.status === 200) {
-            // alert('Success');
             setSuccess(true);
         }
     }
@@ -44,8 +43,7 @@ export default function FormDialog() {
 
     const onSubmit: SubmitHandler<Inputs> = data => {
         const payload = {...data, ...phoneData}
-        console.log(payload)
-        post(data)
+        post(payload)
     }
 
     const context = useContext(ContextProvider);
@@ -57,7 +55,6 @@ export default function FormDialog() {
     const [success, setSuccess] = React.useState(false);
 
     const getPhoneData = (obj) => {
-        console.log(obj)
         setPhoneData(obj)
         return obj
     }

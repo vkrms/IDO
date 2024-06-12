@@ -15,20 +15,16 @@ type infoProps = {
 interface Props {
     success: boolean,
     register: UseFormRegister<any>,
-    getPhoneData: (a: {}) => {number: string, country: string},
+    getPhoneData: (a: {}) => {tel: string, country: string},
 }
 
 export function FormFields({success, register, getPhoneData}: Props) {
-    // console.log('rererender')
     const [phone, setPhone] = React.useState('')
-    // const [phoneB, setPhoneB] = React.useState('')
 
     const handleChange = (newPhone: string, info: infoProps) => {
-        console.log({info})
         setPhone(newPhone)
-        // setPhoneB(info.numberValue)
         getPhoneData({
-            phone: info.numberValue,
+            tel: info.numberValue,
             country: info.countryCallingCode,
         })
     }

@@ -1,6 +1,5 @@
 import Mailjet, { Contact, LibraryResponse, Request } from 'node-mailjet';
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { RequestData } from 'node-mailjet/declarations/request/Request';
 
 const mailjet = new Mailjet({
     apiKey: process.env.MJ_APIKEY_PUBLIC,
@@ -13,10 +12,7 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
-    // console.log('begin',req, 'end')
-    // return res.status(200).json({ body: req.body })
-
-    const { name, lastName, email, tel } = JSON.parse(req.body)
+    const { name, lastName, email, tel, country } = JSON.parse(req.body)
 
     const queryData: Contact.PostContactBody = {
         Name: `${name} ${lastName}`,
@@ -38,41 +34,15 @@ export default async function handler(
             .request({
                 Name: `${name} ${lastName}`,
                 Properties: {
-                    // email,
-                    // familyName,
+                    // newsletter_sub: 'some_string'
                     firstname: name,
                     name: `${name} ${lastName}`,
-                    country: '_placeholder_ KZ',
-                    newsletter_sub: 'some_string'
-                    // tel,
+                    tel,
+                    country,
                 },
                 Action: 'addnoforce',
                 Email: email,
             })
-
-
-        // const ContactID = result.body.Data[0].ID
-
-        // const addMetaResult = await mailjet
-        //     .put('contactdata')
-        //     .id(ContactID)
-        //     .request({
-        //         Data: [
-        //             {
-        //                 // firstname: name,
-        //                 name: `${name} ${familyName}`,
-        //                 country: '_placeholder_',
-        //                 // tel: tel,
-        //             }
-        //         ]
-        //     })
-
-    
-        // const addToListResult: LibraryResponse<RequestData> = await mailjet.post('listrecipient').request({
-        //     ContactID: ContactID,
-        //     ListID: listID,
-        //     IsUnsubscribed: false
-        // });
     
         res.status(200).json({ body: result.body })    
     } catch (error) {
