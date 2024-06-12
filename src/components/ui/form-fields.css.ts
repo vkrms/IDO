@@ -5,7 +5,7 @@ export const body = style({
     maxWidth: 500,
     borderRadius: 12,
     margin: 'auto',
-    padding: '72px 40px',
+    padding: '40px',
     backgroundColor: '#010314',
     backgroundImage: `url(/img/ovals.svg)`,
     backgroundSize: '100% 100%',
