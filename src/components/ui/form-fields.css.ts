@@ -13,9 +13,9 @@ export const body = style({
 });
 
 export const title = style({
-    marginBottom: 8,
-    fontWeight: 'semi-bold',
+    marginBottom: '1em',
     textAlign: 'center',
+    fontWeight: 600,
 })
 
 export const subtitle = style({

@@ -79,9 +79,26 @@ export function FormFields({success, register, getPhoneData}: Props) {
                 </>}
 
     {success && <>
-                    <Typography variant="h3" className={styles.title}>                        
-                        Thanks for signing up to get the drop on the IDO and any other FloCoin news, check your email for the next steps.
-                    </Typography>
+                    <div className="text-center">
+                        <Typography variant="h3" className={styles.title}>                        
+                            Win 10,000 FloCoins & an <span className="whitespace-nowrap">All–Expenses–Paid</span>
+                            Trip to Australia!
+                        </Typography>
+
+                        <Typography variant="body1" className={styles.subtitle}>
+                            Thank you for signing up!
+                            <br /><br />
+                            Think you could become the biggest FloFanatic?<br />
+                            Click below to discover how you can win.
+                        </Typography>
+
+                        <Button variant='contained' size='large' className={''/*styles.btn*/}>
+                            <span>
+                                Learn More
+                            </span>
+                            <BottomGradient />
+                        </Button>
+                    </div>
                 </>}
             </Box>
         </>
