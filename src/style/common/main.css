@@ -292,42 +292,6 @@ label {
     border-radius: 12px;
 }
 
-.menu-item {
-    position: relative;
-}
-
-.menu-item:after {
-    content: "";
-    width: 100%;
-    position: absolute;
-    height: 2px;
-    background: #ffe3f1;
-    box-shadow: 0 0 16px 1px hotpink;
-    opacity: 0;
-    transition: all .3s ease;
-    left: 0;
-    bottom: -4px;
-}
-
-.menu-item:hover:after {
-    opacity: 1;
-    animation: float 6s infinite ease-in-out;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0) rotate(-0.5deg);
-    }
-
-    50% {
-        transform: translateY(-3px) rotate(1.5deg);
-    }
-
-    100% {
-        transform: translateY(0) rotate(-0.5deg);
-    }
-}
-
 .btn-hover-fx {
     transition: all .3s ease;
     max-width: 280px;

@@ -50,9 +50,7 @@ export const linkText = style([
     width: 'fit-content',
 
     ':hover': {
-      background: glowColor,
-      boxShadow: `0 0 24px 16px ${glowColor}`,
-      textShadow: '0 0 8px #ff9fcf',
+      color: '#e651d7',
     },
   },
 ]);
