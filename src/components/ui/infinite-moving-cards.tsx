@@ -2,7 +2,6 @@
 
 import { cn } from "@/lib/utils/cn";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 
 import * as styles from '@/module/home/welcome/welcome.css'
 
@@ -26,15 +25,20 @@ export const InfiniteMovingCards = ({
         addAnimation();
     }, []);
     const [start, setStart] = useState(false);
+
     function addAnimation() {
         if (containerRef.current && scrollerRef.current) {
             const scrollerContent = Array.from(scrollerRef.current.children);
 
-            scrollerContent.forEach((item) => {
-                const duplicatedItem = item.cloneNode(true);
-                if (scrollerRef.current) {
-                    scrollerRef.current.appendChild(duplicatedItem);
-                }
+            // x3 content, in case we're running out of content
+            Array(2).fill(null).forEach(() => {                
+                scrollerContent.forEach((item) => {
+                    const duplicatedItem = item.cloneNode(true);
+
+                    if (scrollerRef.current) {
+                        scrollerRef.current.appendChild(duplicatedItem);
+                    }
+                });
             });
 
             getDirection();
@@ -60,11 +64,11 @@ export const InfiniteMovingCards = ({
     const getSpeed = () => {
         if (containerRef.current) {
             if (speed === "fast") {
-                containerRef.current.style.setProperty("--animation-duration", "20s");
+                containerRef.current.style.setProperty("--animation-duration", "27s");
             } else if (speed === "normal") {
-                containerRef.current.style.setProperty("--animation-duration", "40s");
+                containerRef.current.style.setProperty("--animation-duration", "53s");
             } else {
-                containerRef.current.style.setProperty("--animation-duration", "80s");
+                containerRef.current.style.setProperty("--animation-duration", "107s");
             }
         }
     };

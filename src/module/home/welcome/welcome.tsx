@@ -26,8 +26,8 @@ import { useEffect, useState } from 'react';
 // ----------------------------------------------------------------------------------
 
 const founders = [
-  'stereosonic',
   'hardware',
+  'stereosonic',
   'reminisce',
   'festivalx',
   'tailgate',
@@ -101,7 +101,7 @@ export default function Welcome() {
 
     <Container>
       <Box className={styles.imgBox}>
-          <Image src='/img/home/welcome/video.webp' alt='bob' width={960} height={550}/>  
+          <Image src='/img/home/welcome/video.webp' alt='video' width={960} height={550}/>  
 
           <Box className={styles.iconBox}>
             <IconVideo />
