@@ -111,7 +111,8 @@ declare module '@mui/material/Button' {
 
 const theme = createTheme({
   typography: {
-    fontFamily: `'manrope' system-ui sans-serif`,
+    fontFamily: `'manrope', system-ui, sans-serif`,
+    fontWeightRegular: 400,
 
     body1: {
       fontSize: 12,
@@ -133,6 +134,7 @@ const theme = createTheme({
       lineHeight: '44px',
       marginBottom: 32,
       textAlign: 'center',
+      fontWeight: 600,
 
       [smallUp]: {
         fontSize: 56,
