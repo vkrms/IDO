@@ -10,14 +10,7 @@ const Preloader: React.FC<Props> = ({isVisible}) => {
     return (
         <div>
             <div className={cn('preloader', { isVisible })}>
-                <video
-                    autoPlay={true}
-                    loop={true}
-                    muted
-                    className={cn('preloader__vid')}
-                >
-                    <source src="/xs.webm" type="video/webm" />
-                </video>
+                <img className={cn('preloader__icon')}  src="/img/favicon.webp" />                
             </div>
         </div>
     );
