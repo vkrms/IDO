@@ -18,7 +18,10 @@ type Inputs = {
 export default function FormDialog() {
     const { register, handleSubmit } = useForm<Inputs>();
 
-    const [phoneB, setPhoneB] = React.useState('')
+    const [phoneData, setPhoneData] = React.useState({
+        number: '',
+        country: '',
+    })
 
     async function post(payload: {}) {
         const res = await fetch('/api/mailjet', {
@@ -40,8 +43,8 @@ export default function FormDialog() {
 
 
     const onSubmit: SubmitHandler<Inputs> = data => {
-        data.tel = phoneB
-        console.log({data})
+        const payload = {...data, ...phoneData}
+        console.log(payload)
         post(data)
     }
 
@@ -53,10 +56,10 @@ export default function FormDialog() {
 
     const [success, setSuccess] = React.useState(false);
 
-    const getPhone = (phone: string) => {
-        console.log({phone})
-        setPhoneB(phone)
-        return phone
+    const getPhoneData = (obj) => {
+        console.log(obj)
+        setPhoneData(obj)
+        return obj
     }
 
     return (
@@ -78,14 +81,14 @@ export default function FormDialog() {
                 onSubmit: handleSubmit(onSubmit),
 
                 className: 'bg-transparent overflow-visible',
-                sx: {margin: '80px auto 16px'}
+                sx: {margin: '24px auto 16px'}
             }}
         >
             <IconButton className={'cross-btn'} onClick={handleClose}>
                 <Cross />
             </IconButton>
 
-            <FormFields {...{success, register, getPhone}} />
+            <FormFields {...{success, register, getPhoneData}} />
         </Dialog>
     );
 }

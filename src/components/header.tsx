@@ -59,6 +59,7 @@ const Menu = ({className}: Props) => {
               variant='outlined'
               sx={{ background: 'transparent', borderColor: colorWhite, color: colorWhite }}
               fullWidth
+              className="btn-hover-fx"
             >
               Early Access
             </Button>

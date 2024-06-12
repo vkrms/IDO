@@ -322,3 +322,16 @@ label {
         transform: translateY(0) rotate(-0.5deg);
     }
 }
+
+.btn-hover-fx {
+    transition: all .3s ease;
+    max-width: 280px;
+}
+
+.btn-hover-fx:hover {
+    background-color: #9A098B9a;
+}
+
+.MuiTelInput-Menu .MuiPaper-root {
+    background: #1d1d2b;
+}

@@ -7,22 +7,30 @@ import { MuiTelInput, matchIsValidTel } from 'mui-tel-input'
 import * as styles from './form-fields.css';
 import type { UseFormRegister } from "react-hook-form";
 
+type infoProps = {
+    numberValue: string,
+    countryCallingCode: number,
+}
+
 interface Props {
     success: boolean,
     register: UseFormRegister<any>,
-    getPhone: (a: string) => string,
+    getPhoneData: (a: {}) => {number: string, country: string},
 }
 
-export function FormFields({success, register, getPhone}: Props) {
+export function FormFields({success, register, getPhoneData}: Props) {
     // console.log('rererender')
     const [phone, setPhone] = React.useState('')
     // const [phoneB, setPhoneB] = React.useState('')
 
-    const handleChange = (newPhone: string, info: {numberValue: string}) => {
+    const handleChange = (newPhone: string, info: infoProps) => {
+        console.log({info})
         setPhone(newPhone)
         // setPhoneB(info.numberValue)
-        getPhone(info.numberValue)
-        // console.log({phone, phoneB})
+        getPhoneData({
+            phone: info.numberValue,
+            country: info.countryCallingCode,
+        })
     }
 
     return (
