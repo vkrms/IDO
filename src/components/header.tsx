@@ -103,7 +103,14 @@ export default function LandingHeader() {
         open={open}
         onClose={toggleDrawer}
         className={styles.drawer}
-        PaperProps={{className: styles.drawerPaper}}
+        PaperProps={{
+          sx: {
+            width: '100%',
+            background: 'rgba(12, 12, 12, 0.8)',
+            padding: '32px 16px',         
+            backdropFilter: 'blur(4px)',   
+          }
+        }}
       >
         <Menu className={styles.menuMobile} />
       </Drawer>
