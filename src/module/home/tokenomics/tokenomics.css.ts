@@ -19,7 +19,7 @@ export const box = style({
   flexFlow: 'row wrap',
   justifyContent: 'center',
   alignItems: 'center',
-  textAlign: 'center',
+  textAlign: 'left',
   gap: 32,
   marginBottom: 56,
 
@@ -27,7 +27,7 @@ export const box = style({
     '(min-width: 940px)': {
       flexFlow: 'row',
       justifyContent: 'space-between',
-      textAlign: 'left',
+      // textAlign: 'left',
     },
 
     '(max-width: 1120px)': {
