@@ -60,7 +60,7 @@ export default function Event3() {
 
           <Box className={styles.imgWrap}>
             <FlareBlue className={cn(styles.flare, '--blue')}/>
-            <CardMedia component='img' image='/img//home/event_3/eventflo.webp' className={styles.img} />          
+            <CardMedia component='img' image='/img//home/event_3/eventflo_90.webp' className={styles.img} />          
             <FlarePink className={cn(styles.flare, '--pink')} />
           </Box>
         </Appear>
