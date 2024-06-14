@@ -13,12 +13,7 @@ import { Box, Button, Container, Typography } from '@mui/material';
 
 import img7 from '@/assets/img//home/team/advisor_1.png';
 import img8 from '@/assets/img//home/team/advisor_2.png';
-import img1 from '@/assets/img//home/team/founder_1.png';
-import img2 from '@/assets/img//home/team/founder_2.png';
-import img3 from '@/assets/img//home/team/founder_3.png';
-import img4 from '@/assets/img//home/team/key_member_1.png';
-import img5 from '@/assets/img//home/team/key_member_2.png';
-import img6 from '@/assets/img//home/team/key_member_3.png';
+
 import { CtaButton } from '@/components/ui/cta_button';
 import Appear from '@/components/ui/appear';
 
@@ -28,7 +23,7 @@ const list: TeamData[] = [
     title: 'Our Founders',
     list: [
       {
-        img: img1,
+        img: 'founder_1.webp',
         name: 'Mark Middo',
         role: 'Founder',
         info: [
@@ -43,7 +38,7 @@ const list: TeamData[] = [
         ],
       },
       {
-        img: img2,
+        img: 'founder_2.webp',
         name: 'Corey Topp',
         role: 'Founder',
         info: [
@@ -63,7 +58,7 @@ const list: TeamData[] = [
     title: 'Key Team Members',
     list: [
       {
-        img: img4,
+        img: 'key_member_1.webp',
         name: 'Shinsuke Ito',
         role: 'Head of Development',
         info: [
@@ -74,7 +69,7 @@ const list: TeamData[] = [
         ],
       },
       {
-        img: img5,
+        img: 'key_member_2.webp',
         name: 'Samir Rafiq',
         role: 'Head of Operations',
         info: [
@@ -85,7 +80,8 @@ const list: TeamData[] = [
         ],
       },
       {
-        img: img6,
+        // img: img6,
+        img: 'key_member_3.webp',
         name: 'Adrian Chan',
         role: 'Head of Blockchain',
         info: [
@@ -100,7 +96,7 @@ const list: TeamData[] = [
     title: 'Our Advisors',
     list: [
       {
-        img: img3,
+        img: 'founder_3.webp',
         name: 'Richie McNeill',
         role: 'Advisor',
         info: [
@@ -111,14 +107,14 @@ const list: TeamData[] = [
         ],
       },      
       {
-        img: img7,
+        img: 'advisor_1.webp',
         name: 'Rudy Santino',
         role: 'Advisor',
         info: [{ title: 'Startup Scaling Guru',
           text: `Rudy's got over 20 years of web development expertise under his belt, plus a proven track record with his own startup, Circle.so (valued at over $250M with over 150 staff globally).  He's the technical mastermind guiding eventflo's architecture and mentoring the scale up process.` }],
       },
       {
-        img: img8,
+        img: 'advisor_2.webp',
         name: 'Andrej Urban',
         role: 'Advisor',
         info: [{ title: 'Hype Generator', text: `Andrej's isn't just a marketer, he's a Web3 growth strategist with a decade of proven results.  His track record speaks for itself – multiple 7-figure raises and a $3 million NFT-ticketing triumph demonstrate his ability to build thriving communities and ignite project momentum. As eventflo's advisor, he's the force behind our strategic marketing, fueling FloCoin's unstoppable rise.` }],
@@ -132,8 +128,8 @@ export default function Founders() {
   // ----------------------------------------------------------------------------------
   return (
     <Container className={styles.teamContainer} id='our-team'>
-      <Appear>
-        <Typography className={styles.title}>The Team Delivering Event Industry Transformation</Typography>
+      <Appear className="px-4">
+        <Typography variant="h2" className={styles.title}>The Team Delivering Event Industry Transformation</Typography>
         <Typography className={styles.subtitle}>Meet The Powerhouse Team Driving FloCoin's Success</Typography>
       </Appear>
 

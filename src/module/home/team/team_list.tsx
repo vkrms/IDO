@@ -8,7 +8,7 @@
 
 import * as styles from '@/module/home/team/team_list.css';
 
-import { Box, CardMedia, Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 
 import FoundersListItem from '@/module/home/team/list_item';
 import type { StaticImageData } from 'next/image';
@@ -16,7 +16,7 @@ import type { StaticImageData } from 'next/image';
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { cn } from '@/lib/utils/cn';
 import AppearList from '@/components/ui/appear-list';
-
+import Image from 'next/image';
 
 // ----------------------------------------------------------------------------------
 export type TeamData = {
@@ -58,7 +58,7 @@ export default function TeamList({ list }: PropsType) {
                           <Box className={styles.imgBox}>
 
                             <CardItem translateZ="60">
-                              <CardMedia component='img' image={item.img.src} width={160} height={160} sx={{ maxWidth: 160 }} />
+                              <Image src={`/img/home/team/${item.img}`} width={160} height={160} style={{ maxWidth: 160 }} alt='' />
                             </CardItem>
 
                           </Box>
