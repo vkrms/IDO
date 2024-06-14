@@ -14,3 +14,12 @@ export const title = style({
     lineHeight: '76px',
   })
 });
+
+
+export const section = style({
+  marginBottom: 104,
+
+  '@media': smallUp({
+    marginBottom: 120,
+  })
+})

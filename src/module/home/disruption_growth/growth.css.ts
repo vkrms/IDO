@@ -114,3 +114,12 @@ export const dot = style({
   background: colorPrimary,
   margin: '24px 0',
 })
+
+export const section = style({
+  padding: 0,
+  marginBottom: 56,
+
+  '@media': smallUp({
+    marginBottom: 120,
+  })
+})

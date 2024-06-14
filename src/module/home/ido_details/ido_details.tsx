@@ -27,7 +27,7 @@ const dataList = [
 export default function IdoDetails() {
   // ----------------------------------------------------------------------------------
   return (
-    <Container>
+    <Container className={styles.section}>
       <Appear>
         <Typography className={styles.title} variant="h2">IDO Details</Typography>
 

@@ -20,7 +20,7 @@ export default function Testimonial() {
   const headshot = '/img//home/team/founder_3.png';
 
   return (
-    <Container>
+    <Container className={styles.section}>
       <Appear>
         <Box width={120} height={120} className={styles.img}>
           <CardMedia component='img' image={headshot} width={120} height={120} />        

@@ -34,4 +34,9 @@ export const subtitle = style({
 
 export const teamContainer = style({
   padding: 0,
+  marginBottom: 56,
+
+  '@media': smallUp({
+    marginBottom: 120,    
+  })
 })

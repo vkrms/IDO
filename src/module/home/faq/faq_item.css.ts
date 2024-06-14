@@ -88,7 +88,5 @@ export const itemTitleWrap = style({
 })
 
 export const btn = style({
-  aspectRatio: '1',
-  width: 40,
   marginLeft: 16,
 })

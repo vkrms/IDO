@@ -63,7 +63,7 @@ export default function DisruptionGrowth() {
   const isMobile = useMediaQuery<Theme>(theme => theme.breakpoints.down('md'));
 
   return (
-    <Container id="roadmap">
+    <Container id="roadmap" className={styles.section}>
       <Appear>
         <Typography variant="h2" className={styles.title}>
           The Path<br/>

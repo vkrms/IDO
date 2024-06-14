@@ -27,6 +27,7 @@ export const box = style({
     '(min-width: 940px)': {
       flexFlow: 'row',
       justifyContent: 'space-between',
+      textAlign: 'left',
     },
 
     '(max-width: 1120px)': {

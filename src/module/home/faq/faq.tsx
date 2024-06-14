@@ -54,7 +54,7 @@ export default function FAQ() {
   // ----------------------------------------------------------------------------------
 
   return (
-    <Container>
+    <Container className={styles.section}>
       <Appear>
         <Typography variant="h2" className={styles.title}>FAQ's</Typography>
       </Appear>

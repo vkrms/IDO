@@ -1,5 +1,6 @@
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
+import { smallUp } from '@/style/config/breakpoints.css';
 
 export const img = style({
   margin: '0 auto 20px',
@@ -33,3 +34,12 @@ export const info = style({
   textAlign: 'center',
   margin: '0 auto 56px',
 });
+
+export const section = style({
+  padding: 0,
+  marginBottom: 56,
+
+  '@media': smallUp({
+    marginBottom: 120,
+  })
+})
