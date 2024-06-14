@@ -108,3 +108,11 @@ export const legendWrap = style({
   minWidth: 312,
   maxWidth: 544,
 })
+
+export const section = style({
+  marginBottom: 56,
+
+  '@media': smallUp({
+    marginBottom: 120,
+  })
+})

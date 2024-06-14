@@ -4,12 +4,13 @@ import { smallUp, smallB } from '@/style/config/breakpoints.css';
 import { line } from '../token_allocation/token_allocation.css';
 
 export const title = style({
-  marginBottom: 72,
+  marginBottom: 32,
   color: colorWhite,
   fontWeight: 600,
   textAlign: 'center',
 
   '@media': smallUp({
+    marginBottom: 72,
     fontSize: 56,
     lineHeight: '76px',
   })
@@ -64,3 +65,21 @@ export const itemText = style({
     lineHeight: '24px',
   })
 });
+
+
+export const section = style({
+  marginBottom: 56,
+
+  '@media': smallUp({
+    marginBottom: 120,
+  })  
+})
+
+
+export const btnWrap = style({
+  marginTop: 40,
+
+  '@media': smallUp({
+    marginTop: 72,
+  })
+})

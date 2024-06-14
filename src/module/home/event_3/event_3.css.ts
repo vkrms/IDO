@@ -1,7 +1,10 @@
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
 import { smallB, smallUp } from '@/style/config/breakpoints.css';
-import { m } from 'framer-motion';
+
+export const section = style({
+  marginBottom: 56,
+})
 
 export const title = style({
   maxWidth: 700,

@@ -51,7 +51,7 @@ const list = [
 export default function UseCases() {
   // ----------------------------------------------------------------------------------
   return (
-    <Container>
+    <Container className={styles.section}>
       <Appear>
         <Typography variant="h2" className={styles.title}>FloCoin Use Cases</Typography>
       </Appear>
@@ -69,9 +69,7 @@ export default function UseCases() {
         </Grid>
       </AppearList>
 
-      <Box height={72} />
-
-      <Box textAlign='center'>        
+      <Box textAlign='center' className={styles.btnWrap}>        
         <Button variant='contained' size='large' href="https://online.publuu.com/533650/1195962" target="_new">
           Explore Tokenomics
         </Button>        

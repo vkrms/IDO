@@ -107,10 +107,15 @@ export const itemKey = style({
 
 export const imgBox = style({
   marginTop: 64,
+  marginBottom: 64,
   position: 'relative',
   display: 'flex',
   justifyContent: 'center',
   zIndex: 1,
+
+  '@media': smallUp({
+    marginBottom: 120,
+  })
 });
 
 export const iconBox = style({

@@ -1,10 +1,15 @@
 import { colorWhite } from '@/style/config/color.css';
-import { small, medium } from '@/style/config/breakpoints.css';
+import { small, medium, smallUp } from '@/style/config/breakpoints.css';
 import { style } from '@vanilla-extract/css';
 
 export const bg = style({
   marginTop: 12,
+  marginBottom: 56,
   position: 'relative',
+
+  '@media': smallUp({
+    marginBottom: 120,
+  })
 });
 
 export const title = style({
@@ -25,12 +30,15 @@ export const subtitle = style({
 
 export const text = style({
   maxWidth: 745,
-  margin: '0 auto 80px',
+  margin: '0 auto 40px',
   textAlign: 'center',
-  // fontSize: 18,
-  // lineHeight: '29px',
   fontWeight: 400,
-  // color: colorWhite,
+  fontSize: 20,
+
+  '@media': smallUp({
+    fontSize: 'unset',
+    margin: '0 auto 80px',
+  })
 });
 
 export const iconWrap = style({
@@ -40,12 +48,15 @@ export const iconWrap = style({
 
 export const list = style({
   display: 'flex',
-  gap: '72px 32px',
+  gap: 32,
   justifyContent: 'center',
 
   '@media': {
     '(max-width: 768px)': {
       textAlign: 'center',
+    },
+    '(min-width: 768px)': {
+      gap: '72px 32px',
     }
   }
 });

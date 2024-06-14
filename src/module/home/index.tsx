@@ -37,27 +37,27 @@ export default function HomePage() {
         <Welcome />
       </div>
 
-      <Box height={120} />
+
       <FloCoin />
-      <Box height={120} />
+
       <Event3 />
-      <Box height={120} />
+
       <Tokenomics />
-      <Box height={120} />
+
       <TokenAllocation />
-      <Box height={120} />
+
       <UseCases />
-      <Box height={120} />
+
       <IdoDetails />
-      <Box height={120} />
+
       <Founders />
-      <Box height={120} />
+
       <DisruptionGrowth />
-      <Box height={96} />
+
       <Testimonial />
-      <Box height={120} />
+
       <FAQ />
-      <Box height={120} /> 
+
 
       <div className="footer-grad-overflow">
         <Footer />

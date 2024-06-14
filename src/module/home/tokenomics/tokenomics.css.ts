@@ -1,39 +1,33 @@
 import { colorPrimary, colorWhite } from '@/style/config/color.css';
-import { small, smallB, smallUp } from '@/style/config/breakpoints.css'
+import { smallUp } from '@/style/config/breakpoints.css'
 
 import { style } from '@vanilla-extract/css';
-import { text } from 'stream/consumers';
 
 export const title = style({
   fontWeight: 600,
+  marginBottom: 48,
 
   '@media': smallUp({
     fontSize: 56,
     lineHeight: '77px',
     textAlign: 'center',
-    marginBottom: 48,
   })
 })
 
 export const box = style({
   display: 'flex',
   flexFlow: 'row wrap',
-  justifyContent: 'space-between',
+  justifyContent: 'center',
   alignItems: 'center',
+  textAlign: 'center',
   gap: 32,
   marginBottom: 56,
-  textAlign: 'left',
 
   '@media': {
     '(min-width: 940px)': {
       flexFlow: 'row',
+      justifyContent: 'space-between',
     },
-
-    // '(max-width: 600px)': {
-    //   // flexDirection: 'column',
-    //   gap: 8,
-    //   textAlign: 'left',
-    // },
 
     '(max-width: 1120px)': {
       gap: 16,
@@ -43,7 +37,6 @@ export const box = style({
 });
 
 export const boxLeft = style({
-  // flexBasis: 489,
   fontSize: 48,
   lineHeight: '66px',
   fontWeight: 600,
@@ -133,3 +126,11 @@ export const bgRight = style({
   bottom: 0,
   right: 0,
 });
+
+export const section = style({
+  marginBottom: 56,
+
+  '@media': smallUp({
+    marginBottom: 120,
+  })
+})

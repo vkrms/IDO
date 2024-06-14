@@ -84,7 +84,7 @@ const legendList = [
 export default function TokenAllocation() { 
   // ----------------------------------------------------------------------------------
   return (
-    <Container>
+    <Container className={styles.section}>
       <Appear>
         <Typography id="chart" variant="h2" className={styles.title}>Token Allocation</Typography>
       </Appear>

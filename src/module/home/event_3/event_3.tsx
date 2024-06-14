@@ -44,7 +44,7 @@ const dataList = [
 export default function Event3() {
   // ----------------------------------------------------------------------------------
   return (
-    <Box>
+    <Box className={styles.section}>
       <Container>
 
         <Appear>

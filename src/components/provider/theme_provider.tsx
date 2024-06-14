@@ -113,15 +113,11 @@ const theme = createTheme({
   typography: {
     fontFamily: `'manrope', system-ui, sans-serif`,
     fontWeightRegular: 400,
+    fontSize: 15,
 
     body1: {
-      fontSize: 12,
-      lineHeight: '23px',
-
-      [smallUp]: {
-        fontSize: 16,
-        lineHeight: '24px',
-      }
+      fontSize: 16,
+      lineHeight: 1.5,
     },
 
     h1: {

@@ -73,9 +73,13 @@ export const timeline = style({
 })
 
 export const timelineItem = style({  
-  gap: '72px',
+  gap: 24,
   justifyContent: 'center',
-  padding: 0
+  padding: 0,
+
+  '@media': smallUp({
+    gap: '72px',
+  })
 })
 
 export const timelineContent = style({
