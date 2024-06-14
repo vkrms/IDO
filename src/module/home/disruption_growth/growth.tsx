@@ -43,7 +43,7 @@ const list = [
     duration: 'Q1 - Q2 2025',
     title: 'Phase 3: Innovation & Expansion',
     info: `Seamlessly integrate FloCoin, into eventflo and the Reminisce Festival. Users can utilize FloCoin for transactions and start earning rewards on our platform.`,
-    sutitle: 'Strategic Vision',
+    subtitle: 'Strategic Vision',
     subtext:
       ": Demonstrate FloCoin's real-world applications at a live Festival and show how it can amplify event success for organizers.",
   },
