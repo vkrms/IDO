@@ -8,15 +8,13 @@
 
 import * as styles from '@/module/home/team/team_list.css';
 
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
-import FoundersListItem from '@/module/home/team/list_item';
 import type { StaticImageData } from 'next/image';
 
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { cn } from '@/lib/utils/cn';
 import AppearList from '@/components/ui/appear-list';
-import Image from 'next/image';
+import EmblaCarousel from '@/components/ui/embla-carousel';
 
 // ----------------------------------------------------------------------------------
 export type TeamData = {
@@ -40,6 +38,15 @@ interface PropsType {
 }
 // ----------------------------------------------------------------------------------
 
+const emblaOptions = {
+  align: 'start',
+  dragFree: true,
+  containScroll: 'keepSnaps',
+  breakpoints: {
+    '(min-width: 1040px)': { active: false }
+  }
+}
+
 export default function TeamList({ list }: PropsType) {
   return (
     <Box>
@@ -47,42 +54,47 @@ export default function TeamList({ list }: PropsType) {
         <Box key={item.title} className={styles.teamItem}>
           <Typography variant="h3" className={styles.title}>{item.title}</Typography>
 
-            <AppearList>
-              <Grid container className={cn(styles.list)}>
-                {item.list.map((item) => (
-                  <CardContainer className={cn(styles.cardContainer, 'stagger')} key={item.name}>
-                    <CardBody className="relative group/card">
-                      <Grid item className={styles.cardGrid}>
+          {/* todo: stagger animation */}
+          <AppearList>
+            <EmblaCarousel slides={item.list} options={emblaOptions} />
+          </AppearList>
+          {/* <Grid container className={cn(styles.list)}>
+          </Grid> */}
 
-                        <Box className={styles.header}>
-                          <Box className={styles.imgBox}>
+          {/* {item.list.map((item) => (
+            <CardContainer className={cn(styles.cardContainer, 'stagger')} key={item.name}>
+              <CardBody className="relative group/card">
+                <Grid item className={styles.cardGrid}>
 
-                            <CardItem translateZ="60">
-                              <Image src={`/img/home/team/${item.img}`} width={160} height={160} style={{ maxWidth: 160 }} alt='' />
-                            </CardItem>
+                  <Box className={styles.header}>
+                    <Box className={styles.imgBox}>
 
-                          </Box>
-                        </Box>
-                      
-                        <CardItem translateZ="30" className="w-full">
-                          <Typography className={styles.name}>{item.name}</Typography>
-                          <Typography className={styles.role}>{item.role}</Typography>
-                        </CardItem>
+                      <CardItem translateZ="60">
+                        <Image src={`/img/home/team/${item.img}`} width={160} height={160} style={{ maxWidth: 160 }} alt='' />
+                      </CardItem>
 
-                        <CardItem translateZ={10}>
-                          <Grid container className={styles.infoList}>
-                            {item.info.map((info) => (
-                              <FoundersListItem info={info} key={info.title} />
-                            ))}
-                          </Grid>
-                        </CardItem>
+                    </Box>
+                  </Box>
+                
+                  <CardItem translateZ="30" className="w-full">
+                    <Typography className={styles.name}>{item.name}</Typography>
+                    <Typography className={styles.role}>{item.role}</Typography>
+                  </CardItem>
 
-                        </Grid>
-                      </CardBody>
-                  </CardContainer>
-                ))}
-              </Grid>
-            </AppearList>
+                  <CardItem translateZ={10}>
+                    <Grid container className={styles.infoList}>
+                      {item.info.map((info) => (
+                        <FoundersListItem info={info} key={info.title} />
+                      ))}
+                    </Grid>
+                  </CardItem>
+
+                  </Grid>
+                </CardBody>
+            </CardContainer>
+          ))} */}
+
+
 
         </Box>
       ))}

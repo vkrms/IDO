@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './embla.css';
+
 html {
     scroll-behavior: smooth;
 }
@@ -208,7 +210,7 @@ label {
 
 .stagger {
     opacity: 0;
-    transform: translateY(20%);
+    transform: translateY(10%);
     transition: all .6s ease-out;
 }
 
