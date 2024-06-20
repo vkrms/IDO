@@ -69,27 +69,34 @@ export default function Footer() {
 
   // ----------------------------------------------------------------------------------
   return (
-    <Box className={'footer'}>
-      <BackgroundGradientAnimation
-          firstColor='112, 0, 255'
-          secondColor='255, 0, 199'
-          interactive={false}
-          className={cn(styles.disco, 'fade-down')}
-          opacity={0.8}
-      >
-        <Container className={styles.container}>
-            <Grid container className={styles.box}>
-              <Grid item>
-                <Typography className={styles.logo}>
-                  <IconLogo width={217} />
-                </Typography>
-                <Typography className={styles.iconList}>
-                  {socials.map((item, i) => (
-                    <IconButton size='medium' href={item.href} target="_blank" key={item.slug} className="social">
-                      <CardMedia component='img' image={item.icon} width='32' />
-                    </IconButton>
-                  ))}
-                </Typography>
+    <div className={styles.overflow}>
+      <Box className={'footer'}>
+        <BackgroundGradientAnimation
+            firstColor='112, 0, 255'
+            secondColor='255, 0, 199'
+            interactive={false}
+            className={cn(styles.disco, 'fade-down')}
+            opacity={0.8}
+        >
+          <Container className={styles.container}>
+              <Grid container className={styles.box}>
+                <Grid item>
+                  <Typography className={styles.logo}>
+                    <IconLogo width={217} />
+                  </Typography>
+                  <Typography className={styles.iconList}>
+                    {socials.map((item, i) => (
+                      <IconButton
+                        size='medium'
+                        href={item.href}
+                        target="_blank"
+                        key={item.slug}
+                        className="social"
+                      >
+                        <CardMedia component='img' image={item.icon} width={32} height={32}/>
+                      </IconButton>
+                    ))}
+                  </Typography>
 
                 <Typography className={styles.text}>
                   Participation in an IDO carries inherent risk. Please review our offering materials and consult with a

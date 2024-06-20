@@ -11,9 +11,6 @@ import * as styles from '@/module/home/team/team.css';
 import FoundersList, { type TeamData } from '@/module/home/team/team_list';
 import { Box, Button, Container, Typography } from '@mui/material';
 
-import img7 from '@/assets/img//home/team/advisor_1.png';
-import img8 from '@/assets/img//home/team/advisor_2.png';
-
 import { CtaButton } from '@/components/ui/cta_button';
 import Appear from '@/components/ui/appear';
 

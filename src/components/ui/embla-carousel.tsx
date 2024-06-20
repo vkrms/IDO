@@ -29,8 +29,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             <div className="embla__viewport" ref={emblaRef}>
                 <div className={cn("embla__container", centered)}>
                     {slides.map((item) => (
-                        <div className='embla__slide'>
-                            <CardContainer className={cn(styles.cardContainer, 'stagger')} key={item.name}>
+                        <div className='embla__slide' key={item.name}>
+                            <CardContainer className={cn(styles.cardContainer, 'stagger')}>
                                 <CardBody className="relative group/card">
                                     <Grid item className={styles.cardGrid}>
 

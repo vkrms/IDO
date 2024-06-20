@@ -18,8 +18,6 @@ import {
   colorWhite,
 } from '@/style/config/color.css';
 
-import { line } from '@/module/home/token_allocation/token_allocation.css';
-
 const smallUp = '@media (min-width:600px)';
 
 /**

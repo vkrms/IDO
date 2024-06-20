@@ -99,6 +99,8 @@ path.expand_b_svg__h {
 
 .social {
     transition: all .3s ease;
+    width: 32px;
+    height: 32px;
 }
 
 .social:hover {
