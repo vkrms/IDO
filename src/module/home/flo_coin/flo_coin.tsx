@@ -53,8 +53,10 @@ export default function FloCoin() {
     <Box className={styles.bg} id='why-flocoin'>
 
       <div className="relative bg-pink-500 text-blue-600 mb-2">
-        <video autoPlay={true} loop={true} muted className="object-cover ring-video">
-          <source src="/big_2.webm" type="video/webm" />
+        <video
+          autoPlay={true} loop={true} muted playsInline
+          className="object-cover ring-video">
+          <source src="/big_2.webm" type="video/webm" media='(min-width: 600px)'/>
         </video>
         <div className="ring-video__square"></div>
       </div>

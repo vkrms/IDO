@@ -17,7 +17,7 @@ import Appear from '@/components/ui/appear';
 export default function Testimonial() {
   // --------------------------------------------------------------------------
 
-  const headshot = '/img//home/team/founder_3.png';
+  const headshot = '/img//home/team/founder_3.webp';
 
   return (
     <Container className={styles.section}>

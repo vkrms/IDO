@@ -78,8 +78,10 @@ export default function DisruptionGrowth() {
 
         <Timeline position={isMobile ? 'left' : 'alternate'} className={styles.timeline}>
           {list.map((item) => (
-            <AppearTimeline>
-              <TimelineItem key={item.duration} className={cn(styles.timelineItem)}>
+            <AppearTimeline key={item.duration}>
+              <TimelineItem className={cn(styles.timelineItem)}
+                sx={{ flexFlow: 'column'}}
+              >
 
                 {/* text content */}
                 <TimelineOppositeContent className={styles.timelineContent}>
