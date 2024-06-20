@@ -6,53 +6,17 @@
  * @author shuangshuang 2024/4/11
  */
 
-import 'chart.js/auto';
-
 import * as styles from '@/module/home/token_allocation/token_allocation.css';
 
 import { Container, Grid, Typography } from '@mui/material';
-import { ArcElement, Chart as ChartJS, Legend, Tooltip } from 'chart.js';
-
-import { Doughnut } from 'react-chartjs-2';
 
 import Appear from '@/components/ui/appear';
 import AppearList from '@/components/ui/appear-list';
+import Image from 'next/image';
 
 const colorList = ['#32C8C9', '#E26B91', '#AF6AD8', '#608CD5', '#9A098B'];
 
 // ----------------------------------------------------------------------------------
-
-ChartJS.register(ArcElement, Tooltip, Legend);
-// cutout: 94 too much 
-
-
-const chartOptions = { 
-  cutout: '74%',
-  responsive: true,
-  plugins: {
-    tooltip: {
-      enabled: false
-    },
-    legend: {
-      display: false
-  },
-    deferred: {/*defaults*/},
-  }
-}
-
-const data = {
-  labels: ['Purchase', 'Pre Sales', 'Event Attended', 'Spend'],
-  datasets: [
-    {
-      label: 'Token Allocation',
-      data: [20, 55, 15, 10],
-      backgroundColor: colorList,
-      borderWidth: 0,
-      animation: true,
-      animationEasing: "easeOutSine", 
-    },
-  ],
-};
 
 // ----------------------------------------------------------------------------------
 const legendList = [
@@ -99,14 +63,17 @@ export default function TokenAllocation() {
             loop={true}
             muted
             className={styles.xsVideo}
+            playsInline
           >
             <source src="/xs.webm" type="video/webm" />
           </video>
 
-          <Doughnut
-            className={styles.donut}
-            options={chartOptions}
-            data={data}
+          <Image
+            src="/img/home/token_allocation/chart.webp"
+            className="donut-img"
+            alt="allocation chart"
+            width={384}
+            height={384}
           />
         </Grid>
 
