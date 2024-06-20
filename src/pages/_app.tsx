@@ -11,6 +11,14 @@ import { ToastContainer } from 'react-toastify';
 
 import { GoogleTagManager } from '@next/third-parties/google'
 
+import { Manrope } from 'next/font/google'
+
+// font
+const manrope = Manrope({
+  subsets: ['latin'],
+  display: 'swap',
+})
+
 /**
  * ----------------------------------------------------------------------------------
  * app.tsx
@@ -45,7 +53,9 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
 
       <ToastContainer hideProgressBar />
 
-      <Component {...pageProps} />
+      <div className={manrope.className}>
+        <Component {...pageProps} />
+      </div>
     </>,
   );
 }
