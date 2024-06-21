@@ -43,3 +43,4 @@ service-worker.js
 workbox-*.js
 notes.log
 done.log
+*.mp4
