@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @import './embla.css';
+@import './telly.scss';
 
 html {
     scroll-behavior: smooth;
@@ -32,9 +34,7 @@ html {
 
 body {
     color: #fff;
-    /* font-family: "Manrope"; */
     font-optical-sizing: auto;
-    /* font-weight: <weight>; */
     font-style: normal;
     padding-right: 0 !important;
 }
@@ -55,27 +55,6 @@ path.expand_b_svg__h {
 
 .expState path.expand_b_svg__h {
     transform: rotate(180deg);
-}
-
-.telly .MuiInputAdornment-root {
-    color: #fff;
-    border-right: 1px solid white;
-    height: 100%;
-    max-height: none;
-    font-size: 12px;
-}
-
-.telly .MuiTypography-body1 {
-    border: none;
-}
-
-.telly .MuiInputBase-input {
-    color: #fff;
-    font-size: 12px;
-}
-
-.MuiTelInput-Flag {
-    color: hotpink;
 }
 
 @media (max-width: 1199px) {
@@ -119,7 +98,7 @@ path.expand_b_svg__h {
 
 .input {
     background: #180728;
-    border: 1px solid #fff;
+    border: 1px solid #fffc;
     color: #fff;
     max-width: 424px;
 }
@@ -222,13 +201,13 @@ label {
 }
 
 .appear {
-    transform: translateY(30%);
+    transform: translateY(10%);
     animation: fadeInUp .6s ease-out forwards;
 }
 
 .appear-down {
     line-height: inherit;
-    transform: translateY(-30%);
+    transform: translateY(-10%);
     animation: fadeInDown .6s ease-out forwards;
 }
 
@@ -244,8 +223,8 @@ label {
 
 @keyframes fadeInDown {
     from {
-        opacity: 0;
-        transform: translateY(-20%);
+        opacity: 0.01;
+        transform: translateY(-10%);
     }
 
     to {
@@ -269,7 +248,7 @@ label {
     overflow: hidden;
     display: flex;
     align-items: flex-end;
-    margin-top: -140vh;
+    margin-top: -130vh;
 }
 
 .hero-grad-overflow:after {
@@ -316,10 +295,6 @@ label {
 
 .btn-hover-fx:hover {
     background-color: #9A098B9a;
-}
-
-.MuiTelInput-Menu .MuiPaper-root {
-    background: #1d1d2b;
 }
 
 .px-4 {
