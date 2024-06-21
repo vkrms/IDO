@@ -68,3 +68,17 @@ export const container = style({
   position: 'relative',
 })
   
+export const overflow = style({
+  height: '190vh',
+  overflow: 'hidden',
+  display: 'flex',
+  alignItems: 'flex-end',
+  marginTop: '-130vh',
+
+  '@media': {
+    '(min-width: 900px)': {
+      marginTop: '-1100px',
+      height: 1400,
+    }
+  }
+})

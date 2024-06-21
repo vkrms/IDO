@@ -16,8 +16,6 @@ import img3 from '@/assets/img//footer/icon_3.png';
 import img4 from '@/assets/img//footer/icon_4.png';
 import img5 from '@/assets/img//footer/icon_5.png';
 import IconLogo from '@/assets/img//logo.svg';
-import Link from 'next/link';
-import { icon } from '../home/flo_coin/flo_coin.css';
 
 import ContextProvider from '@/components/provider/context_provider';
 import { useContext } from 'react';
@@ -98,30 +96,31 @@ export default function Footer() {
                     ))}
                   </Typography>
 
-                <Typography className={styles.text}>
-                  Participation in an IDO carries inherent risk. Please review our offering materials and consult with a
-                  financial advisor before making any investment decisions. eventflo is an registered Australian company
-                  (ACN: 677 042 947).
-                </Typography>
+                  <Typography className={styles.text}>
+                    Participation in an IDO carries inherent risk. Please review our offering materials and consult with a
+                    financial advisor before making any investment decisions. eventflo is an registered Australian company
+                    (ACN: 677 042 947).
+                  </Typography>
+                </Grid>
+
+
+
+                <Grid item className={styles.link}>
+                  {/* <Link href='' className={styles.linkText}>
+                    Terms & Conditions
+                  </Link> */}
+                  <a className={cn(styles.linkText, 'menu-item')} onClick={openPrivacy}>
+                    Privacy Policy
+                  </a>
+                  <a className={cn(styles.linkText, 'menu-item')} onClick={openDisclaimer}>
+                    Disclaimer
+                  </a>
+                </Grid>
               </Grid>
-
-
-
-              <Grid item className={styles.link}>
-                {/* <Link href='' className={styles.linkText}>
-                  Terms & Conditions
-                </Link> */}
-                <a className={cn(styles.linkText, 'menu-item')} onClick={openPrivacy}>
-                  Privacy Policy
-                </a>
-                <a className={cn(styles.linkText, 'menu-item')} onClick={openDisclaimer}>
-                  Disclaimer
-                </a>
-              </Grid>
-            </Grid>
-            <Typography className={styles.copyright}>&copy; eventflo Pty Ltd</Typography>
-        </Container>
-      </BackgroundGradientAnimation>
-    </Box>
+              <Typography className={styles.copyright}>&copy; eventflo Pty Ltd</Typography>
+          </Container>
+        </BackgroundGradientAnimation>
+      </Box>
+    </div>
   );
 }

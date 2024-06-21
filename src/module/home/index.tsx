@@ -58,10 +58,7 @@ export default function HomePage() {
 
       <FAQ />
 
-
-      <div className="footer-grad-overflow">
-        <Footer />
-      </div>
+      <Footer />
              
       <ReadingDialog text={disclaimer} slug='disclaimer' />
       <ReadingDialog text={privacy} slug='privacy' />
