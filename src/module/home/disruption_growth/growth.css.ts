@@ -27,11 +27,16 @@ export const subtitle = style({
 export const timeLimeTitle = style({
   textAlign: 'left',
   maxWidth: 339,
-  marginBottom: 24,
-  fontSize: 32,
   fontWeight: 600,
   color: colorWhite,
-  lineHeight: '44px',
+  fontSize: 24,
+  marginBottom: 8,
+  
+  '@media': smallUp({
+    fontSize: 32,
+    lineHeight: '44px',
+    marginBottom: 24,
+  }),
 });
 
 export const timeLineInfo = style({
@@ -56,7 +61,7 @@ export const timeLineSubtitle = style({
   color: colorWhite,
 });
 
-export const timelineDuration = style({
+export const timelineDuration = style({  
   textAlign: 'left',
   background: ' linear-gradient(45deg, #EA347F 14.66%, #E23080 28.1%, #CC2484 50.02%, #A81189 76.18%, #9A098B 85.37%)',
   color: 'transparent',
@@ -66,6 +71,18 @@ export const timelineDuration = style({
   fontWeight: 600,
   flex: '0 1 50%',
   padding: 0,
+  order: 1,
+
+  selectors: {
+    '&&': {
+      marginBottom: 16,
+      fontWeight: 600,
+      fontSize: 24,
+      lineHeight: '33px',
+      flex: '0 1 50%',
+      padding: 0      
+    }
+  },
 });
 
 export const timeline = style({
@@ -73,50 +90,85 @@ export const timeline = style({
 })
 
 export const timelineItem = style({  
-  gap: 24,
-  justifyContent: 'center',
-  padding: 0,
+    paddingLeft: 56,
+    paddingTop: 19,
+    position: 'relative',
 
-  '@media': smallUp({
-    gap: '72px',
-  })
+    '@media': {
+      '(min-width: 1200px)': {
+        gap: '72px',
+        flexFlow: 'row',
+        paddingLeft: 0,
+      }
+    }
 })
+
+
 
 export const timelineContent = style({
   padding: 0,
   flex: '1 1 50%',
-  marginBottom: 32,
+  order: 2,
 
-  // '@media': smallUp({
-  //   marginBottom: 80,
-  // })
+  selectors: {
+    '&&': {
+      marginBottom: 32,
+    }
+  },
 
   '@media': {
-    '(min-width: 1200px)': {
+    '(min-width: 900px)': {
       flex: '0 1 50%',
       marginBottom: 80,
+      order: 'unset',  
     }
   }
-  
-  
 })
 
 export const separator = style({
   background: '#4388dd1a',
   borderRadius: 2,
+  position: 'absolute',
+  left: 0,
+  top: 0,
+  height: '100%',
+  ////
+  flexGrow: 1,
+  width: 24,
+  paddingInline: 12,
+  boxSizing: 'border-box',
+  marginTop: -72,
+  display: 'flex',
+  padding: '80px 12px 8px',
+  transition: 'all .3s ease',
+  maskImage: 'linear-gradient(to bottom, white, transparent var(--tl-grad-mask))',
+
+
+  '@media': {
+    '(min-width: 1200px)': {
+      position: 'static',
+      height: 'auto',
+    }
+  }
 })
 
 export const dot = style({
   aspectRatio: '1/1',
-  transition: 'all .3s',
-  transform: 'scale(1.5)',
+  transition: 'all .3s ease',
+  transform: 'scale(0)',
   width: 24,
   background: colorPrimary,
   margin: '24px 0',
+
+  selectors: {
+    '.appear-down &': {
+      transform: 'scale(1.5)',
+      boxShadow: '0 0 4px 20px #9A098B1A',
+    }
+  }
 })
 
 export const section = style({
-  padding: 0,
   marginBottom: 56,
 
   '@media': smallUp({

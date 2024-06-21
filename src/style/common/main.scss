@@ -198,6 +198,8 @@ label {
 .disappear {
     opacity: 0;
     line-height: 2;
+    --tl-grad-mask: 0%;
+    transition: --tl-grad-mask 2s ease-out;
 }
 
 .appear {
@@ -209,6 +211,7 @@ label {
     line-height: inherit;
     transform: translateY(-10%);
     animation: fadeInDown .6s ease-out forwards;
+    --tl-grad-mask: 500%;
 }
 
 @keyframes fadeInUp {
@@ -299,4 +302,10 @@ label {
 
 .px-4 {
     padding-inline: 16px;
+}
+
+@property --tl-grad-mask {
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 0%;
 }
