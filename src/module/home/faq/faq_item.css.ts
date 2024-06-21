@@ -1,17 +1,20 @@
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
-import { line } from '../token_allocation/token_allocation.css';
-import { smallB } from '@/style/config/breakpoints.css';
+import { smallB, smallUp } from '@/style/config/breakpoints.css';
 
 
 export const quesItem = style({
   display: 'block',
-  padding: '32px 40px',
+  padding: '24px 16px',
   borderRadius: 16,
   background: '#100420',
   marginBottom: 32,
   zIndex: 1,
   overflow: 'hidden',
+
+  '@media': smallUp({
+    padding: '32px 40px',
+  }),
 
   selectors: {
     '&:last-child': {
@@ -88,5 +91,17 @@ export const itemTitleWrap = style({
 })
 
 export const btn = style({
+  aspectRatio: '1/1',
+  padding: 4,
   marginLeft: 16,
+  flex: '0 0 32px',
+  width: 32,
+
+  '@media': {
+    '(min-width: 900px)': {
+      flex: '0 0 48px',
+      width: 48,
+      padding: 0,
+    },
+  }
 })

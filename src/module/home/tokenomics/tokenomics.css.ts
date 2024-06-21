@@ -38,23 +38,19 @@ export const box = style({
 });
 
 export const boxLeft = style({
-  fontSize: 48,
-  lineHeight: '66px',
   fontWeight: 600,
   color: colorWhite,
+  fontSize: 24,
+  lineHeight: '33px',
 
   '@media': {
-    '(max-width: 600px)': {
-      fontSize: 24,
-      lineHeight: '33px',
-      alignSelf: 'flex-start',
-      flex: '0 1 48%',
-      minWidth: 312,
-    },
     '(min-width:940px)': {
       flex: '0 0 50%',
+      fontSize: 48,
+      lineHeight: '66px',
+      alignSelf: 'flex-start',
+      minWidth: 312,      
     }
-
   }
 });
 
@@ -68,7 +64,7 @@ export const boxRight = style({
         fontSize: 18,
         lineHeight: 1.7,
     },
-    '(max-width: 720px)': {
+    '(min-width: 720px)': {
       flex: '0 1 48%',
       minWidth: 312,    
     }
