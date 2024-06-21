@@ -53,7 +53,7 @@ export function FormFields({success, register, getPhoneData}: Props) {
 
                         <FormControl className={styles.control}>
                             <label htmlFor="email">Email Address</label>
-                            <Input id="email" {...register('email')} placeholder="enter your email address" type="email" />
+                            <Input id="email" {...register('email')} placeholder="Enter your email address" type="email" />
                         </FormControl>
 
                         <FormControl className={cn(styles.control, 'telly')}>

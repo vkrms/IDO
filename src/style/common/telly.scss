@@ -1,0 +1,56 @@
+.telly {
+    .MuiTextField-root {
+        height: 48px;
+    }
+
+    .MuiInputBase-root {
+        height: 100%;
+    }
+    
+    legend {
+        display: none;
+    }
+    
+    fieldset {
+        border-radius: 6px;
+        height: 48px;
+        border-color: #fffc;
+        top: 0;
+        border-width: 1px;
+    }
+
+    .MuiInputAdornment-root {
+        color: #fff;
+        border-right: 1px solid #fffc;
+        height: 100%;
+        max-height: none;
+        font-size: 12px;
+    }
+    
+    .MuiTypography-body1 {
+        border: none;
+    }
+
+    .MuiInputBase-input {
+        color: #fff;
+        font-size: 12px;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .MuiTelInput-Menu .MuiPaper-root {
+        background: #1d1d2b;
+    }
+
+    .MuiTelInput-Flag {
+        color: hotpink;
+    }
+
+    .Mui-focused .MuiOutlinedInput-notchedOutline {
+        border-color: #fffc;
+    }
+}
+
+.telly .Mui-focused fieldset.MuiOutlinedInput-notchedOutline {
+    border-color: #fffc;
+}

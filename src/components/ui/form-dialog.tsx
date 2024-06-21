@@ -74,11 +74,15 @@ export default function FormDialog() {
             }}
             PaperProps={{
                 component: 'form',
+                maxWidth: '500px',
 
                 onSubmit: handleSubmit(onSubmit),
 
-                className: 'bg-transparent overflow-visible',
-                sx: {margin: '8px auto'}
+                className: 'bg-transparent overflow-visible modal-form',
+                sx: {
+                    margin: '8px auto',
+                    maxWidth: 'calc(100% - 32px)'
+                }
             }}
         >
             <IconButton className={'cross-btn'} onClick={handleClose}>

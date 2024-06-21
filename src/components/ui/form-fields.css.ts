@@ -5,11 +5,15 @@ export const body = style({
     maxWidth: 500,
     borderRadius: 12,
     margin: 'auto',
-    padding: '32px 40px',
+    padding: '24px',    
     backgroundColor: '#010314',
     backgroundImage: `url(/img/ovals.svg)`,
     backgroundSize: '100% 100%',
     backgroundRepeat: 'no-repeat',
+
+    '@media': smallUp({
+        padding: '32px 40px',        
+    })
 });
 
 export const title = style({
