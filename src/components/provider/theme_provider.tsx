@@ -353,7 +353,9 @@ const theme = createTheme({
     },
     MuiPaper: {
       styleOverrides: {
-        root: {},
+        root: {
+          background: 'transparent',
+        },
         outlined: {
           '&.MuiTableContainer-root': {
             width: 'auto',

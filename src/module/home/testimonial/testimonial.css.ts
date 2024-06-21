@@ -36,7 +36,6 @@ export const info = style({
 });
 
 export const section = style({
-  padding: 0,
   marginBottom: 56,
 
   '@media': smallUp({

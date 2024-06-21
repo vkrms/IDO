@@ -11,7 +11,7 @@ export const header = style({
   right: 0,
   left: 0,
   zIndex: zIndexHeader,
-  padding: '16px 32px',
+  padding: '16px 16px 32px 16px',
   marginInline: 'auto',
   
   '@media': medium({
