@@ -546,10 +546,13 @@ const theme = createTheme({
 export const CustomThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <StrictMode>
-      <CssBaseline />
 
       <StyledEngineProvider injectFirst>
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          
+          {children}
+        </ThemeProvider>
       </StyledEngineProvider>
     </StrictMode>
   );
