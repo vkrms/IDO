@@ -60,7 +60,7 @@ const list = [
 export default function DisruptionGrowth() {
   // ----------------------------------------------------------------------------------
 
-  const isMobile = useMediaQuery<Theme>(theme => theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery<Theme>('@media (max-width:899px)');
 
   return (
     <Container id="roadmap" className={styles.section}>
@@ -84,7 +84,7 @@ export default function DisruptionGrowth() {
               >
 
                 {/* text content */}
-                <TimelineOppositeContent className={styles.timelineContent}>
+                <TimelineOppositeContent className={styles.timelineContent} sx={{padding: 0}}>
                   <Typography className={styles.timeLimeTitle}>{item.title}</Typography>
                   <Typography className={styles.timeLineInfo}>{item.info}</Typography>
                   <Typography className={styles.timeLineInfo}>
@@ -93,15 +93,19 @@ export default function DisruptionGrowth() {
                   </Typography>
                 </TimelineOppositeContent>
 
-                <TimelineSeparator className={styles.separator}>
+                <TimelineSeparator>
                   <TimelineDot className={styles.dot}/>
-                  <TimelineConnector sx={{ background: 'transparent', borderRight: `2px dotted ${colorPrimary}` }} />
+                  <div className={styles.separator}>
+                    <TimelineConnector                      
+                      sx={{ background: 'transparent', borderRight: `2px dotted ${colorPrimary}` }}
+                    />
+                  </div>
                 </TimelineSeparator>
 
                 {/* duration */}
                 <TimelineOppositeContent
                   className={styles.timelineDuration}
-                  sx={{ display: {xs: 'none', md: 'block'}}}
+                  sx={{ padding: 0,}}
                 >
                   {item.duration}
                 </TimelineOppositeContent>
