@@ -18,9 +18,9 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 import { InfiniteMovingCards as Scroller } from '@/components/ui/infinite-moving-cards';
 import Countdown from '@/components/ui/countdown';
 import { CtaButton } from '@/components/ui/cta_button';
-import Image from 'next/image';
 import Preloader from '@/components/ui/preloader';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import { cn } from '@/lib/utils/cn';
 
 
 // ----------------------------------------------------------------------------------
@@ -39,10 +39,21 @@ const founders = [
 
 export default function Welcome() {
   const [loading, setLoading] = useState(true);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   useEffect(() => {
     setLoading(false)
   }, [])
+
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  function handleVideoClick() {
+    setIsVideoPlaying(!isVideoPlaying)
+
+    const method = isVideoPlaying ? 'pause' : 'play'
+
+    videoRef.current?.[method]()
+  }
 
   // ----------------------------------------------------------------------------------
   return (
@@ -101,11 +112,24 @@ export default function Welcome() {
 
     <Container>
       <Box className={styles.imgBox}>
-          <Image src='/img/home/welcome/video.webp' alt='video' width={960} height={597}/>  
+          {/* <Image src='' alt='video' width={960} height={597}/> */}
 
-          <Box className={styles.iconBox}>
-            <IconVideo />
-          </Box>
+          <video
+            ref={videoRef}
+            width={960} height={597}
+            poster="/img/home/welcome/video.webp"
+            style={{ borderRadius: 16 }}
+            controls={isVideoPlaying}
+          >
+            <source src='https://gl71nzm2l7iaribb.public.blob.vercel-storage.com/foobar4-GXrXJ9WMFJb1guJcyGszAeQnZG1916.webm' type='video/webm' />
+          </video>
+
+            <Box
+              className={cn(styles.iconBox, {isVideoPlaying})}
+              onClick={handleVideoClick}
+            >
+              <IconVideo />
+            </Box>           
       </Box>
     </Container>
 
@@ -113,3 +137,4 @@ export default function Welcome() {
   </>
   );
 }
+

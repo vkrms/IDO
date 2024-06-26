@@ -129,6 +129,14 @@ export const iconBox = style({
   width: '100%',
   height: '100%',
   marginInline: 'auto',
+  transition: 'opacity 0.3s ease',
+
+  selectors: {
+    '&.isVideoPlaying': {
+      opacity: 0,
+      visibility: 'hidden',
+    }  
+  }
 });
 
 export const founderTitle = style({
