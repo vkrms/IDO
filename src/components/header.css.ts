@@ -31,7 +31,7 @@ export const list = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  gap: 24,
+  gap: 24, 
 });
 
 export const item = style({
@@ -83,13 +83,10 @@ export const menuWide = style({
 })
 
 export const menuMobile = style({
-  // display: 'flex',
-  // flexFlow: 'column',
-  // alignItems: 'center',
   textAlign: 'center',
 });
 
-globalStyle(`${menuMobile} .doo`, {
+globalStyle(`${menuMobile} ${list}`, {
   paddingTop: 76,
   flexFlow: 'column',
   gap: 32,
@@ -97,6 +94,7 @@ globalStyle(`${menuMobile} .doo`, {
   lineHeight: '22px',
   marginBottom: 48,
 })
+
 
 export const drawer = style({
   width: '100%',

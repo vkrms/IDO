@@ -36,16 +36,18 @@ function slugify(text: string) {
 
 interface Props {
   className?: string;
+  clickHandler?: () => void;
 }
 
-const Menu = ({className}: Props) => {
+
+const Menu = ({className, clickHandler}: Props) => {
   return (
     <Grid item {...{className}}>
       <Grid item>
-        <Grid className={cn(styles.list, 'doo')}>
+        <Grid className={cn(styles.list)}>
           {dataList.map((data) => (
             <Grid key={data} className={styles.item}>
-              <a href={'#' + slugify(data)} className='menu-item'>
+              <a href={'#' + slugify(data)} className='menu-item' onClick={clickHandler}>
                 <Typography variant="inherit" className={styles.itemText}>{data}</Typography>
               </a>
             </Grid>
@@ -112,7 +114,7 @@ export default function LandingHeader() {
           }
         }}
       >
-        <Menu className={styles.menuMobile} />
+        <Menu className={styles.menuMobile} clickHandler={toggleDrawer} />
       </Drawer>
 
     </header>
