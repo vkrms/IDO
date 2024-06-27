@@ -24,15 +24,18 @@ export const quesItem = style({
 });
 
 export const itemTitle = style({
-  fontSize: 24,
-  lineHeight: '36px',
+  lineHeight: 1.3,
+  fontSize: 23,
+
   color: colorWhite,
   fontWeight: 500,
 
-  '@media': smallB({
-    fontSize: 18,
-    lineHeight: '27px',
-  })
+  '@media': {
+    '(min-width: 600px)': {
+      fontSize: 24,
+      lineHeight: '36px',
+    }  
+  }
 });
 
 export const itemInfo = style({
@@ -40,7 +43,7 @@ export const itemInfo = style({
   lineHeight: '29px',
   fontWeight: 400,
   color: colorWhite,
-  marginBottom: 24,
+  margin: '1.69em 0 24px',
 });
 
 export const innerList = style({

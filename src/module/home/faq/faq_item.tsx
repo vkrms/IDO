@@ -69,7 +69,6 @@ export default function FAQItem({ item, className }: PropsType) {
       <AnimatePresence>
         {expState && (
           <motion.div {...accordionTextAnimation}>
-            <Box height={56} />
 
             <Typography className={styles.itemInfo}>
               <div style={{paddingRight: 48}}>
