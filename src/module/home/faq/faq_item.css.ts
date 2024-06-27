@@ -25,7 +25,7 @@ export const quesItem = style({
 
 export const itemTitle = style({
   lineHeight: 1.3,
-  fontSize: 23,
+  fontSize: 21,
 
   color: colorWhite,
   fontWeight: 500,
@@ -39,7 +39,7 @@ export const itemTitle = style({
 });
 
 export const itemInfo = style({
-  fontSize: 18,
+  fontSize: 16,
   lineHeight: '29px',
   fontWeight: 400,
   color: colorWhite,
