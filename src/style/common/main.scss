@@ -309,3 +309,12 @@ label {
     inherits: true;
     initial-value: 0%;
 }
+
+.cmdHome {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    background: hotpink;    
+    cursor: pointer;
+    z-index: 9999;
+}

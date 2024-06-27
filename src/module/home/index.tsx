@@ -19,12 +19,18 @@ import TokenAllocation from '@/module/home/token_allocation/token_allocation';
 import Tokenomics from '@/module/home/tokenomics/tokenomics';
 import UseCases from '@/module/home/use_cases/use_cases';
 import Welcome from '@/module/home/welcome/welcome';
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import ReadingDialog from '@/components/ui/reading-dialog';
 
 import privacy from '@/data/privacy.html';
 import disclaimer from '@/data/disclaimer.html';
 
+function goHome() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',  
+  });
+}
 
 // ----------------------------------------------------------------------------------
 export default function HomePage() {
@@ -62,6 +68,8 @@ export default function HomePage() {
              
       <ReadingDialog text={disclaimer} slug='disclaimer' />
       <ReadingDialog text={privacy} slug='privacy' />
+
+      <Button onClick={goHome} className="cmdHome"/>
     </Box>
   );
 }
