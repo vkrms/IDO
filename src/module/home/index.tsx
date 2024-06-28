@@ -19,7 +19,7 @@ import TokenAllocation from '@/module/home/token_allocation/token_allocation';
 import Tokenomics from '@/module/home/tokenomics/tokenomics';
 import UseCases from '@/module/home/use_cases/use_cases';
 import Welcome from '@/module/home/welcome/welcome';
-import { Box, Button } from '@mui/material';
+import { Box, Button, IconButton } from '@mui/material';
 import ReadingDialog from '@/components/ui/reading-dialog';
 
 import privacy from '@/data/privacy.html';
@@ -31,6 +31,8 @@ function goHome() {
     behavior: 'smooth',  
   });
 }
+
+import Arrow from '@/assets/img/arrow-up.svg';
 
 // ----------------------------------------------------------------------------------
 export default function HomePage() {
@@ -69,7 +71,9 @@ export default function HomePage() {
       <ReadingDialog text={disclaimer} slug='disclaimer' />
       <ReadingDialog text={privacy} slug='privacy' />
 
-      <Button onClick={goHome} className="cmdHome"/>
+      <Button onClick={goHome} className="cmdHome">
+        <Arrow />
+      </Button>
     </Box>
   );
 }

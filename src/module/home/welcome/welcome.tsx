@@ -66,14 +66,10 @@ export default function Welcome() {
       opacity={0.8}
     >
       <Container className={styles.container}>
-          <Box height={176} />
-          
-          <Typography variant='subtitle2' className={styles.title1}>
-            Powered by FloCoin
-          </Typography>
+          <Box height='20vh' />
 
           <Typography className={styles.title2}>
-              Welcome to Event 3.0
+              Welcome to Events 3.0
           </Typography> 
 
           <Typography className={styles.title3}>
@@ -81,7 +77,10 @@ export default function Welcome() {
               of event management
           </Typography>
 
-          {/* new timer layout */}
+          <Typography className={styles.title1} variant='subtitle2'>
+            FloCoin launching in...
+          </Typography>
+
           <Countdown/>
 
           <Box sx={{ textAlign: 'center' }}>
@@ -94,7 +93,7 @@ export default function Welcome() {
 
           </Box>
 
-          <Box height={48} />
+          <Box height={88} />
 
           <Typography className={styles.founderTitle}>
             Built by the <b className={styles.founderBold}>founders</b> of

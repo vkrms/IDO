@@ -313,8 +313,17 @@ label {
 .cmdHome {
     position: fixed;
     bottom: 32px;
-    right: 32px;
-    background: hotpink;    
+    right: 16px;
+    background: #9A098B;    
     cursor: pointer;
     z-index: 9999;
+    width: 48px;
+    height: 48px;
+    transition: all .3s ease;
+    min-width: 0;
+    padding: 0;
+
+    &:hover {
+        background: rgb(107, 6, 97);
+    }
 }

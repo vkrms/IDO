@@ -5,6 +5,7 @@ import {
 } from '@/style/config/font.css';
 
 import { style } from '@vanilla-extract/css';
+import { Brygada_1918 } from 'next/font/google';
 
 export const container = style({
   // position: 'absolute',
@@ -16,34 +17,45 @@ export const container = style({
 })
 
 export const title1 = style({
-  fontSize: 18,
-  lineHeight: '25px',
-  fontWeight: 500,
+  fontSize: 14,
+  lineHeight: 1.35,
+  fontWeight: 700,
   // color: colorWhite,
   textAlign: 'center',
+  marginBottom: 24,
+
+  '@media': smallUp({
+    fontSize: 18,
+    lineHeight: '25px',
+    marginBottom: 32,
+  })
 });
 
 export const title2 = style({
-  marginBottom: 8,
+  marginBottom: 12,
   fontSize: 48,
-  lineHeight: '66px',
+  lineHeight: 1,
   fontWeight: 700,
   // color: colorWhite,
   textAlign: 'center',
 
   '@media': smallUp({
-    fontSize: 64,
-    lineHeight: '88px',
+    fontSize: 72,
+    marginBottom: 16,
   })
 });
 
 export const title3 = style({
-  marginBottom: 32,
-  // fontSize: 18,
-  // lineHeight: '29px',
-  // color: colorWhite,
+  marginBottom: 50,
   fontWeight: 400,
   textAlign: 'center',
+
+  '@media': smallUp({
+    fontSize: 18,
+    maxWidth: '64ch',
+    marginInline: 'auto',
+    marginBottom: 32,
+  })
 });
 
 export const list = style({
@@ -51,7 +63,7 @@ export const list = style({
   justifyContent: 'center',
   alignItems: 'center',
   gap: '0.6em',
-  marginBottom: 40,
+  marginBottom: 32,
 
   '@media': {
     'screen and (min-width: 648px)': {
@@ -76,32 +88,36 @@ export const itemValueList = style({
 
 // digit in a box
 export const itemValue = style({
-  aspectRatio: '56/88',
   display: 'grid',
   placeContent: 'center',
   borderRadius: 6,
   border: `0.066em solid ${colorBorder}`,
-  fontSize: 24,
-  lineHeight: 1.14,
   color: colorWhite,
-  width: '1.4em',
+  fontSize: 18,
+  aspectRatio: '1/1',
+  lineHeight: 1.77,
+  width: '1.77em',
 
   '@media': smallUp({
     fontSize: 40,
+    width: '1.6em',
+    lineHeight: '1.6em',
   })
 });
 
 export const itemKey = style({
-  marginTop: 16,
+  textTransform: 'capitalize',
   textAlign: 'center',
   color: colorWhite,
+  marginTop: 8,
   fontWeight: 400,
   display: 'block',
+  fontSize: 14,
+  lineHeight: 1.57,
 
   '@media': smallUp({
     fontSize: 18,
     lineHeight: '29px',
-    // textTransform: 'capitalize',
   })
 });
 
