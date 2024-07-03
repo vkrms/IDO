@@ -325,6 +325,9 @@ label {
     padding: 0;
     opacity: 0;
     visibility: hidden;
+    display: grid;
+    place-content: center;
+    border-radius: 8px;
 
     &:hover {
         transform: scale(1.1);
