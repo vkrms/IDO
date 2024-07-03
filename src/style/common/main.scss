@@ -314,7 +314,8 @@ label {
     position: fixed;
     bottom: 32px;
     right: 16px;
-    background: #9A098B;    
+    // background: #9A098B;
+    background: #fff;
     cursor: pointer;
     z-index: 9999;
     width: 48px;
@@ -322,8 +323,20 @@ label {
     transition: all .3s ease;
     min-width: 0;
     padding: 0;
+    opacity: 0;
+    visibility: hidden;
 
     &:hover {
-        background: rgb(107, 6, 97);
+        transform: scale(1.1);
+        background: #fff;
     }
+
+    &.--visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.isClient {
+    
 }

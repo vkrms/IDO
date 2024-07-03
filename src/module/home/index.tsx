@@ -19,7 +19,7 @@ import TokenAllocation from '@/module/home/token_allocation/token_allocation';
 import Tokenomics from '@/module/home/tokenomics/tokenomics';
 import UseCases from '@/module/home/use_cases/use_cases';
 import Welcome from '@/module/home/welcome/welcome';
-import { Box, Button, IconButton } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import ReadingDialog from '@/components/ui/reading-dialog';
 
 import privacy from '@/data/privacy.html';
@@ -33,15 +33,23 @@ function goHome() {
 }
 
 import Arrow from '@/assets/img/arrow-up.svg';
+import { useRef } from 'react';
+import { useInView } from 'framer-motion';
+import { cn } from '@/lib/utils/cn';
 
 // ----------------------------------------------------------------------------------
 export default function HomePage() {
+  const welcomeRef = useRef(null);
+  const showCmdHome = useInView(welcomeRef, {
+    amount: 0.5,
+  });
+
   // ----------------------------------------------------------------------------------
   return (
     <Box className="homepage">
       <FormDialog />
 
-      <div className="hero-grad-overflow">
+      <div className="hero-grad-overflow" ref={welcomeRef}>
         <Welcome />
       </div>
 
@@ -71,7 +79,7 @@ export default function HomePage() {
       <ReadingDialog text={disclaimer} slug='disclaimer' />
       <ReadingDialog text={privacy} slug='privacy' />
 
-      <Button onClick={goHome} className="cmdHome">
+      <Button onClick={goHome} className={cn("cmdHome", {'--visible':!showCmdHome})}>
         <Arrow />
       </Button>
     </Box>
