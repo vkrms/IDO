@@ -5,14 +5,17 @@ import type { TimerResult } from 'react-timer-hook';
 
 import * as styles from '@/module/home/welcome/welcome.css';
 import { Digit } from '@/components/ui/digit';
+import { cn } from '@/lib/utils/cn';
 
-function MyTimer({ expiryTimestamp }: { expiryTimestamp: Date }) {
+type Props = { expiryTimestamp: Date, className: string }
+
+function MyTimer({ expiryTimestamp, className }: Props) {
     const timerInstance = useTimer({ expiryTimestamp, onExpire: () => console.warn('onExpire called') });
 
     const timeBits = ['days', 'hours', 'minutes', 'seconds'];
 
     return (
-        <div>
+        <div className={className}>
             <div className={styles.list}>
 
                 {timeBits.map(title => {
@@ -31,8 +34,9 @@ function MyTimer({ expiryTimestamp }: { expiryTimestamp: Date }) {
 }
 
 export default function Countdown() {
-    const [isClient, setIsClient] = useState(false);
 
+    // this is required to prevent the server from trying to render the timer, which ends up in a hydration error
+    const [isClient, setIsClient] = useState(false);
     useEffect(() => {
         setIsClient(true);
     }, []);
@@ -42,7 +46,9 @@ export default function Countdown() {
 
     return (
         <div>
-            {isClient && <MyTimer expiryTimestamp={time} />}
+            {isClient &&
+                <MyTimer expiryTimestamp={time} className={cn('disappear', {appear: isClient})}/>            
+            }
         </div>
     );
 }

@@ -208,7 +208,7 @@ label {
 }
 
 .appear-down {
-    line-height: inherit;
+    line-height: 1.5;
     transform: translateY(-10%);
     animation: fadeInDown .6s ease-out forwards;
     --tl-grad-mask: 500%;
@@ -218,7 +218,7 @@ label {
     /* from {} */
 
     to {
-        line-height: inherit;
+        line-height: 1.5;
         opacity: 1;
         transform: translateY(0);
     }
@@ -231,7 +231,7 @@ label {
     }
 
     to {
-        line-height: inherit;
+        line-height: 1.5;
         opacity: 1;
         transform: translateY(0);
     }
@@ -335,8 +335,4 @@ label {
         opacity: 1;
         visibility: visible;
     }
-}
-
-.isClient {
-    
 }

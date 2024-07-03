@@ -10,7 +10,7 @@ interface Props {
 
 export function Digit({ value, title }: Props) {
     // value might be up to 3 digits long
-    const digits = value.toString().padStart(2, '0').split('');
+    const digits = value.toString().padStart(2, '0').split('');    
 
     return (
         <div className='text-center'>
