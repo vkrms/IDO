@@ -17,6 +17,12 @@ module.exports = {
       },
     },
     extend: {
+      width: {
+        "22": "5.5rem",
+      },
+      zIndex: {
+        "9999": "9999",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

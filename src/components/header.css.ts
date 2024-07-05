@@ -10,7 +10,7 @@ export const header = style({
   top: 0,
   right: 0,
   left: 0,
-  zIndex: zIndexHeader,
+  zIndex: 20,
   padding: '16px 16px 32px 16px',
   marginInline: 'auto',
   

@@ -3,14 +3,11 @@ import React from "react";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils/cn";
 import { Typography, Box, Grid, Button, FormControl } from "@mui/material";
-import { MuiTelInput } from 'mui-tel-input'
 import * as styles from './form-fields.css';
 import type { UseFormRegister } from "react-hook-form";
-
-type infoProps = {
-    numberValue: string,
-    countryCallingCode: number,
-}
+import { PhoneInput } from "./tel-input";
+import { FancyWrap } from "./fancy-wrap";
+import { parsePhoneNumber } from 'react-phone-number-input'
 
 interface Props {
     success: boolean,
@@ -21,12 +18,19 @@ interface Props {
 export function FormFields({success, register, getPhoneData}: Props) {
     const [phone, setPhone] = React.useState('')
 
-    const handleChange = (newPhone: string, info: infoProps) => {
-        setPhone(newPhone)
-        getPhoneData({
-            tel: info.numberValue,
-            country: info.countryCallingCode,
-        })
+    function handlePhoneChange(val) {
+        const phoneNumber = parsePhoneNumber(val)
+        console.log({phoneNumber})
+
+        if (phoneNumber) {
+            const { number, country } = phoneNumber
+            getPhoneData({
+                tel: number,
+                country,
+            })
+
+            setPhone(number)
+        }
     }
 
     return (
@@ -58,16 +62,20 @@ export function FormFields({success, register, getPhoneData}: Props) {
 
                         <FormControl className={cn(styles.control, 'telly')}>
                             <label htmlFor="phone">Phone Number</label>
-                            <MuiTelInput             
-                                value={phone}
-                                onChange={handleChange}
-                                defaultCountry="AU"
-                                forceCallingCode={true}
-                                className="my-class-name"
-                            />                        
+
+                            <FancyWrap>
+                                <PhoneInput
+                                    value={phone}
+                                    onChange={handlePhoneChange}
+                                    international
+                                    defaultCountry="AU"
+                                    className="h-12 items-center"
+                                />
+                            </FancyWrap>
+
                         </FormControl>
 
-                        <Grid item textAlign={'center'}>
+                        <Grid item textAlign={'center'} mt='20px'>
                             <Button variant='contained' size='large' type="submit">
                                 <span>
                                     Register for Early Access

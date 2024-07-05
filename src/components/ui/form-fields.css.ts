@@ -26,15 +26,23 @@ export const subtitle = style({
     textAlign: 'center',
     maxWidth: '48ch',
     marginInline: 'auto',
-    marginBottom: 32,
+
+    selectors: {
+        '&&': {
+            marginBottom: 32,
+        }
+    }
 })
 
 export const control = style({
-    marginBottom: 20,
-
     selectors: {
         '&:last-of-type': {
             marginBottom: 24,
+        },
+
+        // add specificity to override MUI styles
+        '&&': {
+            marginBottom: 20,
         }
     }
 })

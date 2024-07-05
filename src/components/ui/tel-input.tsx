@@ -15,7 +15,7 @@ import {
     CommandItem,
     CommandList,
 } from "@/components/ui/command";
-import { Input, InputProps } from "@/components/ui/input";
+import { Input as InputB, InputProps } from "@/components/ui/input-b";
 import {
     Popover,
     PopoverContent,
@@ -39,7 +39,7 @@ const PhoneInput: React.ForwardRefExoticComponent<PhoneInputProps> =
             return (
                 <RPNInput.default
                     ref={ref}
-                    className={cn("flex", className)}
+                    className={cn("flex w-full", className)}
                     flagComponent={FlagComponent}
                     countrySelectComponent={CountrySelect}
                     inputComponent={InputComponent}
@@ -62,8 +62,8 @@ PhoneInput.displayName = "PhoneInput";
 
 const InputComponent = React.forwardRef<HTMLInputElement, InputProps>(
     ({ className, ...props }, ref) => (
-        <Input
-            className={cn("rounded-e-lg rounded-s-none", className)}
+        <InputB
+            className={cn("rounded-e-lg rounded-s-none bob-425", className)}
             {...props}
             ref={ref}
         />
@@ -99,10 +99,11 @@ const CountrySelect = ({
                 <Button
                     type="button"
                     variant={"outline"}
-                    className={cn("flex gap-1 rounded-e-none rounded-s-lg px-3")}
+                    className={cn("flex gap-1 rounded-e-none rounded-s-lg px-3 h-full bg-transparent hover:bg-transparent hover:text-white border-0 border-r flex-none w-22")}
                     disabled={disabled}
                 >
                     <FlagComponent country={value} countryName={value} />
+
                     <ChevronsUpDown
                         className={cn(
                             "-mr-2 h-4 w-4 opacity-50",
@@ -111,7 +112,7 @@ const CountrySelect = ({
                     />
                 </Button>
             </PopoverTrigger>
-            <PopoverContent className="w-[300px] p-0">
+            <PopoverContent className="w-[300px] p-0 z-9999 border-transparent">
                 <Command>
                     <CommandList>
                         <ScrollArea className="h-72">

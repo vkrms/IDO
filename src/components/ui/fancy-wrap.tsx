@@ -7,8 +7,8 @@ import { useMotionTemplate, useMotionValue, motion } from "framer-motion";
 export interface InputProps
     extends React.InputHTMLAttributes<HTMLInputElement> { }
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
-    ({ className, type, style, ...props }, ref) => {
+const FancyWrap = React.forwardRef<HTMLInputElement, InputProps>(
+    ({ className, type, style, children, ...props }, ref) => {
         const radius = 100; // change this to increase the radius of the hover effect
         const [visible, setVisible] = React.useState(false);
 
@@ -41,26 +41,30 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
                 onMouseLeave={() => setVisible(false)}
                 className="p-[2px] rounded-lg transition duration-300 group/input"
             >
-                <input
-                    type={type}
+                
+                <div
+                    // type={type}
                     className={cn(`
-                            flex h-12 w-full border-none bg-transparent  text-black  shadow-input rounded-md px-3 py-2 text-sm  file:border-0 file:bg-transparent 
+                            flex h-12 w-full border-none bg-transparent  text-black  shadow-input rounded-md text-sm  file:border-0 file:bg-transparent 
                             file:text-sm file:font-medium placeholder:text-neutral-400
                             focus-visible:outline-none focus-visible:ring-[2px] 
                              focus-visible:ring-pink-400 focus-visible:ring-opacity-50
                             disabled:cursor-not-allowed disabled:opacity-50           
                             group-hover/input:shadow-none transition duration-400
                             input
+                            overflow-hidden
                         `,
                         className
                     )}
                     ref={ref}
                     {...props}
-                />
+                >
+                    {children}
+                </div>
             </motion.div>
         );
     }
 );
-Input.displayName = "Input";
+FancyWrap.displayName = "FancyWrap";
 
-export { Input };
+export { FancyWrap };

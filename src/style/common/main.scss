@@ -1,8 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 @import './embla.css';
 @import './telly.scss';
 
@@ -340,3 +335,9 @@ label {
     }
 }
 @import './shadcn.css';
+
+
+.bob-425 {
+    border: none;
+    padding: 0 16px;
+}
