@@ -87,6 +87,7 @@ export default function Welcome() {
 
             <CtaButton>
               <Button variant='contained' size="large">
+                {/* className="pulse" */}
                 Join Early Access IDO List
               </Button>
             </CtaButton>

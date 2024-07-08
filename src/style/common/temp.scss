@@ -1,0 +1,27 @@
+// here we experiment with hero button animation
+
+.pulse {
+    position: relative;
+    height: 64px;
+    line-height: 64px;
+    box-shadow: 0 0 0 0 rgba(243, 88, 204, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 4px 0 rgb(252, 217, 241);
+    }
+
+    70% {
+        box-shadow: 0 0 4px 10px rgba(243, 86, 170, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 4px 50px rgba(252, 209, 243, 0);
+    }
+}
+
+.bob-429 {
+    box-shadow: 0 0 2px 0px #fff, 0 0 8px 4px #c167ee;
+}
