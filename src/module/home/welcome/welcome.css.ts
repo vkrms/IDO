@@ -97,10 +97,12 @@ export const itemValue = style({
   aspectRatio: '1/1',
   lineHeight: 1.77,
   width: '1.77em',
+  height: 'auto',
 
   '@media': smallUp({
     fontSize: 40,
     width: '1.6em',
+    height: '1.6em',
     lineHeight: '1.6em',
   })
 });
