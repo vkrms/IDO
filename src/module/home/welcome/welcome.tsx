@@ -86,8 +86,7 @@ export default function Welcome() {
           <Box sx={{ textAlign: 'center' }}>
 
             <CtaButton>
-              <Button variant='contained' size="large">
-                {/* className="pulse" */}
+              <Button variant='contained' size="large" className="tuesday">                
                 Join Early Access IDO List
               </Button>
             </CtaButton>

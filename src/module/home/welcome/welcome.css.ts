@@ -68,6 +68,7 @@ export const list = style({
   '@media': {
     'screen and (min-width: 648px)': {
       gap: 32, 
+      marginBottom: 64,
     }
   }
 });
