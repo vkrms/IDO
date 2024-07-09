@@ -84,8 +84,8 @@ export default function LandingHeader() {
   return (
     <header className={styles.header}>
       <Grid container className={styles.headerCont}>
-        <Grid item>
-          <IconLogo width={176} />
+        <Grid item mb={'12px'}>
+          <IconLogo className={styles.logo} />
         </Grid>
 
         <Menu className={styles.menuWide}/>

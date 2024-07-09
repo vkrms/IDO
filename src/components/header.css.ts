@@ -1,6 +1,5 @@
 import { colorBorder, colorWhite, glowColor } from '@/style/config/color.css';
 
-import { zIndexHeader } from '@/style/config/zindex.css';
 import { style, globalStyle } from '@vanilla-extract/css';
 import { smallUp, medium } from '@/style/config/breakpoints.css';
 
@@ -10,7 +9,7 @@ export const header = style({
   top: 0,
   right: 0,
   left: 0,
-  zIndex: 20,
+  zIndex: 1201,
   padding: '16px 16px 32px 16px',
   marginInline: 'auto',
   
@@ -118,4 +117,12 @@ export const isVisible = style({
   visibility: 'visible',
   opacity: 1,
   transform: 'scale(1)',
+})
+
+export const logo = style({
+  width: 128,
+
+  '@media': medium({
+    width: 176,
+  }),
 })
