@@ -38,7 +38,7 @@ const legendList = [
   {
     title: 'Liquidity (10%)',
     subtitle:
-      'Ensures sufficient liquidity for market stability, supporting smooth FloCoin transactions with 50% of the initial IDO locked straight into the liquidity pool.',
+      `Ensures sufficient liquidity for market stability, supporting smooth FloCoin transactions with a good percentage of the initial IDO locked straight into the liquidity pool.`,
   },
 ];
 // ----------------------------------------------------------------------------------

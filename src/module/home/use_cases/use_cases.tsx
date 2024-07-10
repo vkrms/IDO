@@ -23,7 +23,7 @@ const list = [
   {
     id: '02',
     title: 'Governance',
-    text: "Gives FloCoin holders a voice in the platform's evolution.",
+    text: `Gives FloCoin holders a voice in the platform's evolution & important decisions.`,
   },
   {
     id: '03',
@@ -32,7 +32,7 @@ const list = [
   },
   {
     id: '04',
-    title: 'Premier Events & Merchandise',
+    title: 'Exclusive Offers',
     text: 'Access to unique events and limited-edition merchandise purchasable only with FloCoin.',
   },
   {
@@ -71,7 +71,7 @@ export default function UseCases() {
 
       <Box textAlign='center' className={styles.btnWrap}>        
         <Button variant='contained' size='large' href="https://online.publuu.com/533650/1195962" target="_new">
-          Explore Tokenomics
+          Explore in-depth Tokenomics
         </Button>        
       </Box>
     </Container>

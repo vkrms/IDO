@@ -25,7 +25,7 @@ const list: TeamData[] = [
         role: 'Founder',
         info: [
           {
-            title: 'Tech Visionary & Crypto Pioneer',
+            title: 'Tech Visionary',
             text: 'Mark is a serial entrepreneur known for his uncanny ability to identify and capitalize on emerging trends. From the early days of Bitcoin, where he built his own mining rig, to the forefront of blockchain innovation with eventflo, Mark’s passion for tech-driven solutions has always been his driving force.',
           },
           {
@@ -40,11 +40,11 @@ const list: TeamData[] = [
         role: 'Founder',
         info: [
           {
-            title: 'Festival Marketing Maestro',
+            title: 'Marketing Maestro',
             text: 'Corey is a social media expert and digital advertising wizard, renowned for transforming Reminisce into one of Australia’s favorite festivals. Leveraging his extensive industry connections and innovative strategies, Corey will be leading eventflo\'s marketing efforts with a proven track record of success.'
           },
           {
-            title: 'Business Growth Strategist',
+            title: 'Growth Strategist',
             text: 'With a wealth of experience from his successful event marketing agency, Corey has generated over $100M in sales for clients through his cutting-edge campaigns. His expertise will be instrumental in positioning eventflo as the premier platform for event creators, driving the expansion and value of FloCoin.'
           }
         ],
@@ -60,7 +60,7 @@ const list: TeamData[] = [
         role: 'Head of Development',
         info: [
           {
-            title: 'Blockchain & AI Wizard',
+            title: 'Wizard Developer',
             text: `Shin's not just a skilled software engineer – he specializes in AI, ML, and cloud technologies (AWS Certified). He even built his own NFT marketplace that was successfully acquired! His passion is pushing the boundaries of web experiences, which aligns perfectly with eventflo's vision.`,
           },
         ],

@@ -22,7 +22,7 @@ const Icon: React.FC<{i: number}> = ({i}) => {
 // ----------------------------------------------------------------------------------
 const dataList = [
   {
-    title: 'Event Ecosystem Currency',
+    title: 'Ecosystem Currency',
     text: 'Purchase tickets, exclusive merchandise, and access unique events on the eventflo platform using FloCoin.',
   },
   {
@@ -35,7 +35,7 @@ const dataList = [
   },
   {
     title: 'Governance',
-    text: 'FloCoin holders have a say in platform development, ensuring its evolution aligns with the needs of both organizers and attendees.',
+    text: `FloCoin holders have a say in important decisions ensuring its evolution aligns with the needs of both organizers and attendees.`,
   },
   {
     title: 'Strategic Buybacks',
@@ -43,7 +43,7 @@ const dataList = [
   },
   {
     title: 'Commercial Activity',
-    text: 'Businesses and creators needing to advertise or promote on the platform will drive consistent demand for FloCoin.',
+    text: `Businesses and creators needing to leverage the platform to sell tickets will drive consistent demand for FloCoin.`,
   },
 ];
 // ----------------------------------------------------------------------------------
