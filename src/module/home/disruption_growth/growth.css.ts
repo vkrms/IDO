@@ -137,9 +137,9 @@ export const separator = style({
   width: 24,
   paddingInline: 12,
   boxSizing: 'border-box',
-  marginTop: -72,
+  marginTop: 24,
   display: 'flex',
-  padding: '80px 12px 8px',
+  padding: '56px 12px 8px',
   transition: 'all .3s ease',
   maskImage: 'linear-gradient(to bottom, white, transparent var(--tl-grad-mask))',
 
@@ -175,3 +175,12 @@ export const section = style({
     marginBottom: 120,
   })
 })
+
+export const separatorWrap = style({
+  position: 'absolute',
+  left: 0,
+  height: '100%',
+  top: 0,
+});
+
+//

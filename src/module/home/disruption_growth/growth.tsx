@@ -93,7 +93,7 @@ export default function DisruptionGrowth() {
                   </Typography>
                 </TimelineOppositeContent>
 
-                <TimelineSeparator>
+                <TimelineSeparator className={styles.separatorWrap}>
                   <TimelineDot className={styles.dot}/>
                   <div className={styles.separator}>
                     <TimelineConnector                      
