@@ -83,6 +83,12 @@ export const timelineDuration = style({
       padding: 0      
     }
   },
+
+  '@media': {
+    '(min-width: 900px)': {
+      marginTop: 16,
+    }
+  }
 });
 
 export const timeline = style({
@@ -95,7 +101,7 @@ export const timelineItem = style({
     position: 'relative',
 
     '@media': {
-      '(min-width: 1200px)': {
+      '(min-width: 900px)': {
         gap: '72px',
         flexFlow: 'row',
         paddingLeft: 0,
@@ -135,22 +141,35 @@ export const separator = style({
   ////
   flexGrow: 1,
   width: 24,
-  paddingInline: 12,
   boxSizing: 'border-box',
   marginTop: 24,
   display: 'flex',
-  padding: '56px 12px 8px',
   transition: 'all .3s ease',
   maskImage: 'linear-gradient(to bottom, white, transparent var(--tl-grad-mask))',
+  padding: "56px 12px 40px",
 
 
   '@media': {
-    '(min-width: 1200px)': {
+    '(min-width: 900px)': {
+      left: 'unset',
+      top: 24,
+    }
+  }
+})
+
+export const separatorWrap = style({
+  position: 'absolute',
+  left: 0,
+  height: '100%',
+  top: 0,
+
+  '@media': {
+    '(min-width: 900px)': {
       position: 'static',
       height: 'auto',
     }
   }
-})
+});
 
 export const dot = style({
   aspectRatio: '1/1',
@@ -175,12 +194,3 @@ export const section = style({
     marginBottom: 120,
   })
 })
-
-export const separatorWrap = style({
-  position: 'absolute',
-  left: 0,
-  height: '100%',
-  top: 0,
-});
-
-//

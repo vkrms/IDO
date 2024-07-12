@@ -347,3 +347,13 @@ label {
 }
 
 @import './temp.scss';
+
+.MuiTimelineItem-root:last-of-type>div {
+    margin-bottom: 0;
+}
+
+@media (min-width: 900px) {
+    .MuiTimelineItem-root:nth-of-type(even) .MuiTypography-root.MuiTypography-body1.MuiTimelineOppositeContent-root.MuiTimelineOppositeContent-positionAlternate {
+        text-align: right;
+    }
+}
