@@ -17,8 +17,6 @@ export const TextGenerateEffect = ({
     let wordsArray = words.split(" ");
     useEffect(() => {
         if (!isInView) return;
-
-        console.log("in view!")
         animate(
             "span",
             {

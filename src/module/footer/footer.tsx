@@ -97,8 +97,8 @@ export default function Footer() {
                   </Typography>
 
                   <Typography className={styles.text}>
-                    Participation in an IDO carries inherent risk. Please review our offering materials and consult with a
-                    financial advisor before making any investment decisions. eventflo is an registered Australian company
+                    Participation in an IDO carries inherent risk. Please review our offering materials and consult with a
+                    financial advisor before making any investment decisions. eventflo is a registered Australian company
                     (ACN: 677 042 947).
                   </Typography>
                 </Grid>
