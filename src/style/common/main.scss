@@ -163,9 +163,9 @@ label {
 
 .preloader__icon {
     aspect-ratio: 1 / 1;
-    width: 32px;
+    width: 216px;
     height: auto;
-    animation: preloader 2.5s infinite;
+    // animation: preloader 2.5s infinite;
 }
 
 @keyframes preloader {
