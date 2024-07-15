@@ -1,4 +1,4 @@
-import { colorWhite } from '@/style/config/color.css';
+import { colorWhite, pinkTextGrad } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
 import { smallB, smallUp } from '@/style/config/breakpoints.css';
 
@@ -62,9 +62,8 @@ export const listItem = style({
 })
 
 export const itemTitle = style({
-  background: ' linear-gradient(45deg, #EA347F 14.66%, #E23080 28.1%, #CC2484 50.02%, #A81189 76.18%, #9A098B 85.37%)',
-  color: 'transparent',
-  backgroundClip: 'text',
+  ...pinkTextGrad,
+
   fontSize: 24,
   fontWeight: 600,  
   marginBottom: 8,

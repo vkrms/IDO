@@ -1,4 +1,4 @@
-import { colorWhite } from '@/style/config/color.css';
+import { colorWhite, pinkTextGrad } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
 import { smallUp, smallB } from '@/style/config/breakpoints.css';
 import { line } from '../token_allocation/token_allocation.css';
@@ -25,9 +25,8 @@ export const list = style({
 });
 
 export const itemId = style({
-  background: ' linear-gradient(45deg, #EA347F 14.66%, #E23080 28.1%, #CC2484 50.02%, #A81189 76.18%, #9A098B 85.37%)',
-  color: 'transparent',
-  backgroundClip: 'text',
+  ...pinkTextGrad,  
+
   fontWeight: 700,
   marginBottom: 8,
   aspectRatio: '1 / 1',

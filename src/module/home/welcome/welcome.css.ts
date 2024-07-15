@@ -1,11 +1,12 @@
 import { smallUp } from '@/style/config/breakpoints.css';
-import { colorBorder, colorWhite } from '@/style/config/color.css';
+import { colorBorder, colorWhite, pinkTextGrad } from '@/style/config/color.css';
 import {
   electrolizeRegular,
 } from '@/style/config/font.css';
 
 import { style } from '@vanilla-extract/css';
-import { Brygada_1918 } from 'next/font/google';
+
+
 
 export const container = style({
   // position: 'absolute',
@@ -23,14 +24,10 @@ export const title1 = style({
   textAlign: 'center',
   marginBottom: 24,
 
-  background: 'linear-gradient(45deg, #EA347F 14.66%, #E23080 28.1%, #CC2484 50.02%, #A81189 76.18%, #9A098B 85.37%)',
-  backgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
+  ...pinkTextGrad,
 
   '@media': smallUp({
-    fontSize: 25,
-    lineHeight: 1.38,
-    marginBottom: 20,
+    fontSize: 25,    
   })
 });
 
@@ -177,9 +174,9 @@ export const founderTitle = style({
 
 export const founderBold = style({
   textAlign: 'center',
-  background: ' linear-gradient(45deg, #EA347F 14.66%, #E23080 28.1%, #CC2484 50.02%, #A81189 76.18%, #9A098B 85.37%)',
-  color: 'transparent',
-  backgroundClip: 'text',
+
+  ...pinkTextGrad,
+
   fontSize: 28,
   lineHeight: '38px',
   fontWeight: 600,

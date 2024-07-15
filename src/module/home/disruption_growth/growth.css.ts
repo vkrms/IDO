@@ -1,4 +1,4 @@
-import { colorPrimary } from '@/style/config/color.css';
+import { colorPrimary, pinkTextGrad } from '@/style/config/color.css';
 
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
@@ -63,9 +63,9 @@ export const timeLineSubtitle = style({
 
 export const timelineDuration = style({  
   textAlign: 'left',
-  background: ' linear-gradient(45deg, #EA347F 14.66%, #E23080 28.1%, #CC2484 50.02%, #A81189 76.18%, #9A098B 85.37%)',
-  color: 'transparent',
-  backgroundClip: 'text',
+
+  ...pinkTextGrad,
+
   fontSize: 24,
   lineHeight: '33px',
   fontWeight: 600,
