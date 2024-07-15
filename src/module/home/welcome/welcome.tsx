@@ -78,7 +78,7 @@ export default function Welcome() {
           </Typography>
 
           <Typography className={styles.title1} variant='subtitle2'>
-            FloCoin launching in...
+            launching in...
           </Typography>
 
           <Countdown/>

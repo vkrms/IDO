@@ -20,14 +20,17 @@ export const title1 = style({
   fontSize: 14,
   lineHeight: 1.35,
   fontWeight: 700,
-  // color: colorWhite,
   textAlign: 'center',
   marginBottom: 24,
 
+  background: 'linear-gradient(45deg, #EA347F 14.66%, #E23080 28.1%, #CC2484 50.02%, #A81189 76.18%, #9A098B 85.37%)',
+  backgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+
   '@media': smallUp({
-    fontSize: 18,
-    lineHeight: '25px',
-    marginBottom: 32,
+    fontSize: 25,
+    lineHeight: 1.38,
+    marginBottom: 20,
   })
 });
 

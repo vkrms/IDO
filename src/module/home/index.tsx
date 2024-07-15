@@ -40,8 +40,8 @@ import { cn } from '@/lib/utils/cn';
 // ----------------------------------------------------------------------------------
 export default function HomePage() {
   const welcomeRef = useRef(null);
-  const showCmdHome = useInView(welcomeRef, {
-    amount: 0.5,
+  const hideCmdHome = useInView(welcomeRef, {
+    amount: 0.25,
   });
 
   // ----------------------------------------------------------------------------------
@@ -79,7 +79,7 @@ export default function HomePage() {
       <ReadingDialog text={disclaimer} slug='disclaimer' />
       <ReadingDialog text={privacy} slug='privacy' />
 
-      <Button onClick={goHome} className={cn("cmdHome", {'--visible':!showCmdHome})}>
+      <Button onClick={goHome} className={cn("cmdHome", {'--visible':!hideCmdHome})}>
         <Arrow />
       </Button>
     </Box>
