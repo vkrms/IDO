@@ -23,7 +23,7 @@ import { CtaButton } from './ui/cta_button';
 
 // ----------------------------------------------------------------------------------
 
-const dataList = ['Whitepaper', 'Why FloCoin', 'Tokenomics', 'Our Team', 'Roadmap'];
+const dataList = ['Why FloCoin', 'Tokenomics', 'Our Team', 'Roadmap'];
 
 function slugify(text: string) {
   return text
@@ -45,6 +45,15 @@ const Menu = ({className, clickHandler}: Props) => {
     <Grid item {...{className}}>
       <Grid item>
         <Grid className={cn(styles.list)}>
+          
+          <Grid className={styles.item}>
+            <a href='https://eventflo.gitbook.io/eventflo' target="_new" className='menu-item'>
+              <Typography variant="inherit" className={styles.itemText}>
+                Whitepaper
+              </Typography>
+            </a>
+          </Grid>
+
           {dataList.map((data) => (
             <Grid key={data} className={styles.item}>
               <a href={'#' + slugify(data)} className='menu-item' onClick={clickHandler}>

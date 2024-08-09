@@ -106,6 +106,9 @@ export default function Footer() {
 
 
                 <Grid item className={styles.link}>
+                  <a className={cn(styles.linkText, 'menu-item')} href="https://eventflo.io/blog" target="_new">
+                    Blog
+                  </a>
                   {/* <Link href='' className={styles.linkText}>
                     Terms & Conditions
                   </Link> */}
