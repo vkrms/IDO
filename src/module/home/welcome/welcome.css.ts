@@ -23,8 +23,9 @@ export const title1 = style({
   fontWeight: 700,
   textAlign: 'center',
   marginBottom: 24,
+  color: '#fff',
 
-  ...pinkTextGrad,
+  // ...pinkTextGrad,
 
   '@media': smallUp({
     fontSize: 25,    
@@ -137,6 +138,17 @@ export const imgBox = style({
   })
 });
 
+export const playBtn = style({
+  transition: 'all 0.3s ease',
+
+  selectors: {
+    '&:hover': {
+      transform: 'scale(1.1)',
+      cursor: 'pointer',
+    }
+  }
+})
+
 export const iconBox = style({
   position: 'absolute',
   top: 0,
@@ -155,11 +167,6 @@ export const iconBox = style({
       opacity: 0,
       visibility: 'hidden',
     },
-    
-    '&:hover': {
-      transform: 'scale(1.1)',
-      cursor: 'pointer',
-    }
   }
 });
 

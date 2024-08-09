@@ -127,7 +127,7 @@ export default function Welcome() {
               className={cn(styles.iconBox, {isVideoPlaying})}
               onClick={handleVideoClick}
             >
-              <IconVideo />
+              <IconVideo className={styles.playBtn}/>
             </Box>           
       </Box>
     </Container>
