@@ -8,9 +8,10 @@ import Image from 'next/image'
 import FoundersListItem from '@/module/home/team/list_item'
 import { cn } from '@/lib/utils/cn'
 import * as styles from '@/module/home/team/team_list.css'
+import { FounderData } from '@/module/home/team/team_list'
 
 type PropType = {
-    slides: {}[],
+    slides: FounderData[],
     options?: EmblaOptionsType
 }
 
@@ -38,7 +39,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                                             <Box className={styles.imgBox}>
 
                                                 <CardItem translateZ="60">
-                                                    <Image src={`/img/home/team/${item.img}`} width={160} height={160} style={{ maxWidth: 160 }} alt='' />
+                                                    <Image src={`/img/home/team/${item.img}`} width={160} height={160} style={{ maxWidth: 160 }} alt=''/>
                                                 </CardItem>
 
                                             </Box>

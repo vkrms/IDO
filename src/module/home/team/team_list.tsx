@@ -15,6 +15,8 @@ import type { StaticImageData } from 'next/image';
 import { cn } from '@/lib/utils/cn';
 import AppearList from '@/components/ui/appear-list';
 import EmblaCarousel from '@/components/ui/embla-carousel';
+import { AlignmentOptionType } from 'node_modules/embla-carousel/esm/components/Alignment';
+import { ScrollContainOptionType } from 'node_modules/embla-carousel/esm/components/ScrollContain';
 
 // ----------------------------------------------------------------------------------
 export type TeamData = {
@@ -25,7 +27,7 @@ export type TeamData = {
 // ----------------------------------------------------------------------------------
 
 export type FounderData = {
-  img: StaticImageData;
+  img: string;
   name: string;
   role: string;
   info: { title: string; text: string }[];
@@ -39,9 +41,9 @@ interface PropsType {
 // ----------------------------------------------------------------------------------
 
 const emblaOptions = {
-  align: 'start',
+  align: 'start' as AlignmentOptionType,
   dragFree: true,
-  containScroll: 'keepSnaps',
+  containScroll: 'keepSnaps' as ScrollContainOptionType,
   breakpoints: {
     '(min-width: 1040px)': { active: false }
   }
