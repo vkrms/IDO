@@ -84,7 +84,6 @@ export default function LandingHeader() {
   // ----------------------------------------------------------------------------------
 
   const [open, setOpen] = useState(false);
-  const isMobile = useMediaQuery<Theme>(theme => theme.breakpoints.down('sm'));
 
   const toggleDrawer = () => {
     setOpen(!open);

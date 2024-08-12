@@ -341,13 +341,6 @@ label {
 @import './shadcn.css';
 
 
-.bob-425 {
-    border: none;
-    padding: 0 16px;
-}
-
-@import './temp.scss';
-
 .MuiTimelineItem-root:last-of-type>div {
     margin-bottom: 0;
 }
@@ -356,17 +349,6 @@ label {
     .MuiTimelineItem-root:nth-of-type(even) .MuiTypography-root.MuiTypography-body1.MuiTimelineOppositeContent-root.MuiTimelineOppositeContent-positionAlternate {
         text-align: right;
     }
-}
-
-.bob-32 {
-    width: 64px;
-    height: 64px;
-    // fill: none;
-    // stroke: rgb(255, 255, 255);
-    // stroke-width: 18;
-    // stroke-linecap: round;
-    // stroke-linejoin: round;
-    // stroke-miterlimit: 10;
 }
 
 .E_svg__e {

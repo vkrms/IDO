@@ -26,6 +26,7 @@ export const subtitle = style({
 
 export const timeLimeTitle = style({
   textAlign: 'left',
+  textWrap: 'balance',
   maxWidth: 339,
   fontWeight: 600,
   color: colorWhite,

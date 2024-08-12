@@ -14,7 +14,6 @@ const Preloader: React.FC<Props> = ({isVisible}) => {
                 <video className={cn('preloader__icon')} playsInline muted autoPlay loop>
                     <source src="/xs.webm" type="video/webm" />
                 </video>
-                {/* <E className={'bob-32'} /> */}
             </div>
         </div>
     );
