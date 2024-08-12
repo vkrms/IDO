@@ -1,5 +1,5 @@
-import { manropeRegular, manropeSemiBold } from '@/style/config/font.css';
-
+import { small } from '@/style/config/breakpoints.css';
+import { medium, smallUp } from '@/style/config/breakpoints.css';
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
 
@@ -9,13 +9,11 @@ export const title = style({
   fontSize: 56,
   lineHeight: '76px',
   color: colorWhite,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   textAlign: 'center',
 
   '@media': {
-    'screen and (max-width: 767px)': {
-      maxWidth: 310,
-      margin: '0 auto 8px',
+    [small]: {
       fontSize: 32,
       lineHeight: '44px',
     },
@@ -24,26 +22,21 @@ export const title = style({
 
 export const subtitle = style({
   marginBottom: 48,
-  fontSize: 18,
-  lineHeight: '31px',
-  fontFamily: manropeRegular,
+  fontWeight: 400,
   color: colorWhite,
   textAlign: 'center',
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 12,
-      lineHeight: '22px',
-    },
-  },
+  '@media': smallUp({
+    fontSize: 18,
+    lineHeight: '31px',
+  }),
 });
 
-export const btnBox = style({
-  marginTop: 80,
+export const teamContainer = style({
+  padding: 0,
+  marginBottom: 56,
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      marginTop: 48,
-    },
-  },
+  '@media': smallUp({
+    marginBottom: 120,
+  }),
 });

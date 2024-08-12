@@ -1,15 +1,13 @@
-import { manropeBold, manropeLight, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
+import { colorPrimary, pinkTextGrad } from '@/style/config/color.css';
 
+import { smallUp } from '@/style/config/breakpoints.css';
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
 
 export const title = style({
-  fontSize: 56,
-  lineHeight: '76px',
   color: colorWhite,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   textAlign: 'center',
-  maxWidth: 596,
   margin: '0 auto 16px',
 
   '@media': {
@@ -24,111 +22,52 @@ export const title = style({
 
 export const subtitle = style({
   maxWidth: 806,
-  fontSize: 18,
-  lineHeight: '29px',
-  fontFamily: manropeRegular,
+  fontWeight: 400,
   color: colorWhite,
   textAlign: 'center',
   margin: '0 auto 104px',
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      maxWidth: 'unset',
-      fontSize: 12,
-      lineHeight: '22px',
-      marginBottom: 48,
-    },
-  },
-});
-
-export const timeline1 = style({
-  '@media': {
-    'screen and (max-width: 767px)': {
-      display: 'none',
-    },
-  },
-});
-
-export const timeline2 = style({
-  display: 'none',
-
-  '@media': {
-    'screen and (max-width: 767px)': {
-      display: 'flex',
-    },
-  },
-});
-
-export const timmelineItem = style({
-  gap: '72px',
-  justifyContent: 'center',
-
-  padding: 0,
-
-  '@media': {
-    'screen and (max-width: 767px)': {
-      gap: 0,
-      selectors: {
-        '&:before': {
-          display: 'none',
-        },
-      },
-    },
-  },
-});
-
-export const timelineContent = style({
-  '@media': {
-    'screen and (max-width: 767px)': {
-      paddingLeft: 46,
-      paddingRight: 0,
-      paddingTop: 0,
-      paddingBottom: 0,
-    },
-  },
+  '@media': smallUp({
+    fontSize: 18,
+    lineHeight: '29px',
+  }),
 });
 
 export const timeLimeTitle = style({
   textAlign: 'left',
+  textWrap: 'balance',
   maxWidth: 339,
-  marginBottom: 24,
-  fontSize: 32,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   color: colorWhite,
-  lineHeight: '44px',
+  fontSize: 24,
+  marginBottom: 8,
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 24,
-      lineHeight: '33px',
-      marginBottom: 8,
-      maxWidth: 'unset',
-    },
-  },
+  '@media': smallUp({
+    fontSize: 32,
+    lineHeight: '44px',
+    marginBottom: 24,
+  }),
 });
 
 export const timeLineInfo = style({
   textAlign: 'left',
-  maxWidth: 476,
+  maxWidth: '44ch',
   marginBottom: 32,
   fontSize: 18,
   lineHeight: '29px',
-  fontFamily: manropeRegular,
+  fontWeight: 400,
   color: colorWhite,
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 16,
-      lineHeight: '22px',
-      maxWidth: 'unset',
-      marginBottom: 24,
+  selectors: {
+    '&:last-child': {
+      marginBottom: 0,
     },
   },
 });
 
 export const timeLineSubtitle = style({
   fontSize: 22,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   color: colorWhite,
 
   '@media': {
@@ -141,18 +80,131 @@ export const timeLineSubtitle = style({
 
 export const timelineDuration = style({
   textAlign: 'left',
-  background: ' linear-gradient(45deg, #EA347F 14.66%, #E23080 28.1%, #CC2484 50.02%, #A81189 76.18%, #9A098B 85.37%)',
-  color: 'transparent',
-  backgroundClip: 'text',
+
+  ...pinkTextGrad,
+
   fontSize: 24,
   lineHeight: '33px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
+  flex: '0 1 50%',
+  padding: 0,
+  order: 1,
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 18,
-      lineHeight: '29px',
+  selectors: {
+    '&&': {
       marginBottom: 16,
+      fontWeight: 600,
+      fontSize: 24,
+      lineHeight: '33px',
+      flex: '0 1 50%',
+      padding: 0,
     },
   },
+
+  '@media': {
+    '(min-width: 900px)': {
+      marginTop: 16,
+    },
+  },
+});
+
+export const timeline = style({
+  padding: '0 0 0 10px',
+});
+
+export const timelineItem = style({
+  paddingLeft: 56,
+  paddingTop: 19,
+  position: 'relative',
+
+  '@media': {
+    '(min-width: 900px)': {
+      gap: '72px',
+      flexFlow: 'row',
+      paddingLeft: 0,
+    },
+  },
+});
+
+export const timelineContent = style({
+  padding: 0,
+  flex: '1 1 50%',
+  order: 2,
+
+  selectors: {
+    '&&': {
+      marginBottom: 32,
+    },
+  },
+
+  '@media': {
+    '(min-width: 900px)': {
+      flex: '0 1 50%',
+      marginBottom: 80,
+      order: 'unset',
+    },
+  },
+});
+
+export const separator = style({
+  background: '#4388dd1a',
+  borderRadius: 2,
+  position: 'absolute',
+  left: 0,
+  top: 0,
+  height: '100%',
+  ////
+  flexGrow: 1,
+  width: 24,
+  boxSizing: 'border-box',
+  marginTop: 24,
+  display: 'flex',
+  transition: 'all .3s ease',
+  maskImage: 'linear-gradient(to bottom, white, transparent var(--tl-grad-mask))',
+  padding: '56px 12px 40px',
+
+  '@media': {
+    '(min-width: 900px)': {
+      left: 'unset',
+      top: 24,
+    },
+  },
+});
+
+export const separatorWrap = style({
+  position: 'absolute',
+  left: 0,
+  height: '100%',
+  top: 0,
+
+  '@media': {
+    '(min-width: 900px)': {
+      position: 'static',
+      height: 'auto',
+    },
+  },
+});
+
+export const dot = style({
+  aspectRatio: '1/1',
+  transition: 'all .3s ease',
+  transform: 'scale(0)',
+  width: 24,
+  background: colorPrimary,
+  margin: '24px 0',
+
+  selectors: {
+    '.appear-down &': {
+      transform: 'scale(1.5)',
+      boxShadow: '0 0 4px 20px #9A098B1A',
+    },
+  },
+});
+
+export const section = style({
+  marginBottom: 56,
+
+  '@media': smallUp({
+    marginBottom: 120,
+  }),
 });

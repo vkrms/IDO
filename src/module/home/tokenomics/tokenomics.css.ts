@@ -1,68 +1,106 @@
-import { colorPrimary, colorWhite } from '@/style/config/color.css';
-import { manropeRegular, manropeSemiBold } from '@/style/config/font.css';
+import { smallUp } from '@/style/config/breakpoints.css';
+import { colorWhite } from '@/style/config/color.css';
 
 import { style } from '@vanilla-extract/css';
 
 export const title = style({
-  marginBottom: 56,
-  fontSize: 56,
-  lineHeight: '76px',
-  color: colorWhite,
-  fontFamily: manropeSemiBold,
-  textAlign: 'center',
+  fontWeight: 600,
+  marginBottom: 48,
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 32,
-      lineHeight: '44px',
-      marginBottom: 22,
-    },
-  },
+  '@media': smallUp({
+    fontSize: 56,
+    lineHeight: '77px',
+    textAlign: 'center',
+  }),
 });
 
 export const box = style({
   display: 'flex',
-  justifyContent: 'space-between',
+  flexFlow: 'row wrap',
+  justifyContent: 'center',
   alignItems: 'center',
+  textAlign: 'left',
   gap: 32,
   marginBottom: 56,
 
   '@media': {
-    'screen and (max-width: 767px)': {
-      justifyContent: 'start',
-      marginBottom: 32,
+    '(min-width: 940px)': {
+      flexFlow: 'row',
+      justifyContent: 'space-between',
+    },
+
+    '(max-width: 1120px)': {
+      gap: 16,
+      marginInline: 'auto',
     },
   },
 });
 
 export const boxLeft = style({
-  maxWidth: 489,
-  fontSize: 48,
-  lineHeight: '66px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   color: colorWhite,
+  fontSize: 24,
+  lineHeight: '33px',
 
   '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 24,
-      lineHeight: '33px',
-      maxWidth: 'unset',
+    '(min-width:940px)': {
+      flex: '0 0 50%',
+      fontSize: 48,
+      lineHeight: '66px',
+      alignSelf: 'flex-start',
+      minWidth: 312,
     },
   },
 });
 
 export const boxRight = style({
-  maxWidth: 543,
-  fontSize: 18,
-  lineHeight: '25px',
-  fontFamily: manropeRegular,
+  fontWeight: 400,
   color: colorWhite,
+  maxWidth: 768,
 
   '@media': {
-    'screen and (max-width: 767px)': {
-      maxWidth: 'unset',
-      fontSize: 12,
-      lineHeight: '22px',
+    '(min-width: 600px)': {
+      fontSize: 18,
+      lineHeight: 1.7,
+    },
+    '(min-width: 720px)': {
+      flex: '0 1 48%',
+      minWidth: 312,
     },
   },
+});
+
+export const itemTitle = style({
+  marginBottom: 16,
+  fontSize: 16,
+  lineHeight: '22px',
+  fontWeight: 600,
+  color: '#686868',
+});
+
+export const itemText = style({
+  fontSize: 32,
+  color: colorWhite,
+  lineHeight: '44px',
+  fontWeight: 600,
+});
+
+export const bgLeft = style({
+  position: 'absolute',
+  top: 0,
+  left: 0,
+});
+
+export const bgRight = style({
+  position: 'absolute',
+  bottom: 0,
+  right: 0,
+});
+
+export const section = style({
+  marginBottom: 56,
+
+  '@media': smallUp({
+    marginBottom: 120,
+  }),
 });

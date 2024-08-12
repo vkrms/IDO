@@ -1,16 +1,17 @@
 import * as styles from '@/components/header.css';
+import { isVisible, menuIcon } from '@/components/header.css';
 
-import { HOME, LOGIN, OUR_TEAM, ROADMAP, TOKENOMICS, WHY_FLO_COIN } from '@/router/name';
-import { Button, Grid, IconButton, Typography } from '@mui/material';
+import { Button, Drawer, Grid, IconButton, Typography } from '@mui/material';
 
 import IconLogo from '@/assets/img//logo.svg';
-import IconMenu from '@/assets/svg/menu.svg';
-import NavMenu from '@/components/nav_menu';
-import { linkToBtn } from '@/style/common/link.css';
+import CloseIcon from '@/assets/svg/close.svg';
+import MenuIcon from '@/assets/svg/menu.svg';
+import { cn } from '@/lib/utils/cn';
 import { colorWhite } from '@/style/config/color.css';
-import classNames from 'classnames';
-import Link from 'next/link';
 import { useState } from 'react';
+import { CtaButton } from './ui/cta_button';
+
+//
 
 /**
  * ----------------------------------------------------------------------------------
@@ -22,73 +23,103 @@ import { useState } from 'react';
 
 // ----------------------------------------------------------------------------------
 
-export const pathList = [
-  {
-    text: 'Whitepaper',
-    route: HOME,
-  },
-  {
-    text: 'Why FloCoin',
-    route: WHY_FLO_COIN,
-  },
-  {
-    text: 'Tokenomics',
-    route: TOKENOMICS,
-  },
-  {
-    text: 'Our Team',
-    route: OUR_TEAM,
-  },
-  {
-    text: 'Roadmap',
-    route: ROADMAP,
-  },
-];
+const dataList = ['Why FloCoin', 'Tokenomics', 'Our Team', 'Roadmap'];
+
+function slugify(text: string) {
+  return text
+    .toLowerCase()
+    .replace(/ /g, '-')
+    .replace(/[^\w-]+/g, '');
+}
 
 // ----------------------------------------------------------------------------------
 
-export default function Header() {
+interface Props {
+  className?: string;
+  clickHandler?: () => void;
+}
+
+const Menu = ({ className, clickHandler }: Props) => {
+  return (
+    <Grid item {...{ className }}>
+      <Grid item>
+        <Grid className={cn(styles.list)}>
+          <Grid className={styles.item}>
+            <a href='https://eventflo.gitbook.io/eventflo' target='_new' className='menu-item'>
+              <Typography variant='inherit' className={styles.itemText}>
+                Whitepaper
+              </Typography>
+            </a>
+          </Grid>
+
+          {dataList.map((data) => (
+            <Grid key={data} className={styles.item}>
+              <a href={`#${slugify(data)}`} className='menu-item' onClick={clickHandler}>
+                <Typography variant='inherit' className={styles.itemText}>
+                  {data}
+                </Typography>
+              </a>
+            </Grid>
+          ))}
+        </Grid>
+      </Grid>
+
+      <Grid item>
+        <CtaButton>
+          <Button
+            variant='outlined'
+            sx={{ background: 'transparent', borderColor: colorWhite, color: colorWhite }}
+            fullWidth
+            className='btn-hover-fx'
+          >
+            Early Access
+          </Button>
+        </CtaButton>
+      </Grid>
+    </Grid>
+  );
+};
+
+export default function LandingHeader() {
   // ----------------------------------------------------------------------------------
 
-  const [menuState, setMenuState] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  // ----------------------------------------------------------------------------------
+  const toggleDrawer = () => {
+    setOpen(!open);
+  };
 
   return (
     <header className={styles.header}>
       <Grid container className={styles.headerCont}>
-        <Grid item>
-          <IconLogo width={176} />
+        <Grid item mb={'12px'}>
+          <IconLogo className={styles.logo} />
         </Grid>
-        <Grid item className={styles.listBox}>
-          <Grid className={styles.list}>
-            {pathList.map((data) => (
-              <Grid key={data.text} className={styles.item}>
-                <Link href={data.route} className={styles.itemText}>
-                  {data.text}
-                </Link>
-              </Grid>
-            ))}
-          </Grid>
-        </Grid>
-        <Grid item>
-          <IconButton size='large' sx={{ padding: 0 }} className={styles.menu} onClick={() => setMenuState(true)}>
-            <IconMenu />
-          </IconButton>
-          <Link href={LOGIN} className={classNames([styles.loginBtn, linkToBtn])}>
-            <Button
-              variant='outlined'
-              sx={{ background: 'transparent', borderColor: colorWhite, color: colorWhite }}
-              fullWidth
-            >
-              {/* Early Access */}
-              LOGIN
-            </Button>
-          </Link>
-        </Grid>
+
+        <Menu className={styles.menuWide} />
+
+        <IconButton className={styles.menuBtn} onClick={toggleDrawer}>
+          <CloseIcon className={cn(menuIcon, { [isVisible]: open })} />
+          <MenuIcon className={cn(menuIcon, { [isVisible]: !open })} />
+        </IconButton>
       </Grid>
 
-      {<NavMenu open={menuState} onClose={() => setMenuState(false)} />}
+      <Drawer
+        anchor='right'
+        open={open}
+        onClose={toggleDrawer}
+        className={styles.drawer}
+        PaperProps={{
+          sx: {
+            width: '100%',
+            background: 'rgba(12, 12, 12, 0.8)',
+            padding: '32px 16px',
+            backdropFilter: 'blur(4px)',
+          },
+        }}
+      >
+        <Menu className={styles.menuMobile} clickHandler={toggleDrawer} />
+      </Drawer>
     </header>
   );
 }

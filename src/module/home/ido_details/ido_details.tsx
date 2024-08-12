@@ -10,6 +10,7 @@ import * as styles from '@/module/home/tokenomics/tokenomics.css';
 
 import { Container, Typography } from '@mui/material';
 
+import Appear from '@/components/ui/appear';
 import TokenomicsList from '@/module/home/tokenomics/list';
 
 // ----------------------------------------------------------------------------------
@@ -17,8 +18,8 @@ import TokenomicsList from '@/module/home/tokenomics/list';
 const dataList = [
   { title: 'Launchpad', text: 'TBC' },
   { title: 'Launch Date & Time', text: 'TBC' },
-  { title: 'Token Price', text: '$0.05' },
-  { title: 'Available Allocation', text: '8%' },
+  { title: 'Token Price', text: '$0.25' },
+  { title: 'Available Allocation', text: '20%' },
 ];
 
 // ----------------------------------------------------------------------------------
@@ -26,12 +27,16 @@ const dataList = [
 export default function IdoDetails() {
   // ----------------------------------------------------------------------------------
   return (
-    <Container>
-      <Typography className={styles.title} sx={{ marginBottom: '56px' }}>
-        IDO Details
-      </Typography>
+    <Container className={styles.section}>
+      <Appear>
+        <Typography className={styles.title} variant='h2'>
+          IDO Details
+        </Typography>
 
-      <TokenomicsList list={dataList} cate='idoDetails' />
+        <div>
+          <TokenomicsList list={dataList} cate='idoDetails' />
+        </div>
+      </Appear>
     </Container>
   );
 }

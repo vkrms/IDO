@@ -1,4 +1,5 @@
 import 'react-toastify/dist/ReactToastify.css';
+import '@/style/common/main.scss';
 
 import type { ReactElement, ReactNode } from 'react';
 
@@ -7,6 +8,8 @@ import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ToastContainer } from 'react-toastify';
+
+import { GoogleTagManager } from '@next/third-parties/google';
 
 /**
  * ----------------------------------------------------------------------------------
@@ -35,6 +38,8 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
           name='viewport'
           content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover'
         />
+
+        <GoogleTagManager gtmId='G-2YH66SSP7K' />
       </Head>
 
       <ToastContainer hideProgressBar />

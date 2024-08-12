@@ -1,46 +1,35 @@
-import { manropeBold, manropeLight, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
-
+import { smallB, smallUp } from '@/style/config/breakpoints.css';
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
 
 export const title = style({
   marginBottom: 16,
-  fontSize: 56,
-  lineHeight: '76px',
   color: colorWhite,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   textAlign: 'center',
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 32,
-      lineHeight: '44px',
-      marginBottom: 8,
-    },
-  },
+  '@media': smallUp({
+    fontSize: 56,
+    lineHeight: '76px',
+  }),
 });
 
 export const subtitle = style({
-  fontSize: 18,
-  lineHeight: '29px',
-  fontFamily: manropeRegular,
+  fontWeight: 400,
   color: colorWhite,
   textAlign: 'center',
   marginBottom: 80,
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 14,
-      lineHeight: '22px',
-      marginBottom: 40,
-    },
-  },
+  '@media': smallUp({
+    fontSize: 18,
+    lineHeight: '29px',
+  }),
 });
 
 export const list = style({
   display: 'flex',
   gap: 40,
-  justifyContent: 'space-between',
+  justifyContent: 'space-evenly',
   alignItems: 'center',
 
   '@media': {
@@ -64,37 +53,76 @@ export const legendList = style({
 export const legendTitle = style({
   fontSize: 24,
   lineHeight: '36px',
-  fontFamily: manropeBold,
+  fontWeight: 700,
   marginBottom: 4,
+  position: 'relative',
+  paddingLeft: 12,
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 20,
-      lineHeight: '30px',
-      marginBottom: 8,
-    },
-  },
+  '@media': smallB({
+    fontSize: 20,
+    lineHeight: '30px',
+  }),
 });
 
 export const legendText = style({
   maxWidth: 544,
-  fontSize: 16,
-  lineHeight: '24px',
-  fontFamily: manropeLight,
+  fontWeight: 300,
   color: colorWhite,
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 12,
-      lineHeight: '18px',
-    },
-  },
+
+  '@media': smallUp({
+    fontSize: 16,
+    lineHeight: '24px',
+  }),
 });
 
 export const line = style({
   display: 'inline-block',
   marginRight: 6,
   width: 6,
-  height: 36,
   borderRadius: 2,
   verticalAlign: 'middle',
+  position: 'absolute',
+  height: '100%',
+  left: 0,
+});
+
+export const donut = style({
+  position: 'relative',
+});
+
+export const donutWrap = style({
+  position: 'relative',
+  objectFit: 'cover',
+  // flex: '0 1 384px',
+
+  // for tablet resolution
+  flex: '1 1 312px',
+  minWidth: 312,
+  maxWidth: 384,
+});
+
+export const xsVideo = style({
+  position: 'absolute',
+  aspectRatio: '1 / 1',
+  width: '156px',
+  margin: 'auto',
+  top: '0',
+  right: '0',
+  bottom: '0',
+  left: '0',
+  objectFit: 'cover',
+});
+
+export const legendWrap = style({
+  flex: '1 1 384px',
+  minWidth: 312,
+  maxWidth: 544,
+});
+
+export const section = style({
+  marginBottom: 56,
+
+  '@media': smallUp({
+    marginBottom: 120,
+  }),
 });

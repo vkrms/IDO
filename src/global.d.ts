@@ -1,5 +1,4 @@
 declare module '*.svg?url' {
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   const content: any;
   export default content;
 }
@@ -14,4 +13,9 @@ declare module 'lang-list' {
   }[];
 
   export default { getList };
+}
+
+declare module '*.html' {
+  const content: string;
+  export default content;
 }

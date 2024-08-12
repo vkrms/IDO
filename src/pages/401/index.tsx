@@ -1,5 +1,4 @@
 import { colorPrimary, colorWhite } from '@/style/config/color.css';
-import { manropeBold, manropeMedium, manropeRegular } from '@/style/config/font.css';
 import { Button, Typography } from '@mui/material';
 
 import { getLayout } from '@/components/layout/home';
@@ -27,19 +26,15 @@ const Unauthorized: NextPageWithLayout = () => {
         <Box height={256} />
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div>
-            <Typography variant='h1' align='center' sx={{ fontSize: 120, fontFamily: manropeBold, color: colorWhite }}>
+            <Typography variant='h1' align='center' sx={{ fontSize: 120, color: colorWhite }}>
               401
               <b style={{ color: colorPrimary, marginLeft: 12 }}>Oops!</b>
             </Typography>
-            <Typography variant='h2' align='center' sx={{ fontSize: 80, fontFamily: manropeMedium, color: colorWhite }}>
+            <Typography variant='h2' align='center' sx={{ fontSize: 80, color: colorWhite }}>
               Unauthorized
             </Typography>
             <Box height={24} />
-            <Typography
-              variant='subtitle1'
-              align='center'
-              sx={{ color: colorWhite, fontSize: 20, fontFamily: manropeRegular }}
-            >
+            <Typography variant='subtitle1' align='center' sx={{ color: colorWhite, fontSize: 20 }}>
               Access is allowed only for registered users, click on the button below to head on back to home base.
             </Typography>
             <Box height={24} />

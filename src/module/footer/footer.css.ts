@@ -1,31 +1,16 @@
-import { manropeRegular, manropeSemiBold } from '@/style/config/font.css';
-
 import { linkToBtn } from '@/style/common/link.css';
-import { colorWhite } from '@/style/config/color.css';
+import { colorWhite, glowColor } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
 
-export const footer = style({
-  padding: '56px 0 40px 0',
-  background: 'url(/img/footer/bg_1.png) bottom left no-repeat, url(/img/footer/bg_2.png) bottom right no-repeat',
-
-  '@media': {
-    'screen and (max-width: 767px)': {
-      background:
-        'url(/img/footer/bg_1_mobile.png) top left no-repeat, url(/img/footer/bg_2_mobile.png) bottom right no-repeat',
-    },
-  },
+export const disco = style({
+  padding: '56px 0 40px',
 });
 
 export const box = style({
   justifyContent: 'space-between',
   gap: 40,
-
-  '@media': {
-    'screen and (max-width: 767px)': {
-      gap: 32,
-      justifyContent: 'center',
-    },
-  },
+  borderBottom: '1px solid #fff3',
+  paddingBottom: 16,
 });
 
 export const logo = style({
@@ -56,16 +41,7 @@ export const text = style({
   fontSize: 18,
   lineHeight: '29px',
   color: colorWhite,
-  fontFamily: manropeRegular,
-
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 14,
-      lineHeight: '22px',
-      textAlign: 'center',
-      maxWidth: 'unset',
-    },
-  },
+  fontWeight: 400,
 });
 
 export const link = style({
@@ -84,10 +60,17 @@ export const link = style({
 export const linkText = style([
   linkToBtn,
   {
-    fontFamily: manropeSemiBold,
+    cursor: 'pointer',
+    fontWeight: 600,
     fontSize: 16,
     lineHeight: '22px',
     color: colorWhite,
+    transition: 'all .35s ease-out',
+    width: 'fit-content',
+
+    ':hover': {
+      color: '#e651d7',
+    },
   },
 ]);
 
@@ -96,11 +79,25 @@ export const copyright = style({
   textAlign: 'center',
   color: colorWhite,
   fontSize: 16,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
+});
+
+export const container = style({
+  zIndex: 1,
+  position: 'relative',
+});
+
+export const overflow = style({
+  height: '190vh',
+  overflow: 'hidden',
+  display: 'flex',
+  alignItems: 'flex-end',
+  marginTop: '-130vh',
 
   '@media': {
-    'screen and (max-width: 767px)': {
-      marginTop: 28,
+    '(min-width: 900px)': {
+      marginTop: '-1100px',
+      height: 1400,
     },
   },
 });

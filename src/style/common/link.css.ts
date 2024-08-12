@@ -10,6 +10,7 @@ import { style } from '@vanilla-extract/css';
 export const linkToBtn = style({
   border: 'transparent',
   textDecoration: 'none',
+  display: 'inline-block',
 
   ':hover': {
     border: 'transparent',

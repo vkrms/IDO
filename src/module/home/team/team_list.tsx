@@ -8,10 +8,12 @@
 
 import * as styles from '@/module/home/team/team_list.css';
 
-import { Box, CardMedia, Grid, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
-import FoundersListItem from '@/module/home/team/list_item';
-import type { StaticImageData } from 'next/image';
+import AppearList from '@/components/ui/appear-list';
+import EmblaCarousel from '@/components/ui/embla-carousel';
+import type { AlignmentOptionType } from 'node_modules/embla-carousel/esm/components/Alignment';
+import type { ScrollContainOptionType } from 'node_modules/embla-carousel/esm/components/ScrollContain';
 
 // ----------------------------------------------------------------------------------
 export type TeamData = {
@@ -22,7 +24,7 @@ export type TeamData = {
 // ----------------------------------------------------------------------------------
 
 export type FounderData = {
-  img: StaticImageData;
+  img: string;
   name: string;
   role: string;
   info: { title: string; text: string }[];
@@ -35,34 +37,27 @@ interface PropsType {
 }
 // ----------------------------------------------------------------------------------
 
+const emblaOptions = {
+  align: 'start' as AlignmentOptionType,
+  dragFree: true,
+  containScroll: 'keepSnaps' as ScrollContainOptionType,
+  breakpoints: {
+    '(min-width: 1040px)': { active: false },
+  },
+};
+
 export default function TeamList({ list }: PropsType) {
   return (
     <Box>
       {list.map((item) => (
         <Box key={item.title} className={styles.teamItem}>
-          <Typography className={styles.title}>{item.title}</Typography>
+          <Typography variant='h3' className={styles.title}>
+            {item.title}
+          </Typography>
 
-          <Grid container className={styles.list}>
-            {item.list.map((item) => (
-              <Grid item key={item.name} flexBasis={352} className={styles.item}>
-                <Box className={styles.header}>
-                  <Box className={styles.imgBox}>
-                    <CardMedia component='img' image={item.img.src} width={160} height={160} sx={{ maxWidth: 160 }} />
-                  </Box>
-                </Box>
-
-                <Box className={styles.itemPadding}>
-                  <Typography className={styles.name}>{item.name}</Typography>
-                  <Typography className={styles.role}>{item.role}</Typography>
-                  <Grid container className={styles.infoList}>
-                    {item.info.map((info) => (
-                      <FoundersListItem info={info} key={info.title} />
-                    ))}
-                  </Grid>
-                </Box>
-              </Grid>
-            ))}
-          </Grid>
+          <AppearList>
+            <EmblaCarousel slides={item.list} options={emblaOptions} />
+          </AppearList>
         </Box>
       ))}
     </Box>

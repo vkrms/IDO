@@ -1,92 +1,82 @@
-import { manropeBold, manropeLight, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
-
-import { colorWhite } from '@/style/config/color.css';
+import { smallB, smallUp } from '@/style/config/breakpoints.css';
+import { colorWhite, pinkTextGrad } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
+import { line } from '../token_allocation/token_allocation.css';
 
 export const title = style({
-  marginBottom: 72,
-  fontSize: 56,
-  lineHeight: '76px',
+  marginBottom: 32,
   color: colorWhite,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   textAlign: 'center',
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 32,
-      lineHeight: '44px',
-      marginBottom: 32,
-    },
-  },
+  '@media': smallUp({
+    marginBottom: 72,
+    fontSize: 56,
+    lineHeight: '76px',
+  }),
 });
 
 export const list = style({
-  display: 'flex',
   gap: '32px 52px',
-  justifyContent: 'space-between',
-
-  '@media': {
-    'screen and (max-width: 767px)': {
-      gap: 28,
-    },
-  },
+  justifyContent: 'space-evenly',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(288px, 336px))',
+  paddingInline: 12,
 });
 
 export const itemId = style({
-  background: ' linear-gradient(45deg, #EA347F 14.66%, #E23080 28.1%, #CC2484 50.02%, #A81189 76.18%, #9A098B 85.37%)',
-  color: 'transparent',
-  backgroundClip: 'text',
-  fontSize: 56,
-  lineHeight: '72px',
-  fontFamily: manropeBold,
+  ...pinkTextGrad,
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 40,
-      lineHeight: '52px',
-    },
-  },
+  fontWeight: 700,
+  marginBottom: 8,
+  aspectRatio: '1 / 1',
+  width: 72,
+  height: 'auto',
+  objectPosition: 'left',
+  objectFit: 'none',
+
+  '@media': smallB({
+    fontSize: 40,
+    lineHeight: '52px',
+  }),
 });
 
 export const itemTitle = style({
-  maxWidth: 250,
   marginBottom: 8,
-  fontSize: 24,
+  fontSize: 23,
   lineHeight: '33px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   color: colorWhite,
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 20,
-      lineHeight: '27px',
-      maxWidth: 'unset',
-    },
-  },
+  '@media': smallB({
+    fontSize: 20,
+    lineHeight: '27px',
+  }),
 });
 
 export const itemText = style({
   maxWidth: 350,
-  fontSize: 16,
-  lineHeight: '24px',
   color: colorWhite,
-  fontFamily: manropeLight,
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 12,
-      lineHeight: '18px',
-    },
-  },
+  fontWeight: 300,
+
+  '@media': smallUp({
+    fontSize: 16,
+    lineHeight: '24px',
+  }),
 });
 
-export const btnBox = style({
-  marginTop: 72,
-  textAlign: 'center',
+export const section = style({
+  marginBottom: 56,
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      marginTop: 40,
-      textAlign: 'left',
-    },
-  },
+  '@media': smallUp({
+    marginBottom: 120,
+  }),
+});
+
+export const btnWrap = style({
+  marginTop: 40,
+
+  '@media': smallUp({
+    marginTop: 72,
+  }),
 });

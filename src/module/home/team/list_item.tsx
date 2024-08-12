@@ -5,14 +5,18 @@
  *
  * @author shuangshuang 2024/4/11
  */
+import { Grid, IconButton, Typography } from '@mui/material';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
 
+import IconArrowRight from '@/assets/img//home/team/arrow_right.svg';
 import * as styles from '@/module/home/team/team_list.css';
 
-import { Grid, IconButton, Typography } from '@mui/material';
-
-import IconArrowDown from '@/assets/img//home/team/arrow_down.svg';
-import IconArrowRight from '@/assets/img//home/team/arrow_right.svg';
-import { useState } from 'react';
+const accordionTextAnimation = {
+  initial: { opacity: 0, height: 0 },
+  animate: { opacity: 1, height: 'auto', transition: { duration: 0.3 } },
+  exit: { opacity: 0, height: 0, transition: { duration: 0.3 } },
+};
 
 // ----------------------------------------------------------------------------------
 
@@ -29,24 +33,37 @@ interface PropsType {
 
 export default function FoundersListItem({ info }: PropsType) {
   const [expState, setExpState] = useState(false);
+
+  function toggle() {
+    setExpState(!expState);
+  }
+
   // ----------------------------------------------------------------------------------
   return (
-    <Grid item key={info.title} sx={{ width: '100%' }}>
-      <Grid
-        container
-        alignItems='center'
-        sx={{ gap: '4px', width: '100%', display: 'grid', gridTemplateColumns: 'auto 18px', gridGap: '8px' }}
-        justifyContent='space-between'
-      >
-        <Typography className={styles.infoTitle}>{info.title}</Typography>
-        <IconButton
-          sx={{ width: 18, height: 18, background: 'transparent', '&:hover': { background: 'transparent' } }}
-          onClick={() => setExpState(!expState)}
+    <Grid item key={info.title}>
+      <Grid container gap={2} alignItems='center' className={styles.cardItemTitle} onClick={toggle}>
+        <Grid>
+          <Typography className={styles.infoTitle}>{info.title}</Typography>
+        </Grid>
+
+        <motion.div
+          style={{ width: 18, height: 18, display: 'grid' }}
+          animate={{ rotate: expState ? 90 : 0 }}
+          transition={{ duration: 0.3 }}
         >
-          {expState ? <IconArrowDown /> : <IconArrowRight />}
-        </IconButton>
+          <IconButton sx={{ width: 18, height: 18 }}>
+            <IconArrowRight />
+          </IconButton>
+        </motion.div>
       </Grid>
-      {expState && <Typography className={styles.infoText}>{info.text}</Typography>}
+
+      <AnimatePresence>
+        {expState && (
+          <motion.div {...accordionTextAnimation}>
+            <Typography className={styles.infoText}>{info.text}</Typography>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </Grid>
   );
 }

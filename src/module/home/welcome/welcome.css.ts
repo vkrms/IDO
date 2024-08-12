@@ -1,126 +1,147 @@
-import {
-  electrolizeRegular,
-  manropeBold,
-  manropeMedium,
-  manropeRegular,
-  manropeSemiBold,
-} from '@/style/config/font.css';
-
-import { colorWhite } from '@/style/config/color.css';
+import { smallUp } from '@/style/config/breakpoints.css';
+import { colorWhite, pinkTextGrad } from '@/style/config/color.css';
+import { electrolizeRegular } from '@/style/config/font.css';
 import { style } from '@vanilla-extract/css';
 
-export const bg = style({
-  paddingTop: 108,
-  background: 'url(/img/home/welcome/bg_1.png) top left no-repeat, url(/img/home/welcome/bg_2.png) top right no-repeat',
-  backgroundSize: 'contain',
+export const container = style({
+  // position: 'absolute',
+  position: 'relative',
+  top: 0,
+  left: 0,
+  right: 0,
+  zIndex: 1,
 });
 
 export const title1 = style({
-  fontSize: 18,
-  lineHeight: '25px',
-  fontFamily: manropeMedium,
-  color: colorWhite,
+  fontSize: 14,
+  lineHeight: 1.35,
+  fontWeight: 700,
   textAlign: 'center',
+  marginBottom: 24,
+  color: '#fff',
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 14,
-      lineHeight: '19px',
-    },
-  },
+  // ...pinkTextGrad,
+
+  '@media': smallUp({
+    fontSize: 25,
+  }),
 });
 
 export const title2 = style({
-  marginBottom: 8,
-  fontSize: 64,
-  lineHeight: '88px',
-  fontFamily: manropeBold,
-  color: colorWhite,
+  marginBottom: 12,
+  fontSize: 48,
+  lineHeight: 1,
+  fontWeight: 700,
+  // color: colorWhite,
   textAlign: 'center',
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 48,
-      lineHeight: '66px',
-    },
-  },
+  '@media': smallUp({
+    fontSize: 72,
+    marginBottom: 16,
+  }),
 });
 
 export const title3 = style({
-  marginBottom: 32,
-  fontSize: 18,
-  lineHeight: '29px',
-  color: colorWhite,
-  fontFamily: manropeRegular,
+  marginBottom: 50,
+  fontWeight: 400,
   textAlign: 'center',
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      margin: '0 auto 32px',
-      maxWidth: 310,
-      fontSize: 14,
-      lineHeight: '22px',
-    },
-  },
+  '@media': smallUp({
+    fontSize: 18,
+    maxWidth: '64ch',
+    marginInline: 'auto',
+    marginBottom: 32,
+  }),
 });
 
 export const list = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  gap: 32,
-  marginBottom: 40,
+  gap: '0.6em',
+  marginBottom: 32,
 
   '@media': {
-    'screen and (max-width: 767px)': {
-      gap: 16,
-      marginBottom: 56,
+    'screen and (min-width: 648px)': {
+      gap: 32,
+      marginBottom: 64,
     },
   },
 });
 
+// group of digits
 export const itemValueList = style({
-  gap: 8,
+  gap: '0.14em',
   alignItems: 'center',
-});
-
-export const itemValue = style({
-  padding: '12px 16px',
-  borderRadius: 6,
-  border: `2px solid ${colorWhite}`,
-  fontSize: 40,
-  lineHeight: '64px',
   fontFamily: electrolizeRegular,
-  color: colorWhite,
+  display: 'flex',
 
   '@media': {
-    'screen and (max-width: 767px)': {
-      padding: 12,
-      fontSize: 18,
-      lineHeight: '29px',
+    'screen and (min-width: 648px)': {
+      gap: 8,
     },
   },
+});
+
+// digit in a box
+export const itemValue = style({
+  display: 'grid',
+  placeContent: 'center',
+  borderRadius: 6,
+  border: '0.066em solid #fff',
+  color: colorWhite,
+  fontSize: 18,
+  aspectRatio: '1/1',
+  lineHeight: 1.77,
+  width: '1.77em',
+  height: 'auto',
+
+  '@media': smallUp({
+    fontSize: 40,
+    width: '1.6em',
+    height: '1.6em',
+    lineHeight: '1.6em',
+  }),
 });
 
 export const itemKey = style({
-  marginTop: 16,
+  textTransform: 'capitalize',
   textAlign: 'center',
-  fontSize: 18,
-  lineHeight: '29px',
   color: colorWhite,
-  fontFamily: manropeRegular,
+  marginTop: 8,
+  fontWeight: 400,
+  display: 'block',
+  fontSize: 14,
+  lineHeight: 1.57,
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 14,
-      lineHeight: '22px',
-    },
-  },
+  '@media': smallUp({
+    fontSize: 18,
+    lineHeight: '29px',
+  }),
 });
 
 export const imgBox = style({
-  marginTop: 40,
+  marginTop: 64,
+  marginBottom: 64,
   position: 'relative',
+  display: 'flex',
+  justifyContent: 'center',
+  zIndex: 1,
+
+  '@media': smallUp({
+    marginBottom: 120,
+  }),
+});
+
+export const playBtn = style({
+  transition: 'all 0.3s ease',
+
+  selectors: {
+    '&:hover': {
+      transform: 'scale(1.1)',
+      cursor: 'pointer',
+    },
+  },
 });
 
 export const iconBox = style({
@@ -133,6 +154,15 @@ export const iconBox = style({
   justifyContent: 'center',
   width: '100%',
   height: '100%',
+  marginInline: 'auto',
+  transition: 'all 0.3s ease',
+
+  selectors: {
+    '&.isVideoPlaying': {
+      opacity: 0,
+      visibility: 'hidden',
+    },
+  },
 });
 
 export const founderTitle = style({
@@ -140,7 +170,7 @@ export const founderTitle = style({
   textAlign: 'center',
   fontSize: 28,
   lineHeight: '38px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   color: colorWhite,
 
   '@media': {
@@ -154,19 +184,12 @@ export const founderTitle = style({
 
 export const founderBold = style({
   textAlign: 'center',
-  background: ' linear-gradient(45deg, #EA347F 14.66%, #E23080 28.1%, #CC2484 50.02%, #A81189 76.18%, #9A098B 85.37%)',
-  color: 'transparent',
-  backgroundClip: 'text',
+
+  ...pinkTextGrad,
+
   fontSize: 28,
   lineHeight: '38px',
-  fontFamily: manropeSemiBold,
-
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 20,
-      lineHeight: '27px',
-    },
-  },
+  fontWeight: 600,
 });
 
 export const founderList = style({
@@ -174,24 +197,18 @@ export const founderList = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  gap: 32,
   flexWrap: 'wrap',
+  maxWidth: 900,
+  marginInline: 'auto',
+  gap: 32,
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      gap: 18,
-      marginBottom: 56,
-      justifyContent: 'space-around',
-    },
-  },
+  '@media': smallUp({
+    gap: '28px 56px',
+  }),
 });
 
-export const img = style({
-  height: 28,
-
-  '@media': {
-    'screen and (max-width: 767px)': {
-      height: 18,
-    },
-  },
+export const logo = style({
+  width: 'auto',
+  height: 'auto',
+  maxWidth: 152,
 });

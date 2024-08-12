@@ -1,5 +1,4 @@
 import { colorWhite } from '@/style/config/color.css';
-import { manropeMedium } from '@/style/config/font.css';
 import { zIndexHeader } from '@/style/config/zindex.css';
 import { style } from '@vanilla-extract/css';
 
@@ -32,7 +31,6 @@ export const item = style({
 
 export const itemText = style({
   fontSize: 16,
-  fontFamily: manropeMedium,
   color: colorWhite,
   whiteSpace: 'nowrap',
 });

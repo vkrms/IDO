@@ -1,5 +1,4 @@
-import { colorPrimary, colorWhite } from '@/style/config/color.css';
-import { manropeBold, manropeMedium, manropeRegular } from '@/style/config/font.css';
+import { colorPrimary } from '@/style/config/color.css';
 import { Button, Typography } from '@mui/material';
 
 import { getLayout } from '@/components/layout/home';
@@ -27,19 +26,15 @@ const NotFound: NextPageWithLayout = () => {
         <Box height={256} />
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div>
-            <Typography variant='h1' align='center' sx={{ fontSize: 120, fontFamily: manropeBold, color: colorWhite }}>
+            <Typography variant='h1' align='center' sx={{ fontSize: 120 }}>
               404
               <b style={{ color: colorPrimary, marginLeft: 12 }}>Oops!</b>
             </Typography>
-            <Typography variant='h2' align='center' sx={{ fontSize: 80, fontFamily: manropeMedium, color: colorWhite }}>
+            <Typography variant='h2' align='center' sx={{ fontSize: 80 }}>
               Page Not Found
             </Typography>
             <Box height={24} />
-            <Typography
-              variant='subtitle1'
-              align='center'
-              sx={{ color: colorWhite, fontSize: 20, fontFamily: manropeRegular }}
-            >
+            <Typography variant='subtitle1' align='center' sx={{ fontSize: 20 }}>
               Sorry the page you are looking for does not exist, click the <br />
               button below to head on back to the home base.
             </Typography>

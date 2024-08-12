@@ -1,7 +1,6 @@
+import { small } from '@/style/config/breakpoints.css';
 import { colorPrimary, colorWhite } from '@/style/config/color.css';
 import { style, styleVariants } from '@vanilla-extract/css';
-
-import { manropeSemiBold } from '@/style/config/font.css';
 
 export const infoBox = style({
   position: 'relative',
@@ -10,6 +9,7 @@ export const infoBox = style({
   borderRadius: 16,
   overflow: 'hidden',
   background: 'rgba(154, 9, 139, 0.10)',
+  textAlign: 'center',
 });
 
 export const list = style({
@@ -18,8 +18,13 @@ export const list = style({
   gap: 56,
 
   '@media': {
-    'screen and (max-width: 767px)': {
-      gap: 40,
+    '(min-width: 500px)': {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+    },
+    '(min-width: 1110px)': {
+      display: 'flex',
+      flexFlow: 'row nowrap',
     },
   },
 });
@@ -30,9 +35,17 @@ export const item = style({
   alignItems: 'center',
 
   '@media': {
-    'screen and (max-width: 767px)': {
-      gap: 40,
-      flexDirection: 'column',
+    [small]: {
+      paddingRight: 0,
+      paddingBottom: 40,
+      borderRight: 'none',
+      borderBottom: `1px solid ${colorPrimary}`,
+    },
+  },
+
+  selectors: {
+    '&:last-child': {
+      borderRight: '1px solid transparent',
     },
   },
 });
@@ -55,15 +68,16 @@ export const itemTitle = style({
   marginBottom: 16,
   fontSize: 16,
   lineHeight: '22px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   color: '#686868',
+  textAlign: 'center',
 });
 
 export const itemText = style({
   fontSize: 32,
   color: colorWhite,
   lineHeight: '44px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
 });
 
 export const bgPosVar = styleVariants({

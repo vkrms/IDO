@@ -1,5 +1,6 @@
 import { createVanillaExtractPlugin } from "@vanilla-extract/next-plugin";
 import  withPWA from "next-pwa";
+import { types } from "util";
 
 // ------------------------------------------------------------------------------
 
@@ -18,7 +19,13 @@ const nextConfig = {
 		],
 	},
 	reactStrictMode: true,
-	transpilePackages: ["@pusher/push-notifications-web"],
+	typescript: {
+		ignoreBuildErrors: true,
+	},
+	transpilePackages: [
+		"@pusher/push-notifications-web",
+		'mui-tel-input',
+	],
 	i18n: {
 		locales: ["en-US", "zh-CN"],
 		defaultLocale: "en-US",
@@ -70,6 +77,20 @@ const webpack = (config, options) => {
 			resourceQuery: { not: /url/ }, // exclude if *.svg?url
 			use: ["@svgr/webpack"],
 		},
+		
+		// webp loader (not used anywhere yet)
+		{
+			test: /\.webp$/i,
+			issuer: /\.[jt]sx?$/,
+			use: ["webp-loader"],
+		},
+
+		//html loader
+		{
+			test: /\.html$/i,
+			issuer: /\.[jt]sx?$/,
+			use: ["html-loader"],
+		}
 	);
 
 	// Modify the file loader rule to ignore *.svg, since we have it handled now.

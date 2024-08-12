@@ -4,8 +4,8 @@ import { CssBaseline } from '@mui/material';
 import { StyledEngineProvider, ThemeProvider, createTheme } from '@mui/material/styles';
 
 import { colorPrimary, colorTextBlack, colorTextGrey, colorWhite } from '@/style/config/color.css';
-import { manropeBold, manropeMedium } from '@/style/config/font.css';
-import { borderColor, borderRadius, height, maxWidth } from '@mui/system';
+
+const smallUp = '@media (min-width:600px)';
 
 /**
  * ----------------------------------------------------------------------------------
@@ -19,6 +19,125 @@ import { borderColor, borderRadius, height, maxWidth } from '@mui/system';
 // ----------------------------------------------------------------------------------
 
 const theme = createTheme({
+  typography: {
+    fontFamily: 'var(--font-manrope)',
+    fontWeightRegular: 400,
+    fontSize: 15,
+
+    body1: {
+      fontSize: 16,
+      lineHeight: 1.5,
+    },
+
+    h1: {
+      fontSize: 40,
+      color: colorWhite,
+    },
+
+    h2: {
+      fontSize: 32,
+      lineHeight: '44px',
+      marginBottom: 32,
+      textAlign: 'center',
+      fontWeight: 600,
+
+      [smallUp]: {
+        fontSize: 56,
+        lineHeight: '76px',
+      },
+      // styleOverrides: {
+      //   root: {
+      //     fontSize: 30,
+      //     fontWeight: 500,
+      //   },
+      // },
+    },
+    h3: {
+      fontSize: 24,
+      lineHeight: '33px',
+      fontWeight: 500,
+    },
+    subtitle1: {
+      fontSize: 18,
+      lineHeight: '25px',
+      fontWeight: 600,
+    },
+    subtitle2: {
+      fontSize: 18,
+      lineHeight: '25px',
+      fontWeight: 600,
+    },
+    subText1: {
+      fontSize: 30,
+      fontWeight: 600,
+    },
+    subText2: {
+      fontSize: 24,
+      lineHeight: '33px',
+      fontWeight: 600,
+    },
+    subText3: {
+      fontSize: 20,
+      fontWeight: 700,
+    },
+    subText4: {
+      fontSize: 18,
+      fontWeight: 700,
+    },
+    subText5: {
+      fontSize: 16,
+      lineHeight: '24px',
+      fontWeight: 600,
+    },
+    subText6: {
+      fontSize: 16,
+      lineHeight: '24px',
+      fontWeight: 500,
+    },
+    subText7: {
+      fontSize: 15,
+      fontWeight: 500,
+    },
+    subText8: {
+      fontSize: 14,
+      lineHeight: '19px',
+      fontWeight: 500,
+    },
+    subText9: {
+      fontSize: 13,
+      fontWeight: 500,
+    },
+    subText10: {
+      fontSize: 12,
+      lineHeight: '18px',
+      fontWeight: 500,
+    },
+    subText11: {
+      fontSize: 12,
+      WebkitTransform: 'scale(0.84)',
+      lineHeight: '14px',
+      fontWeight: 500,
+    },
+    subText12: {
+      fontSize: 18,
+      lineHeight: '25px',
+      fontWeight: 400,
+    },
+    subText13: {
+      fontSize: 15,
+      fontWeight: 400,
+    },
+    subText14: {
+      fontSize: 12,
+      lineHeight: '18px',
+      fontWeight: 400,
+    },
+    subText15: {
+      fontSize: 12,
+      WebkitTransform: 'scale(0.66)',
+      fontWeight: 400,
+    },
+  },
   palette: {
     primary: {
       main: colorPrimary,
@@ -28,72 +147,38 @@ const theme = createTheme({
     },
 
     text: {
-      primary: colorTextBlack,
+      primary: colorWhite,
       secondary: colorTextGrey,
     },
   },
   components: {
-    MuiInputBase: {
+    MuiFormControl: {
       styleOverrides: {
         root: {
-          '&.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline': {
-            borderColor: colorWhite,
-          },
-
-          '&.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: colorWhite,
-          },
-          '&.MuiInput-underline:before': {
-            height: 48,
-            borderRadius: 8,
-            border: `1px solid ${colorWhite}`,
-          },
-          '&.MuiInput-underline:after': {
-            border: 'none',
-          },
-
-          '&.MuiInput-underline.MuiInput-root:hover:before': {
-            border: `1px solid ${colorWhite}`,
-          },
-          '&.MuiInput-underline.MuiInput-root.Mui-focused:hover:before': {
-            border: `1px solid ${colorWhite}`,
-          },
-        },
-        input: {
-          paddingTop: '12px',
-          paddingBottom: '12px',
-          color: colorWhite,
+          width: '100%',
+          maxWidth: 424,
+          marginBottom: 16,
         },
       },
     },
-    MuiOutlinedInput: {
-      styleOverrides: {
-        input: {
-          paddingTop: '12px',
-          paddingBottom: '12px',
-          color: colorWhite,
-        },
-        notchedOutline: {
-          border: `1px solid ${colorWhite}`,
-          height: 48,
-          borderRadius: '8px',
-        },
-      },
-    },
-    MuiInputAdornment: {
-      styleOverrides: {
-        root: {
-          paddingLeft: '16px',
-          marginRight: '16px',
-        },
-      },
-    },
-    MuiButtonBase: {
-      styleOverrides: {
-        root: {
-          '&.MuiPhoneNumber-flagButton': {
-            maxWidth: 24,
-          },
+    MuiTypography: {
+      defaultProps: {
+        variantMapping: {
+          subText1: 'p',
+          subText2: 'p',
+          subText3: 'p',
+          subText4: 'p',
+          subText5: 'p',
+          subText6: 'p',
+          subText7: 'p',
+          subText8: 'p',
+          subText9: 'p',
+          subText10: 'p',
+          subText11: 'p',
+          subText12: 'p',
+          subText13: 'p',
+          subText14: 'p',
+          subText15: 'p',
         },
       },
     },
@@ -131,6 +216,13 @@ const theme = createTheme({
         },
       },
     },
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          paddingInline: 20,
+        },
+      },
+    },
     MuiCardHeader: {
       styleOverrides: {
         root: {
@@ -150,7 +242,9 @@ const theme = createTheme({
     },
     MuiPaper: {
       styleOverrides: {
-        root: {},
+        root: {
+          background: 'transparent',
+        },
         outlined: {
           '&.MuiTableContainer-root': {
             width: 'auto',
@@ -168,6 +262,45 @@ const theme = createTheme({
         },
       },
     },
+    // MuiTableHead: {
+    //   styleOverrides: {
+    //     root: {
+    //       background: colorBgGreyDark,
+    //     },
+    //   },
+    // },
+    MuiInputAdornment: {
+      styleOverrides: {
+        root: {
+          color: '#fff',
+        },
+      },
+    },
+    // MuiTableCell: {
+    //   styleOverrides: {
+    //     root: {
+    //       padding: '18px 40px',
+    //       borderBottom: `1px solid ${colorBorder}`,
+    //     },
+    //     sizeMedium: {},
+    //     sizeSmall: {
+    //       padding: '12px 0',
+    //     },
+    //     head: {
+    //       padding: '24px 16px',
+    //       fontSize: 18,
+    //       color: colorTextBlack,
+    //       fontWeight: 500,
+    //     },
+    //     body: {
+    //       padding: '18px 40px',
+    //       fontSize: 15,
+    //       lineHeight: '18px',
+    //       color: colorWhite,
+    //       fontWeight: 400,
+    //     },
+    //   },
+    // },
     MuiButton: {
       styleOverrides: {
         root: {
@@ -204,17 +337,17 @@ const theme = createTheme({
         textSizeLarge: {
           fontSize: 16,
           lineHeight: '24px',
-          fontFamily: manropeMedium,
+          fontWeight: 500,
         },
         textSizeMedium: {
           fontSize: 16,
           lineHeight: '24px',
-          fontFamily: manropeMedium,
+          fontWeight: 500,
         },
         textSizeSmall: {
           fontSize: 14,
           lineHeight: '24px',
-          fontFamily: manropeBold,
+          fontWeight: 700,
         },
       },
     },
@@ -226,10 +359,12 @@ const theme = createTheme({
 export const CustomThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <StrictMode>
-      <CssBaseline />
-
       <StyledEngineProvider injectFirst>
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+
+          {children}
+        </ThemeProvider>
       </StyledEngineProvider>
     </StrictMode>
   );

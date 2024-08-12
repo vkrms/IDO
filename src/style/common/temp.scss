@@ -1,0 +1,92 @@
+// here we experiment with hero button animation
+
+.pulse {
+    position: relative;
+    height: 64px;
+    line-height: 64px;
+    box-shadow: 0 0 0 0 transparent;
+    animation: pulseB 3s infinite ease-in-out;
+    will-change: transform, box-shadow;
+    font-size: 19px;
+    border-radius: 16px;
+    transition: all .3s ease;
+}
+
+@keyframes pulseB {
+    5% {
+        box-shadow: 0 0 4px 0 #9A098B;
+    }
+
+    70% {
+        box-shadow: 0 0 8px 8px #ffbaf87b;
+    }
+
+    90% {
+        box-shadow: 0 0 8px 12px #f4a5ec65;
+    }
+}
+
+.double-box-shadow {
+    box-shadow: 0 0 2px 0px #fff, 0 0 8px 4px #c167ee;
+}
+
+// @keyframes float {
+//     0% {
+//         transform: translateY(0) rotate(0);
+//     }
+
+//     25% {
+//         transform: translateY(-6px) rotate(-1.5deg);
+//     }
+
+//     40% {
+//         transform: translateY(-3px) rotate(-0.5deg);
+//     }
+
+//     50% {
+//         transform: translateY(0px) rotate(-0.5deg);
+//     }
+
+//     75% {
+//         transform: translateY(6px) rotate(1.5deg);
+//     }
+
+//     100% {
+//         transform: translateY(0) rotate(0);
+//     }
+// }
+
+.temp__viewport {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 300 / 150;
+    background: #fff;
+    padding: 64px;
+}
+
+.tuesday {
+    box-shadow: 0 0 0 0 rgba(154, 9, 140, 0.4);
+    // box-shadow: 0 0 0 0 rgba(88, 120, 243, 0.4);
+    animation: tuesday 3s infinite;
+    // background: #5265ea;
+    background: rgba(154, 9, 140, 1);;
+    padding: 16px 32px;
+    border-radius: 12px;
+    height: 64px;
+    font-size: 18px;
+}
+
+@keyframes tuesday {
+    0% {
+        box-shadow: 0 0 0 0 rgba(154, 9, 140, 1);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(154, 9, 140, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 50px rgba(154, 9, 140, 0);
+    }
+}

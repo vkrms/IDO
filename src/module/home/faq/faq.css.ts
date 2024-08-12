@@ -1,21 +1,24 @@
-import { manropeBold, manropeLight, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
-
+import { smallUp } from '@/style/config/breakpoints.css';
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
 
 export const title = style({
   marginBottom: 56,
-  fontSize: 56,
-  lineHeight: '76px',
+
   color: colorWhite,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   textAlign: 'center',
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 32,
-      lineHeight: '44px',
-      marginBottom: 40,
-    },
-  },
+  '@media': smallUp({
+    fontSize: 56,
+    lineHeight: '76px',
+  }),
+});
+
+export const section = style({
+  marginBottom: 104,
+
+  '@media': smallUp({
+    marginBottom: 120,
+  }),
 });

@@ -6,7 +6,10 @@
  * @author shuangshuang 2024/4/11
  */
 
+import Appear from '@/components/ui/appear';
+import AppearList from '@/components/ui/appear-list';
 import * as styles from '@/module/home/use_cases/use_cases.css';
+import Icon from '@mui/material/Icon';
 
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 
@@ -20,7 +23,7 @@ const list = [
   {
     id: '02',
     title: 'Governance',
-    text: "Gives FloCoin holders a voice in the platform's evolution.",
+    text: `Gives FloCoin holders a voice in the platform's evolution & important decisions.`,
   },
   {
     id: '03',
@@ -29,7 +32,7 @@ const list = [
   },
   {
     id: '04',
-    title: 'Premier Events & Merchandise',
+    title: 'Exclusive Offers',
     text: 'Access to unique events and limited-edition merchandise purchasable only with FloCoin.',
   },
   {
@@ -48,19 +51,29 @@ const list = [
 export default function UseCases() {
   // ----------------------------------------------------------------------------------
   return (
-    <Container>
-      <Typography className={styles.title}>FloCoin Use Cases</Typography>
-      <Grid container className={styles.list}>
-        {list.map((item) => (
-          <Grid item key={item.id}>
-            <Typography className={styles.itemId}>{item.id}</Typography>
-            <Typography className={styles.itemTitle}>{item.title}</Typography>
-            <Typography className={styles.itemText}>{item.text}</Typography>
-          </Grid>
-        ))}
-      </Grid>
-      <Box className={styles.btnBox}>
-        <Button variant='contained'>Explore Tokenomics</Button>
+    <Container className={styles.section}>
+      <Appear>
+        <Typography variant='h2' className={styles.title}>
+          FloCoin Use Cases
+        </Typography>
+      </Appear>
+
+      <AppearList>
+        <Grid container className={styles.list}>
+          {list.map((item) => (
+            <Grid item key={item.id} className='stagger'>
+              <Icon component='img' src={`/img/${item.id}.svg`} className={styles.itemId} />
+              <Typography className={styles.itemTitle}>{item.title}</Typography>
+              <Typography className={styles.itemText}>{item.text}</Typography>
+            </Grid>
+          ))}
+        </Grid>
+      </AppearList>
+
+      <Box textAlign='center' className={styles.btnWrap}>
+        <Button variant='contained' size='large' href='https://online.publuu.com/533650/1195962' target='_new'>
+          Explore in-depth Tokenomics
+        </Button>
       </Box>
     </Container>
   );

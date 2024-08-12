@@ -1,5 +1,4 @@
-import { manropeMedium, manropeRegular, manropeSemiBold } from '@/style/config/font.css';
-
+import { smallUp } from '@/style/config/breakpoints.css';
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
 
@@ -14,25 +13,30 @@ export const teamItem = style({
 
 export const title = style({
   marginBottom: 48,
-  fontSize: 32,
-  lineHeight: '44px',
-  fontFamily: manropeSemiBold,
-  color: colorWhite,
   textAlign: 'center',
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      fontSize: 24,
-      lineHeight: '33px',
-      marginBottom: 32,
-    },
-  },
+  '@media': smallUp({
+    fontSize: 32,
+    lineHeight: '44px',
+  }),
 });
 
 export const list = style({
   position: 'relative',
   gap: 32,
-  justifyContent: 'center',
+  justifyContent: 'left',
+  flexFlow: 'row',
+  maxWidth: '100%',
+  overflow: 'auto',
+  padding: 32,
+
+  '@media': {
+    '(min-width: 1200px)': {
+      paddingInline: 0,
+      justifyContent: 'center',
+      overflow: 'visible',
+    },
+  },
 });
 
 export const item = style({
@@ -45,6 +49,7 @@ export const itemPadding = style({
 });
 
 export const header = style({
+  transformStyle: 'preserve-3d',
   position: 'relative',
   width: '100%',
   height: 160,
@@ -53,6 +58,7 @@ export const header = style({
 });
 
 export const imgBox = style({
+  transformStyle: 'preserve-3d',
   position: 'absolute',
   width: '100%',
   height: '100%',
@@ -68,7 +74,7 @@ export const name = style({
   marginBottom: 4,
   fontSize: 24,
   lineHeight: '33px',
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
   textAlign: 'center',
   color: colorWhite,
 });
@@ -76,27 +82,30 @@ export const name = style({
 export const role = style({
   fontSize: 20,
   lineHeight: '27px',
-  fontFamily: manropeMedium,
+  fontWeight: 500,
   color: colorWhite,
   textAlign: 'center',
   marginBottom: 38,
 });
 
+export const cardGrid = style({
+  borderRadius: 8,
+  backgroundColor: '#9A098B1A',
+  maxWidth: 352,
+  flexBasis: 288,
+  flexGrow: 1,
+});
+
 export const infoList = style({
-  padding: 0,
+  padding: '0 16px 32px',
   gap: 28,
-  '@media': {
-    'screen and (max-width: 767px)': {
-      gap: 20,
-    },
-  },
 });
 
 export const infoTitle = style({
   fontSize: 18,
   lineHeight: '27px',
   color: colorWhite,
-  fontFamily: manropeSemiBold,
+  fontWeight: 600,
 });
 
 export const infoText = style({
@@ -104,6 +113,19 @@ export const infoText = style({
   color: '#B5B5B5',
   fontSize: 14,
   lineHeight: '24px',
-  fontFamily: manropeRegular,
+  fontWeight: 400,
   maxWidth: 320,
+});
+
+export const cardItemTitle = style({
+  whiteSpace: 'nowrap',
+  display: 'flex',
+  flexFlow: 'row',
+  cursor: 'pointer',
+  userSelect: 'none',
+});
+
+export const cardContainer = style({
+  width: '100%',
+  minWidth: 312,
 });

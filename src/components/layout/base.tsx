@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react';
 
 import { AllProvider } from '@/components/provider/all_provider';
+import { Something } from '../provider/context_provider';
 
 /*
  * ----------------------------------------------------------------------------------
@@ -11,7 +12,11 @@ import { AllProvider } from '@/components/provider/all_provider';
  */
 
 function Layout({ children }: { children: ReactElement }) {
-  return <AllProvider>{children}</AllProvider>;
+  return (
+    <Something>
+      <AllProvider>{children}</AllProvider>
+    </Something>
+  );
 }
 
 export const getBasicLayout = (page: ReactElement) => <Layout>{page}</Layout>;

@@ -1,0 +1,18 @@
+@property --trans {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
+
+.box {
+    transition: var(--trans) 1.8s;
+    background:linear-gradient(100deg, white, transparent var(--trans));
+    background-clip: text;
+    color: transparent;
+    position: relative;
+}
+
+.isInView {
+    --trans: 300%;
+    /* we update on hover */
+}
