@@ -2,6 +2,8 @@ import { small } from '@/style/config/breakpoints.css';
 import { colorPrimary, colorWhite } from '@/style/config/color.css';
 import { style, styleVariants } from '@vanilla-extract/css';
 
+const gapClamp = 'clamp(40px, 5vw, 64px)';
+
 export const infoBox = style({
   position: 'relative',
   width: '100%',
@@ -14,15 +16,17 @@ export const infoBox = style({
 
 export const list = style({
   display: 'flex',
+  flexFlow: 'column nowrap',
   justifyContent: 'center',
-  gap: 56,
+  gap: gapClamp,
 
   '@media': {
     '(min-width: 500px)': {
       display: 'grid',
       gridTemplateColumns: '1fr 1fr',
     },
-    '(min-width: 1110px)': {
+
+    '(min-width: 1000px)': {
       display: 'flex',
       flexFlow: 'row nowrap',
     },
@@ -31,35 +35,54 @@ export const list = style({
 
 export const item = style({
   display: 'flex',
-  gap: 56,
+  flexFlow: 'column nowrap',
   alignItems: 'center',
+  justifyContent: 'center',
+  paddingRight: 0,
+  borderRight: 'none',
+  gap: 40,
+  whiteSpace: 'nowrap',
 
-  '@media': {
-    [small]: {
-      paddingRight: 0,
-      paddingBottom: 40,
-      borderRight: 'none',
-      borderBottom: `1px solid ${colorPrimary}`,
-    },
+  // horizontal line
+  ':after': {
+    content: '',
+    width: 56,
+    height: 2,
+    background: colorPrimary,
+    display: 'block',
   },
 
   selectors: {
-    '&:last-child': {
-      borderRight: '1px solid transparent',
+    '&:last-child:after': {
+      content: 'none',
     },
   },
-});
-
-export const divider = style({
-  width: 2,
-  height: 56,
-  background: colorPrimary,
 
   '@media': {
-    'screen and (max-width: 767px)': {
-      width: 56,
-      height: 2,
-      background: colorPrimary,
+    // when grid
+    '(min-width: 500px) and (max-width: 999px)': {
+      selectors: {
+        '&:nth-last-child(-n + 2):after': {
+          content: 'none !important',
+        },
+      },
+    },
+
+    // when row
+    '(min-width: 1000px)': {
+      flexFlow: 'row nowrap',
+      gap: gapClamp,
+
+      selectors: {
+        // vertical line
+        '&:after': {
+          content: '',
+          width: 2,
+          height: 56,
+          background: colorPrimary,
+          display: 'block',
+        },
+      },
     },
   },
 });

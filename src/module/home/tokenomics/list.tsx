@@ -46,7 +46,6 @@ export default function TokenomicsList({ list, cate }: PropsType) {
               <Typography className={styles.itemTitle}>{data.title}</Typography>
               <Typography className={styles.itemText}>{data.text}</Typography>
             </Box>
-            {index !== list.length - 1 && <Divider className={styles.divider} />}
           </Grid>
         ))}
       </Grid>

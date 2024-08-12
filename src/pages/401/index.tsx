@@ -26,11 +26,11 @@ const Unauthorized: NextPageWithLayout = () => {
         <Box height={256} />
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div>
-            <Typography variant='h1' align='center' sx={{ fontSize: 120, color: colorWhite }}>
+            <Typography variant='h1' align='center' sx={{ fontSize: 120, color: colorWhite, fontWeight: 700 }}>
               401
               <b style={{ color: colorPrimary, marginLeft: 12 }}>Oops!</b>
             </Typography>
-            <Typography variant='h2' align='center' sx={{ fontSize: 80, color: colorWhite }}>
+            <Typography variant='h2' align='center' sx={{ fontSize: 80, color: colorWhite, fontWeight: 700 }}>
               Unauthorized
             </Typography>
             <Box height={24} />
