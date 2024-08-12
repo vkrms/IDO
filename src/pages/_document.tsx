@@ -18,7 +18,7 @@ export default function Document() {
         <meta name='theme-color' content={colorWhite} />
         <meta name='keywords' content='' />
         <meta httpEquiv='Content-Security-Policy' content='connect-src *' />
-        <link rel="icon" href='/img/favicon.webp' />      
+        <link rel='icon' href='/img/favicon.webp' />
       </Head>
       <body>
         <Main />

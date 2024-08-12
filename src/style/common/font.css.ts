@@ -1,6 +1,5 @@
-
-import { colorPrimary, colorWhite } from '@/style/config/color.css';
 import { small } from '@/style/config/breakpoints.css';
+import { colorPrimary, colorWhite } from '@/style/config/color.css';
 
 import { style } from '@vanilla-extract/css';
 
@@ -32,10 +31,9 @@ export const h2 = style({
       fontSize: 32,
       lineHeight: 44,
       marginBottom: 32,
-    }
-  }
-
-})
+    },
+  },
+});
 
 export const h3 = style({
   fontSize: 24,

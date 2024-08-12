@@ -6,17 +6,17 @@
  * @author shuangshuang 2024/4/11
  */
 import { Grid, IconButton, Typography } from '@mui/material';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
-import * as styles from '@/module/home/team/team_list.css';
 import IconArrowRight from '@/assets/img//home/team/arrow_right.svg';
+import * as styles from '@/module/home/team/team_list.css';
 
 const accordionTextAnimation = {
   initial: { opacity: 0, height: 0 },
   animate: { opacity: 1, height: 'auto', transition: { duration: 0.3 } },
   exit: { opacity: 0, height: 0, transition: { duration: 0.3 } },
-}
+};
 
 // ----------------------------------------------------------------------------------
 
@@ -35,13 +35,12 @@ export default function FoundersListItem({ info }: PropsType) {
   const [expState, setExpState] = useState(false);
 
   function toggle() {
-    setExpState(!expState)
+    setExpState(!expState);
   }
 
   // ----------------------------------------------------------------------------------
   return (
     <Grid item key={info.title}>
-
       <Grid container gap={2} alignItems='center' className={styles.cardItemTitle} onClick={toggle}>
         <Grid>
           <Typography className={styles.infoTitle}>{info.title}</Typography>
@@ -52,9 +51,7 @@ export default function FoundersListItem({ info }: PropsType) {
           animate={{ rotate: expState ? 90 : 0 }}
           transition={{ duration: 0.3 }}
         >
-          <IconButton
-            sx={{ width: 18, height: 18 }}            
-          >
+          <IconButton sx={{ width: 18, height: 18 }}>
             <IconArrowRight />
           </IconButton>
         </motion.div>
@@ -62,12 +59,8 @@ export default function FoundersListItem({ info }: PropsType) {
 
       <AnimatePresence>
         {expState && (
-          <motion.div
-            {...accordionTextAnimation}
-          >
-            <Typography className={styles.infoText}>
-              {info.text}
-            </Typography>
+          <motion.div {...accordionTextAnimation}>
+            <Typography className={styles.infoText}>{info.text}</Typography>
           </motion.div>
         )}
       </AnimatePresence>

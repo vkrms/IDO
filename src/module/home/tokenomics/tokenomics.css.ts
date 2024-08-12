@@ -1,5 +1,5 @@
+import { smallUp } from '@/style/config/breakpoints.css';
 import { colorPrimary, colorWhite } from '@/style/config/color.css';
-import { smallUp } from '@/style/config/breakpoints.css'
 
 import { style } from '@vanilla-extract/css';
 
@@ -11,8 +11,8 @@ export const title = style({
     fontSize: 56,
     lineHeight: '77px',
     textAlign: 'center',
-  })
-})
+  }),
+});
 
 export const box = style({
   display: 'flex',
@@ -33,7 +33,7 @@ export const box = style({
     '(max-width: 1120px)': {
       gap: 16,
       marginInline: 'auto',
-    }
+    },
   },
 });
 
@@ -49,9 +49,9 @@ export const boxLeft = style({
       fontSize: 48,
       lineHeight: '66px',
       alignSelf: 'flex-start',
-      minWidth: 312,      
-    }
-  }
+      minWidth: 312,
+    },
+  },
 });
 
 export const boxRight = style({
@@ -61,14 +61,14 @@ export const boxRight = style({
 
   '@media': {
     '(min-width: 600px)': {
-        fontSize: 18,
-        lineHeight: 1.7,
+      fontSize: 18,
+      lineHeight: 1.7,
     },
     '(min-width: 720px)': {
       flex: '0 1 48%',
-      minWidth: 312,    
-    }
-  }
+      minWidth: 312,
+    },
+  },
 });
 
 export const infoBox = style({
@@ -129,5 +129,5 @@ export const section = style({
 
   '@media': smallUp({
     marginBottom: 120,
-  })
-})
+  }),
+});

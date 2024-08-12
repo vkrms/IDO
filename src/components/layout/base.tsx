@@ -16,7 +16,7 @@ function Layout({ children }: { children: ReactElement }) {
     <Something>
       <AllProvider>{children}</AllProvider>
     </Something>
-  )
+  );
 }
 
 export const getBasicLayout = (page: ReactElement) => <Layout>{page}</Layout>;

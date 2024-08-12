@@ -10,8 +10,8 @@ import * as styles from '@/module/home/tokenomics/tokenomics.css';
 
 import { Container, Typography } from '@mui/material';
 
-import TokenomicsList from '@/module/home/tokenomics/list';
 import Appear from '@/components/ui/appear';
+import TokenomicsList from '@/module/home/tokenomics/list';
 
 // ----------------------------------------------------------------------------------
 
@@ -29,7 +29,9 @@ export default function IdoDetails() {
   return (
     <Container className={styles.section}>
       <Appear>
-        <Typography className={styles.title} variant="h2">IDO Details</Typography>
+        <Typography className={styles.title} variant='h2'>
+          IDO Details
+        </Typography>
 
         <div>
           <TokenomicsList list={dataList} cate='idoDetails' />

@@ -1,6 +1,6 @@
+import { smallB, smallUp } from '@/style/config/breakpoints.css';
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
-import { smallB, smallUp } from '@/style/config/breakpoints.css';
 
 export const title = style({
   marginBottom: 16,
@@ -11,11 +11,10 @@ export const title = style({
   '@media': smallUp({
     fontSize: 56,
     lineHeight: '76px',
-  })
+  }),
 });
 
 export const subtitle = style({
-
   fontWeight: 400,
   color: colorWhite,
   textAlign: 'center',
@@ -24,7 +23,7 @@ export const subtitle = style({
   '@media': smallUp({
     fontSize: 18,
     lineHeight: '29px',
-  })
+  }),
 });
 
 export const list = style({
@@ -51,7 +50,7 @@ export const legendTitle = style({
   '@media': smallB({
     fontSize: 20,
     lineHeight: '30px',
-  })
+  }),
 });
 
 export const legendText = style({
@@ -62,7 +61,7 @@ export const legendText = style({
   '@media': smallUp({
     fontSize: 16,
     lineHeight: '24px',
-  })
+  }),
 });
 
 export const line = style({
@@ -78,7 +77,7 @@ export const line = style({
 
 export const donut = style({
   position: 'relative',
-})
+});
 
 export const donutWrap = style({
   position: 'relative',
@@ -89,7 +88,7 @@ export const donutWrap = style({
   flex: '1 1 312px',
   minWidth: 312,
   maxWidth: 384,
-})
+});
 
 export const xsVideo = style({
   position: 'absolute',
@@ -101,18 +100,18 @@ export const xsVideo = style({
   bottom: '0',
   left: '0',
   objectFit: 'cover',
-})
+});
 
 export const legendWrap = style({
   flex: '1 1 384px',
   minWidth: 312,
   maxWidth: 544,
-})
+});
 
 export const section = style({
   marginBottom: 56,
 
   '@media': smallUp({
     marginBottom: 120,
-  })
-})
+  }),
+});

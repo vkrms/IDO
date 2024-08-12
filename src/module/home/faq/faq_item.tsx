@@ -11,9 +11,9 @@ import * as styles from '@/module/home/faq/faq_item.css';
 import { Box, Grid, IconButton, List, ListItem, ListItemText, Typography } from '@mui/material';
 
 import IconExpand from '@/assets/svg/expand_b.svg';
-import { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 import { cn } from '@/lib/utils/cn';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
 
 // ----------------------------------------------------------------------------------
 
@@ -41,7 +41,7 @@ const accordionTextAnimation = {
   initial: { opacity: 0, height: 0 },
   animate: { opacity: 1, height: 'auto', transition: { duration: 0.3 } },
   exit: { opacity: 0, height: 0, transition: { duration: 0.3 } },
-}
+};
 
 // ----------------------------------------------------------------------------------
 
@@ -49,7 +49,7 @@ export default function FAQItem({ item, className }: PropsType) {
   const [expState, setExpState] = useState(false);
 
   function toggle() {
-    setExpState(!expState)
+    setExpState(!expState);
   }
 
   // ----------------------------------------------------------------------------------
@@ -61,19 +61,16 @@ export default function FAQItem({ item, className }: PropsType) {
           <Typography className={styles.itemTitle}>{item.title}</Typography>
         </Grid>
 
-          <IconButton size='large' className={styles.btn}>
-            <IconExpand className={cn({expState})}/>
-          </IconButton>
+        <IconButton size='large' className={styles.btn}>
+          <IconExpand className={cn({ expState })} />
+        </IconButton>
       </Grid>
 
       <AnimatePresence>
         {expState && (
           <motion.div {...accordionTextAnimation}>
-
             <Typography className={styles.itemInfo}>
-              <div style={{paddingRight: 48}}>
-                {item.info}
-              </div>
+              <div style={{ paddingRight: 48 }}>{item.info}</div>
             </Typography>
 
             {/* <List className={styles.innerList}>

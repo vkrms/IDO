@@ -1,12 +1,8 @@
 import { smallUp } from '@/style/config/breakpoints.css';
 import { colorBorder, colorWhite, pinkTextGrad } from '@/style/config/color.css';
-import {
-  electrolizeRegular,
-} from '@/style/config/font.css';
+import { electrolizeRegular } from '@/style/config/font.css';
 
 import { style } from '@vanilla-extract/css';
-
-
 
 export const container = style({
   // position: 'absolute',
@@ -15,7 +11,7 @@ export const container = style({
   left: 0,
   right: 0,
   zIndex: 1,
-})
+});
 
 export const title1 = style({
   fontSize: 14,
@@ -28,8 +24,8 @@ export const title1 = style({
   // ...pinkTextGrad,
 
   '@media': smallUp({
-    fontSize: 25,    
-  })
+    fontSize: 25,
+  }),
 });
 
 export const title2 = style({
@@ -43,7 +39,7 @@ export const title2 = style({
   '@media': smallUp({
     fontSize: 72,
     marginBottom: 16,
-  })
+  }),
 });
 
 export const title3 = style({
@@ -56,7 +52,7 @@ export const title3 = style({
     maxWidth: '64ch',
     marginInline: 'auto',
     marginBottom: 32,
-  })
+  }),
 });
 
 export const list = style({
@@ -68,10 +64,10 @@ export const list = style({
 
   '@media': {
     'screen and (min-width: 648px)': {
-      gap: 32, 
+      gap: 32,
       marginBottom: 64,
-    }
-  }
+    },
+  },
 });
 
 // group of digits
@@ -84,8 +80,8 @@ export const itemValueList = style({
   '@media': {
     'screen and (min-width: 648px)': {
       gap: 8,
-    }
-  }  
+    },
+  },
 });
 
 // digit in a box
@@ -106,7 +102,7 @@ export const itemValue = style({
     width: '1.6em',
     height: '1.6em',
     lineHeight: '1.6em',
-  })
+  }),
 });
 
 export const itemKey = style({
@@ -122,7 +118,7 @@ export const itemKey = style({
   '@media': smallUp({
     fontSize: 18,
     lineHeight: '29px',
-  })
+  }),
 });
 
 export const imgBox = style({
@@ -135,7 +131,7 @@ export const imgBox = style({
 
   '@media': smallUp({
     marginBottom: 120,
-  })
+  }),
 });
 
 export const playBtn = style({
@@ -145,9 +141,9 @@ export const playBtn = style({
     '&:hover': {
       transform: 'scale(1.1)',
       cursor: 'pointer',
-    }
-  }
-})
+    },
+  },
+});
 
 export const iconBox = style({
   position: 'absolute',
@@ -167,7 +163,7 @@ export const iconBox = style({
       opacity: 0,
       visibility: 'hidden',
     },
-  }
+  },
 });
 
 export const founderTitle = style({
@@ -198,14 +194,14 @@ export const founderList = style({
   maxWidth: 900,
   marginInline: 'auto',
   gap: 32,
-  
+
   '@media': smallUp({
     gap: '28px 56px',
-  })
+  }),
 });
 
 export const logo = style({
   width: 'auto',
   height: 'auto',
   maxWidth: 152,
-})
+});

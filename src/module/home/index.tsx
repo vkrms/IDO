@@ -7,35 +7,35 @@
  */
 
 import FormDialog from '@/components/ui/form-dialog';
+import ReadingDialog from '@/components/ui/reading-dialog';
 import Footer from '@/module/footer/footer';
-import Testimonial from '@/module/home/testimonial/testimonial';
 import DisruptionGrowth from '@/module/home/disruption_growth/growth';
 import Event3 from '@/module/home/event_3/event_3';
 import FAQ from '@/module/home/faq/faq';
 import FloCoin from '@/module/home/flo_coin/flo_coin';
 import IdoDetails from '@/module/home/ido_details/ido_details';
 import Founders from '@/module/home/team/team';
+import Testimonial from '@/module/home/testimonial/testimonial';
 import TokenAllocation from '@/module/home/token_allocation/token_allocation';
 import Tokenomics from '@/module/home/tokenomics/tokenomics';
 import UseCases from '@/module/home/use_cases/use_cases';
 import Welcome from '@/module/home/welcome/welcome';
 import { Box, Button } from '@mui/material';
-import ReadingDialog from '@/components/ui/reading-dialog';
 
-import privacy from '@/data/privacy.html';
 import disclaimer from '@/data/disclaimer.html';
+import privacy from '@/data/privacy.html';
 
 function goHome() {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth',  
+    behavior: 'smooth',
   });
 }
 
 import Arrow from '@/assets/img/arrow-up.svg';
-import { useRef } from 'react';
-import { useInView } from 'framer-motion';
 import { cn } from '@/lib/utils/cn';
+import { useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 // ----------------------------------------------------------------------------------
 export default function HomePage() {
@@ -46,13 +46,12 @@ export default function HomePage() {
 
   // ----------------------------------------------------------------------------------
   return (
-    <Box className="homepage">
+    <Box className='homepage'>
       <FormDialog />
 
-      <div className="hero-grad-overflow" ref={welcomeRef}>
+      <div className='hero-grad-overflow' ref={welcomeRef}>
         <Welcome />
       </div>
-
 
       <FloCoin />
 
@@ -75,11 +74,11 @@ export default function HomePage() {
       <FAQ />
 
       <Footer />
-             
+
       <ReadingDialog text={disclaimer} slug='disclaimer' />
       <ReadingDialog text={privacy} slug='privacy' />
 
-      <Button onClick={goHome} className={cn("cmdHome", {'--visible':!hideCmdHome})}>
+      <Button onClick={goHome} className={cn('cmdHome', { '--visible': !hideCmdHome })}>
         <Arrow />
       </Button>
     </Box>

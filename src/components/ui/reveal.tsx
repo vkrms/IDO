@@ -1,26 +1,26 @@
-"use client";
-import { useEffect, useRef } from "react";
-import { useInView } from "framer-motion";
-import { cn } from "@/lib/utils/cn";
-import styles from './reveal.module.css'
+'use client';
+import { cn } from '@/lib/utils/cn';
+import { useInView } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import styles from './reveal.module.css';
 
 export const Reveal = ({
-    children,
-    className,
+  children,
+  className,
 }: {
-    children: React.ReactNode
-    className?: string;
+  children: React.ReactNode;
+  className?: string;
 }) => {
-    const ref = useRef(null)
-    const isInView = useInView(ref)
-    
-    useEffect(() => {
-        if (!isInView) return;
-    }, [isInView]);
+  const ref = useRef(null);
+  const isInView = useInView(ref);
 
-    return (
-        <div className={cn(className, styles.box, {[styles.isInView]: isInView})} ref={ref}>
-            {children}
-        </div>
-    );
+  useEffect(() => {
+    if (!isInView) return;
+  }, [isInView]);
+
+  return (
+    <div className={cn(className, styles.box, { [styles.isInView]: isInView })} ref={ref}>
+      {children}
+    </div>
+  );
 };

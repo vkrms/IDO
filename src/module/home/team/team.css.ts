@@ -1,7 +1,7 @@
-import { colorWhite } from '@/style/config/color.css';
 import { small } from '@/style/config/breakpoints.css';
+import { medium, smallUp } from '@/style/config/breakpoints.css';
+import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
-import { smallUp, medium } from '@/style/config/breakpoints.css';
 
 export const title = style({
   maxWidth: 740,
@@ -17,7 +17,7 @@ export const title = style({
       fontSize: 32,
       lineHeight: '44px',
     },
-  }
+  },
 });
 
 export const subtitle = style({
@@ -29,7 +29,7 @@ export const subtitle = style({
   '@media': smallUp({
     fontSize: 18,
     lineHeight: '31px',
-  })
+  }),
 });
 
 export const teamContainer = style({
@@ -37,6 +37,6 @@ export const teamContainer = style({
   marginBottom: 56,
 
   '@media': smallUp({
-    marginBottom: 120,    
-  })
-})
+    marginBottom: 120,
+  }),
+});

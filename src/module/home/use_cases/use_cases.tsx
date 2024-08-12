@@ -8,8 +8,8 @@
 
 import Appear from '@/components/ui/appear';
 import AppearList from '@/components/ui/appear-list';
-import Icon from '@mui/material/Icon';
 import * as styles from '@/module/home/use_cases/use_cases.css';
+import Icon from '@mui/material/Icon';
 
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 
@@ -53,14 +53,16 @@ export default function UseCases() {
   return (
     <Container className={styles.section}>
       <Appear>
-        <Typography variant="h2" className={styles.title}>FloCoin Use Cases</Typography>
+        <Typography variant='h2' className={styles.title}>
+          FloCoin Use Cases
+        </Typography>
       </Appear>
-      
+
       <AppearList>
         <Grid container className={styles.list}>
           {list.map((item) => (
-            <Grid item key={item.id} className="stagger">
-              <Icon component="img" src={`/img/${item.id}.svg`} className={styles.itemId} />
+            <Grid item key={item.id} className='stagger'>
+              <Icon component='img' src={`/img/${item.id}.svg`} className={styles.itemId} />
               {/* <Typography className={styles.itemId}>{item.id}</Typography> */}
               <Typography className={styles.itemTitle}>{item.title}</Typography>
               <Typography className={styles.itemText}>{item.text}</Typography>
@@ -69,10 +71,10 @@ export default function UseCases() {
         </Grid>
       </AppearList>
 
-      <Box textAlign='center' className={styles.btnWrap}>        
-        <Button variant='contained' size='large' href="https://online.publuu.com/533650/1195962" target="_new">
+      <Box textAlign='center' className={styles.btnWrap}>
+        <Button variant='contained' size='large' href='https://online.publuu.com/533650/1195962' target='_new'>
           Explore in-depth Tokenomics
-        </Button>        
+        </Button>
       </Box>
     </Container>
   );

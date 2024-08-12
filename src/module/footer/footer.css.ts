@@ -66,8 +66,8 @@ export const copyright = style({
 export const container = style({
   zIndex: 1,
   position: 'relative',
-})
-  
+});
+
 export const overflow = style({
   height: '190vh',
   overflow: 'hidden',
@@ -79,6 +79,6 @@ export const overflow = style({
     '(min-width: 900px)': {
       marginTop: '-1100px',
       height: 1400,
-    }
-  }
-})
+    },
+  },
+});

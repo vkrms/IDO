@@ -9,14 +9,14 @@
 import * as styles from '@/module/home/flo_coin/flo_coin.css';
 
 import { Box, Container, Grid, Typography } from '@mui/material';
-import Image from 'next/image'
+import Image from 'next/image';
 
 import Appear from '@/components/ui/appear';
 import AppearList from '@/components/ui/appear-list';
 import { cn } from '@/lib/utils/cn';
 
-const Icon: React.FC<{i: number}> = ({i}) => {
-  return <Image src={`/img/home/flo_coin/icon_${i}.webp`} alt="Icon" width={72} height={72} />
+const Icon: React.FC<{ i: number }> = ({ i }) => {
+  return <Image src={`/img/home/flo_coin/icon_${i}.webp`} alt='Icon' width={72} height={72} />;
 };
 
 // ----------------------------------------------------------------------------------
@@ -31,7 +31,7 @@ const dataList = [
   },
   {
     title: 'Unlock Exclusive Perks',
-    text: 'Holding onto your FloCoin unlocks a world of enhanced rewards, including superior staking benefits and increased influence in the platform\'s decision-making process.',
+    text: "Holding onto your FloCoin unlocks a world of enhanced rewards, including superior staking benefits and increased influence in the platform's decision-making process.",
   },
   {
     title: 'Shape the Future',
@@ -51,27 +51,21 @@ export default function FloCoin() {
   // ----------------------------------------------------------------------------------
   return (
     <Box className={styles.bg} id='why-flocoin'>
-
-      <div className="relative bg-pink-500 text-blue-600 mb-2">
-        <video
-          autoPlay={true} loop={true} muted playsInline
-          className="object-cover ring-video">
-          <source src="/big_2.webm" type="video/webm" media='(min-width: 600px)'/>
+      <div className='relative bg-pink-500 text-blue-600 mb-2'>
+        <video autoPlay={true} loop={true} muted playsInline className='object-cover ring-video'>
+          <source src='/big_2.webm' type='video/webm' media='(min-width: 600px)' />
         </video>
-        <div className="ring-video__square"></div>
+        <div className='ring-video__square' />
       </div>
 
       <Container>
-
         <Appear>
-          <Typography className={styles.title} variant="h2">
+          <Typography className={styles.title} variant='h2'>
             FloCoin: The Future of Events
           </Typography>
-          
-          <Typography className={styles.subtitle}>
-            Why FloCoin? Utility - Rewards - Growth Potential
-          </Typography>
-          
+
+          <Typography className={styles.subtitle}>Why FloCoin? Utility - Rewards - Growth Potential</Typography>
+
           <Typography className={styles.text}>
             FloCoin ignites a new era of event experience. Invest in FloCoin, and you're not only fueling innovation in
             event attendance & management, but also have the potential to directly benefit from its success.
@@ -81,8 +75,7 @@ export default function FloCoin() {
         <AppearList>
           <Grid container className={styles.list}>
             {dataList.map((data, i) => (
-              <Grid key={data.text} className={cn(styles.item, "stagger")}>
-                
+              <Grid key={data.text} className={cn(styles.item, 'stagger')}>
                 <Box className={styles.iconWrap}>
                   <Icon i={i + 1} />
                 </Box>

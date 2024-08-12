@@ -1,6 +1,5 @@
 import { globalFontFace, style } from '@vanilla-extract/css';
 
-
 export const electrolizeRegular = 'ElectrolizeRegular';
 
 globalFontFace(electrolizeRegular, {

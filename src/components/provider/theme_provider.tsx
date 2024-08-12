@@ -133,7 +133,7 @@ const theme = createTheme({
       [smallUp]: {
         fontSize: 56,
         lineHeight: '76px',
-      }
+      },
       // styleOverrides: {
       //   root: {
       //     fontSize: 30,
@@ -215,19 +215,16 @@ const theme = createTheme({
     subText13: {
       fontSize: 15,
       fontWeight: 400,
-
     },
     subText14: {
       fontSize: 12,
       lineHeight: '18px',
       fontWeight: 400,
-
     },
     subText15: {
       fontSize: 12,
       WebkitTransform: 'scale(0.66)',
       fontWeight: 400,
-
     },
   },
   palette: {
@@ -324,8 +321,8 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           paddingInline: 20,
-        }
-      }
+        },
+      },
     },
     MuiCardHeader: {
       styleOverrides: {
@@ -377,8 +374,8 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           color: '#fff',
-        }
-      }
+        },
+      },
     },
     MuiTableCell: {
       styleOverrides: {
@@ -450,8 +447,6 @@ const theme = createTheme({
           fontSize: 16,
           lineHeight: '24px',
           fontWeight: 500,
-
-          
         },
         textSizeMedium: {
           fontSize: 16,
@@ -541,11 +536,10 @@ const theme = createTheme({
 export const CustomThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <StrictMode>
-
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          
+
           {children}
         </ThemeProvider>
       </StyledEngineProvider>

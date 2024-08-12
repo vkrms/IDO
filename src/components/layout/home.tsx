@@ -2,8 +2,8 @@ import LandingHeader from '@/components/header';
 import { getBasicLayout } from '@/components/layout/base';
 import type { NextPageWithLayout } from '@/pages/_app';
 import { Box } from '@mui/material';
+import { Manrope } from 'next/font/google';
 import type { ReactElement } from 'react';
-import { Manrope } from 'next/font/google'
 
 /**
  * ----------------------------------------------------------------------------------
@@ -17,12 +17,11 @@ export interface Props {
   children: React.ReactElement;
 }
 
-
 // font
 const manrope = Manrope({
   subsets: ['latin'],
   // display: 'swap',
-})
+});
 
 const LandingLayout: NextPageWithLayout<Props> = ({ children }) => {
   return (

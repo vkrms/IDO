@@ -1,12 +1,12 @@
-import * as React from 'react';
-import { useState } from 'react';
+import Cross from '@/assets/svg/close.svg';
+import ContextProvider from '@/components/provider/context_provider';
 import Dialog from '@mui/material/Dialog';
 import IconButton from '@mui/material/IconButton';
+import * as React from 'react';
+import { useState } from 'react';
 import { useContext } from 'react';
-import ContextProvider from '@/components/provider/context_provider';
+import { type SubmitHandler, useForm } from 'react-hook-form';
 import { FormFields } from './form-fields';
-import Cross from '@/assets/svg/close.svg';
-import { useForm, SubmitHandler } from 'react-hook-form';
 
 export type Inputs = {
   name: string;
@@ -16,85 +16,84 @@ export type Inputs = {
 };
 
 export type PhoneData = {
-    tel: string,
-    country?: string,
-}
+  tel: string;
+  country?: string;
+};
 
 export default function FormDialog() {
-    const { register, handleSubmit } = useForm<Inputs>();
+  const { register, handleSubmit } = useForm<Inputs>();
 
-    const [phoneData, setPhoneData] = useState<PhoneData>({
-        tel: '',
-        country: '',
-    })
+  const [phoneData, setPhoneData] = useState<PhoneData>({
+    tel: '',
+    country: '',
+  });
 
-    async function post(payload: {}) {
-        const res = await fetch('/api/mailjet', {
-            method: 'POST',
-            body: JSON.stringify(payload),
-        });
+  async function post(payload: object) {
+    const res = await fetch('/api/mailjet', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    });
 
-        const v = await res.json();
+    const v = await res.json();
 
-        if (res.status === 500) {
-            console.warn(v)
-        }
-
-        if (res.status === 200) {
-            setSuccess(true);
-        }
+    if (res.status === 500) {
+      console.warn(v);
     }
 
-
-    const onSubmit: SubmitHandler<Inputs> = data => {
-        const payload = {...data, ...phoneData}
-        post(payload)
+    if (res.status === 200) {
+      setSuccess(true);
     }
+  }
 
-    const context = useContext(ContextProvider);
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    const payload = { ...data, ...phoneData };
+    post(payload);
+  };
 
-    function handleClose() {
-        context.toggleForm();
-    }
+  const context = useContext(ContextProvider);
 
-    const [success, setSuccess] = useState(false);
+  function handleClose() {
+    context.toggleForm();
+  }
 
-    const getPhoneData = (obj: PhoneData) => {
-        setPhoneData(obj)
-        return obj
-    }
+  const [success, setSuccess] = useState(false);
 
-    return (
-        <Dialog
-            open={context.isOpen('form')}
-            onClose={context.toggleForm}
-            scroll="body"
-            slotProps={{
-                backdrop: {
-                    sx: {
-                        backgroundColor: '#0009',
-                        backdropFilter: 'blur(6px)',
-                    },
-                },
-            }}
-            PaperProps={{
-                component: 'form',
-                maxWidth: '500px',
+  const getPhoneData = (obj: PhoneData) => {
+    setPhoneData(obj);
+    return obj;
+  };
 
-                onSubmit: handleSubmit(onSubmit),
+  return (
+    <Dialog
+      open={context.isOpen('form')}
+      onClose={context.toggleForm}
+      scroll='body'
+      slotProps={{
+        backdrop: {
+          sx: {
+            backgroundColor: '#0009',
+            backdropFilter: 'blur(6px)',
+          },
+        },
+      }}
+      PaperProps={{
+        component: 'form',
+        maxWidth: '500px',
 
-                className: 'bg-transparent overflow-visible modal-form',
-                sx: {
-                    margin: '8px auto',
-                    maxWidth: 'calc(100% - 32px)'
-                }
-            }}
-        >
-            <IconButton className={'cross-btn'} onClick={handleClose}>
-                <Cross />
-            </IconButton>
+        onSubmit: handleSubmit(onSubmit),
 
-            <FormFields {...{success, register, getPhoneData}} />
-        </Dialog>
-    );
+        className: 'bg-transparent overflow-visible modal-form',
+        sx: {
+          margin: '8px auto',
+          maxWidth: 'calc(100% - 32px)',
+        },
+      }}
+    >
+      <IconButton className={'cross-btn'} onClick={handleClose}>
+        <Cross />
+      </IconButton>
+
+      <FormFields {...{ success, register, getPhoneData }} />
+    </Dialog>
+  );
 }

@@ -1,6 +1,6 @@
+import { smallUp } from '@/style/config/breakpoints.css';
 import { colorWhite, pinkTextGrad } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
-import { smallUp } from '@/style/config/breakpoints.css';
 
 export const img = style({
   margin: '0 auto 20px',
@@ -40,5 +40,5 @@ export const section = style({
 
   '@media': smallUp({
     marginBottom: 120,
-  })
-})
+  }),
+});

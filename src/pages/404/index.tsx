@@ -24,27 +24,15 @@ const NotFound: NextPageWithLayout = () => {
 
       <div style={{ marginTop: 256, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div>
-          <Typography
-            variant='h1'
-            align='center'
-            sx={{ fontSize: 120, fontWeight: 700, color: colorTextBlack }}
-          >
+          <Typography variant='h1' align='center' sx={{ fontSize: 120, fontWeight: 700, color: colorTextBlack }}>
             404
             <b style={{ color: colorPrimary, marginLeft: 12 }}>Oops!</b>
           </Typography>
-          <Typography
-            variant='h2'
-            align='center'
-            sx={{ fontSize: 80, fontWeight: 500, color: colorTextBlack }}
-          >
+          <Typography variant='h2' align='center' sx={{ fontSize: 80, fontWeight: 500, color: colorTextBlack }}>
             Page Not Found
           </Typography>
           <Box height={24} />
-          <Typography
-            variant='subtitle1'
-            align='center'
-            sx={{ color: colorTextGrey, fontSize: 20, fontWeight: 400}}
-          >
+          <Typography variant='subtitle1' align='center' sx={{ color: colorTextGrey, fontSize: 20, fontWeight: 400 }}>
             Sorry the page you are looking for does not exist, click the <br />
             button below to head on back to the home base.
           </Typography>

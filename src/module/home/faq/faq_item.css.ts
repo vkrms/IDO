@@ -1,7 +1,6 @@
+import { smallB, smallUp } from '@/style/config/breakpoints.css';
 import { colorWhite, pinkTextGrad } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
-import { smallB, smallUp } from '@/style/config/breakpoints.css';
-
 
 export const quesItem = style({
   display: 'block',
@@ -34,8 +33,8 @@ export const itemTitle = style({
     '(min-width: 600px)': {
       fontSize: 24,
       lineHeight: '36px',
-    }  
-  }
+    },
+  },
 });
 
 export const itemInfo = style({
@@ -66,7 +65,7 @@ export const innerIdx = style({
   textAlign: 'center',
 
   ...pinkTextGrad,
-  
+
   fontSize: 20,
   lineHeight: '30px',
   fontWeight: 700,
@@ -91,7 +90,7 @@ export const itemTitleWrap = style({
   alignItems: 'center',
   cursor: 'pointer',
   userSelect: 'none',
-})
+});
 
 export const btn = style({
   aspectRatio: '1/1',
@@ -106,5 +105,5 @@ export const btn = style({
       width: 48,
       padding: 0,
     },
-  }
-})
+  },
+});

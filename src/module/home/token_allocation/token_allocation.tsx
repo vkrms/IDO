@@ -33,45 +33,38 @@ const legendList = [
   {
     title: 'Team & Advisors (15%)',
     subtitle:
-      'Vesting aligns team incentives with long-term success, ensuring continued dedication to the project\'s growth.',
+      "Vesting aligns team incentives with long-term success, ensuring continued dedication to the project's growth.",
   },
   {
     title: 'Liquidity (10%)',
     subtitle:
-      `Ensures sufficient liquidity for market stability, supporting smooth FloCoin transactions with a good percentage of the initial IDO locked straight into the liquidity pool.`,
+      'Ensures sufficient liquidity for market stability, supporting smooth FloCoin transactions with a good percentage of the initial IDO locked straight into the liquidity pool.',
   },
 ];
 // ----------------------------------------------------------------------------------
 
-
-
-export default function TokenAllocation() { 
+export default function TokenAllocation() {
   // ----------------------------------------------------------------------------------
   return (
     <Container className={styles.section}>
       <Appear>
-        <Typography id="chart" variant="h2" className={styles.title}>Token Allocation</Typography>
+        <Typography id='chart' variant='h2' className={styles.title}>
+          Token Allocation
+        </Typography>
       </Appear>
 
       <Typography className={styles.subtitle}>Here's how we'll emphasize value creation and longevity</Typography>
 
       <Grid container className={styles.list}>
         <Grid item className={styles.donutWrap}>
-
-          <video
-            autoPlay={true}
-            loop={true}
-            muted
-            className={styles.xsVideo}
-            playsInline
-          >
-            <source src="/xs.webm" type="video/webm" />
+          <video autoPlay={true} loop={true} muted className={styles.xsVideo} playsInline>
+            <source src='/xs.webm' type='video/webm' />
           </video>
 
           <Image
-            src="/img/home/token_allocation/chart.webp"
-            className="donut-img"
-            alt="allocation chart"
+            src='/img/home/token_allocation/chart.webp'
+            className='donut-img'
+            alt='allocation chart'
             width={384}
             height={384}
           />
@@ -81,7 +74,7 @@ export default function TokenAllocation() {
           <AppearList>
             <Grid container className={styles.legendList}>
               {legendList.map((data, index) => (
-                <Grid item key={data.title} className="stagger">
+                <Grid item key={data.title} className='stagger'>
                   <Typography style={{ color: colorList[index] }} className={styles.legendTitle}>
                     <span className={styles.line} style={{ background: colorList[index] }} />
                     {data.title}
@@ -90,7 +83,7 @@ export default function TokenAllocation() {
                 </Grid>
               ))}
             </Grid>
-          </AppearList>  
+          </AppearList>
         </Grid>
       </Grid>
     </Container>

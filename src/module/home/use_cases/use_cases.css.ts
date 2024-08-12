@@ -1,6 +1,6 @@
+import { smallB, smallUp } from '@/style/config/breakpoints.css';
 import { colorWhite, pinkTextGrad } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
-import { smallUp, smallB } from '@/style/config/breakpoints.css';
 import { line } from '../token_allocation/token_allocation.css';
 
 export const title = style({
@@ -13,7 +13,7 @@ export const title = style({
     marginBottom: 72,
     fontSize: 56,
     lineHeight: '76px',
-  })
+  }),
 });
 
 export const list = style({
@@ -25,7 +25,7 @@ export const list = style({
 });
 
 export const itemId = style({
-  ...pinkTextGrad,  
+  ...pinkTextGrad,
 
   fontWeight: 700,
   marginBottom: 8,
@@ -34,11 +34,11 @@ export const itemId = style({
   height: 'auto',
   objectPosition: 'left',
   objectFit: 'none',
-    
+
   '@media': smallB({
     fontSize: 40,
     lineHeight: '52px',
-  })
+  }),
 });
 
 export const itemTitle = style({
@@ -51,7 +51,7 @@ export const itemTitle = style({
   '@media': smallB({
     fontSize: 20,
     lineHeight: '27px',
-  })
+  }),
 });
 
 export const itemText = style({
@@ -62,23 +62,21 @@ export const itemText = style({
   '@media': smallUp({
     fontSize: 16,
     lineHeight: '24px',
-  })
+  }),
 });
-
 
 export const section = style({
   marginBottom: 56,
 
   '@media': smallUp({
     marginBottom: 120,
-  })  
-})
-
+  }),
+});
 
 export const btnWrap = style({
   marginTop: 40,
 
   '@media': smallUp({
     marginTop: 72,
-  })
-})
+  }),
+});

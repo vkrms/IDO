@@ -1,6 +1,6 @@
+import { smallUp } from '@/style/config/breakpoints.css';
 import { colorWhite } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
-import { smallUp } from '@/style/config/breakpoints.css';
 
 export const teamItem = style({
   marginBottom: 56,
@@ -18,7 +18,7 @@ export const title = style({
   '@media': smallUp({
     fontSize: 32,
     lineHeight: '44px',
-  })
+  }),
 });
 
 export const list = style({
@@ -35,8 +35,8 @@ export const list = style({
       paddingInline: 0,
       justifyContent: 'center',
       overflow: 'visible',
-    }
-  }
+    },
+  },
 });
 
 export const header = style({
@@ -85,11 +85,11 @@ export const cardGrid = style({
   maxWidth: 352,
   flexBasis: 288,
   flexGrow: 1,
-})
+});
 
 export const infoList = style({
   padding: '0 16px 32px',
-  gap: 28
+  gap: 28,
 });
 
 export const infoTitle = style({
@@ -114,9 +114,9 @@ export const cardItemTitle = style({
   flexFlow: 'row',
   cursor: 'pointer',
   userSelect: 'none',
-})  
+});
 
 export const cardContainer = style({
   width: '100%',
   minWidth: 312,
-})
+});

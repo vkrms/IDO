@@ -8,32 +8,23 @@
 
 import * as styles from '@/module/home/welcome/welcome.css';
 
-import { Box, Button, Typography } from '@mui/material';
 import IconVideo from '@/assets/img//home/welcome/video.svg';
+import { Box, Button, Typography } from '@mui/material';
 import { Container } from '@mui/material';
 
 // ----------------------------------------------------------------------------------
 
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
-import { InfiniteMovingCards as Scroller } from '@/components/ui/infinite-moving-cards';
+import { BackgroundGradientAnimation } from '@/components/ui/background-gradient-animation';
 import Countdown from '@/components/ui/countdown';
 import { CtaButton } from '@/components/ui/cta_button';
+import { InfiniteMovingCards as Scroller } from '@/components/ui/infinite-moving-cards';
 import Preloader from '@/components/ui/preloader';
-import { useEffect, useState, useRef } from 'react';
 import { cn } from '@/lib/utils/cn';
-
+import { useEffect, useRef, useState } from 'react';
 
 // ----------------------------------------------------------------------------------
 
-const founders = [
-  'hardware',
-  'stereosonic',
-  'reminisce',
-  'festivalx',
-  'tailgate',
-  'twotribes',
-  'babylon',
-]
+const founders = ['hardware', 'stereosonic', 'reminisce', 'festivalx', 'tailgate', 'twotribes', 'babylon'];
 
 // ----------------------------------------------------------------------------------
 
@@ -42,55 +33,50 @@ export default function Welcome() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   useEffect(() => {
-    setLoading(false)
-  }, [])
+    setLoading(false);
+  }, []);
 
-  const videoRef = useRef<HTMLVideoElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   function handleVideoClick() {
-    setIsVideoPlaying(!isVideoPlaying)
+    setIsVideoPlaying(!isVideoPlaying);
 
-    const method = isVideoPlaying ? 'pause' : 'play'
+    const method = isVideoPlaying ? 'pause' : 'play';
 
-    videoRef.current?.[method]()
+    videoRef.current?.[method]();
   }
 
   // ----------------------------------------------------------------------------------
   return (
-  <>
-    <BackgroundGradientAnimation
-      firstColor='112, 0, 255'
-      secondColor='255, 0, 199'
-      interactive={false}
-      className='fade-up'
-      opacity={0.8}
-    >
-      <Container className={styles.container}>
+    <>
+      <BackgroundGradientAnimation
+        firstColor='112, 0, 255'
+        secondColor='255, 0, 199'
+        interactive={false}
+        className='fade-up'
+        opacity={0.8}
+      >
+        <Container className={styles.container}>
           <Box height='20vh' />
 
-          <Typography className={styles.title2}>
-              Welcome to Events 3.0
-          </Typography> 
+          <Typography className={styles.title2}>Welcome to Events 3.0</Typography>
 
           <Typography className={styles.title3}>
-              Own the cryptocurrency powering NFT ticketing, data-driven insights, and the future
-              of event management
+            Own the cryptocurrency powering NFT ticketing, data-driven insights, and the future of event management
           </Typography>
 
           <Typography className={styles.title1} variant='subtitle2'>
             launching in...
           </Typography>
 
-          <Countdown/>
+          <Countdown />
 
           <Box sx={{ textAlign: 'center' }}>
-
             <CtaButton>
-              <Button variant='contained' size="large" className="tuesday">                
+              <Button variant='contained' size='large' className='tuesday'>
                 Join Early Access IDO List
               </Button>
             </CtaButton>
-
           </Box>
 
           <Box height={88} />
@@ -100,40 +86,36 @@ export default function Welcome() {
           </Typography>
 
           <div className='scroller__container'>
-            <Scroller
-              items={founders}
-              direction="left"
-              speed="slow"
-            />
+            <Scroller items={founders} direction='left' speed='slow' />
           </div>
         </Container>
-    </BackgroundGradientAnimation>
+      </BackgroundGradientAnimation>
 
-    <Container>
-      <Box className={styles.imgBox}>
+      <Container>
+        <Box className={styles.imgBox}>
           {/* <Image src='' alt='video' width={960} height={597}/> */}
 
           <video
             ref={videoRef}
-            width={960} height={597}
-            poster="/img/home/welcome/video.webp"
+            width={960}
+            height={597}
+            poster='/img/home/welcome/video.webp'
             style={{ borderRadius: 16 }}
             controls={isVideoPlaying}
           >
-            <source src='https://gl71nzm2l7iaribb.public.blob.vercel-storage.com/foobar4-GXrXJ9WMFJb1guJcyGszAeQnZG1916.webm' type='video/webm' />
+            <source
+              src='https://gl71nzm2l7iaribb.public.blob.vercel-storage.com/foobar4-GXrXJ9WMFJb1guJcyGszAeQnZG1916.webm'
+              type='video/webm'
+            />
           </video>
 
-            <Box
-              className={cn(styles.iconBox, {isVideoPlaying})}
-              onClick={handleVideoClick}
-            >
-              <IconVideo className={styles.playBtn}/>
-            </Box>           
-      </Box>
-    </Container>
+          <Box className={cn(styles.iconBox, { isVideoPlaying })} onClick={handleVideoClick}>
+            <IconVideo className={styles.playBtn} />
+          </Box>
+        </Box>
+      </Container>
 
-    <Preloader isVisible={loading} />
-  </>
+      <Preloader isVisible={loading} />
+    </>
   );
 }
-

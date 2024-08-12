@@ -12,11 +12,11 @@ import { Box, Typography } from '@mui/material';
 
 import type { StaticImageData } from 'next/image';
 
-import { cn } from '@/lib/utils/cn';
 import AppearList from '@/components/ui/appear-list';
 import EmblaCarousel from '@/components/ui/embla-carousel';
-import { AlignmentOptionType } from 'node_modules/embla-carousel/esm/components/Alignment';
-import { ScrollContainOptionType } from 'node_modules/embla-carousel/esm/components/ScrollContain';
+import { cn } from '@/lib/utils/cn';
+import type { AlignmentOptionType } from 'node_modules/embla-carousel/esm/components/Alignment';
+import type { ScrollContainOptionType } from 'node_modules/embla-carousel/esm/components/ScrollContain';
 
 // ----------------------------------------------------------------------------------
 export type TeamData = {
@@ -45,16 +45,18 @@ const emblaOptions = {
   dragFree: true,
   containScroll: 'keepSnaps' as ScrollContainOptionType,
   breakpoints: {
-    '(min-width: 1040px)': { active: false }
-  }
-}
+    '(min-width: 1040px)': { active: false },
+  },
+};
 
 export default function TeamList({ list }: PropsType) {
   return (
     <Box>
       {list.map((item) => (
         <Box key={item.title} className={styles.teamItem}>
-          <Typography variant="h3" className={styles.title}>{item.title}</Typography>
+          <Typography variant='h3' className={styles.title}>
+            {item.title}
+          </Typography>
 
           {/* todo: stagger animation */}
           <AppearList>
@@ -95,9 +97,6 @@ export default function TeamList({ list }: PropsType) {
                 </CardBody>
             </CardContainer>
           ))} */}
-
-
-
         </Box>
       ))}
     </Box>

@@ -1,10 +1,10 @@
+import { smallB, smallUp } from '@/style/config/breakpoints.css';
 import { colorWhite, pinkTextGrad } from '@/style/config/color.css';
 import { style } from '@vanilla-extract/css';
-import { smallB, smallUp } from '@/style/config/breakpoints.css';
 
 export const section = style({
   marginBottom: 56,
-})
+});
 
 export const title = style({
   maxWidth: 700,
@@ -15,7 +15,7 @@ export const title = style({
 
   '@media': smallB({
     textAlign: 'left',
-  })
+  }),
 });
 
 export const subtitle = style({
@@ -29,7 +29,7 @@ export const subtitle = style({
     textAlign: 'center',
     fontSize: 18,
     lineHeight: '29px',
-  })
+  }),
 });
 
 export const list = style({
@@ -50,36 +50,36 @@ export const list = style({
       marginTop: 64,
       paddingInline: 16,
       vars: {
-        '--minWidth': '360px',      
-      }
-    }
-  }
+        '--minWidth': '360px',
+      },
+    },
+  },
 });
 
 export const listItem = style({
   maxWidth: 544,
   marginInline: 'auto',
-})
+});
 
 export const itemTitle = style({
   ...pinkTextGrad,
 
   fontSize: 24,
-  fontWeight: 600,  
+  fontWeight: 600,
   marginBottom: 8,
 
   selectors: {
     '&:after': {
       content: ':',
       marginRight: '0.5ch',
-    }
+    },
   },
 
   '@media': smallB({
     fontSize: 18,
     lineHeight: '27px',
     marginBottom: 4,
-  })
+  }),
 });
 
 export const itemText = style({
@@ -97,11 +97,11 @@ export const img = style({
   display: 'block',
   zIndex: 1,
   position: 'relative',
-})
+});
 
 export const imgWrap = style({
   position: 'relative',
-})
+});
 
 export const flare = style({
   position: 'absolute',
@@ -116,6 +116,6 @@ export const flare = style({
     '&.--pink': {
       bottom: -192,
       right: -128,
-    }
-  }
-})
+    },
+  },
+});

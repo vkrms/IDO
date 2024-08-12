@@ -1,5 +1,5 @@
+import { medium, small, smallUp } from '@/style/config/breakpoints.css';
 import { colorWhite, pinkTextGrad } from '@/style/config/color.css';
-import { small, medium, smallUp } from '@/style/config/breakpoints.css';
 import { style } from '@vanilla-extract/css';
 
 export const bg = style({
@@ -9,7 +9,7 @@ export const bg = style({
 
   '@media': smallUp({
     marginBottom: 120,
-  })
+  }),
 });
 
 export const title = style({
@@ -21,7 +21,7 @@ export const subtitle = style({
   marginBottom: 16,
   textAlign: 'center',
 
-  ...pinkTextGrad, 
+  ...pinkTextGrad,
 
   fontSize: 16,
   lineHeight: '22px',
@@ -38,13 +38,13 @@ export const text = style({
   '@media': smallUp({
     fontSize: 'unset',
     margin: '0 auto 80px',
-  })
+  }),
 });
 
 export const iconWrap = style({
   display: 'inline-block',
   marginBottom: 8,
-})
+});
 
 export const list = style({
   display: 'flex',
@@ -57,8 +57,8 @@ export const list = style({
     },
     '(min-width: 768px)': {
       gap: '72px 32px',
-    }
-  }
+    },
+  },
 });
 
 export const itemTitle = style({
@@ -79,9 +79,9 @@ export const itemText = style({
 
 export const icon = style({
   marginBottom: 8,
-})
+});
 
 export const item = style({
   flex: '1 1 312px',
   maxWidth: 352,
-})
+});

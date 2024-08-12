@@ -1,7 +1,7 @@
-import { colorBorder, colorWhite, glowColor } from '@/style/config/color.css';
+import { colorWhite } from '@/style/config/color.css';
 
-import { style, globalStyle } from '@vanilla-extract/css';
-import { smallUp, medium } from '@/style/config/breakpoints.css';
+import { medium } from '@/style/config/breakpoints.css';
+import { globalStyle, style } from '@vanilla-extract/css';
 
 export const header = style({
   width: '100%',
@@ -12,7 +12,7 @@ export const header = style({
   zIndex: 1201,
   padding: '16px 16px 32px 16px',
   marginInline: 'auto',
-  
+
   '@media': medium({
     padding: 32,
     maxWidth: 1066,
@@ -30,7 +30,7 @@ export const list = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  gap: 24, 
+  gap: 24,
 });
 
 export const item = style({
@@ -43,17 +43,16 @@ export const itemText = style({
   whiteSpace: 'nowrap',
   transition: 'all .35s ease-out',
   display: 'block',
-  borderBottom: `2px solid transparent`,
+  borderBottom: '2px solid transparent',
   position: 'relative',
   borderRadius: 12,
 
   selectors: {
     '&:hover': {
       color: '#e651d7',
-    }
-  }
+    },
+  },
 });
-
 
 export const menuBtn = style({
   display: 'grid',
@@ -63,15 +62,15 @@ export const menuBtn = style({
   cursor: 'pointer',
   width: 40,
   padding: 0,
-  
+
   '@media': medium({
     display: 'none',
   }),
-})
+});
 
 export const menuWide = style({
   display: 'none',
-  
+
   '@media': medium({
     display: 'flex',
     alignItems: 'center',
@@ -79,7 +78,7 @@ export const menuWide = style({
     flex: '0 1 calc(9/12 * 100%)',
     gap: 24,
   }),
-})
+});
 
 export const menuMobile = style({
   textAlign: 'center',
@@ -92,18 +91,17 @@ globalStyle(`${menuMobile} ${list}`, {
   fontSize: 16,
   lineHeight: '22px',
   marginBottom: 48,
-})
-
+});
 
 export const drawer = style({
   width: '100%',
-})  
+});
 
 export const drawerPaper = style({
   width: '100%',
   background: 'rgba(12, 12, 12, 0.8)',
   padding: '32px 16px',
-})
+});
 
 export const menuIcon = style({
   transition: 'all 0.3s',
@@ -111,13 +109,13 @@ export const menuIcon = style({
   opacity: 0,
   position: 'absolute',
   transform: 'scale(0)',
-})
+});
 
 export const isVisible = style({
   visibility: 'visible',
   opacity: 1,
   transform: 'scale(1)',
-})
+});
 
 export const logo = style({
   width: 128,
@@ -125,4 +123,4 @@ export const logo = style({
   '@media': medium({
     width: 176,
   }),
-})
+});

@@ -24,27 +24,15 @@ const Unauthorized: NextPageWithLayout = () => {
 
       <div style={{ marginTop: 256, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div>
-          <Typography
-            variant='h1'
-            align='center'
-            sx={{ fontSize: 120, fontWeight: 700, color: colorTextBlack }}
-          >
+          <Typography variant='h1' align='center' sx={{ fontSize: 120, fontWeight: 700, color: colorTextBlack }}>
             401
             <b style={{ color: colorPrimary, marginLeft: 12 }}>Oops!</b>
           </Typography>
-          <Typography
-            variant='h2'
-            align='center'
-            sx={{ fontSize: 80, fontWeight: 500, color: colorTextBlack }}
-          >
+          <Typography variant='h2' align='center' sx={{ fontSize: 80, fontWeight: 500, color: colorTextBlack }}>
             Unauthorized
           </Typography>
           <Box height={24} />
-          <Typography
-            variant='subtitle1'
-            align='center'
-            sx={{ color: colorTextGrey, fontSize: 20, fontWeight: 400}}
-          >
+          <Typography variant='subtitle1' align='center' sx={{ color: colorTextGrey, fontSize: 20, fontWeight: 400 }}>
             Access is allowed only for registered users, click on the button below to head on back to home base.
           </Typography>
           <Box height={24} />

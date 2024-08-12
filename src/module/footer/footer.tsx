@@ -46,7 +46,7 @@ const socials = [
     href: 'https://t.me/eventfloHQ',
     icon: img5.src,
   },
-]
+];
 import { BackgroundGradientAnimation } from '@/components/ui/background-gradient-animation';
 import { cn } from '@/lib/utils/cn';
 
@@ -57,12 +57,12 @@ export default function Footer() {
 
   function openPrivacy(e: React.MouseEvent) {
     e.preventDefault();
-    context.toggle('privacy');    
+    context.toggle('privacy');
   }
 
   function openDisclaimer(e: React.MouseEvent) {
     e.preventDefault();
-    context.toggle('disclaimer');    
+    context.toggle('disclaimer');
   }
 
   // ----------------------------------------------------------------------------------
@@ -70,57 +70,49 @@ export default function Footer() {
     <div className={styles.overflow}>
       <Box className={'footer'}>
         <BackgroundGradientAnimation
-            firstColor='112, 0, 255'
-            secondColor='255, 0, 199'
-            interactive={false}
-            className={cn(styles.disco, 'fade-down')}
-            opacity={0.8}
+          firstColor='112, 0, 255'
+          secondColor='255, 0, 199'
+          interactive={false}
+          className={cn(styles.disco, 'fade-down')}
+          opacity={0.8}
         >
           <Container className={styles.container}>
-              <Grid container className={styles.box}>
-                <Grid item>
-                  <Typography className={styles.logo}>
-                    <IconLogo width={217} />
-                  </Typography>
-                  <Typography className={styles.iconList}>
-                    {socials.map((item, i) => (
-                      <IconButton
-                        size='medium'
-                        href={item.href}
-                        target="_blank"
-                        key={item.slug}
-                        className="social"
-                      >
-                        <CardMedia component='img' image={item.icon} width={32} height={32}/>
-                      </IconButton>
-                    ))}
-                  </Typography>
+            <Grid container className={styles.box}>
+              <Grid item>
+                <Typography className={styles.logo}>
+                  <IconLogo width={217} />
+                </Typography>
+                <Typography className={styles.iconList}>
+                  {socials.map((item, i) => (
+                    <IconButton size='medium' href={item.href} target='_blank' key={item.slug} className='social'>
+                      <CardMedia component='img' image={item.icon} width={32} height={32} />
+                    </IconButton>
+                  ))}
+                </Typography>
 
-                  <Typography className={styles.text}>
-                    Participation in an IDO carries inherent risk. Please review our offering materials and consult with a
-                    financial advisor before making any investment decisions. eventflo is a registered Australian company
-                    (ACN: 677 042 947).
-                  </Typography>
-                </Grid>
+                <Typography className={styles.text}>
+                  Participation in an IDO carries inherent risk. Please review our offering materials and consult with a
+                  financial advisor before making any investment decisions. eventflo is a registered Australian company
+                  (ACN: 677 042 947).
+                </Typography>
+              </Grid>
 
-
-
-                <Grid item className={styles.link}>
-                  <a className={cn(styles.linkText, 'menu-item')} href="https://eventflo.io/blog" target="_new">
-                    Blog
-                  </a>
-                  {/* <Link href='' className={styles.linkText}>
+              <Grid item className={styles.link}>
+                <a className={cn(styles.linkText, 'menu-item')} href='https://eventflo.io/blog' target='_new'>
+                  Blog
+                </a>
+                {/* <Link href='' className={styles.linkText}>
                     Terms & Conditions
                   </Link> */}
-                  <a className={cn(styles.linkText, 'menu-item')} onClick={openPrivacy}>
-                    Privacy Policy
-                  </a>
-                  <a className={cn(styles.linkText, 'menu-item')} onClick={openDisclaimer}>
-                    Disclaimer
-                  </a>
-                </Grid>
+                <a className={cn(styles.linkText, 'menu-item')} onClick={openPrivacy}>
+                  Privacy Policy
+                </a>
+                <a className={cn(styles.linkText, 'menu-item')} onClick={openDisclaimer}>
+                  Disclaimer
+                </a>
               </Grid>
-              <Typography className={styles.copyright}>&copy; eventflo Pty Ltd</Typography>
+            </Grid>
+            <Typography className={styles.copyright}>&copy; eventflo Pty Ltd</Typography>
           </Container>
         </BackgroundGradientAnimation>
       </Box>

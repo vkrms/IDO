@@ -1,10 +1,5 @@
-import React from 'react'
+import type React from 'react';
 
+const Temp: React.FC = () => <>{/* <button className='pulse'>sup</button> */}</>;
 
-const Temp: React.FC = () => (
-    <>
-        <button className="pulse">sup</button>
-    </>
-)
-
-export default Temp
+export default Temp;
