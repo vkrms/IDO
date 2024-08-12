@@ -21,23 +21,23 @@ import AppearList from '@/components/ui/appear-list';
 const dataList = [
   {
     title: 'NFT Ticketing',
-    text: ' Eradicate ticket fraud and ensure verifiable ticket ownership by establishing a secure resale marketplace for transactions using FloCoin. We can ensure transparency and authenticity in every transaction.',
+    text: 'Eliminate ticket fraud and guarantee verifiable ownership with our NFT-based tickets. FloCoin ensures every transaction is transparent and secure, revolutionizing ticket resale with our exclusive FloMarket.',
+  },
+  {
+    title: 'Seamless Event Mgt',
+    text: 'Organizers can optimize their events with powerful, integrated tools—AI-driven marketing, robust CRM, and smart customer service. eventflo enhances operations, boosting FloCoin usage across the platform.',
+  },
+  {
+    title: 'AI-Driven Insights',
+    text: 'Harness the power of AI for tailored recommendations, dynamic pricing, and accurate demand forecasting. eventflo transforms data into actionable strategies, driving successful events and FloCoin adoption.',
   },
   {
     title: 'FloCoin Integration',
-    text: 'Seamlessly utilize FloCoin for ticket purchases and unlock its full benefits within the platform, showcasing its everyday utility for both organizers and attendees.',
+    text: 'FloCoin isn’t just a currency; it’s a key to unlocking the full potential of the eventflo platform. Use it for everything from ticket purchases to premium features, maximizing utility for organizers and attendees alike.',
   },
   {
-    title: 'Seamless Operations',
-    text: ' Streamline event management with integrated marketing tools, a robust CRM and customer service management powered by AI, increasing the number of events successfully powered by the platform and, in turn, FloCoin usage.',
-  },
-  {
-    title: 'Data-Driven Insights',
-    text: 'Empower organizers with AI-powered recommendations, pricing suggestions, and demand forecasting. This translates into more successful events using FloCoin as the preferred payment method.',
-  },
-  {
-    title: 'The Road Ahead',
-    text: "Expand FloCoin's value with features like decentralized event planning, fan-to-artist marketplaces, and exclusive event access – all fueled by the eventflo platform and FloCoin.",
+    title: 'FloMarket - Secure Resale',
+    text: 'FloMarket protects buyers and sellers from fraudulent tickets, ensuring only genuine transactions. Plus, it guarantees profits go back to the organizers and artists, not scalpers.',
   },
 ];
 // ----------------------------------------------------------------------------------
