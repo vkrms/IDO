@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import Dialog from '@mui/material/Dialog';
 import IconButton from '@mui/material/IconButton';
 import { useContext } from 'react';
@@ -7,18 +8,22 @@ import { FormFields } from './form-fields';
 import Cross from '@/assets/svg/close.svg';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
-type Inputs = {
-    name: string,
-    familyName: string,
-    email: string,
-    tel: string,
-}
+export type Inputs = {
+  name: string;
+  lastName: string;
+  email: string;
+  tel: string;
+};
 
+export type PhoneData = {
+    tel: string,
+    country?: string,
+}
 
 export default function FormDialog() {
     const { register, handleSubmit } = useForm<Inputs>();
 
-    const [phoneData, setPhoneData] = React.useState({
+    const [phoneData, setPhoneData] = useState<PhoneData>({
         tel: '',
         country: '',
     })
@@ -52,9 +57,9 @@ export default function FormDialog() {
         context.toggleForm();
     }
 
-    const [success, setSuccess] = React.useState(false);
+    const [success, setSuccess] = useState(false);
 
-    const getPhoneData = (obj) => {
+    const getPhoneData = (obj: PhoneData) => {
         setPhoneData(obj)
         return obj
     }

@@ -51,8 +51,9 @@ const PhoneInput: React.ForwardRefExoticComponent<PhoneInputProps> =
                      * the value is coerced to an empty string.
                      *
                      * @param {E164Number | undefined} value - The entered value
-                     */
-                    onChange={(value) => onChange?.(value || "")}
+                     */                    
+                    //@ts-ignore
+                    onChange={(value) => onChange?.(value || '')}
                     {...props}
                 />
             );

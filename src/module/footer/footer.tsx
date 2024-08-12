@@ -55,12 +55,12 @@ import { cn } from '@/lib/utils/cn';
 export default function Footer() {
   const context = useContext(ContextProvider);
 
-  function openPrivacy(e) {
+  function openPrivacy(e: React.MouseEvent) {
     e.preventDefault();
     context.toggle('privacy');    
   }
 
-  function openDisclaimer(e) {
+  function openDisclaimer(e: React.MouseEvent) {
     e.preventDefault();
     context.toggle('disclaimer');    
   }

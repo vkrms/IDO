@@ -1,10 +1,17 @@
 import React, { createContext, useState } from 'react';
 
-const Context = createContext({
-    isOpen: (a: string) => {},
-    setIsOpen: (a: any) => { },
-    toggleForm: () => { },
-    toggleDisclaimer: () => { },    
+const Context = createContext<{
+    isOpen: (a: string) => boolean;
+    setIsOpen: (a: any) => void;
+    toggleForm: () => void;
+    toggleDisclaimer: () => void;
+    toggle: (slug: string) => void;
+}>({
+    isOpen: (a: string) => false,
+    setIsOpen: (a: any) => {},
+    toggleForm: () => {},
+    toggleDisclaimer: () => {},
+    toggle: (slug: string) => {},
 });
 
 interface Props {
@@ -37,6 +44,8 @@ export const Something = ({ children }: Props) => {
                     return isDisclaimerOpen;
                 case 'privacy':
                     return isPrivacyOpen;
+                default:
+                    return false;
             }
         },
 
@@ -53,7 +62,11 @@ export const Something = ({ children }: Props) => {
                     break;
             }
             return false;
-        }
+        },
+
+        setIsOpen: (a: any) => { },
+
+        w: null
     };
 
     return (

@@ -15,3 +15,8 @@ declare module 'lang-list' {
 
   export default { getList };
 }
+
+declare module '*.html' {
+  const content: string;
+  export default content;
+}

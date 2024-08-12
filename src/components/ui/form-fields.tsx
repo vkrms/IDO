@@ -4,21 +4,30 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils/cn";
 import { Typography, Box, Grid, Button, FormControl } from "@mui/material";
 import * as styles from './form-fields.css';
-import type { UseFormRegister } from "react-hook-form";
 import { PhoneInput } from "./tel-input";
 import { FancyWrap } from "./fancy-wrap";
 import { parsePhoneNumber } from 'react-phone-number-input'
 
+import type { UseFormRegister } from 'react-hook-form';
+import type { Value as E164Number } from 'react-phone-number-input';
+import type { Inputs, PhoneData } from './form-dialog';
+
+interface Props {
+  success: boolean;
+  getPhoneData: (a: PhoneData) => any;
+  register: UseFormRegister<Inputs>;
+}
+
 interface Props {
     success: boolean,
     register: UseFormRegister<any>,
-    getPhoneData: (a: {}) => {tel: string, country: string},
+    getPhoneData: (a: PhoneData) => any,
 }
 
 export function FormFields({success, register, getPhoneData}: Props) {
     const [phone, setPhone] = React.useState('')
 
-    function handlePhoneChange(val) {
+    function handlePhoneChange(val: E164Number) {
         const phoneNumber = parsePhoneNumber(val)
         console.log({phoneNumber})
 
@@ -36,7 +45,7 @@ export function FormFields({success, register, getPhoneData}: Props) {
     return (
         <>
             <Box className={styles.body}>                
-    {!success && <>
+                {!success && <>
                     <Typography variant="h3" className={styles.title}>
                         Early Access
                     </Typography>
